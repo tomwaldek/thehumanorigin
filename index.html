@@ -4,46 +4,172 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Human Origin — Tom Waldek</title>
+<meta name="description" content="Every organisation runs on a script nobody wrote. Six film disciplines meet neurobiology. Tom Waldek — Human Leadership Architect.">
+<meta name="author" content="Tom Waldek">
+<link rel="alternate" hreflang="en" href="en/">
+<link rel="alternate" hreflang="de" href="de/">
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500&display=swap');
+
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0F1A24;min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;font-family:'Futura','Century Gothic','Avenir','Trebuchet MS',sans-serif;overflow:hidden;position:relative}
-.bg{position:fixed;inset:0;z-index:0}
-.bg div{position:absolute;inset:0}
-.wrap{position:relative;z-index:1;text-align:center;padding:24px}
-.the{font-weight:100;font-size:28px;color:rgba(168,176,204,0.4);letter-spacing:8px;display:block}
-.origin{font-weight:700;font-size:52px;color:rgba(232,184,164,0.85);letter-spacing:7px;display:block;margin-top:4px}
-.line{width:44px;height:1.5px;background:rgba(204,112,88,0.35);margin:24px auto}
-.hook{font-weight:200;font-size:16px;color:rgba(168,176,204,0.5);line-height:1.75;max-width:460px;margin:0 auto 36px}
-.hook span{display:block;font-size:14px;color:rgba(168,176,204,0.35);margin-top:4px}
-.links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-.links a{display:block;border:1px solid rgba(204,112,88,0.35);padding:16px 44px;font-family:inherit;font-weight:500;font-size:11px;letter-spacing:4px;color:rgba(204,112,88,0.7);text-transform:uppercase;text-decoration:none;transition:all 0.3s;background:transparent}
-.links a:hover{background:rgba(204,112,88,0.15);color:rgba(232,184,164,0.9)}
-.foot{position:fixed;bottom:28px;left:0;right:0;text-align:center;z-index:1}
-.foot p{font-weight:200;font-size:11px;color:rgba(74,88,120,0.4);letter-spacing:1px}
-.fi{opacity:0;transform:translateY(20px);animation:fi 0.8s cubic-bezier(0.22,1,0.36,1) forwards}
-.fi:nth-child(2){animation-delay:0.15s}
-.fi:nth-child(3){animation-delay:0.3s}
-.fi:nth-child(4){animation-delay:0.45s}
-.fi:nth-child(5){animation-delay:0.6s}
-@keyframes fi{to{opacity:1;transform:translateY(0)}}
+:root{
+  --bg:#0a0a0f;
+  --cyan:#06b6d4;
+  --cyan2:#0891b2;
+  --orange:#f97316;
+  --white:#ffffff;
+  --tx2:rgba(255,255,255,0.7);
+  --tx3:rgba(255,255,255,0.45);
+  --tx4:rgba(255,255,255,0.25);
+  --glass:rgba(255,255,255,0.03);
+  --border:rgba(255,255,255,0.07);
+  --border2:rgba(6,182,212,0.15);
+  --display:'Sora',sans-serif;
+  --serif:'Playfair Display',serif;
+}
+html,body{height:100%}
+body{background:var(--bg);color:var(--white);font-family:var(--display);overflow:hidden;-webkit-font-smoothing:antialiased;display:flex;align-items:center;justify-content:center}
+
+/* MESH */
+.mesh-layer{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.mesh-orb{position:absolute;border-radius:50%;filter:blur(120px);will-change:transform}
+.mesh-orb.c1{width:55vw;height:55vw;top:-20%;left:-15%;background:rgba(6,182,212,0.12);animation:orbA 22s ease-in-out infinite}
+.mesh-orb.o1{width:45vw;height:45vw;bottom:-15%;right:-15%;background:rgba(249,115,22,0.07);animation:orbB 28s ease-in-out infinite}
+.mesh-orb.c2{width:30vw;height:30vw;top:50%;right:25%;background:rgba(8,145,178,0.06);animation:orbC 25s ease-in-out infinite}
+@keyframes orbA{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,-40px)}}
+@keyframes orbB{0%,100%{transform:translate(0,0)}50%{transform:translate(-50px,30px)}}
+@keyframes orbC{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,50px) scale(1.1)}}
+
+.grid-overlay{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(6,182,212,0.015) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(6,182,212,0.015) 1px,transparent 1px);
+  background-size:100px 100px;opacity:0.5}
+
+/* CONTENT */
+.splash{position:relative;z-index:1;text-align:center;max-width:700px;padding:40px}
+
+.splash-role{font-weight:300;font-size:13px;color:var(--cyan);letter-spacing:6px;text-transform:uppercase;margin-bottom:32px;opacity:0.7;
+  animation:fadeUp 0.8s ease 0.2s both}
+
+.splash-title{margin-bottom:24px;line-height:1;animation:fadeUp 0.8s ease 0.4s both}
+.splash-title .label{
+  font-family:var(--display);
+  font-weight:200;
+  font-size:clamp(24px,4vw,42px);
+  letter-spacing:10px;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.7);
+  display:block;
+  margin-bottom:0;
+}
+.splash-title .anchor{
+  font-family:var(--serif);
+  font-weight:800;
+  font-size:clamp(60px,10vw,110px);
+  display:block;
+  background:linear-gradient(135deg,var(--white) 0%,var(--cyan) 35%,var(--orange) 65%,var(--white) 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  background-size:200% 200%;
+  animation:gradShift 8s ease infinite;
+  letter-spacing:-2px;
+  line-height:0.9;
+  margin-top:-6px;
+}
+@keyframes gradShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+.splash-hook{
+  font-family:var(--serif);
+  font-weight:400;
+  font-size:clamp(17px,2.5vw,22px);
+  color:rgba(255,255,255,0.6);
+  line-height:1.7;
+  margin-bottom:48px;
+  letter-spacing:-0.2px;
+  animation:fadeUp 0.8s ease 0.6s both;
+}
+
+.splash-lang{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;animation:fadeUp 0.8s ease 0.8s both}
+
+.lang-btn{
+  padding:16px 48px;
+  border-radius:100px;
+  font-family:var(--display);
+  font-weight:300;
+  font-size:14px;
+  letter-spacing:2px;
+  cursor:pointer;
+  transition:all 0.35s;
+  text-decoration:none;
+  position:relative;
+  overflow:hidden;
+}
+.lang-btn.primary{
+  background:linear-gradient(135deg,var(--cyan),var(--orange));
+  color:var(--white);
+  border:none;
+  font-weight:400;
+}
+.lang-btn.primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 30px rgba(6,182,212,0.3);
+}
+.lang-btn.ghost{
+  background:transparent;
+  color:var(--white);
+  border:1px solid rgba(255,255,255,0.15);
+  backdrop-filter:blur(8px);
+}
+.lang-btn.ghost:hover{
+  border-color:rgba(6,182,212,0.4);
+  background:rgba(6,182,212,0.05);
+  color:var(--cyan);
+}
+
+.splash-footer{
+  margin-top:60px;
+  font-weight:200;
+  font-size:11px;
+  color:var(--tx4);
+  letter-spacing:2px;
+  animation:fadeUp 0.8s ease 1s both;
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(16px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@media(max-width:600px){
+  .splash-lang{flex-direction:column;align-items:center}
+  .lang-btn{width:200px;text-align:center}
+}
 </style>
 </head>
 <body>
-<div class="bg">
-<div style="background:radial-gradient(ellipse 60% 50% at 30% 55%,rgba(204,112,88,0.2) 0%,transparent 70%)"></div>
-<div style="background:radial-gradient(ellipse 80% 30% at 50% 85%,rgba(232,200,160,0.1) 0%,transparent 70%)"></div>
-<div style="background:radial-gradient(ellipse 90% 60% at 70% 30%,rgba(45,80,110,0.25) 0%,transparent 60%)"></div>
+
+<div class="mesh-layer">
+  <div class="mesh-orb c1"></div>
+  <div class="mesh-orb o1"></div>
+  <div class="mesh-orb c2"></div>
 </div>
-<div class="wrap">
-<span class="the fi">THE HUMAN</span>
-<span class="origin fi">ORIGIN</span>
-<div class="line fi"></div>
-<p class="hook fi">Every organisation runs on a script nobody wrote.<span>Jede Organisation folgt einem Skript, das niemand geschrieben hat.</span></p>
-<div class="links fi">
-<a href="en/">English</a>
-<a href="de/">Deutsch</a>
+<div class="grid-overlay"></div>
+
+<div class="splash">
+  <div class="splash-role">Tom Waldek — Human Leadership Architect</div>
+  <div class="splash-title">
+    <span class="label">The Human</span>
+    <span class="anchor">Origin</span>
+  </div>
+  <div class="splash-hook">Every organisation runs on a script nobody wrote.</div>
+  <div class="splash-lang">
+    <a href="en/" class="lang-btn primary">English</a>
+    <a href="de/" class="lang-btn ghost">Deutsch</a>
+  </div>
+  <div class="splash-footer">Six film disciplines meet neurobiology.</div>
 </div>
-</div>
-<div class="foot"><p>Six disciplines. Applied neurobiology.</p></div>
+
 </body>
 </html>
