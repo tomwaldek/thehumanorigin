@@ -3,70 +3,104 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Human Origin — Tom Waldek</title>
-<meta name="description" content="Every organisation runs on a script nobody wrote. Six film disciplines meet neurobiology. Tom Waldek — Human Leadership Architect.">
+<title>The Human Origin — Tom Waldek | Human Leadership Architect</title>
+<meta name="description" content="Six film disciplines meet neurobiology. The methodology that surfaces the survival patterns running your organisation — and unlocks the capacity underneath.">
 <meta name="author" content="Tom Waldek">
-<link rel="alternate" hreflang="en" href="en/">
-<link rel="alternate" hreflang="de" href="de/">
+<link rel="alternate" hreflang="de" href="../de/">
+<link rel="alternate" hreflang="en" href="../en/">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@100;200;300;400;500;600&display=swap');
 
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
   --bg:#0a0a0f;
   --cyan:#06b6d4;
   --cyan2:#0891b2;
+  --cyan3:#164e63;
   --orange:#f97316;
+  --orange2:#ea580c;
   --white:#ffffff;
+  --tx:#e4e0db;
   --tx2:rgba(255,255,255,0.7);
   --tx3:rgba(255,255,255,0.45);
   --tx4:rgba(255,255,255,0.25);
   --glass:rgba(255,255,255,0.03);
+  --glass2:rgba(255,255,255,0.06);
+  --glass3:rgba(255,255,255,0.08);
   --border:rgba(255,255,255,0.07);
   --border2:rgba(6,182,212,0.15);
+  --section-pad:110px;
+  --ff:'Inter',sans-serif;
   --display:'Sora',sans-serif;
   --serif:'Playfair Display',serif;
 }
-html,body{height:100%}
-body{background:var(--bg);color:var(--white);font-family:var(--display);overflow:hidden;-webkit-font-smoothing:antialiased;display:flex;align-items:center;justify-content:center}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:var(--ff);overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.7}
 
-/* MESH */
+/* ═══ FULL-PAGE MESH ═══ */
 .mesh-layer{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
 .mesh-orb{position:absolute;border-radius:50%;filter:blur(120px);will-change:transform}
-.mesh-orb.c1{width:55vw;height:55vw;top:-20%;left:-15%;background:rgba(6,182,212,0.12);animation:orbA 22s ease-in-out infinite}
-.mesh-orb.o1{width:45vw;height:45vw;bottom:-15%;right:-15%;background:rgba(249,115,22,0.07);animation:orbB 28s ease-in-out infinite}
-.mesh-orb.c2{width:30vw;height:30vw;top:50%;right:25%;background:rgba(8,145,178,0.06);animation:orbC 25s ease-in-out infinite}
+.mesh-orb.cyan1{width:50vw;height:50vw;top:-15%;left:-10%;background:rgba(6,182,212,0.12);animation:orbA 22s ease-in-out infinite}
+.mesh-orb.orange1{width:40vw;height:40vw;bottom:-10%;right:-10%;background:rgba(249,115,22,0.07);animation:orbB 28s ease-in-out infinite}
+.mesh-orb.cyan2{width:35vw;height:35vw;top:40%;right:20%;background:rgba(8,145,178,0.08);animation:orbC 25s ease-in-out infinite}
+.mesh-orb.orange2{width:30vw;height:30vw;top:70%;left:10%;background:rgba(249,115,22,0.05);animation:orbA 30s ease-in-out infinite reverse}
 @keyframes orbA{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,-40px)}}
 @keyframes orbB{0%,100%{transform:translate(0,0)}50%{transform:translate(-50px,30px)}}
 @keyframes orbC{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,50px) scale(1.1)}}
 
+/* Grid overlay */
 .grid-overlay{position:fixed;inset:0;z-index:0;pointer-events:none;
   background-image:
     linear-gradient(rgba(6,182,212,0.015) 1px,transparent 1px),
     linear-gradient(90deg,rgba(6,182,212,0.015) 1px,transparent 1px);
   background-size:100px 100px;opacity:0.5}
 
-/* CONTENT */
-.splash{position:relative;z-index:1;text-align:center;max-width:700px;padding:40px}
+/* ═══ NAV ═══ */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 44px;display:flex;justify-content:space-between;align-items:center;backdrop-filter:blur(24px);background:rgba(10,10,15,0.6);border-bottom:1px solid var(--border);transition:all 0.3s}
+.nav-logo{font-family:var(--display);font-weight:200;font-size:12px;color:rgba(255,255,255,0.35);letter-spacing:6px;text-transform:uppercase}
+.nav-logo span{color:var(--cyan);font-weight:400;opacity:0.5}
+.nav-links{display:flex;gap:32px}
+.nav-links a{font-weight:300;font-size:11px;color:rgba(255,255,255,0.35);letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:color 0.3s;position:relative}
+.nav-links a:hover{color:var(--cyan)}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:var(--cyan);transform:scaleX(0);transition:transform 0.3s;transform-origin:right}
+.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
 
-.splash-role{font-weight:300;font-size:13px;color:var(--cyan);letter-spacing:6px;text-transform:uppercase;margin-bottom:32px;opacity:0.7;
-  animation:fadeUp 0.8s ease 0.2s both}
+/* ═══ SECTIONS ═══ */
+section{position:relative;z-index:1;padding:var(--section-pad) 44px}
+.wrap{max-width:900px;margin:0 auto;text-align:center}
+.section-label{font-family:var(--display);font-weight:400;font-size:15px;color:var(--cyan);letter-spacing:6px;text-transform:uppercase;margin-bottom:36px;opacity:0.9}
 
-.splash-title{margin-bottom:24px;line-height:1;animation:fadeUp 0.8s ease 0.4s both}
-.splash-title .label{
+/* ═══ HERO ═══ */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:120px 44px 80px;position:relative;overflow:hidden}
+.hero-mesh{position:absolute;inset:0;background:
+  radial-gradient(ellipse at 15% 85%, rgba(6,182,212,0.14) 0%, transparent 50%),
+  radial-gradient(ellipse at 75% 15%, rgba(249,115,22,0.09) 0%, transparent 50%),
+  radial-gradient(ellipse at 50% 50%, rgba(8,145,178,0.06) 0%, transparent 60%);
+  animation:heroMesh 12s ease-in-out infinite alternate}
+@keyframes heroMesh{0%{opacity:0.7}100%{opacity:1}}
+.hero-grid{position:absolute;inset:0;background-image:
+  linear-gradient(rgba(6,182,212,0.04) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(6,182,212,0.04) 1px, transparent 1px);
+  background-size:80px 80px;opacity:0.5}
+.hero-content{position:relative;z-index:2;max-width:900px;text-align:center;margin:0 auto}
+.hero-role{font-family:var(--display);font-weight:300;font-size:15px;color:var(--cyan);letter-spacing:6px;text-transform:uppercase;margin-bottom:24px;opacity:0.75}
+
+/* TITLE: hybrid unit — "The Human" + "Origin" as one mark */
+.hero-title{margin-bottom:20px;line-height:1}
+.hero-title .line-label{
   font-family:var(--display);
   font-weight:200;
-  font-size:clamp(24px,4vw,42px);
+  font-size:clamp(28px,4.5vw,48px);
   letter-spacing:10px;
   text-transform:uppercase;
   color:rgba(255,255,255,0.7);
   display:block;
   margin-bottom:0;
 }
-.splash-title .anchor{
+.hero-title .line-anchor{
   font-family:var(--serif);
   font-weight:800;
-  font-size:clamp(60px,10vw,110px);
+  font-size:clamp(68px,10vw,120px);
   display:block;
   background:linear-gradient(135deg,var(--white) 0%,var(--cyan) 35%,var(--orange) 65%,var(--white) 100%);
   -webkit-background-clip:text;
@@ -80,96 +114,589 @@ body{background:var(--bg);color:var(--white);font-family:var(--display);overflow
 }
 @keyframes gradShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 
-.splash-hook{
+/* TAGLINE — Playfair serif, echoes method header */
+.hero-tagline{
   font-family:var(--serif);
-  font-weight:400;
-  font-size:clamp(17px,2.5vw,22px);
-  color:rgba(255,255,255,0.6);
-  line-height:1.7;
-  margin-bottom:48px;
-  letter-spacing:-0.2px;
-  animation:fadeUp 0.8s ease 0.6s both;
+  font-weight:500;
+  font-size:clamp(18px,2.5vw,26px);
+  color:rgba(255,255,255,0.75);
+  letter-spacing:-0.3px;
+  margin-bottom:32px;
+  margin-top:28px;
+  line-height:1.4;
 }
 
-.splash-lang{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;animation:fadeUp 0.8s ease 0.8s both}
+.hero-sub{font-weight:300;font-size:17px;color:var(--tx2);line-height:1.8;max-width:640px;margin:0 auto 40px}
+.hero-sub strong{color:rgba(255,255,255,0.85);font-weight:400}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+.btn-primary{padding:14px 36px;border-radius:100px;background:linear-gradient(135deg,var(--cyan),var(--orange));color:var(--white);font-family:var(--display);font-weight:500;font-size:13px;border:none;cursor:pointer;letter-spacing:1px;transition:all 0.3s;text-decoration:none}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(6,182,212,0.3)}
+.btn-ghost{padding:14px 36px;border-radius:100px;background:transparent;color:var(--white);font-family:var(--display);font-weight:300;font-size:13px;border:1px solid rgba(255,255,255,0.15);cursor:pointer;letter-spacing:1px;transition:all 0.3s;text-decoration:none;backdrop-filter:blur(8px)}
+.btn-ghost:hover{border-color:rgba(6,182,212,0.4);background:rgba(6,182,212,0.05);color:var(--cyan)}
 
-.lang-btn{
-  padding:16px 48px;
-  border-radius:100px;
-  font-family:var(--display);
-  font-weight:300;
-  font-size:14px;
-  letter-spacing:2px;
-  cursor:pointer;
-  transition:all 0.35s;
-  text-decoration:none;
-  position:relative;
-  overflow:hidden;
-}
-.lang-btn.primary{
-  background:linear-gradient(135deg,var(--cyan),var(--orange));
-  color:var(--white);
-  border:none;
-  font-weight:400;
-}
-.lang-btn.primary:hover{
-  transform:translateY(-2px);
-  box-shadow:0 8px 30px rgba(6,182,212,0.3);
-}
-.lang-btn.ghost{
-  background:transparent;
-  color:var(--white);
-  border:1px solid rgba(255,255,255,0.15);
-  backdrop-filter:blur(8px);
-}
-.lang-btn.ghost:hover{
-  border-color:rgba(6,182,212,0.4);
-  background:rgba(6,182,212,0.05);
-  color:var(--cyan);
-}
+/* ═══ STATS — counting ═══ */
+.stats{padding:60px 44px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(255,255,255,0.015);position:relative;z-index:1}
+.stats-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:40px;text-align:center}
+.stat-num{font-family:var(--display);font-weight:200;font-size:36px;letter-spacing:-1px;margin-bottom:6px}
+.stat-num .counter-val{background:linear-gradient(135deg,var(--cyan),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-num .counter-suffix{background:linear-gradient(135deg,var(--cyan),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-desc{font-weight:300;font-size:11px;color:var(--tx3);letter-spacing:1px;line-height:1.5}
 
-.splash-footer{
-  margin-top:60px;
-  font-weight:200;
-  font-size:11px;
-  color:var(--tx4);
-  letter-spacing:2px;
-  animation:fadeUp 0.8s ease 1s both;
-}
+/* ═══ CONTENT SECTIONS ═══ */
+.sec-head{font-family:var(--serif);font-weight:600;font-size:clamp(32px,5vw,52px);line-height:1.15;margin-bottom:40px;color:var(--white);letter-spacing:-0.5px}
+.sec-text{font-weight:300;font-size:15px;color:var(--tx2);line-height:2;margin-bottom:24px}
+.sec-text strong{color:var(--cyan);font-weight:400}
 
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(16px)}
-  to{opacity:1;transform:translateY(0)}
-}
+/* ═══ QUOTE BLOCKS — Sora display style, tracked like "The Human" ═══ */
+.quote-block{margin:48px 0;padding:36px 44px;border-left:2px solid;border-image:linear-gradient(180deg,var(--cyan),var(--orange)) 1;background:rgba(255,255,255,0.02);backdrop-filter:blur(12px);border-radius:0 12px 12px 0;text-align:left}
+.quote-text{font-family:var(--display);font-weight:200;font-size:18px;color:rgba(255,255,255,0.75);line-height:1.85;margin-bottom:14px;letter-spacing:1.5px}
+.quote-attr{font-family:var(--display);font-weight:300;font-size:10px;color:var(--tx4);letter-spacing:4px;text-transform:uppercase}
 
-@media(max-width:600px){
-  .splash-lang{flex-direction:column;align-items:center}
-  .lang-btn{width:200px;text-align:center}
+/* ═══ GLASS CARDS ═══ */
+.glass-card{background:var(--glass2);backdrop-filter:blur(16px);border:1px solid var(--border);border-radius:16px;padding:40px;position:relative;overflow:hidden;transition:all 0.4s}
+.glass-card:hover{border-color:var(--border2);background:var(--glass3)}
+.glass-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(6,182,212,0.15),transparent)}
+
+/* ═══ PROOF ═══ */
+.proof-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:40px}
+.proof-card{padding:32px;background:var(--glass);border:1px solid var(--border);border-radius:12px;transition:all 0.3s;text-align:left}
+.proof-card:hover{border-color:var(--border2)}
+.proof-num{font-family:var(--display);font-weight:200;font-size:28px;margin-bottom:8px}
+.proof-num .cyan{color:var(--cyan)}
+.proof-num .orange{color:var(--orange)}
+.proof-counter{font-family:var(--display)}
+.proof-label{font-weight:300;font-size:12px;color:var(--tx3);letter-spacing:0.5px}
+.proof-src{font-weight:300;font-size:10px;color:var(--tx4);margin-top:6px;letter-spacing:1px}
+
+/* ═══ DISCIPLINES ═══ */
+.disc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:40px}
+.disc-card{padding:28px 32px;background:var(--glass);border:1px solid var(--border);border-radius:12px;transition:all 0.3s;position:relative;overflow:hidden;text-align:left}
+.disc-card:hover{border-color:var(--border2);transform:translateY(-2px)}
+.disc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--orange));opacity:0;transition:opacity 0.3s}
+.disc-card:hover::after{opacity:1}
+.disc-num{font-family:var(--display);font-weight:500;font-size:14px;color:var(--orange);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.disc-name{font-family:var(--display);font-weight:300;font-size:20px;color:var(--cyan);margin-bottom:14px;letter-spacing:0.3px;line-height:1.4}
+.disc-desc{font-weight:300;font-size:13px;color:var(--tx3);line-height:1.8}
+
+/* ═══ PROCESS ═══ */
+.phase-list{margin-top:40px;display:flex;flex-direction:column;gap:2px}
+.phase{display:flex;align-items:flex-start;gap:24px;padding:28px 32px;background:var(--glass);border:1px solid var(--border);transition:all 0.3s;position:relative;text-align:left}
+.phase:first-child{border-radius:12px 12px 0 0}
+.phase:last-child{border-radius:0 0 12px 12px}
+.phase:hover{background:var(--glass2);border-color:var(--border2)}
+.phase-num{font-family:var(--display);font-weight:200;font-size:32px;color:var(--cyan);opacity:0.4;min-width:40px;line-height:1}
+.phase-name{font-family:var(--display);font-weight:500;font-size:14px;color:var(--white);margin-bottom:6px;letter-spacing:0.5px}
+.phase-desc{font-weight:300;font-size:13px;color:var(--tx3);line-height:1.7}
+
+/* ═══ DIAGNOSTIC ═══ */
+.diag-container{max-width:640px;margin:0 auto}
+.diag-intro{text-align:center;margin-bottom:40px}
+.diag-intro p{font-weight:300;font-size:14px;color:var(--tx3)}
+.diag-intro .count{font-family:var(--display);font-weight:500;color:var(--cyan)}
+#prog{display:flex;gap:6px;justify-content:center;margin-bottom:32px}
+.dd{width:28px;height:3px;border-radius:2px;background:rgba(255,255,255,0.06);transition:all 0.4s}
+.dd.done{background:var(--cyan)}
+.dd.cur{background:var(--orange);box-shadow:0 0 10px rgba(249,115,22,0.4)}
+.qnum{font-family:var(--display);font-weight:300;font-size:11px;color:var(--tx4);letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;text-align:center}
+.qtx{font-weight:300;font-size:17px;color:var(--white);text-align:center;line-height:1.7;margin-bottom:32px;min-height:60px}
+.qops{display:flex;flex-direction:column;gap:8px}
+.qopt{padding:14px 20px;border:1px solid var(--border);border-radius:10px;background:var(--glass);font-weight:300;font-size:13px;color:var(--tx2);cursor:pointer;transition:all 0.25s;text-align:center;backdrop-filter:blur(8px)}
+.qopt:hover{border-color:var(--border2);background:var(--glass2);color:var(--white)}
+.qopt.sel{border-color:var(--cyan);background:rgba(6,182,212,0.08);color:var(--white)}
+#results{display:none}
+.res-zone{padding:20px 24px;border-left:2px solid var(--orange);margin-bottom:12px;background:var(--glass);border-radius:0 10px 10px 0}
+.res-zone-name{font-family:var(--display);font-weight:500;font-size:13px;color:var(--orange);margin-bottom:6px;letter-spacing:1px}
+.res-zone-desc{font-weight:300;font-size:13px;color:var(--tx3);line-height:1.6}
+
+/* ═══ CTA ═══ */
+.cta-section{text-align:center;padding:var(--section-pad) 44px;position:relative}
+.cta-section::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:200px;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent)}
+.cta-quote{font-family:var(--display);font-weight:200;font-size:20px;color:rgba(255,255,255,0.7);line-height:1.8;max-width:600px;margin:0 auto 48px;letter-spacing:1.5px}
+
+/* ═══ AVATAR ═══ */
+.cta-avatar{width:110px;height:110px;border-radius:50%;overflow:hidden;margin:0 auto 12px;position:relative;border:2px solid transparent;background-origin:border-box;background-clip:padding-box,border-box;background-image:linear-gradient(var(--bg),var(--bg)),linear-gradient(135deg,var(--cyan),var(--orange))}
+.cta-avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%;filter:saturate(0.15) brightness(0.7) contrast(1.15)}
+.cta-avatar-name{font-family:var(--display);font-weight:300;font-size:11px;color:var(--tx3);letter-spacing:3px;text-transform:uppercase;margin-bottom:32px}
+
+/* ═══ FOOTER ═══ */
+footer{padding:40px 44px;border-top:1px solid var(--border);text-align:center;position:relative;z-index:1}
+footer p{font-weight:300;font-size:11px;color:var(--tx4);letter-spacing:1px}
+footer a{color:var(--tx3);text-decoration:none;transition:color 0.3s}
+footer a:hover{color:var(--cyan)}
+
+/* ═══ DIVIDER — animated grow from center ═══ */
+.section-div{height:1px;margin:0 44px;position:relative;z-index:1;overflow:hidden}
+.section-div::after{content:'';position:absolute;top:0;left:50%;width:0;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),var(--orange),transparent);transition:width 1s cubic-bezier(0.22,1,0.36,1),left 1s cubic-bezier(0.22,1,0.36,1)}
+.section-div.visible::after{width:100%;left:0}
+
+/* ═══ WHO THIS IS FOR — accent blocks ═══ */
+.for-statements{display:flex;flex-direction:column;gap:20px;max-width:680px;margin:0 auto}
+.for-block{padding:20px 28px;border-left:2px solid var(--cyan);background:rgba(6,182,212,0.03);border-radius:0 10px 10px 0;text-align:left;transition:all 0.3s}
+.for-block:hover{background:rgba(6,182,212,0.06);border-left-color:var(--orange)}
+.for-block p{font-weight:300;font-size:16px;color:var(--tx2);line-height:1.8;margin:0}
+.for-block em{color:var(--cyan);font-style:normal;font-weight:400}
+.for-closing{margin-top:28px;font-weight:300;font-size:17px;color:var(--tx2);line-height:1.8}
+.for-closing em{color:var(--cyan);font-style:normal;font-weight:500}
+
+/* ═══ SCROLL ANIM — with stagger support ═══ */
+.fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.7s ease,transform 0.7s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+.fade-in .stagger-1{opacity:0;transform:translateY(12px);transition:opacity 0.6s ease 0.1s,transform 0.6s ease 0.1s}
+.fade-in .stagger-2{opacity:0;transform:translateY(12px);transition:opacity 0.6s ease 0.2s,transform 0.6s ease 0.2s}
+.fade-in .stagger-3{opacity:0;transform:translateY(12px);transition:opacity 0.6s ease 0.3s,transform 0.6s ease 0.3s}
+.fade-in .stagger-4{opacity:0;transform:translateY(12px);transition:opacity 0.6s ease 0.4s,transform 0.6s ease 0.4s}
+.fade-in.visible .stagger-1,
+.fade-in.visible .stagger-2,
+.fade-in.visible .stagger-3,
+.fade-in.visible .stagger-4{opacity:1;transform:translateY(0)}
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:768px){
+  section{padding:80px 24px}
+  nav{padding:16px 24px}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:24px}
+  .disc-grid{grid-template-columns:1fr}
+  .proof-grid{grid-template-columns:1fr}
+  .hero-ctas{flex-direction:column}
+  .btn-primary,.btn-ghost{text-align:center}
+  .nav-links{display:none}
+  .hero-title .line-label{letter-spacing:4px}
+  .for-statements{gap:14px}
+  .for-block{padding:16px 20px}
 }
 </style>
 </head>
 <body>
 
+<!-- FULL-PAGE MESH -->
 <div class="mesh-layer">
-  <div class="mesh-orb c1"></div>
-  <div class="mesh-orb o1"></div>
-  <div class="mesh-orb c2"></div>
+  <div class="mesh-orb cyan1"></div>
+  <div class="mesh-orb orange1"></div>
+  <div class="mesh-orb cyan2"></div>
+  <div class="mesh-orb orange2"></div>
 </div>
 <div class="grid-overlay"></div>
 
-<div class="splash">
-  <div class="splash-role">Tom Waldek — Human Leadership Architect</div>
-  <div class="splash-title">
-    <span class="label">The Human</span>
-    <span class="anchor">Origin</span>
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">THE HUMAN <span>ORIGIN</span></div>
+  <div class="nav-links">
+    <a href="#method">Method</a>
+    <a href="#process">Process</a>
+    <a href="#diagnostic">Diagnostic</a>
+    <a href="#contact">Contact</a>
   </div>
-  <div class="splash-hook">Every organisation runs on a script nobody wrote.</div>
-  <div class="splash-lang">
-    <a href="en/" class="lang-btn primary">English</a>
-    <a href="de/" class="lang-btn ghost">Deutsch</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-mesh"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content fade-in">
+    <div class="hero-role">Tom Waldek — Human Leadership Architect</div>
+    <h1 class="hero-title">
+      <span class="line-label">The Human</span>
+      <span class="line-anchor">Origin</span>
+    </h1>
+    <div class="hero-tagline">Six film disciplines meet neurobiology.</div>
+    <p class="hero-sub">You've restructured. Retrained. Replaced people. <strong>The pattern survived all of it.</strong> It goes deeper than strategy.</p>
+    <div class="hero-ctas">
+      <a href="#diagnostic" class="btn-primary">Take the pulse check</a>
+      <a href="#contact" class="btn-ghost">Start the conversation</a>
+    </div>
   </div>
-  <div class="splash-footer">Six film disciplines meet neurobiology.</div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-grid fade-in" id="stats-section">
+    <div>
+      <div class="stat-num"><span class="counter-val" data-target="617" data-prefix="€" data-suffix="B">€0B</span></div>
+      <div class="stat-desc">Stress-related cost across the EU annually</div>
+    </div>
+    <div>
+      <div class="stat-num"><span class="counter-val" data-target="56" data-suffix="%">0%</span></div>
+      <div class="stat-desc">Project failures traced to communication breakdown</div>
+    </div>
+    <div>
+      <div class="stat-num"><span class="counter-val" data-target="21" data-suffix="%">0%</span></div>
+      <div class="stat-desc">Higher profitability in engaged organisations</div>
+    </div>
+    <div>
+      <div class="stat-num"><span class="counter-val" data-target="74" data-suffix="%">0%</span></div>
+      <div class="stat-desc">Less stress in high-trust organisations</div>
+    </div>
+  </div>
 </div>
+
+<!-- THE PROBLEM -->
+<section id="problem" class="fade-in">
+  <div class="wrap">
+    <div class="section-label stagger-1">The Problem No One's Measuring</div>
+    <p class="sec-text stagger-2">It's never a people problem. It's one condition: an organisation running on <strong>survival architecture</strong> — the operating system it defaulted to under pressure and never switched off.</p>
+    <p class="sec-text stagger-3">You see it in the hire who leaves at month four. In the feedback no one gives honestly. In the conversation after the meeting that contradicts the meeting. The nervous system decides safety or threat before anyone in the room is conscious of it.</p>
+    <p class="sec-text stagger-3">That's the layer no restructure reaches. No software sees it. <strong>Because everyone accepts it.</strong></p>
+    <div class="quote-block stagger-4">
+      <div class="quote-text">"Most organisations perform the company they wish they were — not the one they actually are."</div>
+      <div class="quote-attr">Tom Waldek</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-div"></div>
+
+<!-- THE ORIGIN OF EVERY PATTERN -->
+<section id="origin" class="fade-in">
+  <div class="wrap">
+    <div class="section-label stagger-1">The Origin of Every Pattern</div>
+    <p class="sec-text stagger-2">Every pattern has a personal story: what stays unresolved doesn't stay personal. It migrates into leadership behaviour. <strong>Control replaces connection. Performance replaces presence.</strong> Not maliciously — automatically.</p>
+    <p class="sec-text stagger-3">The gap between who a leader is and who they perform becomes the operating system of the entire organisation. No one names it. Everyone feels it. Keltner's research confirms it: power without self-awareness erodes the very empathy that built it.</p>
+    <div class="quote-block stagger-4">
+      <div class="quote-text">"The organisation doesn't copy the leader's strategy. It copies the leader's nervous system."</div>
+      <div class="quote-attr">Tom Waldek</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-div"></div>
+
+<!-- THE OPPORTUNITY -->
+<section id="opportunity" class="fade-in">
+  <div class="wrap">
+    <div class="section-label">The Opportunity No One's Automating</div>
+    <p class="sec-text">That survival architecture is also hiding the most valuable thing in your organisation: <strong>the full capacity of your people.</strong> Everything no dashboard captures and no AI replicates — reading a room, making the real calls, being right. Not soft skill. The original technology.</p>
+    <div class="quote-block">
+      <div class="quote-text">"We play safe because once, it was the smartest thing we had. And we never stopped."</div>
+      <div class="quote-attr">Tom Waldek</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-div"></div>
+
+<!-- THE ORIGIN POWER -->
+<section id="power" class="fade-in">
+  <div class="wrap">
+    <div class="section-label stagger-1">The Origin Power No One Uses</div>
+    <p class="sec-text stagger-2">But that capacity doesn't return on command. Survival is repetition — same seat, same response, same performance — and the nervous system will keep choosing it until something breaks the loop. <strong>Creativity is that break.</strong> Not as art. As practice.</p>
+    <p class="sec-text stagger-3">Placing your phone somewhere different. Choosing a chair you've never sat in. Each micro-disruption tells the nervous system: safety doesn't require sameness. Practise it small and you build the capacity for what matters: the brave conversation, the honest decision, the moment you lead from yourself — not from a role.</p>
+    <p class="sec-text stagger-4"><strong>The Human Origin doesn't teach creativity. It removes what blocks it.</strong></p>
+  </div>
+</section>
+
+<!-- POSITIVE PROOF -->
+<section id="proof" class="fade-in">
+  <div class="wrap">
+    <div class="section-label">Positive Proof</div>
+    <div class="proof-grid" id="proof-section">
+      <div class="proof-card">
+        <div class="proof-num"><span class="proof-counter cyan" data-target="67" data-suffix="%">0%</span> less turnover</div>
+        <div class="proof-label">When employees feel genuinely heard</div>
+        <div class="proof-src">Gallup Workplace Research</div>
+      </div>
+      <div class="proof-card">
+        <div class="proof-num"><span class="proof-counter cyan" data-target="450" data-suffix="%">0%</span> better decisions</div>
+        <div class="proof-label">In psychologically safe teams</div>
+        <div class="proof-src">Google Project Aristotle</div>
+      </div>
+      <div class="proof-card">
+        <div class="proof-num"><span class="proof-counter orange" data-target="76" data-suffix="%">0%</span> more engagement</div>
+        <div class="proof-label">With authentic leadership presence</div>
+        <div class="proof-src">Psychological Capital Research</div>
+      </div>
+      <div class="proof-card">
+        <div class="proof-num"><span class="proof-counter orange" data-target="3" data-suffix="×">0×</span> innovation rate</div>
+        <div class="proof-label">In teams that surface conflict safely</div>
+        <div class="proof-src">Edmondson, Harvard</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-div"></div>
+
+<!-- TRUST CASCADE -->
+<section id="trust" class="fade-in">
+  <div class="wrap">
+    <div class="section-label">The Trust Cascade</div>
+    <p class="sec-text">Trust isn't a value. It's a sequence. One honest conversation surfaces what's real. What's real creates alignment. Alignment creates speed. Speed without trust is just noise. <strong>This is the architecture underneath performance.</strong></p>
+    <div class="quote-block">
+      <div class="quote-text">"The aura changes. Not the strategy. Not the structure. The room gets warmer, trust gets easier, and courage stops being an initiative and starts being the atmosphere."</div>
+      <div class="quote-attr">Tom Waldek</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-div"></div>
+
+<!-- WHO THIS IS FOR -->
+<section id="for" class="fade-in">
+  <div class="wrap">
+    <div class="section-label stagger-1">Who This Is For</div>
+    <div class="for-statements">
+      <div class="for-block stagger-2">
+        <p>Leaders shaped by a story that <em>no longer serves</em>.</p>
+      </div>
+      <div class="for-block stagger-3">
+        <p>Organisations running patterns they've <em>never examined</em>.</p>
+      </div>
+      <div class="for-block stagger-4">
+        <p>Teams performing a version of themselves that <em>everyone maintains and no one believes</em>.</p>
+      </div>
+    </div>
+    <p class="for-closing stagger-4">Not because something is broken. Because something is <em>ready</em>.</p>
+  </div>
+</section>
+
+<div class="section-div"></div>
+
+<!-- METHOD -->
+<section id="method" class="fade-in">
+  <div class="wrap">
+    <div class="section-label stagger-1">The Method</div>
+    <div class="sec-head stagger-2" style="font-size:clamp(24px,3.5vw,36px);font-weight:500">Six Film Disciplines. One Leadership Architecture.</div>
+    <div class="disc-grid stagger-3">
+      <div class="disc-card">
+        <div class="disc-num">01 — Writing</div>
+        <div class="disc-name">Shaping the narrative before anyone performs it.</div>
+        <div class="disc-desc">In screenwriting, character is built from personal story — not job description. This discipline surfaces the narratives everyone in the system is carrying beneath the performance.</div>
+      </div>
+      <div class="disc-card">
+        <div class="disc-num">02 — Directing</div>
+        <div class="disc-name">Creating conditions where truth shows up.</div>
+        <div class="disc-desc">A director never tells anyone what to feel. They adjust the room until what's real has no choice but to appear. Applied between meetings, where your culture actually lives.</div>
+      </div>
+      <div class="disc-card">
+        <div class="disc-num">03 — Acting</div>
+        <div class="disc-name">The difference between performed safety and real presence. The survival script made visible.</div>
+        <div class="disc-desc">An actor's real craft: accessing what's true inside and acting from there. Applied to entire teams — replacing the version pressure taught everyone to perform with something genuine.</div>
+      </div>
+      <div class="disc-card">
+        <div class="disc-num">04 — Editing</div>
+        <div class="disc-name">Cutting what no longer serves the story. Strengthening what carries it.</div>
+        <div class="disc-desc">Every film has a kill-your-darlings moment. Organisations do too: the rituals, hierarchies, and unspoken rules that exist to keep people hiding — not to serve the work.</div>
+      </div>
+      <div class="disc-card">
+        <div class="disc-num">05 — Producing</div>
+        <div class="disc-name">Turning creative vision into operational reality under real constraints.</div>
+        <div class="disc-desc">On set, a producer builds the backbone that lets everyone do their best creative work — support, communication, protection. The structure that holds people so they can stop holding it together alone.</div>
+      </div>
+      <div class="disc-card">
+        <div class="disc-num">06 — Intimacy Coordination</div>
+        <div class="disc-name">Creating conditions where vulnerability is possible without exposure. The reason trust forms.</div>
+        <div class="disc-desc">Film's newest and most revolutionary discipline. The architecture where anyone — leaders, teams, partners — can say 'I don't know' or 'I disagree' without it costing them safety or belonging.</div>
+      </div>
+    </div>
+    <p class="sec-text stagger-4" style="margin-top:36px">A director doesn't tell actors what to feel. A director creates conditions where truth shows up. The Human Origin works the same way — regulate the nervous system, structural and personal, surface the survival narrative hiding behind reputation and performance, and watch what your teams are actually capable of.</p>
+  </div>
+</section>
+
+<div class="section-div"></div>
+
+<!-- PROCESS -->
+<section id="process" class="fade-in">
+  <div class="wrap">
+    <div class="section-label">How The Work Happens</div>
+    <div class="phase-list">
+      <div class="phase">
+        <div class="phase-num">0</div>
+        <div>
+          <div class="phase-name">Entry Conversation</div>
+          <div class="phase-desc">A conversation at eye level. No pitch. Just one question — the right one.</div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">1</div>
+        <div>
+          <div class="phase-name">Trust Architecture Diagnostic</div>
+          <div class="phase-desc">Five observation contexts. One-on-one conversations. A map of where survival patterns cost the most.</div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">2</div>
+        <div>
+          <div class="phase-name">Intervention</div>
+          <div class="phase-desc">Workshops, one-on-one work, live intervention during real meetings. Creativity as the mechanism of regulation — micro-disruptions that break survival patterns. What follows isn't insight — it's a new foundation. And with it: the ability to act.</div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">3</div>
+        <div>
+          <div class="phase-name">Transformation Cycle</div>
+          <div class="phase-desc">Deep structural and personal rewiring. The survival script is replaced with a story that comes from you — not from the script.</div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">4</div>
+        <div>
+          <div class="phase-name">Return to Origin</div>
+          <div class="phase-desc">3–9 months after completion. Has the shift held? Honest assessment. Course correction. Included.</div>
+        </div>
+      </div>
+    </div>
+    <div class="quote-block" style="margin-top:48px">
+      <div class="quote-text">"Blame or weakness? No. Just never the space to dare something brave and real. Create it, and people flourish. The work follows."</div>
+      <div class="quote-attr">Tom Waldek</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-div"></div>
+
+<!-- DIAGNOSTIC -->
+<section id="diagnostic" class="fade-in">
+  <div class="wrap">
+    <div class="section-label">Your Organisation — A Quick Pulse Check</div>
+    <div class="diag-container">
+      <div class="diag-intro">
+        <p><span class="count">9 questions. Under 3 minutes.</span></p>
+        <p style="margin-top:8px">No data stored. The result is yours alone — an honest mirror of what might be running underneath your organisation's surface.</p>
+      </div>
+      <div id="diag-container">
+        <div id="prog"></div>
+        <div id="qarea"></div>
+      </div>
+      <div id="results">
+        <div class="sec-head" style="text-align:center;font-size:24px;margin-bottom:24px">Your Pattern Map</div>
+        <div id="res-zones"></div>
+        <div style="text-align:center;margin-top:40px">
+          <a href="#contact" class="btn-primary">Start the conversation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-div"></div>
+
+<!-- CTA -->
+<section id="contact" class="cta-section fade-in">
+  <div class="section-label">The Next Step</div>
+  <div class="cta-quote">"Come together. Say what's true. Have the courage to create a future your team actually wants to be part of."</div>
+  <p class="sec-text" style="max-width:560px;margin:0 auto 16px;text-align:center">Where survival patterns are running your organisation.<br>Three weeks to surface the conversations your team isn't having.</p>
+  <p style="font-family:var(--display);font-weight:400;font-size:13px;color:var(--cyan);letter-spacing:2px;margin-bottom:40px">A Trust Architecture Diagnostic.</p>
+  <div class="cta-avatar">
+    <img src="../TomWaldek_Actor_01.jpg" alt="Tom Waldek">
+  </div>
+  <div class="cta-avatar-name">Tom Waldek</div>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+    <a href="mailto:tom@thehumanorigin.com?subject=Trust%20Architecture%20Diagnostic" class="btn-primary">Start the conversation</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 The Human Origin — Tom Waldek</p>
+  <p style="margin-top:8px">Research: Porges (Polyvagal Theory) · Barsade (Emotional Contagion) · Keltner (Power Paradox) · Edmondson (Psychological Safety) · Brown (Vulnerability & Trust)</p>
+</footer>
+
+<!-- ═══ SCRIPTS ═══ -->
+<script>
+// ── COUNTING ANIMATION ──
+function animateCounters(){
+  const counters=document.querySelectorAll('.counter-val');
+  counters.forEach(el=>{
+    const target=parseInt(el.dataset.target);
+    const prefix=el.dataset.prefix||'';
+    const suffix=el.dataset.suffix||'';
+    const duration=2000;
+    const startTime=performance.now();
+    function update(now){
+      const elapsed=now-startTime;
+      const progress=Math.min(elapsed/duration,1);
+      // ease-out cubic
+      const eased=1-Math.pow(1-progress,3);
+      const current=Math.round(target*eased);
+      el.textContent=prefix+current+suffix;
+      if(progress<1)requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  });
+}
+
+// ── SCROLL OBSERVER — counters fire once ──
+let countersFired=false;
+const statsObs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting&&!countersFired){
+      countersFired=true;
+      animateCounters();
+    }
+  });
+},{threshold:0.3});
+const statsEl=document.getElementById('stats-section');
+if(statsEl)statsObs.observe(statsEl);
+
+// ── PROOF COUNTING ANIMATION ──
+function animateProofCounters(){
+  const counters=document.querySelectorAll('.proof-counter');
+  counters.forEach(el=>{
+    const target=parseInt(el.dataset.target);
+    const suffix=el.dataset.suffix||'';
+    const duration=2000;
+    const startTime=performance.now();
+    function update(now){
+      const elapsed=now-startTime;
+      const progress=Math.min(elapsed/duration,1);
+      const eased=1-Math.pow(1-progress,3);
+      const current=Math.round(target*eased);
+      el.textContent=current+suffix;
+      if(progress<1)requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  });
+}
+let proofFired=false;
+const proofObs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting&&!proofFired){
+      proofFired=true;
+      animateProofCounters();
+    }
+  });
+},{threshold:0.3});
+const proofEl=document.getElementById('proof-section');
+if(proofEl)proofObs.observe(proofEl);
+
+// ── FADE IN OBSERVER ──
+const fadeObs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting)e.target.classList.add('visible');
+  });
+},{threshold:0.1});
+document.querySelectorAll('.fade-in,.section-div').forEach(el=>fadeObs.observe(el));
+
+// ── DIAGNOSTIC ──
+var cur=0,ans=new Array(9).fill(null);
+var Qs=[
+{z:"survival",t:"When was the last time someone openly contradicted the most senior person in the room?",o:["This week","This month","Months ago","I can't remember"],s:[0,1,2,3]},
+{z:"trust",t:"How would your newest employee describe the gap between what they were promised and what they found?",o:["No gap","Small gap","Clear gap","Wide gap"],s:[0,1,2,3]},
+{z:"external",t:"If you asked your longest-standing client what it feels like to work with your company — would their answer match your website?",o:["Completely","Mostly","Partially","Not really"],s:[0,1,2,3]},
+{z:"absence",t:"When you're away for a week — does your team's performance improve, stay the same, or decline?",o:["Improves","Stays the same","Slight decline","Clear decline"],s:[2,1,2,3]},
+{z:"attachment",t:"When someone on your team needs support — does that energise you, or drain you?",o:["Energises me","Neutral","Slightly drains me","Significantly drains me"],s:[0,1,2,3]},
+{z:"peers",t:"How often do your leadership peers genuinely challenge each other's ideas in meetings?",o:["Regularly","Sometimes","Rarely","Never"],s:[0,1,2,3]},
+{z:"direct",t:"When was the last time a direct report told you something you didn't want to hear?",o:["This week","This month","Months ago","I can't remember"],s:[0,1,2,3]},
+{z:"narrative",t:"If someone recorded a typical Monday morning in your company and played it back — would you recognise the culture you describe to candidates?",o:["Yes","Mostly","Partially","No"],s:[0,1,2,3]},
+{z:"origin",t:"How much of your leadership style is a conscious choice — and how much is a pattern you've never examined?",o:["Fully conscious","Mostly conscious","More pattern than choice","I've never thought about it"],s:[0,1,2,3]}
+];
+var zoneNames={survival:"Survival Mode",trust:"Trust Gap",external:"External Perception",absence:"Dependency Pattern",attachment:"Attachment Pattern",peers:"Peer Dynamics",direct:"Direct Feedback",narrative:"Narrative Gap",origin:"Origin Pattern"};
+var zoneDescs={
+survival:"When contradiction disappears, the organisation is running on compliance, not trust.",
+trust:"The distance between promise and reality is the distance employees travel toward disengagement.",
+external:"How clients experience you reveals what your internal culture actually produces.",
+absence:"What happens when you leave reveals what you've built — or what depends on you.",
+attachment:"Whether supporting others energises or drains you reveals the attachment pattern underneath your leadership.",
+peers:"Political caution between senior leaders is survival architecture at the executive level.",
+direct:"When problems surface tells you how much psychological safety actually exists.",
+narrative:"The gap between the story told and the story lived is where trust is lost.",
+origin:"Energy spent managing perception is energy missing where real leadership is needed."
+};
+function bP(){var h="";for(var i=0;i<Qs.length;i++){var c="dd";if(i<cur)c+=" done";if(i===cur)c+=" cur";h+='<div class="'+c+'"></div>'}document.getElementById("prog").innerHTML=h}
+function sQ(){var a=document.getElementById("qarea"),q=Qs[cur];var h='<p class="qnum">Question '+(cur+1)+" of "+Qs.length+"</p>";h+='<p class="qtx">'+q.t+"</p>";h+='<div class="qops">';for(var i=0;i<q.o.length;i++){var sc=ans[cur]===i?' sel':'';h+='<div class="qopt'+sc+'" onclick="pick('+i+')">'+q.o[i]+"</div>"}h+="</div>";a.innerHTML=h;bP()}
+function pick(i){ans[cur]=i;if(cur<Qs.length-1){cur++;setTimeout(sQ,300)}else{showR()}}
+function showR(){document.getElementById("diag-container").style.display="none";var r=document.getElementById("results");r.style.display="block";var zones={};for(var i=0;i<Qs.length;i++){if(ans[i]!==null&&Qs[i].s[ans[i]]>=2){var z=Qs[i].z;if(!zones[z])zones[z]=0;zones[z]+=Qs[i].s[ans[i]]}}var zk=Object.keys(zones).sort(function(a,b){return zones[b]-zones[a]});var h="";if(zk.length===0){h='<p class="sec-text" style="margin-top:20px;text-align:center">Strong signals. Your organisation shows few signs of active survival patterns. That\'s rare — and valuable.</p>'}else{for(var j=0;j<Math.min(zk.length,4);j++){h+='<div class="res-zone"><div class="res-zone-name">'+(zoneNames[zk[j]]||zk[j])+'</div><div class="res-zone-desc">'+(zoneDescs[zk[j]]||"")+"</div></div>"}}document.getElementById("res-zones").innerHTML=h}
+sQ();
+</script>
 
 </body>
 </html>
