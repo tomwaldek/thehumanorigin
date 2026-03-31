@@ -326,7 +326,7 @@ footer a:hover{color:var(--cyan)}
       <span class="line-anchor">Origin</span>
     </h1>
     <div class="hero-tagline">Six film disciplines meet neurobiology.</div>
-    <p class="hero-sub">You've restructured. Retrained. Replaced people. <strong>The pattern survived all of it.</strong> It goes deeper than strategy.</p>
+    <p class="hero-sub">Where people stop performing — and build the togetherness that makes organisations capable of a future.</p>
     <div class="hero-ctas">
       <a href="#diagnostic" class="btn-primary">Take the pulse check</a>
       <a href="#contact" class="btn-ghost">Start the conversation</a>
@@ -732,10 +732,10 @@ var Qs=[
 {z:"external",t:"If you asked your longest-standing client what it feels like to work with your company — would their answer match your website?",o:["Completely","Mostly","Partially","Not really"],s:[0,1,2,3]},
 {z:"absence",t:"When you're away for a week — does your team's performance improve, stay the same, or decline?",o:["Improves","Stays the same","Slight decline","Clear decline"],s:[2,1,2,3]},
 {z:"attachment",t:"When someone on your team needs support — does that energise you, or drain you?",o:["Energises me","Neutral","Slightly drains me","Significantly drains me"],s:[0,1,2,3]},
-{z:"peers",t:"How often do your leadership peers genuinely challenge each other's ideas in meetings?",o:["Regularly","Sometimes","Rarely","Never"],s:[0,1,2,3]},
-{z:"direct",t:"When was the last time a direct report told you something you didn't want to hear?",o:["This week","This month","Months ago","I can't remember"],s:[0,1,2,3]},
-{z:"narrative",t:"If someone recorded a typical Monday morning in your company and played it back — would you recognise the culture you describe to candidates?",o:["Yes","Mostly","Partially","No"],s:[0,1,2,3]},
-{z:"origin",t:"How much of your leadership style is a conscious choice — and how much is a pattern you've never examined?",o:["Fully conscious","Mostly conscious","More pattern than choice","I've never thought about it"],s:[0,1,2,3]}
+{z:"peers",t:"Would you describe the relationship between your leadership peers as genuinely cooperative — or politically careful?",o:["Genuinely cooperative","Mostly cooperative","More careful than honest","Political"],s:[0,1,2,3]},
+{z:"direct",t:"Do your people bring you problems early — or only when they can no longer hide them?",o:["Early and openly","Mostly early","Often late","Only when they have no choice"],s:[0,1,2,3]},
+{z:"narrative",t:"If you read your company's careers page aloud in a team meeting — would people recognise the place being described?",o:["Yes, completely","Mostly","They'd smile politely","They'd look away"],s:[0,1,2,3]},
+{z:"origin",t:"How much of your leadership energy goes into managing how you're perceived — versus actually leading?",o:["Almost none — I lead as myself","Some — I'm aware of it","A lot — it costs real energy","Most of it, honestly"],s:[0,1,2,3]}
 ];
 var zoneNames={survival:"Survival Mode",trust:"Trust Gap",external:"External Perception",absence:"Dependency Pattern",attachment:"Attachment Pattern",peers:"Peer Dynamics",direct:"Direct Feedback",narrative:"Narrative Gap",origin:"Origin Pattern"};
 var zoneDescs={
@@ -744,10 +744,10 @@ trust:"The distance between promise and reality is the distance employees travel
 external:"How clients experience you reveals what your internal culture actually produces.",
 absence:"What happens when you leave reveals what you've built — or what depends on you.",
 attachment:"Whether supporting others energises or drains you reveals the attachment pattern underneath your leadership.",
-peers:"Political caution between senior leaders is survival architecture at the executive level.",
-direct:"When problems surface tells you how much psychological safety actually exists.",
-narrative:"The gap between the story told and the story lived is where trust is lost.",
-origin:"Energy spent managing perception is energy missing where real leadership is needed."
+peers:"Political caution between leadership peers is survival architecture at the executive level.",
+direct:"When problems surface reveals how much psychological safety actually exists.",
+narrative:"The gap between the story told and the story lived is where trust erodes.",
+origin:"Energy flowing into perception management is energy missing where real leadership is needed."
 };
 function bP(){var h="";for(var i=0;i<Qs.length;i++){var c="dd";if(i<cur)c+=" done";if(i===cur)c+=" cur";h+='<div class="'+c+'"></div>'}document.getElementById("prog").innerHTML=h}
 function sQ(){var a=document.getElementById("qarea"),q=Qs[cur];var h='<p class="qnum">Question '+(cur+1)+" of "+Qs.length+"</p>";h+='<p class="qtx">'+q.t+"</p>";h+='<div class="qops">';for(var i=0;i<q.o.length;i++){var sc=ans[cur]===i?' sel':'';h+='<div class="qopt'+sc+'" onclick="pick('+i+')">'+q.o[i]+"</div>"}h+="</div>";a.innerHTML=h;bP()}
