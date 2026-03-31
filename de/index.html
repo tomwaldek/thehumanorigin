@@ -326,7 +326,7 @@ footer a:hover{color:var(--cyan)}
       <span class="line-anchor">Origin</span>
     </h1>
     <div class="hero-tagline">Wenn sechs Filmdisziplinen auf Neurobiologie treffen.</div>
-    <p class="hero-sub">Neue Struktur. Neue Leute. Neue Strategie. <strong>Dennoch hat das Muster alles überlebt.</strong> Denn es sitzt tiefer.</p>
+    <p class="hero-sub">Wo Menschen aufhören zu performen — und das Miteinander schaffen, das Unternehmen zukunftsfähig macht.</p>
     <div class="hero-ctas">
       <a href="#diagnostic" class="btn-primary">Zum Pulscheck</a>
       <a href="#contact" class="btn-ghost">Gespräch starten</a>
@@ -734,10 +734,10 @@ var Qs=[
 {z:"attachment",t:"Wenn jemand in Ihrem Team Unterstützung braucht — gibt Ihnen das Energie, oder entzieht es Ihnen welche?",o:["Gibt mir Energie","Neutral","Entzieht mir etwas Energie","Entzieht mir deutlich Energie"],s:[0,1,2,3]},
 {z:"peers",t:"Würden Sie die Beziehung zwischen Ihren Führungskollegen als kooperativ beschreiben — oder als politisch vorsichtig?",o:["Wirklich kooperativ","Überwiegend kooperativ","Eher vorsichtig als ehrlich","Politisch"],s:[0,1,2,3]},
 {z:"direct",t:"Bringen Ihre Leute Ihnen Probleme frühzeitig — oder erst, wenn sie sie nicht mehr verbergen können?",o:["Früh und offen","Meistens früh","Oft spät","Nur wenn es nicht anders geht"],s:[0,1,2,3]},
-{z:"narrative1",t:"Wenn Sie die Karriereseite Ihres Unternehmens laut in einem Teammeeting vorlesen würden — würden die Menschen den beschriebenen Ort wiedererkennen?",o:["Ja, vollständig","Größtenteils","Sie würden höflich lächeln","Sie würden wegschauen"],s:[0,1,2,3]},
+{z:"narrative",t:"Wenn Sie die Karriereseite Ihres Unternehmens laut in einem Teammeeting vorlesen würden — würden die Menschen den beschriebenen Ort wiedererkennen?",o:["Ja, vollständig","Größtenteils","Sie würden höflich lächeln","Sie würden wegschauen"],s:[0,1,2,3]},
 {z:"origin",t:"Wie viel Ihrer Führungsenergie fließt in das Management, wie Sie wahrgenommen werden — versus tatsächlich zu führen?",o:["Fast keine — ich führe als ich selbst","Etwas — ich bin mir dessen bewusst","Viel — es kostet echte Energie","Das meiste, ehrlich gesagt"],s:[0,1,2,3]}
 ];
-var zoneNames={survival:"Überlebensmodus",trust:"Vertrauensarchitektur",external:"Außenwahrnehmung",absence:"Abhängigkeitsmuster",attachment:"Beziehungsmuster",peers:"Führungsbeziehungen",direct:"Psychologische Sicherheit",narrative1:"Narrativ-Lücke",origin:"Ursprungsmuster"};
+var zoneNames={survival:"Überlebensmodus",trust:"Vertrauensarchitektur",external:"Außenwahrnehmung",absence:"Abhängigkeitsmuster",attachment:"Beziehungsmuster",peers:"Führungsbeziehungen",direct:"Psychologische Sicherheit",narrative:"Narrativ-Lücke",origin:"Ursprungsmuster"};
 var zoneDescs={
 survival:"Das Überlebensmuster ist aktiv — Widerspruch ist im System nicht sicher genug, um zu erscheinen.",
 trust:"Die Lücke zwischen Versprechen und Realität zeigt, wo die Überlebensarchitektur das Erleben formt.",
@@ -746,7 +746,7 @@ absence:"Ob die Leistung steigt oder sinkt ohne Sie — beide Richtungen verrate
 attachment:"Das Beziehungsmuster liegt am tiefsten. Die Bedürfnisse anderer registrieren sich als Belastung statt als Verbindung — ein Signal dafür, dass Führungsenergie in eine ältere Geschichte fließt, nicht in das Team, das vor Ihnen steht.",
 peers:"Politische Vorsicht zwischen Führungskräften ist Überlebensarchitektur auf Leitungsebene.",
 direct:"Wann Probleme auftauchen, zeigt, wie viel psychologische Sicherheit tatsächlich existiert.",
-narrative1:"Die Lücke zwischen der erzählten und der erlebten Geschichte ist die Lücke, in der Vertrauen verloren geht.",
+narrative:"Die Lücke zwischen der erzählten und der erlebten Geschichte ist die Lücke, in der Vertrauen verloren geht.",
 origin:"Energie, die in Wahrnehmungsmanagement fließt, fehlt dort, wo echte Führung gebraucht wird."
 };
 function bP(){var h="";for(var i=0;i<Qs.length;i++){var c="dd";if(i<cur)c+=" done";if(i===cur)c+=" cur";h+='<div class="'+c+'"></div>'}document.getElementById("prog").innerHTML=h}
