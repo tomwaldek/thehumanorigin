@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Human Origin — Tom Waldek | Human Leadership Architect</title>
-<meta name="description" content="Wenn sechs Filmdisziplinen auf Neurobiologie treffen. Die Methode, die Überlebensmuster in Ihrem Unternehmen sichtbar macht — und die Kapazität darunter freisetzt.">
+<meta name="description" content="Wenn sechs Filmdisziplinen auf Neurobiologie treffen. Die Methodik, die Überlebensmuster sichtbar macht — und die Kapazität darunter freisetzt.">
 <meta name="author" content="Tom Waldek">
-<link rel="alternate" hreflang="de" href="../de/">
+<link rel="alternate" hreflang="de" href="./">
 <link rel="alternate" hreflang="en" href="../en/">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@100;200;300;400;500;600&display=swap');
@@ -211,26 +211,56 @@ section{position:relative;z-index:1;padding:var(--section-pad) 44px}
 .phase-name{font-family:var(--display);font-weight:500;font-size:14px;color:var(--white);margin-bottom:6px;letter-spacing:0.5px}
 .phase-desc{font-weight:300;font-size:13px;color:var(--tx3);line-height:1.7}
 
-/* ═══ DIAGNOSTIC ═══ */
+
+/* ═══ DIAGNOSTIC ENHANCED ═══ */
 .diag-container{max-width:640px;margin:0 auto}
-.diag-intro{text-align:center;margin-bottom:40px}
+.diag-intro{text-align:center;margin-bottom:32px}
 .diag-intro p{font-weight:300;font-size:14px;color:var(--tx3)}
 .diag-intro .count{font-family:var(--display);font-weight:500;color:var(--cyan)}
-#prog{display:flex;gap:6px;justify-content:center;margin-bottom:32px}
-.dd{width:28px;height:3px;border-radius:2px;background:rgba(255,255,255,0.06);transition:all 0.4s}
-.dd.done{background:var(--cyan)}
-.dd.cur{background:var(--orange);box-shadow:0 0 10px rgba(249,115,22,0.4)}
-.qnum{font-family:var(--display);font-weight:300;font-size:11px;color:var(--tx4);letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;text-align:center}
-.qtx{font-weight:300;font-size:17px;color:var(--white);text-align:center;line-height:1.7;margin-bottom:32px;min-height:60px}
-.qops{display:flex;flex-direction:column;gap:8px}
-.qopt{padding:14px 20px;border:1px solid var(--border);border-radius:10px;background:var(--glass);font-weight:300;font-size:13px;color:var(--tx2);cursor:pointer;transition:all 0.25s;text-align:center;backdrop-filter:blur(8px)}
-.qopt:hover{border-color:var(--border2);background:var(--glass2);color:var(--white)}
-.qopt.sel{border-color:var(--cyan);background:rgba(6,182,212,0.08);color:var(--white)}
-#results{display:none}
-.res-zone{padding:20px 24px;border-left:2px solid var(--orange);margin-bottom:12px;background:var(--glass);border-radius:0 10px 10px 0}
-.res-zone-name{font-family:var(--display);font-weight:500;font-size:13px;color:var(--orange);margin-bottom:6px;letter-spacing:1px}
-.res-zone-desc{font-weight:300;font-size:13px;color:var(--tx3);line-height:1.6}
-
+.d-prog{display:flex;gap:4px;margin-bottom:40px}
+.d-dot{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,0.06);transition:background 0.4s ease}
+.d-dot.done{background:var(--cyan)}.d-dot.cur{background:var(--orange)}
+.d-card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.d-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.d-num{font-family:var(--display);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--tx4);font-weight:300}
+.d-disc{font-family:var(--display);display:inline-block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);border:1px solid rgba(249,115,22,0.25);border-radius:4px;padding:4px 10px;font-weight:400}
+.d-text{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--white);line-height:1.5;margin-bottom:24px}
+.d-neuro{background:rgba(6,182,212,0.04);border:1px solid rgba(6,182,212,0.12);border-radius:8px;padding:14px 16px;margin-bottom:28px;max-height:500px;overflow:hidden;transition:max-height 0.4s ease,opacity 0.4s ease,margin 0.4s ease,padding 0.4s ease}
+.d-neuro.hidden{max-height:0;opacity:0;margin-bottom:0;padding:0 16px;border-color:transparent}
+.d-neuro-icon{font-family:var(--display);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:6px;font-weight:500}
+.d-neuro-text{font-size:13px;line-height:1.6;color:rgba(255,255,255,0.45)}
+.d-neuro-ref{font-size:11px;color:var(--tx4);margin-top:8px;font-style:italic}
+.d-opt{padding:14px 18px;margin-bottom:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:14px;color:var(--tx2);transition:all 0.2s ease;font-family:'Inter',sans-serif;width:100%;text-align:left}
+.d-opt:hover{border-color:rgba(255,255,255,0.1);background:rgba(255,255,255,0.04)}
+.d-opt.sel{border-color:var(--cyan);background:rgba(6,182,212,0.08);color:var(--white)}
+.d-nav{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+.d-btn{display:inline-block;padding:14px 32px;border-radius:8px;border:none;font-size:14px;font-weight:500;letter-spacing:1px;cursor:pointer;transition:all 0.3s ease;font-family:'Inter',sans-serif;text-decoration:none}
+.d-btn-cyan{background:linear-gradient(135deg,var(--cyan),var(--cyan2));color:#080d12}
+.d-btn-ghost{background:transparent;border:1px solid var(--border);color:var(--tx3)}
+.d-btn.dis{opacity:0.3;pointer-events:none}
+.d-toggle{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:24px}
+.d-sw{width:40px;height:22px;border-radius:11px;cursor:pointer;position:relative;transition:background 0.3s ease}
+.d-sw.on{background:var(--cyan)}.d-sw.off{background:rgba(255,255,255,0.06)}
+.d-knob{width:16px;height:16px;border-radius:50%;background:#fff;position:absolute;top:3px;transition:left 0.3s ease}
+.d-sw.on .d-knob{left:21px}.d-sw.off .d-knob{left:3px}
+.d-info{margin:24px auto;max-width:480px;padding:20px 24px;background:rgba(255,255,255,0.03);border-radius:12px;border:1px solid var(--border);text-align:left}
+.d-info-title{font-family:var(--display);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:12px;font-weight:400}
+.d-info-body{font-size:13px;line-height:1.8;color:var(--tx3)}
+.d-phase{display:none}.d-phase.active{display:block;animation:dFadeUp 0.4s ease}
+@keyframes dFadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.score-circle{width:120px;height:120px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 32px}
+.score-num{font-family:var(--serif);font-size:36px;font-weight:400;color:var(--white)}
+.score-lbl{font-family:var(--display);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--tx3);margin-top:4px;font-weight:300}
+.mirror-label{font-family:var(--display);font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;font-weight:400}
+.mirror-text{font-size:15px;line-height:1.7;color:var(--white)}
+.z-card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:24px 20px;margin-bottom:16px;opacity:0;transform:translateY(12px);transition:all 0.5s ease}
+.z-card.show{opacity:1;transform:translateY(0)}
+.z-head{display:flex;justify-content:space-between;align-items:center}
+.z-name{font-size:14px;font-weight:600}.z-pct{font-size:13px;color:var(--tx3);font-family:var(--serif)}
+.z-bar{height:4px;border-radius:2px;background:rgba(255,255,255,0.06);margin-top:10px;margin-bottom:8px;overflow:hidden}
+.z-fill{height:100%;border-radius:2px;width:0;transition:width 1.2s cubic-bezier(0.23,1,0.32,1)}
+.z-desc{font-size:13px;line-height:1.6;color:var(--tx3);margin-top:8px}
+.z-disc{font-size:12px;color:var(--orange);margin-top:8px;font-style:italic}
 /* ═══ CTA ═══ */
 .cta-section{text-align:center;padding:var(--section-pad) 44px;position:relative}
 .cta-section::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:200px;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent)}
@@ -326,7 +356,7 @@ footer a:hover{color:var(--cyan)}
       <span class="line-anchor">Origin</span>
     </h1>
     <div class="hero-tagline">Wenn sechs Filmdisziplinen auf Neurobiologie treffen.</div>
-    <p class="hero-sub">Wo Menschen aufhören zu performen — und das Miteinander schaffen, das Unternehmen zukunftsfähig macht.</p>
+    <p class="hero-sub">Wo Menschen sich wieder trauen, echt zu sein — und Unternehmen zukunftsfähig machen.</p>
     <div class="hero-ctas">
       <a href="#diagnostic" class="btn-primary">Zum Pulscheck</a>
       <a href="#contact" class="btn-ghost">Gespräch starten</a>
@@ -338,7 +368,7 @@ footer a:hover{color:var(--cyan)}
 <div class="stats">
   <div class="stats-grid fade-in" id="stats-section">
     <div>
-      <div class="stat-num"><span class="counter-val" data-target="617" data-prefix="€" data-suffix="Mrd">€0Mrd</span></div>
+      <div class="stat-num"><span class="counter-val" data-target="617" data-prefix="€" data-suffix="Mrd">€0B</span></div>
       <div class="stat-desc">Stressbedingte Kosten in der EU jährlich</div>
     </div>
     <div>
@@ -364,7 +394,7 @@ footer a:hover{color:var(--cyan)}
     <p class="sec-text stagger-3">Man sieht es an der Stelle, die nach vier Monaten wieder frei ist. Am Feedback, das niemand ehrlich gibt. Am Gespräch nach dem Meeting, das dem Meeting widerspricht. Das Nervensystem entscheidet Sicherheit oder Bedrohung, bevor irgendjemand im Raum es bewusst wahrnimmt.</p>
     <p class="sec-text stagger-3">Das ist die Schicht, die keine Umstrukturierung erreicht. Keine Software sieht sie. <strong>Weil man es hinnimmt.</strong></p>
     <div class="quote-block stagger-4">
-      <div class="quote-text">„Die meisten Unternehmen performen das Unternehmen, das sie gerne wären — nicht das, das sie tatsächlich sind."</div>
+      <div class="quote-text">„Die meisten Unternehmen performen das Unternehmen, das sie gerne wären — nicht das, das sie tatsächlich sind.“</div>
       <div class="quote-attr">Tom Waldek</div>
     </div>
   </div>
@@ -377,9 +407,9 @@ footer a:hover{color:var(--cyan)}
   <div class="wrap">
     <div class="section-label stagger-1">Der Ursprung jedes Musters</div>
     <p class="sec-text stagger-2">Jedes Muster hat eine persönliche Geschichte: Was ungelöst bleibt, bleibt nicht privat — es wird zum Führungsverhalten. <strong>Kontrolle statt Verbindung. Performance statt Präsenz.</strong> Nicht böswillig — automatisch.</p>
-    <p class="sec-text stagger-3">Die Kluft zwischen dem Menschen und der Rolle, die gespielt wird — die gesamte Organisation nutzt sie als tägliches Betriebssystem. Keiner benennt es. Jeder spürt es. Keltners Forschung bestätigt: Macht ohne Selbstwahrnehmung zerstört genau die Empathie, die sie aufgebaut hat.</p>
+    <p class="sec-text stagger-3">The gap between who a leader is and who they perform becomes the operating system of the entire organisation. No one names it. Everyone feels it. Keltner's research confirms it: power without self-awareness erodes the very empathy that built it.</p>
     <div class="quote-block stagger-4">
-      <div class="quote-text">„Die Organisation kopiert nicht die Strategie — sie kopiert das Nervensystem der Führung."</div>
+      <div class="quote-text">„Die Organisation kopiert nicht die Strategie — sie kopiert das Nervensystem der Führung.“</div>
       <div class="quote-attr">Tom Waldek</div>
     </div>
   </div>
@@ -393,7 +423,7 @@ footer a:hover{color:var(--cyan)}
     <div class="section-label">Die Chance, die niemand automatisiert</div>
     <p class="sec-text">Diese Überlebensarchitektur verbirgt auch das Wertvollste in Ihrem Unternehmen: <strong>die volle Kapazität Ihrer Menschen.</strong> Alles, was kein Dashboard erfasst und keine KI repliziert — einen Raum lesen, echte Entscheidungen treffen, richtig liegen. Kein Soft Skill. Die ursprüngliche Technologie.</p>
     <div class="quote-block">
-      <div class="quote-text">„Wir spielen auf Sicherheit, weil es einmal das Klügste war, was wir hatten. Und wir haben nie damit aufgehört."</div>
+      <div class="quote-text">"We play safe because once, it was the smartest thing we had. And we never stopped."</div>
       <div class="quote-attr">Tom Waldek</div>
     </div>
   </div>
@@ -405,8 +435,8 @@ footer a:hover{color:var(--cyan)}
 <section id="power" class="fade-in">
   <div class="wrap">
     <div class="section-label stagger-1">Die Ursprungskraft, die niemand nutzt</div>
-    <p class="sec-text stagger-2">Aber diese Fähigkeit kehrt nicht auf Befehl zurück. Überleben ist Wiederholung — derselbe Platz, dieselbe Reaktion, dieselbe Performance — und das Nervensystem wird sie immer wieder wählen, bis etwas die Schleife durchbricht. <strong>Kreativität ist dieser Bruch.</strong> Nicht als Kunst. Als Praxis.</p>
-    <p class="sec-text stagger-3">Das Handy an einem anderen Ort platzieren. Einen Stuhl wählen, auf dem man noch nie saß. Jede Mikrostörung signalisiert dem Nervensystem: <strong>Sicherheit braucht keine Gleichförmigkeit.</strong></p>
+    <p class="sec-text stagger-2">Aber diese Fähigkeit kehrt nicht auf Befehl zurück. Überleben ist Wiederholung — derselbe Platz, dieselbe Reaktion, dieselbe Performance — and the nervous system will keep choosing it until something breaks the loop. <strong>Kreativität ist dieser Bruch.</strong> Not as art. As practice.</p>
+    <p class="sec-text stagger-3">Das Handy an einem anderen Ort platzieren. Einen Stuhl wählen, auf dem du noch nie gesessen hast. Jede Mikro-Störung sagt dem Nervensystem: <strong>Sicherheit braucht keine Gleichförmigkeit.</strong></p>
     <p class="sec-text stagger-4">Übe es im Kleinen und du baust die Fähigkeit auf, die zählt: das mutige Gespräch, die ehrliche Entscheidung, der Moment, in dem du aus dir heraus führst — nicht aus einer Rolle. <strong>The Human Origin lehrt nicht Kreativität. Es entfernt, was sie blockiert.</strong></p>
   </div>
 </section>
@@ -414,16 +444,16 @@ footer a:hover{color:var(--cyan)}
 <!-- POSITIVE PROOF -->
 <section id="proof" class="fade-in">
   <div class="wrap">
-    <div class="section-label">Positiver Beweis</div>
+    <div class="section-label">Positive Evidenz</div>
     <div class="proof-grid" id="proof-section">
       <div class="proof-card">
         <div class="proof-num"><span class="proof-counter cyan" data-target="67" data-suffix="%">0%</span> weniger Fluktuation</div>
-        <div class="proof-label">Wenn Mitarbeiter sich wirklich gehört fühlen</div>
+        <div class="proof-label">Wenn Mitarbeitende sich wirklich gehört fühlen</div>
         <div class="proof-src">Gallup Workplace Research</div>
       </div>
       <div class="proof-card">
         <div class="proof-num"><span class="proof-counter cyan" data-target="450" data-suffix="%">0%</span> bessere Entscheidungen</div>
-        <div class="proof-label">In psychologisch sicheren Teams</div>
+        <div class="proof-label">In psychologically safe teams</div>
         <div class="proof-src">Google Project Aristotle</div>
       </div>
       <div class="proof-card">
@@ -446,8 +476,8 @@ footer a:hover{color:var(--cyan)}
 <section id="trust" class="fade-in">
   <div class="wrap">
     <div class="section-label">Die Vertrauenskaskade</div>
-    <p class="sec-text">Wenn Überleben nachlässt, merkt es die Außenwelt vor Ihnen. Partner hören auf zu taktieren. Projektverträge beschleunigen sich. Kunden verlängern, weil sich etwas verändert hat, das sie nicht benennen können. Teams hören auf, Produktivität zu performen, und fangen an, sie zu produzieren. Fluktuation sinkt ohne ein einziges neues Benefit. <strong>Keine Theorie — der präfrontale Kortex, wieder online, in den Menschen, die Ihre Entscheidungen treffen.</strong></p>
-    <p class="sec-text-emphasis">Die Aura verändert sich. Nicht die Strategie. Nicht die Struktur. Der Raum wird wärmer, Vertrauen wird leichter, und Mut hört auf, eine Initiative zu sein, und wird zur Atmosphäre.</p>
+    <p class="sec-text">Trust isn't a value. It's a sequence. One honest conversation surfaces what's real. What's real creates alignment. Alignment creates speed. Speed without trust is just noise. <strong>Das ist die Architektur unter der Performance.</strong></p>
+    <p class="sec-text-emphasis">Die Aura verändert sich. Nicht die Strategie. Nicht die Struktur. Der Raum wird wärmer, Vertrauen wird leichter, und Mut hört auf, eine Initiative zu sein — und wird zur Atmosphäre.</p>
   </div>
 </section>
 
@@ -456,19 +486,19 @@ footer a:hover{color:var(--cyan)}
 <!-- WHO THIS IS FOR -->
 <section id="for" class="fade-in">
   <div class="wrap">
-    <div class="section-label stagger-1">Für wen diese Arbeit ist</div>
+    <div class="section-label stagger-1">Für wen das ist</div>
     <div class="for-statements">
       <div class="for-block stagger-2">
-        <p>Unternehmen, die von ihrem Gründer geprägt sind — und deren Kultur <em>nie hinterfragt wurde</em>.</p>
+        <p>Leaders shaped by a story that <em>no longer serves</em>.</p>
       </div>
       <div class="for-block stagger-3">
-        <p>Organisationen, deren Überlebensarchitektur <em>nicht mehr trägt</em>, aber noch nicht ersetzt ist.</p>
+        <p>Organisationen, die Muster fahren, die sie <em>nie untersucht haben</em>.</p>
       </div>
       <div class="for-block stagger-4">
-        <p>Führungskräfte, die ahnen, dass das Problem, das sie nicht lösen können, das ist, <em>dem sie sich nie gestellt haben</em>.</p>
+        <p>Teams performing a version of themselves that <em>die alle aufrechterhalten und niemand glaubt</em>.</p>
       </div>
     </div>
-    <p class="for-closing stagger-4">Nicht weil etwas kaputt ist. Weil etwas <em>bereit</em> ist.</p>
+    <p class="for-closing stagger-4">Nicht weil etwas kaputt ist. Weil etwas <em>ready</em>.</p>
   </div>
 </section>
 
@@ -482,36 +512,36 @@ footer a:hover{color:var(--cyan)}
     <div class="disc-grid stagger-3">
       <div class="disc-card">
         <div class="disc-num">01 — Drehbuch</div>
-        <div class="disc-name">Die Erzählung formen, bevor jemand sie performt.</div>
-        <div class="disc-desc">Im Drehbuch werden Charaktere aus persönlichen Geschichten gebaut — nicht aus Jobbeschreibungen. Diese Disziplin bringt die Narrative an die Oberfläche, die alle im System unter der Performance mit sich tragen.</div>
+        <div class="disc-name">Das Narrativ formen, bevor jemand es performt.</div>
+        <div class="disc-desc">Im Drehbuch entsteht Charakter aus der persönlichen Geschichte — nicht aus der Stellenbeschreibung. Diese Disziplin macht die Narrative sichtbar, die alle im System unter der Performance tragen.</div>
       </div>
       <div class="disc-card">
         <div class="disc-num">02 — Regie</div>
-        <div class="disc-name">Bedingungen schaffen, in denen Wahrheit erscheint.</div>
-        <div class="disc-desc">Ein Regisseur sagt niemandem, was er fühlen soll. Er verändert den Raum, bis das Echte keine andere Wahl hat, als zu erscheinen. Angewandt zwischen den Meetings, dort wo Ihre Kultur tatsächlich lebt.</div>
+        <div class="disc-name">Bedingungen schaffen, in denen Wahrheit auftaucht.</div>
+        <div class="disc-desc">Ein Regisseur sagt niemandem, was er fühlen soll. Er verändert den Raum, bis das Echte keine andere Wahl hat als aufzutauchen. Angewandt zwischen den Meetings, wo Ihre Kultur tatsächlich lebt.</div>
       </div>
       <div class="disc-card">
         <div class="disc-num">03 — Schauspiel</div>
-        <div class="disc-name">Der Unterschied zwischen performter Sicherheit und echter Präsenz. Das Überlebensskript, sichtbar gemacht.</div>
-        <div class="disc-desc">Das eigentliche Handwerk eines Schauspielers: Zugang zu dem finden, was innerlich wahr ist, und danach zu handeln. Angewandt auf ganze Teams — die Version ersetzen, die der Druck allen beigebracht hat zu performen, durch etwas Echtes.</div>
+        <div class="disc-name">Der Unterschied zwischen performter Sicherheit und echter Präsenz. Das Überlebensskript sichtbar gemacht.</div>
+        <div class="disc-desc">Das eigentliche Handwerk: Zugang zu dem, was innen wahr ist, und danach handeln. Angewandt auf ganze Teams — die Version, die der Druck allen beigebracht hat zu performen, durch etwas Echtes ersetzen.</div>
       </div>
       <div class="disc-card">
         <div class="disc-num">04 — Schnitt</div>
-        <div class="disc-name">Herausschneiden, was der Geschichte nicht mehr dient. Stärken, was sie trägt.</div>
-        <div class="disc-desc">Jeder Film hat einen Kill-your-darlings-Moment. Unternehmen auch: die Rituale, Hierarchien und unausgesprochenen Regeln, die existieren, damit sich Menschen verstecken — nicht um der Arbeit zu dienen.</div>
+        <div class="disc-name">Schneiden, was der Geschichte nicht mehr dient. Stärken, was sie trägt.</div>
+        <div class="disc-desc">Jeder Film hat einen Kill-your-Darlings-Moment. Organisationen auch: die Rituale, Hierarchien und unausgesprochenen Regeln, die existieren, damit Menschen sich verstecken — nicht um der Arbeit zu dienen.</div>
       </div>
       <div class="disc-card">
         <div class="disc-num">05 — Produktion</div>
-        <div class="disc-name">Kreative Vision unter realen Bedingungen in operative Realität verwandeln.</div>
-        <div class="disc-desc">Am Set baut ein Produzent das Rückgrat, das allen erlaubt, ihre beste kreative Arbeit zu leisten — Unterstützung, Kommunikation, Schutz. Die Struktur, die Menschen hält, damit sie aufhören können, alles alleine zusammenzuhalten.</div>
+        <div class="disc-name">Kreative Vision in operative Realität übersetzen. Unter echten Bedingungen.</div>
+        <div class="disc-desc">Am Set baut ein Produzent das Rückgrat, das allen ermöglicht, ihre beste kreative Arbeit zu leisten — Unterstützung, Kommunikation, Schutz. Die Struktur, die Menschen hält, damit sie aufhören können, alles allein zusammenzuhalten.</div>
       </div>
       <div class="disc-card">
         <div class="disc-num">06 — Intimacy Coordination</div>
-        <div class="disc-name">Bedingungen schaffen, in denen Verletzlichkeit möglich ist, ohne Bloßstellung. Der Grund, warum Vertrauen entsteht.</div>
-        <div class="disc-desc">Die neueste und revolutionärste Filmdisziplin. Die Architektur, in der jeder — Führungskräfte, Teams, Partner — sagen kann: ‚Ich weiß es nicht' oder ‚Ich bin anderer Meinung' — ohne dass es Sicherheit oder Zugehörigkeit kostet.</div>
+        <div class="disc-name">Bedingungen schaffen, in denen gesunde Verletzlichkeit möglich ist, ohne Bloßstellung. Der Grund, warum Vertrauen entsteht.</div>
+        <div class="disc-desc">Die neueste und revolutionärste Filmdisziplin. Die Architektur, in der jeder — Führungskräfte, Teams, Partner — sagen kann „Ich weiß es nicht“ oder „Ich sehe das anders“, ohne dass es Sicherheit oder Zugehörigkeit kostet.</div>
       </div>
     </div>
-    <p class="sec-text stagger-4" style="margin-top:36px">Ein Regisseur sagt Schauspielern nicht, was sie fühlen sollen. Ein Regisseur schafft die Bedingungen, in denen Wahrheit erscheint. The Human Origin funktioniert genauso — das Nervensystem regulieren, strukturell und persönlich, das Überlebensskript hinter Reputation und Performance sichtbar machen, und dann zusehen, wozu Ihre Teams tatsächlich fähig sind.</p>
+    <p class="sec-text stagger-4" style="margin-top:36px">Ein Regisseur sagt Schauspielern nicht, was sie fühlen sollen. Ein Regisseur schafft Bedingungen, in denen Wahrheit auftaucht. The Human Origin arbeitet genauso — das Nervensystem regulieren, strukturell und persönlich, das Überlebensnarrativ hinter Reputation und Performance sichtbar machen, und beobachten, wozu Ihre Teams tatsächlich fähig sind.</p>
   </div>
 </section>
 
@@ -520,12 +550,12 @@ footer a:hover{color:var(--cyan)}
 <!-- PROCESS -->
 <section id="process" class="fade-in">
   <div class="wrap">
-    <div class="section-label">Wie die Arbeit geschieht</div>
+    <div class="section-label">Wie die Arbeit abläuft</div>
     <div class="phase-list">
       <div class="phase">
         <div class="phase-num">0</div>
         <div>
-          <div class="phase-name">Eingangsgespräch</div>
+          <div class="phase-name">Erstgespräch</div>
           <div class="phase-desc">Ein Gespräch auf Augenhöhe. Kein Pitch. Nur eine Frage — die richtige.</div>
         </div>
       </div>
@@ -533,33 +563,33 @@ footer a:hover{color:var(--cyan)}
         <div class="phase-num">1</div>
         <div>
           <div class="phase-name">Trust Architecture Diagnostic</div>
-          <div class="phase-desc">Fünf Beobachtungskontexte. Einzelgespräche. Eine Karte, die zeigt, wo Überlebensmuster am meisten kosten.</div>
+          <div class="phase-desc">Fünf Beobachtungskontexte. Einzelgespräche. Eine Karte, wo Überlebensmuster am meisten kosten.</div>
         </div>
       </div>
       <div class="phase">
         <div class="phase-num">2</div>
         <div>
-          <div class="phase-name">Intervention</div>
-          <div class="phase-desc">Workshops, Einzelarbeit, Live-Intervention in echten Meetings. Kreativität als Regulationsmechanismus — Mikrostörungen, die Überlebensmuster durchbrechen. Was folgt, ist nicht Erkenntnis — sondern ein neues Fundament. Und damit: Handlungsfähigkeit.</div>
+          <div class="phase-name">Origin Work</div>
+          <div class="phase-desc">Die Muster auflösen. Zugang zu dem, was darunter liegt. Was folgt, ist keine Erkenntnis — es ist ein neues Fundament. Und damit: die Fähigkeit zu handeln.</div>
         </div>
       </div>
       <div class="phase">
         <div class="phase-num">3</div>
         <div>
-          <div class="phase-name">Transformationszyklus</div>
-          <div class="phase-desc">Tiefgreifende strukturelle und persönliche Neuverdrahtung. Das Überlebensskript wird durch eine Geschichte ersetzt, die von Ihnen kommt — nicht vom Skript.</div>
+          <div class="phase-name">Integration</div>
+          <div class="phase-desc">Das neue Betriebssystem wird tägliche Praxis. Kein Programm — eine Geschichte, die von Ihnen kommt, nicht aus dem Skript.</div>
         </div>
       </div>
       <div class="phase">
         <div class="phase-num">4</div>
         <div>
-          <div class="phase-name">Rückkehr zum Ursprung</div>
-          <div class="phase-desc">3–9 Monate nach Abschluss. Hat die Veränderung gehalten? Ehrliche Bestandsaufnahme. Kurskorrektur. Inklusive.</div>
+          <div class="phase-name">Überprüfung</div>
+          <div class="phase-desc">Hat die Veränderung gehalten? Ehrliche Bestandsaufnahme. Kurskorrektur. Inklusive.</div>
         </div>
       </div>
     </div>
     <div class="quote-block" style="margin-top:48px">
-      <div class="quote-text">„Keine Schuld. Keine Schwäche. Nur nie der Raum für etwas Mutigeres. Schaffe ihn, und Menschen blühen auf. Die Arbeit folgt."</div>
+      <div class="quote-text">"Nicht unehrlich. Nicht schwach. Nur nie die Bedingungen gehabt für etwas Mutigeres. Schaffe sie, und Menschen blühen auf. Die Arbeit folgt."</div>
       <div class="quote-attr">Tom Waldek</div>
     </div>
   </div>
@@ -568,26 +598,38 @@ footer a:hover{color:var(--cyan)}
 <div class="section-div"></div>
 
 <!-- DIAGNOSTIC -->
+
+<!-- DIAGNOSTIC ENHANCED -->
 <section id="diagnostic" class="fade-in">
   <div class="wrap">
-    <div class="section-label">Ihr Unternehmen — ein kurzer Pulscheck</div>
-    <div class="diag-container">
-      <div class="diag-intro">
-        <p><span class="count">9 Fragen. Unter 3 Minuten.</span></p>
-        <p style="margin-top:8px">Keine Daten gespeichert. Das Ergebnis gehört Ihnen allein — ein ehrlicher Spiegel dessen, was unter der Oberfläche Ihres Unternehmens laufen könnte.</p>
-      </div>
-      <div id="diag-container">
-        <div id="prog"></div>
-        <div id="qarea"></div>
-      </div>
-      <div id="results">
-        <div class="sec-head" style="text-align:center;font-size:24px;margin-bottom:24px">Ihre Musterkarte</div>
-        <div id="res-zones"></div>
-        <div style="text-align:center;margin-top:40px">
-          <a href="#contact" class="btn-primary">Gespräch starten</a>
+    <div id="d-intro" class="d-phase active">
+      <div class="section-label">Ihr Unternehmen — ein Pulscheck</div>
+      <div class="diag-container">
+        <div class="diag-intro">
+          <p><span class="count">9 Fragen. Unter 3 Minuten.</span></p>
+          <p style="margin-top:8px">Keine Daten gespeichert. Keine Algorithmen. Das Ergebnis gehört Ihnen allein — ein ehrlicher Spiegel dessen, was unter der Oberfläche Ihres Unternehmens laufen könnte.</p>
         </div>
+        <div class="d-info">
+          <div class="d-info-title">Was hier gemessen wird</div>
+          <div class="d-info-body">Jede Frage bildet eine Zone ab, in der Überlebensmuster in Organisationen wirken — von der Art, wie Widerspruch behandelt wird, bis zur Kluft zwischen erzählter und gelebter Geschichte. Die Diagnostik verbindet jede Zone mit einer spezifischen Filmdisziplin und der Neurowissenschaft, die erklärt, warum diese Muster bestehen bleiben.</div>
+        </div>
+        <div class="d-toggle">
+          <div id="dToggle" class="d-sw on" onclick="dToggleNeuro()"><div class="d-knob"></div></div>
+          <span style="font-size:13px;color:var(--tx3)">Neurowissenschaftliche Anmerkungen zeigen</span>
+        </div>
+        <div style="text-align:center"><button class="d-btn d-btn-cyan" onclick="dStart()">Diagnostik starten</button></div>
+        <div style="margin-top:24px;font-family:var(--display);font-size:11px;color:var(--tx4);text-align:center;font-weight:300;letter-spacing:2px">Für C-Level · HR · Teamleitung · Teammitglieder</div>
       </div>
     </div>
+    <div id="d-questions" class="d-phase">
+      <div id="d-prog" class="d-prog"></div>
+      <div id="d-qcard" class="d-card"></div>
+      <div class="d-nav">
+        <button id="d-prev" class="d-btn d-btn-ghost" onclick="dPrev()">&#8592; Zurück</button>
+        <button id="d-next" class="d-btn d-btn-cyan dis" onclick="dNext()">Weiter &#8594;</button>
+      </div>
+    </div>
+    <div id="d-results" class="d-phase"></div>
   </div>
 </section>
 
@@ -596,7 +638,7 @@ footer a:hover{color:var(--cyan)}
 <!-- CTA -->
 <section id="contact" class="cta-section fade-in">
   <div class="section-label">Der nächste Schritt</div>
-  <div class="cta-quote">„Zusammenkommen. Sagen, was wahr ist. Den Mut haben, eine Zukunft zu gestalten, zu der Ihr Team wirklich gehören will."</div>
+  <div class="cta-quote">„Zusammenkommen. Sagen, was wahr ist. Den Mut haben, eine Zukunft zu gestalten, zu der Ihr Team wirklich gehören will.“</div>
   <p class="sec-text" style="max-width:560px;margin:0 auto 16px;text-align:center">Wo Überlebensmuster Ihr Unternehmen steuern.<br>Drei Wochen, um die Gespräche an die Oberfläche zu bringen, die Ihr Team nicht führt.</p>
   <p style="font-family:var(--display);font-weight:400;font-size:13px;color:var(--cyan);letter-spacing:2px;margin-bottom:40px">Eine Trust Architecture Diagnostic.</p>
   <div class="cta-avatar">
@@ -604,18 +646,18 @@ footer a:hover{color:var(--cyan)}
   </div>
   <div class="cta-avatar-name">Tom Waldek</div>
   <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-    <a href="mailto:tom@thehumanorigin.com?subject=Trust%20Architecture%20Diagnostic" class="btn-primary">Gespräch starten</a>
+    <a href="/cdn-cgi/l/email-protection#a7d3c8cae7d3cfc2cfd2cac6c9c8d5cec0cec989c4c8ca98d4d2c5cdc2c4d39af3d5d2d4d3829597e6d5c4cfced3c2c4d3d2d5c2829597e3cec6c0c9c8d4d3cec4" class="btn-primary">Gespräch starten</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <p>© 2025 The Human Origin — Tom Waldek</p>
-  <p style="margin-top:8px">Research: Porges (Polyvagal Theory) · Barsade (Emotional Contagion) · Keltner (Power Paradox) · Edmondson (Psychological Safety) · Brown (Vulnerability & Trust)</p>
+  <p style="margin-top:8px">Forschung: Porges (Autonome Regulation) · Barsade (Emotional Contagion) · Keltner (Power Paradox) · Edmondson (Psychological Safety) · Brown (Verletzlichkeit & Vertrauen)</p>
 </footer>
 
 <!-- ═══ SCRIPTS ═══ -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ── COUNTING ANIMATION ──
 function animateCounters(){
   const counters=document.querySelectorAll('.counter-val');
@@ -725,35 +767,35 @@ if(portraitEl){
 }
 
 // ── DIAGNOSTIC ──
-var cur=0,ans=new Array(9).fill(null);
-var Qs=[
-{z:"survival",t:"Wann hat das letzte Mal jemand der seniorsten Person im Raum offen widersprochen?",o:["Diese Woche","Diesen Monat","Vor Monaten","Ich kann mich nicht erinnern"],s:[0,1,2,3]},
-{z:"trust",t:"Wie würde Ihr neuester Mitarbeiter die Lücke zwischen dem beschreiben, was ihm versprochen wurde, und dem, was er vorgefunden hat?",o:["Keine Lücke","Kleine Lücke","Deutliche Lücke","Große Lücke"],s:[0,1,2,3]},
-{z:"external",t:"Wenn Sie Ihren langjährigsten Kunden fragen würden, wie es sich anfühlt, mit Ihrem Unternehmen zu arbeiten — würde die Antwort zu Ihrer Website passen?",o:["Vollständig","Größtenteils","Teilweise","Eher nicht"],s:[0,1,2,3]},
-{z:"absence",t:"Wenn Sie eine Woche abwesend sind — verbessert sich die Leistung Ihres Teams, bleibt sie gleich oder sinkt sie?",o:["Verbessert sich","Bleibt gleich","Sinkt leicht","Sinkt deutlich"],s:[2,1,2,3]},
-{z:"attachment",t:"Wenn jemand in Ihrem Team Unterstützung braucht — gibt Ihnen das Energie, oder entzieht es Ihnen welche?",o:["Gibt mir Energie","Neutral","Entzieht mir etwas Energie","Entzieht mir deutlich Energie"],s:[0,1,2,3]},
-{z:"peers",t:"Würden Sie die Beziehung zwischen Ihren Führungskollegen als kooperativ beschreiben — oder als politisch vorsichtig?",o:["Wirklich kooperativ","Überwiegend kooperativ","Eher vorsichtig als ehrlich","Politisch"],s:[0,1,2,3]},
-{z:"direct",t:"Bringen Ihre Leute Ihnen Probleme frühzeitig — oder erst, wenn sie sie nicht mehr verbergen können?",o:["Früh und offen","Meistens früh","Oft spät","Nur wenn es nicht anders geht"],s:[0,1,2,3]},
-{z:"narrative",t:"Wenn Sie die Karriereseite Ihres Unternehmens laut in einem Teammeeting vorlesen würden — würden die Menschen den beschriebenen Ort wiedererkennen?",o:["Ja, vollständig","Größtenteils","Sie würden höflich lächeln","Sie würden wegschauen"],s:[0,1,2,3]},
-{z:"origin",t:"Wie viel Ihrer Führungsenergie fließt in das Management, wie Sie wahrgenommen werden — versus tatsächlich zu führen?",o:["Fast keine — ich führe als ich selbst","Etwas — ich bin mir dessen bewusst","Viel — es kostet echte Energie","Das meiste, ehrlich gesagt"],s:[0,1,2,3]}
+
+// ── DIAGNOSTIC ENHANCED ──
+var dCur=0,dAns=new Array(9).fill(null),dShowNeuro=true;
+var dQs=[
+{zone:"survival",disc:"Regie",t:"Wann hat das letzte Mal jemand der Person mit der meisten Autorit\u00e4t im Raum offen widersprochen?",neuro:"Neurozeption \u2014 das Nervensystem scannt nach Bedrohung, bevor ein bewusster Gedanke entsteht. Schweigen gegen\u00fcber Autorit\u00e4t signalisiert Gefahrenerkennung, nicht Zustimmung.",ref:"Porges, Autonome Regulation",opts:[{l:"Diese Woche",s:0},{l:"Diesen Monat",s:1},{l:"Vor Monaten",s:2},{l:"Ich kann mich nicht erinnern",s:3}]},
+{zone:"trust",disc:"Drehbuch",t:"Wie w\u00fcrde Ihr neuester Mitarbeiter die L\u00fccke zwischen dem beschreiben, was ihm versprochen wurde, und dem, was er vorgefunden hat?",neuro:"Narrative Dissonanz aktiviert den anterioren cingul\u00e4ren Cortex \u2014 den Konfliktdetektor des Gehirns. Die Kluft zwischen erz\u00e4hlter und gelebter Geschichte zerst\u00f6rt Vertrauen neurologisch.",ref:"Edmondson, Psychologische Sicherheit",opts:[{l:"Keine L\u00fccke",s:0},{l:"Kleine L\u00fccke",s:1},{l:"Deutliche L\u00fccke",s:2},{l:"Gro\u00dfe L\u00fccke",s:3}]},
+{zone:"external",disc:"Schnitt",t:"Wenn Sie Ihren langj\u00e4hrigsten Kunden fragen w\u00fcrden, wie es sich anf\u00fchlt, mit Ihrem Unternehmen zu arbeiten \u2014 w\u00fcrde die Antwort zu Ihrer Website passen?",neuro:"Externe Stakeholder umgehen das interne Narrativ. Ihre Erfahrung spiegelt das tats\u00e4chliche Nervensystem der Organisation wider, nicht ihre performte Identit\u00e4t.",ref:"Barsade, Emotionale Ansteckung",opts:[{l:"Vollst\u00e4ndig",s:0},{l:"Gr\u00f6\u00dftenteils",s:1},{l:"Teilweise",s:2},{l:"Eher nicht",s:3}]},
+{zone:"absence",disc:"Produktion",t:"Wenn Sie eine Woche abwesend sind \u2014 verbessert sich die Leistung Ihres Teams, bleibt sie gleich oder sinkt sie?",neuro:"Die Abwesenheit der F\u00fchrungskraft zeigt Co-Regulations-Abh\u00e4ngigkeit. Wenn die Leistung sinkt, l\u00e4uft das System auf dem Nervensystem der F\u00fchrungskraft \u2014 nicht auf eigener Architektur.",ref:"Porges, Co-Regulation",opts:[{l:"Verbessert sich",s:2},{l:"Bleibt gleich",s:1},{l:"Sinkt leicht",s:2},{l:"Sinkt deutlich",s:3}]},
+{zone:"attachment",disc:"Intimacy Coordination",t:"Wenn jemand in Ihrem Team Unterst\u00fctzung braucht \u2014 gibt Ihnen das Energie, oder entzieht es Ihnen welche?",neuro:"Bindungsmuster aus der fr\u00fchen Lebensgeschichte setzen sich in der F\u00fchrung fort. Der Energieverlust signalisiert ungel\u00f6ste Beziehungsarchitektur, die unter dem professionellen Verhalten operiert.",ref:"Bowlby / Porges, Bindung & Autonomer Zustand",opts:[{l:"Gibt mir Energie",s:0},{l:"Neutral",s:1},{l:"Entzieht mir leicht Energie",s:2},{l:"Entzieht mir deutlich Energie",s:3}]},
+{zone:"peers",disc:"Schauspiel",t:"W\u00fcrden Sie die Beziehung in Ihrem F\u00fchrungsteam als kollegial oder als betont h\u00f6flich beschreiben?",neuro:"Betonte H\u00f6flichkeit ist performte Sicherheit. Das sympathische Nervensystem bleibt aktiviert \u2014 wachsam, strategisch, nie in Ruhe. Zusammenarbeit erfordert Zugang zum ventralen Vagus.",ref:"Keltner, Power Paradox",opts:[{l:"Echt kollegial",s:0},{l:"\u00dcberwiegend kollegial",s:1},{l:"Betont h\u00f6flich",s:2},{l:"Isoliert oder kompetitiv",s:3}]},
+{zone:"direct",disc:"Regie",t:"Wie lange dauert es, bis ein echtes Problem die Person erreicht, die es tats\u00e4chlich l\u00f6sen kann?",neuro:"Informationsverz\u00f6gerung ist eine \u00dcberlebensmetrik. In psychologisch sicheren Teams tauchen Probleme in Stunden auf. In unsicheren erst in Krisen.",ref:"Edmondson, The Fearless Organization",opts:[{l:"Stunden",s:0},{l:"Tage",s:1},{l:"Wochen",s:2},{l:"Erst in einer Krise",s:3}]},
+{zone:"narrative",disc:"Drehbuch",t:"Wenn Ihr Team die Unternehmenskultur einem Fremden beschreiben w\u00fcrde \u2014 w\u00fcrden Sie sie wiedererkennen?",neuro:"Narrative Fragmentierung: Wenn die Geschichte der F\u00fchrung und die Geschichte des Teams auseinandergehen, operiert die Organisation auf zwei Nervensystemen gleichzeitig.",ref:"Barsade, Emotionale Ansteckung in Gruppen",opts:[{l:"Sofort",s:0},{l:"Gr\u00f6\u00dftenteils",s:1},{l:"Teilweise",s:2},{l:"Wahrscheinlich nicht",s:3}]},
+{zone:"origin",disc:"Schauspiel",t:"Wie viel Energie verwendet Ihr F\u00fchrungsteam darauf, wie es wahrgenommen wird \u2014 statt zu sagen, was tats\u00e4chlich wahr ist?",neuro:"Das Gehirn verbraucht messbar mehr Energie, um eine performte Identit\u00e4t aufrechtzuerhalten. Diese Energie fehlt f\u00fcr Kreativit\u00e4t, Entscheidungen und echte Verbindung.",ref:"Porges / Keltner, Macht & Autonome Kosten",opts:[{l:"Fast keine \u2014 wir sind direkt",s:0},{l:"Etwas \u2014 geh\u00f6rt zur Kultur",s:1},{l:"Erheblich \u2014 Ruf z\u00e4hlt mehr als Wahrheit",s:2},{l:"Es ist die Hauptbesch\u00e4ftigung",s:3}]}
 ];
-var zoneNames={survival:"Überlebensmodus",trust:"Vertrauensarchitektur",external:"Außenwahrnehmung",absence:"Abhängigkeitsmuster",attachment:"Beziehungsmuster",peers:"Führungsbeziehungen",direct:"Psychologische Sicherheit",narrative:"Narrativ-Lücke",origin:"Ursprungsmuster"};
-var zoneDescs={
-survival:"Das Überlebensmuster ist aktiv — Widerspruch ist im System nicht sicher genug, um zu erscheinen.",
-trust:"Die Lücke zwischen Versprechen und Realität zeigt, wo die Überlebensarchitektur das Erleben formt.",
-external:"Wie Ihr Unternehmen von außen erlebt wird, spiegelt, wie tief das performte Narrativ reicht.",
-absence:"Ob die Leistung steigt oder sinkt ohne Sie — beide Richtungen verraten das Muster.",
-attachment:"Das Beziehungsmuster liegt am tiefsten. Die Bedürfnisse anderer registrieren sich als Belastung statt als Verbindung — ein Signal dafür, dass Führungsenergie in eine ältere Geschichte fließt, nicht in das Team, das vor Ihnen steht.",
-peers:"Politische Vorsicht zwischen Führungskräften ist Überlebensarchitektur auf Leitungsebene.",
-direct:"Wann Probleme auftauchen, zeigt, wie viel psychologische Sicherheit tatsächlich existiert.",
-narrative:"Die Lücke zwischen der erzählten und der erlebten Geschichte ist die Lücke, in der Vertrauen verloren geht.",
-origin:"Energie, die in Wahrnehmungsmanagement fließt, fehlt dort, wo echte Führung gebraucht wird."
-};
-function bP(){var h="";for(var i=0;i<Qs.length;i++){var c="dd";if(i<cur)c+=" done";if(i===cur)c+=" cur";h+='<div class="'+c+'"></div>'}document.getElementById("prog").innerHTML=h}
-function sQ(){var a=document.getElementById("qarea"),q=Qs[cur];var h='<p class="qnum">Question '+(cur+1)+" of "+Qs.length+"</p>";h+='<p class="qtx">'+q.t+"</p>";h+='<div class="qops">';for(var i=0;i<q.o.length;i++){var sc=ans[cur]===i?' sel':'';h+='<div class="qopt'+sc+'" onclick="pick('+i+')">'+q.o[i]+"</div>"}h+="</div>";a.innerHTML=h;bP()}
-function pick(i){ans[cur]=i;if(cur<Qs.length-1){cur++;setTimeout(sQ,300)}else{showR()}}
-function showR(){document.getElementById("diag-container").style.display="none";var r=document.getElementById("results");r.style.display="block";var zones={};for(var i=0;i<Qs.length;i++){if(ans[i]!==null&&Qs[i].s[ans[i]]>=2){var z=Qs[i].z;if(!zones[z])zones[z]=0;zones[z]+=Qs[i].s[ans[i]]}}var zk=Object.keys(zones).sort(function(a,b){return zones[b]-zones[a]});var h="";if(zk.length===0){h='<p class="sec-text" style="margin-top:20px;text-align:center">Starke Signale. Ihre Organisation zeigt wenig Anzeichen aktiver Überlebensmuster. Das ist selten — und wertvoll.</p>'}else{for(var j=0;j<Math.min(zk.length,4);j++){h+='<div class="res-zone"><div class="res-zone-name">'+(zoneNames[zk[j]]||zk[j])+'</div><div class="res-zone-desc">'+(zoneDescs[zk[j]]||"")+"</div></div>"}}document.getElementById("res-zones").innerHTML=h}
-sQ();
+var dZM={survival:{name:"\u00dcberlebensarchitektur",color:"#f97316",disc:"Regie",desc:"Der Raum liest das Nervensystem der F\u00fchrungskraft, bevor ein einziges Wort gesprochen wird. Wenn Schweigen den Widerspruch ersetzt, hat das System Sicherheit \u00fcber Wahrheit gew\u00e4hlt.",dn:"Bedingungen schaffen, in denen Wahrheit auftaucht \u2014 nicht Schweigen als Zustimmung durchgeht."},trust:{name:"Narrative Kluft",color:"#e8b8a4",disc:"Drehbuch",desc:"Die Kluft zwischen erz\u00e4hlter und gelebter Geschichte ist der Ort, an dem Vertrauen erodiert \u2014 neurologisch, nicht nur emotional.",dn:"Das Narrativ sichtbar machen, in dem die Organisation tats\u00e4chlich lebt."},external:{name:"Externes Vertrauenssignal",color:"#cc7058",disc:"Schnitt",desc:"Kunden und Partner erleben das tats\u00e4chliche Betriebssystem der Organisation. Sie umgehen das interne Narrativ vollst\u00e4ndig.",dn:"Schneiden, was der Geschichte nicht mehr dient. St\u00e4rken, was sie tr\u00e4gt."},absence:{name:"Pr\u00e4senz-Abh\u00e4ngigkeit",color:"#a04c38",disc:"Produktion",desc:"Wenn die Leistung sinkt, sobald die F\u00fchrungskraft geht, l\u00e4uft die Organisation nicht auf Architektur \u2014 sondern auf einem einzigen Nervensystem.",dn:"Das R\u00fcckgrat bauen, das Menschen h\u00e4lt, damit sie aufh\u00f6ren k\u00f6nnen, alles allein zusammenzuhalten."},attachment:{name:"Beziehungsmuster",color:"#8a6ca0",disc:"Intimacy Coordination",desc:"Ob Unterst\u00fctzung anderer Energie gibt oder entzieht, zeigt die Bindungsarchitektur unter der F\u00fchrung \u2014 kein Pers\u00f6nlichkeitsmerkmal, ein Nervensystemmuster.",dn:"Bedingungen, in denen jeder \u201eIch wei\u00df es nicht\u201c sagen kann, ohne dass es Sicherheit kostet."},peers:{name:"Peer-Dynamik",color:"#a8b0cc",disc:"Schauspiel",desc:"Betonte H\u00f6flichkeit ist das sympathische Nervensystem auf F\u00fchrungsebene. Performte Zusammenarbeit \u2014 wachsam, strategisch, nie in Ruhe.",dn:"Der Unterschied zwischen performter Sicherheit und echter Pr\u00e4senz."},direct:{name:"Sicherheit & Ehrlichkeit",color:"#384878",disc:"Regie",desc:"Wann Probleme auftauchen, zeigt, wie viel psychologische Sicherheit tats\u00e4chlich existiert \u2014 nicht in der Theorie, im Nervensystem jeder Person, die schweigt.",dn:"Den Raum so ver\u00e4ndern, dass Wahres keine andere Wahl hat als aufzutauchen."},narrative:{name:"Geteiltes Narrativ",color:"#6070a0",disc:"Drehbuch",desc:"Wenn die Geschichte der F\u00fchrung und die Geschichte des Teams auseinandergehen, l\u00e4uft die Organisation auf zwei Nervensystemen. Eines gewinnt. Meist das lautere.",dn:"Das Narrativ formen, bevor jemand es performt."},origin:{name:"Der Ursprung",color:"#06b6d4",disc:"Schauspiel",desc:"Energie, die f\u00fcr Wahrnehmungsmanagement aufgewendet wird, fehlt dort, wo echte F\u00fchrung gebraucht wird. Die metabolischen Kosten der Fassade sind messbar \u2014 und sie summieren sich.",dn:"Zugang zu dem, was tats\u00e4chlich wahr ist \u2014 und danach handeln."}};
+function dToggleNeuro(){dShowNeuro=!dShowNeuro;var t=document.getElementById('dToggle');t.className=dShowNeuro?'d-sw on':'d-sw off';var nb=document.querySelector('.d-neuro');if(nb)nb.className=dShowNeuro?'d-neuro':'d-neuro hidden'}
+function dRenderProg(){var h='';for(var i=0;i<dQs.length;i++){var c='d-dot';if(i<dCur)c+=' done';if(i===dCur)c+=' cur';h+='<div class="'+c+'"></div>'}document.getElementById('d-prog').innerHTML=h}
+function dRenderQ(){var q=dQs[dCur];var h='<div class="d-head"><div class="d-num">Frage '+(dCur+1)+' von '+dQs.length+'</div><div class="d-disc">'+q.disc+'</div></div><div class="d-text">'+q.t+'</div><div class="d-neuro'+(dShowNeuro?'':' hidden')+'"><div class="d-neuro-icon">Neurowissenschaft</div><div class="d-neuro-text">'+q.neuro+'</div><div class="d-neuro-ref">'+q.ref+'</div></div>';for(var i=0;i<q.opts.length;i++){h+='<button class="d-opt'+(dAns[dCur]===i?' sel':'')+'" onclick="dPick('+i+')">'+q.opts[i].l+'</button>'}document.getElementById('d-qcard').innerHTML=h;dRenderProg();document.getElementById('d-prev').className=dCur===0?'d-btn d-btn-ghost dis':'d-btn d-btn-ghost';document.getElementById('d-next').className=dAns[dCur]!==null?'d-btn d-btn-cyan':'d-btn d-btn-cyan dis';document.getElementById('d-next').textContent=dCur===dQs.length-1?'Ergebnis anzeigen':'Weiter \u2192'}
+function dPick(i){dAns[dCur]=i;dRenderQ()}
+function dNext(){if(dAns[dCur]===null)return;if(dCur===dQs.length-1){dShowResults();return}dCur++;dShowPhase('d-questions');dRenderQ()}
+function dPrev(){if(dCur>0){dCur--;dRenderQ()}}
+function dShowPhase(id){document.querySelectorAll('.d-phase').forEach(function(p){p.classList.remove('active')});document.getElementById(id).classList.add('active')}
+function dStart(){dCur=0;dShowPhase('d-questions');dRenderQ()}
+function dShowResults(){dShowPhase('d-results');var total=0,maxT=dQs.length*3;for(var i=0;i<dQs.length;i++){if(dAns[i]!==null)total+=dQs[i].opts[dAns[i]].s}var pct=Math.round(total/maxT*100);var zs={};dQs.forEach(function(q,i){if(dAns[i]!==null){if(!zs[q.zone])zs[q.zone]={score:0,max:0};zs[q.zone].score+=q.opts[dAns[i]].s;zs[q.zone].max+=3}});var sorted=Object.keys(zs).map(function(k){return{key:k,pct:Math.round(zs[k].score/zs[k].max*100)}}).sort(function(a,b){return b.pct-a.pct});var mirror,verdict;if(pct<=25){mirror="Ihre Antworten deuten auf echte Offenheit hin \u2014 wenig \u00dcberlebensarchitektur, echtes Vertrauen. Eine Diagnostik w\u00fcrde best\u00e4tigen, was funktioniert, und sichtbar machen, was sich unter der Gesundheit verbirgt.";verdict="Gesunde Signale. Eine Diagnostik w\u00fcrde best\u00e4tigen und vertiefen, was funktioniert."}else if(pct<=50){mirror="Es funktioniert, aber schwerer als n\u00f6tig. Genug Vertrauen f\u00fcr das Tagesgesch\u00e4ft, aber nicht genug f\u00fcr die ehrlichen Gespr\u00e4che, die die Richtung \u00e4ndern w\u00fcrden. Stille Kosten summieren sich.";verdict="Eine Trust Architecture Diagnostic wird empfohlen. Stille Muster summieren sich \u2014 sie fr\u00fch zu finden ver\u00e4ndert die Richtung."}else if(pct<=75){mirror="\u00dcberlebensarchitektur steuert wesentliche Teile Ihres Unternehmens. Kommunikation wird gemanagt statt ehrlich gef\u00fchrt. Die Kluft zwischen Geschichte und Realit\u00e4t kostet Vertrauen \u2014 bei Partnern, Kunden und Ihren Menschen.";verdict="Eine Trust Architecture Diagnostic wird dringend empfohlen. Die \u00dcberlebensarchitektur hat messbare Kosten \u2014 in Vertrauen, Kapazit\u00e4t und Umsatz."}else{mirror="Ein System unter erheblichem Stress \u2014 \u00dcberlebensmuster aktiv \u00fcber mehrere Dimensionen. Das ist kein F\u00fchrungsversagen. Es ist ein System, das lange genug im \u00dcberlebensmodus l\u00e4uft, um es normal erscheinen zu lassen. Das Bewusstsein in Ihren Antworten bedeutet: Die Bedingungen f\u00fcr Ver\u00e4nderung existieren bereits.";verdict="Sofortige Intervention empfohlen. Die Kosten summieren sich t\u00e4glich \u2014 in Fluktuation, verlorenem Vertrauen und unterdr\u00fcckter Kapazit\u00e4t."}var ccRaw=pct<=25?'#22c55e':pct<=50?'#06b6d4':pct<=75?'#f97316':'#ef4444';var h='<div style="text-align:center;margin-bottom:40px"><div class="section-label">Ihr Ergebnis</div><div class="score-circle" style="border:2px solid '+ccRaw+';box-shadow:0 0 40px '+ccRaw+'22"><div class="score-num" id="dScoreNum">0</div><div class="score-lbl">\u00dcberleben aktiv</div></div></div>';h+='<div class="d-card" style="border-color:'+ccRaw+'33"><div class="mirror-label" style="color:'+ccRaw+'">Der Spiegel</div><div class="mirror-text">'+mirror+'</div></div>';h+='<div style="margin-top:32px"><div class="section-label" style="margin-bottom:20px">Muster-Karte \u2014 Wo \u00dcberleben wirkt</div>';for(var j=0;j<sorted.length;j++){var z=sorted[j];var zm=dZM[z.key];var bL=z.pct>=50?'border-left:3px solid '+zm.color:'';h+='<div class="z-card" style="'+bL+'"><div class="z-head"><div class="z-name" style="color:'+zm.color+'">'+zm.name+'</div><div class="z-pct">'+z.pct+'%</div></div><div class="z-bar"><div class="z-fill" data-pct="'+z.pct+'" style="background:'+zm.color+'"></div></div>';if(z.pct>=33){h+='<div class="z-desc">'+zm.desc+'</div><div class="z-disc">Filmdisziplin: '+zm.disc+' \u2014 '+zm.dn+'</div>'}h+='</div>'}h+='</div>';h+='<div class="d-card" style="margin-top:32px;background:rgba(6,182,212,0.04);border-color:rgba(6,182,212,0.15)"><div class="mirror-label" style="color:var(--cyan)">Diagnostik-Empfehlung</div><div class="mirror-text">'+verdict+'</div></div>';h+='<div style="margin-top:32px;padding:20px 24px;background:rgba(255,255,255,0.03);border-radius:12px;border:1px solid var(--border)"><div style="font-family:var(--display);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--tx4);margin-bottom:12px;font-weight:400">Die Wissenschaft hinter dieser Diagnostik</div><div style="font-size:13px;line-height:1.8;color:var(--tx3)">Jede Frage bildet ein spezifisches autonomes Muster ab, das in peer-reviewed Forschung dokumentiert ist. Emotionale Ansteckung \u00fcbertr\u00e4gt den Nervensystemzustand der F\u00fchrungskraft innerhalb von Millisekunden auf Teams (Barsade, 2002). Psychologische Sicherheit \u2014 oder ihr Fehlen \u2014 bestimmt, ob Probleme in Stunden oder erst in Krisen sichtbar werden (Edmondson, 1999). Macht reduziert Empathie und erh\u00f6ht Risikobereitschaft, wenn sie unkontrolliert bleibt (Keltner, 2016). Die Organisation kopiert nicht die Strategie. Sie kopiert das Nervensystem der F\u00fchrung.</div><div style="font-size:11px;color:var(--tx4);margin-top:12px">Forschung: Porges (Autonome Regulation) \u00b7 Barsade (Emotionale Ansteckung) \u00b7 Edmondson (Psychologische Sicherheit) \u00b7 Keltner (Power Paradox) \u00b7 Brown (Verletzlichkeit & Vertrauen)</div></div>';h+='<div style="display:flex;gap:12px;justify-content:center;margin-top:40px;flex-wrap:wrap"><a href="mailto:tom@thehumanorigin.com?subject=Trust%20Architecture%20Diagnostic&body=Ich%20habe%20den%20Pulscheck%20abgeschlossen%20(Ergebnis:%20'+pct+'%25).%20Ich%20m%C3%B6chte%20eine%20Diagnostik%20besprechen." class="d-btn d-btn-cyan">Gespr\u00e4ch starten</a><button class="d-btn d-btn-ghost" onclick="dReset()">Nochmal durchf\u00fchren</button></div>';document.getElementById('d-results').innerHTML=h;var sn=document.getElementById('dScoreNum'),counter=0,step=Math.max(1,Math.floor(pct/30));var iv=setInterval(function(){counter+=step;if(counter>=pct){counter=pct;clearInterval(iv)}sn.textContent=counter+'%'},40);setTimeout(function(){document.querySelectorAll('.z-card').forEach(function(c,i){setTimeout(function(){c.classList.add('show')},i*120)});setTimeout(function(){document.querySelectorAll('.z-fill').forEach(function(f){f.style.width=f.getAttribute('data-pct')+'%'})},200)},400)}
+function dReset(){dCur=0;dAns=new Array(9).fill(null);dShowPhase('d-intro')}
+
+// ── SCROLL ANIMATIONS ──
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}})},{threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
 </script>
 
 </body>
