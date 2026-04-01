@@ -211,26 +211,56 @@ section{position:relative;z-index:1;padding:var(--section-pad) 44px}
 .phase-name{font-family:var(--display);font-weight:500;font-size:14px;color:var(--white);margin-bottom:6px;letter-spacing:0.5px}
 .phase-desc{font-weight:300;font-size:13px;color:var(--tx3);line-height:1.7}
 
-/* ═══ DIAGNOSTIC ═══ */
+
+/* ═══ DIAGNOSTIC ENHANCED ═══ */
 .diag-container{max-width:640px;margin:0 auto}
-.diag-intro{text-align:center;margin-bottom:40px}
+.diag-intro{text-align:center;margin-bottom:32px}
 .diag-intro p{font-weight:300;font-size:14px;color:var(--tx3)}
 .diag-intro .count{font-family:var(--display);font-weight:500;color:var(--cyan)}
-#prog{display:flex;gap:6px;justify-content:center;margin-bottom:32px}
-.dd{width:28px;height:3px;border-radius:2px;background:rgba(255,255,255,0.06);transition:all 0.4s}
-.dd.done{background:var(--cyan)}
-.dd.cur{background:var(--orange);box-shadow:0 0 10px rgba(249,115,22,0.4)}
-.qnum{font-family:var(--display);font-weight:300;font-size:11px;color:var(--tx4);letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;text-align:center}
-.qtx{font-weight:300;font-size:17px;color:var(--white);text-align:center;line-height:1.7;margin-bottom:32px;min-height:60px}
-.qops{display:flex;flex-direction:column;gap:8px}
-.qopt{padding:14px 20px;border:1px solid var(--border);border-radius:10px;background:var(--glass);font-weight:300;font-size:13px;color:var(--tx2);cursor:pointer;transition:all 0.25s;text-align:center;backdrop-filter:blur(8px)}
-.qopt:hover{border-color:var(--border2);background:var(--glass2);color:var(--white)}
-.qopt.sel{border-color:var(--cyan);background:rgba(6,182,212,0.08);color:var(--white)}
-#results{display:none}
-.res-zone{padding:20px 24px;border-left:2px solid var(--orange);margin-bottom:12px;background:var(--glass);border-radius:0 10px 10px 0}
-.res-zone-name{font-family:var(--display);font-weight:500;font-size:13px;color:var(--orange);margin-bottom:6px;letter-spacing:1px}
-.res-zone-desc{font-weight:300;font-size:13px;color:var(--tx3);line-height:1.6}
-
+.d-prog{display:flex;gap:4px;margin-bottom:40px}
+.d-dot{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,0.06);transition:background 0.4s ease}
+.d-dot.done{background:var(--cyan)}.d-dot.cur{background:var(--orange)}
+.d-card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.d-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.d-num{font-family:var(--display);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--tx4);font-weight:300}
+.d-disc{font-family:var(--display);display:inline-block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);border:1px solid rgba(249,115,22,0.25);border-radius:4px;padding:4px 10px;font-weight:400}
+.d-text{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--white);line-height:1.5;margin-bottom:24px}
+.d-neuro{background:rgba(6,182,212,0.04);border:1px solid rgba(6,182,212,0.12);border-radius:8px;padding:14px 16px;margin-bottom:28px;max-height:500px;overflow:hidden;transition:max-height 0.4s ease,opacity 0.4s ease,margin 0.4s ease,padding 0.4s ease}
+.d-neuro.hidden{max-height:0;opacity:0;margin-bottom:0;padding:0 16px;border-color:transparent}
+.d-neuro-icon{font-family:var(--display);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:6px;font-weight:500}
+.d-neuro-text{font-size:13px;line-height:1.6;color:rgba(255,255,255,0.45)}
+.d-neuro-ref{font-size:11px;color:var(--tx4);margin-top:8px;font-style:italic}
+.d-opt{padding:14px 18px;margin-bottom:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:14px;color:var(--tx2);transition:all 0.2s ease;font-family:'Inter',sans-serif;width:100%;text-align:left}
+.d-opt:hover{border-color:rgba(255,255,255,0.1);background:rgba(255,255,255,0.04)}
+.d-opt.sel{border-color:var(--cyan);background:rgba(6,182,212,0.08);color:var(--white)}
+.d-nav{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+.d-btn{display:inline-block;padding:14px 32px;border-radius:8px;border:none;font-size:14px;font-weight:500;letter-spacing:1px;cursor:pointer;transition:all 0.3s ease;font-family:'Inter',sans-serif;text-decoration:none}
+.d-btn-cyan{background:linear-gradient(135deg,var(--cyan),var(--cyan2));color:#080d12}
+.d-btn-ghost{background:transparent;border:1px solid var(--border);color:var(--tx3)}
+.d-btn.dis{opacity:0.3;pointer-events:none}
+.d-toggle{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:24px}
+.d-sw{width:40px;height:22px;border-radius:11px;cursor:pointer;position:relative;transition:background 0.3s ease}
+.d-sw.on{background:var(--cyan)}.d-sw.off{background:rgba(255,255,255,0.06)}
+.d-knob{width:16px;height:16px;border-radius:50%;background:#fff;position:absolute;top:3px;transition:left 0.3s ease}
+.d-sw.on .d-knob{left:21px}.d-sw.off .d-knob{left:3px}
+.d-info{margin:24px auto;max-width:480px;padding:20px 24px;background:rgba(255,255,255,0.03);border-radius:12px;border:1px solid var(--border);text-align:left}
+.d-info-title{font-family:var(--display);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:12px;font-weight:400}
+.d-info-body{font-size:13px;line-height:1.8;color:var(--tx3)}
+.d-phase{display:none}.d-phase.active{display:block;animation:dFadeUp 0.4s ease}
+@keyframes dFadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.score-circle{width:120px;height:120px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 32px}
+.score-num{font-family:var(--serif);font-size:36px;font-weight:400;color:var(--white)}
+.score-lbl{font-family:var(--display);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--tx3);margin-top:4px;font-weight:300}
+.mirror-label{font-family:var(--display);font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;font-weight:400}
+.mirror-text{font-size:15px;line-height:1.7;color:var(--white)}
+.z-card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:24px 20px;margin-bottom:16px;opacity:0;transform:translateY(12px);transition:all 0.5s ease}
+.z-card.show{opacity:1;transform:translateY(0)}
+.z-head{display:flex;justify-content:space-between;align-items:center}
+.z-name{font-size:14px;font-weight:600}.z-pct{font-size:13px;color:var(--tx3);font-family:var(--serif)}
+.z-bar{height:4px;border-radius:2px;background:rgba(255,255,255,0.06);margin-top:10px;margin-bottom:8px;overflow:hidden}
+.z-fill{height:100%;border-radius:2px;width:0;transition:width 1.2s cubic-bezier(0.23,1,0.32,1)}
+.z-desc{font-size:13px;line-height:1.6;color:var(--tx3);margin-top:8px}
+.z-disc{font-size:12px;color:var(--orange);margin-top:8px;font-style:italic}
 /* ═══ CTA ═══ */
 .cta-section{text-align:center;padding:var(--section-pad) 44px;position:relative}
 .cta-section::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:200px;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent)}
@@ -568,26 +598,38 @@ footer a:hover{color:var(--cyan)}
 <div class="section-div"></div>
 
 <!-- DIAGNOSTIC -->
+
+<!-- DIAGNOSTIC ENHANCED -->
 <section id="diagnostic" class="fade-in">
   <div class="wrap">
-    <div class="section-label">Your Organisation — A Quick Pulse Check</div>
-    <div class="diag-container">
-      <div class="diag-intro">
-        <p><span class="count">9 questions. Under 3 minutes.</span></p>
-        <p style="margin-top:8px">No data stored. The result is yours alone — an honest mirror of what might be running underneath your organisation's surface.</p>
-      </div>
-      <div id="diag-container">
-        <div id="prog"></div>
-        <div id="qarea"></div>
-      </div>
-      <div id="results">
-        <div class="sec-head" style="text-align:center;font-size:24px;margin-bottom:24px">Your Pattern Map</div>
-        <div id="res-zones"></div>
-        <div style="text-align:center;margin-top:40px">
-          <a href="#contact" class="btn-primary">Start the conversation</a>
+    <div id="d-intro" class="d-phase active">
+      <div class="section-label">Your Organisation — A Pulse Check</div>
+      <div class="diag-container">
+        <div class="diag-intro">
+          <p><span class="count">9 Questions. Under 3 Minutes.</span></p>
+          <p style="margin-top:8px">No data stored. No algorithms. The result is yours alone — an honest mirror of what might be running underneath your organisation's surface.</p>
         </div>
+        <div class="d-info">
+          <div class="d-info-title">What This Measures</div>
+          <div class="d-info-body">Each question maps to a zone where survival patterns operate in organisations — from how dissent is handled, to how trust erodes between the story told and the story lived. The diagnostic connects each zone to a specific film discipline from The Human Origin methodology and the neuroscience that explains why these patterns persist.</div>
+        </div>
+        <div class="d-toggle">
+          <div id="dToggle" class="d-sw on" onclick="dToggleNeuro()"><div class="d-knob"></div></div>
+          <span style="font-size:13px;color:var(--tx3)">Show neuroscience annotations</span>
+        </div>
+        <div style="text-align:center"><button class="d-btn d-btn-cyan" onclick="dStart()">Begin Diagnostic</button></div>
+        <div style="margin-top:24px;font-family:var(--display);font-size:11px;color:var(--tx4);text-align:center;font-weight:300;letter-spacing:2px">For C-Level · HR · Team Leaders · Team Members</div>
       </div>
     </div>
+    <div id="d-questions" class="d-phase">
+      <div id="d-prog" class="d-prog"></div>
+      <div id="d-qcard" class="d-card"></div>
+      <div class="d-nav">
+        <button id="d-prev" class="d-btn d-btn-ghost" onclick="dPrev()">&#8592; Back</button>
+        <button id="d-next" class="d-btn d-btn-cyan dis" onclick="dNext()">Next &#8594;</button>
+      </div>
+    </div>
+    <div id="d-results" class="d-phase"></div>
   </div>
 </section>
 
@@ -604,7 +646,7 @@ footer a:hover{color:var(--cyan)}
   </div>
   <div class="cta-avatar-name">Tom Waldek</div>
   <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-    <a href="mailto:tom@thehumanorigin.com?subject=Trust%20Architecture%20Diagnostic" class="btn-primary">Start the conversation</a>
+    <a href="/cdn-cgi/l/email-protection#b2c6dddff2c6dad7dac7dfd3dcddc0dbd5dbdc9cd1dddf8dc1c7d0d8d7d1c68fe6c0c7c1c6978082f3c0d1dadbc6d7d1c6c7c0d7978082f6dbd3d5dcddc1c6dbd1" class="btn-primary">Start the conversation</a>
   </div>
 </section>
 
@@ -615,7 +657,7 @@ footer a:hover{color:var(--cyan)}
 </footer>
 
 <!-- ═══ SCRIPTS ═══ -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ── COUNTING ANIMATION ──
 function animateCounters(){
   const counters=document.querySelectorAll('.counter-val');
@@ -725,35 +767,35 @@ if(portraitEl){
 }
 
 // ── DIAGNOSTIC ──
-var cur=0,ans=new Array(9).fill(null);
-var Qs=[
-{z:"survival",t:"When was the last time someone openly contradicted the most senior person in the room?",o:["This week","This month","Months ago","I can't remember"],s:[0,1,2,3]},
-{z:"trust",t:"How would your newest employee describe the gap between what they were promised and what they found?",o:["No gap","Small gap","Clear gap","Wide gap"],s:[0,1,2,3]},
-{z:"external",t:"If you asked your longest-standing client what it feels like to work with your company — would their answer match your website?",o:["Completely","Mostly","Partially","Not really"],s:[0,1,2,3]},
-{z:"absence",t:"When you're away for a week — does your team's performance improve, stay the same, or decline?",o:["Improves","Stays the same","Slight decline","Clear decline"],s:[2,1,2,3]},
-{z:"attachment",t:"When someone on your team needs support — does that energise you, or drain you?",o:["Energises me","Neutral","Slightly drains me","Significantly drains me"],s:[0,1,2,3]},
-{z:"peers",t:"Would you describe the relationship between your leadership peers as genuinely cooperative — or politically careful?",o:["Genuinely cooperative","Mostly cooperative","More careful than honest","Political"],s:[0,1,2,3]},
-{z:"direct",t:"Do your people bring you problems early — or only when they can no longer hide them?",o:["Early and openly","Mostly early","Often late","Only when they have no choice"],s:[0,1,2,3]},
-{z:"narrative",t:"If you read your company's careers page aloud in a team meeting — would people recognise the place being described?",o:["Yes, completely","Mostly","They'd smile politely","They'd look away"],s:[0,1,2,3]},
-{z:"origin",t:"How much of your leadership energy goes into managing how you're perceived — versus actually leading?",o:["Almost none — I lead as myself","Some — I'm aware of it","A lot — it costs real energy","Most of it, honestly"],s:[0,1,2,3]}
+
+// ── DIAGNOSTIC ENHANCED ──
+var dCur=0,dAns=new Array(9).fill(null),dShowNeuro=true;
+var dQs=[
+{zone:"survival",disc:"Directing",t:"When was the last time someone openly contradicted the most senior person in the room?",neuro:"Neuroception \u2014 the nervous system scans for threat before conscious thought. Silence around authority signals danger detection, not agreement.",ref:"Porges, Autonomic Regulation",opts:[{l:"This week",s:0},{l:"This month",s:1},{l:"Months ago",s:2},{l:"I can\u2019t remember",s:3}]},
+{zone:"trust",disc:"Writing",t:"How would your newest hire describe the gap between what they were promised and what they found?",neuro:"Narrative dissonance activates the anterior cingulate cortex \u2014 the brain\u2019s conflict detector. The gap between told story and lived story erodes trust neurologically.",ref:"Edmondson, Psychological Safety",opts:[{l:"No gap",s:0},{l:"Small gap",s:1},{l:"Clear gap",s:2},{l:"Wide gap",s:3}]},
+{zone:"external",disc:"Editing",t:"If you asked your longest-standing client what it feels like to work with your company \u2014 would their answer match your website?",neuro:"External stakeholders bypass the internal narrative. Their experience reflects the organisation\u2019s actual nervous system, not its performed identity.",ref:"Barsade, Emotional Contagion",opts:[{l:"Completely",s:0},{l:"Mostly",s:1},{l:"Partially",s:2},{l:"Not really",s:3}]},
+{zone:"absence",disc:"Producing",t:"When you\u2019re away for a week, does your team\u2019s output improve, stay the same, or drop?",neuro:"Leader absence reveals co-regulation dependency. If performance drops, the system runs on the leader\u2019s nervous system \u2014 not its own architecture.",ref:"Porges, Co-Regulation",opts:[{l:"Improves",s:2},{l:"Stays the same",s:1},{l:"Drops slightly",s:2},{l:"Drops significantly",s:3}]},
+{zone:"attachment",disc:"Intimacy Coordination",t:"When someone on your team needs support, does it energise you \u2014 or quietly drain you?",neuro:"Attachment patterns from early life migrate into leadership. The drain signals unresolved relational architecture operating beneath professional behaviour.",ref:"Bowlby / Porges, Attachment & Autonomic State",opts:[{l:"Energises me",s:0},{l:"Neutral",s:1},{l:"Drains me slightly",s:2},{l:"Drains me significantly",s:3}]},
+{zone:"peers",disc:"Acting",t:"Would you describe the relationship between your leadership peers as collaborative \u2014 or politically careful?",neuro:"Political caution is performed safety. The sympathetic nervous system stays activated \u2014 vigilant, strategic, never at rest. Collaboration requires ventral vagal access.",ref:"Keltner, Power Paradox",opts:[{l:"Genuinely collaborative",s:0},{l:"Mostly collaborative",s:1},{l:"Politically careful",s:2},{l:"Siloed or competitive",s:3}]},
+{zone:"direct",disc:"Directing",t:"How long does it take for a real problem to reach the person who can actually solve it?",neuro:"Information delay is a survival metric. In psychologically safe teams, problems surface in hours. In unsafe ones, they surface in crises.",ref:"Edmondson, The Fearless Organization",opts:[{l:"Hours",s:0},{l:"Days",s:1},{l:"Weeks",s:2},{l:"Only in a crisis",s:3}]},
+{zone:"narrative",disc:"Writing",t:"If your team described the company culture to a stranger \u2014 would you recognise it?",neuro:"Narrative fragmentation: when the leader\u2019s story and the team\u2019s story diverge, the organisation operates on two nervous systems simultaneously.",ref:"Barsade, Emotional Contagion in Groups",opts:[{l:"Immediately",s:0},{l:"Mostly",s:1},{l:"Partially",s:2},{l:"Probably not",s:3}]},
+{zone:"origin",disc:"Acting",t:"How much energy does your leadership team spend managing how they\u2019re perceived \u2014 versus saying what\u2019s actually true?",neuro:"Perception management is metabolically expensive. The prefrontal cortex burns glucose maintaining a performed identity. That energy is unavailable for creativity, decision-making, or genuine connection.",ref:"Porges / Keltner, Power & Autonomic Cost",opts:[{l:"Almost none \u2014 we\u2019re direct",s:0},{l:"Some \u2014 it\u2019s part of the culture",s:1},{l:"Significant \u2014 reputation matters more than truth",s:2},{l:"It\u2019s the dominant activity",s:3}]}
 ];
-var zoneNames={survival:"Survival Mode",trust:"Trust Gap",external:"External Perception",absence:"Dependency Pattern",attachment:"Attachment Pattern",peers:"Peer Dynamics",direct:"Direct Feedback",narrative:"Narrative Gap",origin:"Origin Pattern"};
-var zoneDescs={
-survival:"When contradiction disappears, the organisation is running on compliance, not trust.",
-trust:"The distance between promise and reality is the distance employees travel toward disengagement.",
-external:"How clients experience you reveals what your internal culture actually produces.",
-absence:"What happens when you leave reveals what you've built — or what depends on you.",
-attachment:"Whether supporting others energises or drains you reveals the attachment pattern underneath your leadership.",
-peers:"Political caution between leadership peers is survival architecture at the executive level.",
-direct:"When problems surface reveals how much psychological safety actually exists.",
-narrative:"The gap between the story told and the story lived is where trust erodes.",
-origin:"Energy flowing into perception management is energy missing where real leadership is needed."
-};
-function bP(){var h="";for(var i=0;i<Qs.length;i++){var c="dd";if(i<cur)c+=" done";if(i===cur)c+=" cur";h+='<div class="'+c+'"></div>'}document.getElementById("prog").innerHTML=h}
-function sQ(){var a=document.getElementById("qarea"),q=Qs[cur];var h='<p class="qnum">Question '+(cur+1)+" of "+Qs.length+"</p>";h+='<p class="qtx">'+q.t+"</p>";h+='<div class="qops">';for(var i=0;i<q.o.length;i++){var sc=ans[cur]===i?' sel':'';h+='<div class="qopt'+sc+'" onclick="pick('+i+')">'+q.o[i]+"</div>"}h+="</div>";a.innerHTML=h;bP()}
-function pick(i){ans[cur]=i;if(cur<Qs.length-1){cur++;setTimeout(sQ,300)}else{showR()}}
-function showR(){document.getElementById("diag-container").style.display="none";var r=document.getElementById("results");r.style.display="block";var zones={};for(var i=0;i<Qs.length;i++){if(ans[i]!==null&&Qs[i].s[ans[i]]>=2){var z=Qs[i].z;if(!zones[z])zones[z]=0;zones[z]+=Qs[i].s[ans[i]]}}var zk=Object.keys(zones).sort(function(a,b){return zones[b]-zones[a]});var h="";if(zk.length===0){h='<p class="sec-text" style="margin-top:20px;text-align:center">Strong signals. Your organisation shows few signs of active survival patterns. That\'s rare — and valuable.</p>'}else{for(var j=0;j<Math.min(zk.length,4);j++){h+='<div class="res-zone"><div class="res-zone-name">'+(zoneNames[zk[j]]||zk[j])+'</div><div class="res-zone-desc">'+(zoneDescs[zk[j]]||"")+"</div></div>"}}document.getElementById("res-zones").innerHTML=h}
-sQ();
+var dZM={survival:{name:"Survival Architecture",color:"#f97316",disc:"Directing",desc:"The room reads the leader\u2019s nervous system before a single word is spoken. When silence replaces challenge, the system has chosen safety over truth.",dn:"Creating conditions where truth shows up \u2014 not where silence passes for agreement."},trust:{name:"Narrative Gap",color:"#e8b8a4",disc:"Writing",desc:"The gap between the story told and the story lived is where trust erodes \u2014 neurologically, not just emotionally.",dn:"Surfacing the narrative the organisation is actually living inside."},external:{name:"External Trust Signal",color:"#cc7058",disc:"Editing",desc:"Clients and partners experience the organisation\u2019s actual operating system. They bypass the internal narrative entirely.",dn:"Cutting what no longer serves the story. Strengthening what carries it."},absence:{name:"Presence Dependency",color:"#a04c38",disc:"Producing",desc:"If performance drops when the leader leaves, the organisation isn\u2019t running on architecture \u2014 it\u2019s running on one nervous system.",dn:"Building the backbone that holds people so they can stop holding it together alone."},attachment:{name:"Relational Pattern",color:"#8a6ca0",disc:"Intimacy Coordination",desc:"Whether supporting others energises or drains reveals the attachment architecture underneath the leadership \u2014 not a personality trait, a nervous system pattern.",dn:"The conditions where anyone can say \u2018I don\u2019t know\u2019 without it costing them safety."},peers:{name:"Peer Dynamics",color:"#a8b0cc",disc:"Acting",desc:"Political caution is the sympathetic nervous system at the executive level. It\u2019s performed collaboration \u2014 vigilant, strategic, never at rest.",dn:"The difference between performed safety and real presence."},direct:{name:"Safety & Honesty",color:"#384878",disc:"Directing",desc:"When problems surface tells you how much psychological safety actually exists \u2014 not in theory, in the nervous system of every person who stays silent.",dn:"Adjusting the room until what\u2019s real has no choice but to appear."},narrative:{name:"Story Fragmentation",color:"#6070a0",disc:"Writing",desc:"When the leader\u2019s story and the team\u2019s story diverge, the organisation is running on two nervous systems. One will win. Usually the louder one.",dn:"Shaping the narrative before anyone performs it."},origin:{name:"The Origin",color:"#06b6d4",disc:"Acting",desc:"Energy spent managing perception is energy missing where real leadership is needed. The metabolic cost of facade is measurable \u2014 and it compounds.",dn:"Accessing what\u2019s actually true and acting from there."}};
+function dToggleNeuro(){dShowNeuro=!dShowNeuro;var t=document.getElementById('dToggle');t.className=dShowNeuro?'d-sw on':'d-sw off';var nb=document.querySelector('.d-neuro');if(nb)nb.className=dShowNeuro?'d-neuro':'d-neuro hidden'}
+function dRenderProg(){var h='';for(var i=0;i<dQs.length;i++){var c='d-dot';if(i<dCur)c+=' done';if(i===dCur)c+=' cur';h+='<div class="'+c+'"></div>'}document.getElementById('d-prog').innerHTML=h}
+function dRenderQ(){var q=dQs[dCur];var h='<div class="d-head"><div class="d-num">Question '+(dCur+1)+' of '+dQs.length+'</div><div class="d-disc">'+q.disc+'</div></div><div class="d-text">'+q.t+'</div><div class="d-neuro'+(dShowNeuro?'':' hidden')+'"><div class="d-neuro-icon">Neuroscience</div><div class="d-neuro-text">'+q.neuro+'</div><div class="d-neuro-ref">'+q.ref+'</div></div>';for(var i=0;i<q.opts.length;i++){h+='<button class="d-opt'+(dAns[dCur]===i?' sel':'')+'" onclick="dPick('+i+')">'+q.opts[i].l+'</button>'}document.getElementById('d-qcard').innerHTML=h;dRenderProg();document.getElementById('d-prev').className=dCur===0?'d-btn d-btn-ghost dis':'d-btn d-btn-ghost';document.getElementById('d-next').className=dAns[dCur]!==null?'d-btn d-btn-cyan':'d-btn d-btn-cyan dis';document.getElementById('d-next').textContent=dCur===dQs.length-1?'See Results':'Next \u2192'}
+function dPick(i){dAns[dCur]=i;dRenderQ()}
+function dNext(){if(dAns[dCur]===null)return;if(dCur===dQs.length-1){dShowResults();return}dCur++;dShowPhase('d-questions');dRenderQ()}
+function dPrev(){if(dCur>0){dCur--;dRenderQ()}}
+function dShowPhase(id){document.querySelectorAll('.d-phase').forEach(function(p){p.classList.remove('active')});document.getElementById(id).classList.add('active')}
+function dStart(){dCur=0;dShowPhase('d-questions');dRenderQ()}
+function dShowResults(){dShowPhase('d-results');var total=0,maxT=dQs.length*3;for(var i=0;i<dQs.length;i++){if(dAns[i]!==null)total+=dQs[i].opts[dAns[i]].s}var pct=Math.round(total/maxT*100);var zs={};dQs.forEach(function(q,i){if(dAns[i]!==null){if(!zs[q.zone])zs[q.zone]={score:0,max:0};zs[q.zone].score+=q.opts[dAns[i]].s;zs[q.zone].max+=3}});var sorted=Object.keys(zs).map(function(k){return{key:k,pct:Math.round(zs[k].score/zs[k].max*100)}}).sort(function(a,b){return b.pct-a.pct});var mirror,verdict;if(pct<=25){mirror="Your answers suggest genuine openness \u2014 low survival architecture, real trust. A diagnostic would confirm what\u2019s working and surface anything hiding beneath the health.";verdict="Healthy signals. A diagnostic would confirm and deepen what\u2019s working."}else if(pct<=50){mirror="Things work, but harder than they should. There\u2019s enough trust for daily operations but not enough for the honest conversations that would change the trajectory. Quiet costs compound.";verdict="A Trust Architecture Diagnostic is recommended. Quiet patterns compound \u2014 finding them early changes the trajectory."}else if(pct<=75){mirror="Survival architecture is running significant parts of your organisation. Communication is managed rather than honest. The gap between story and reality is costing trust \u2014 with partners, clients, and your people.";verdict="A Trust Architecture Diagnostic is strongly recommended. The survival architecture has measurable cost \u2014 in trust, capacity, and revenue."}else{mirror="A system under significant stress \u2014 survival patterns active across multiple dimensions. This isn\u2019t a leadership failure. It\u2019s a system running on survival long enough to make it normal. The awareness in your answers means conditions for change already exist.";verdict="Immediate intervention recommended. The cost is compounding daily \u2014 in turnover, lost trust, and suppressed capacity."}var ccRaw=pct<=25?'#22c55e':pct<=50?'#06b6d4':pct<=75?'#f97316':'#ef4444';var h='<div style="text-align:center;margin-bottom:40px"><div class="section-label">Your Results</div><div class="score-circle" style="border:2px solid '+ccRaw+';box-shadow:0 0 40px '+ccRaw+'22"><div class="score-num" id="dScoreNum">0</div><div class="score-lbl">Survival Active</div></div></div>';h+='<div class="d-card" style="border-color:'+ccRaw+'33"><div class="mirror-label" style="color:'+ccRaw+'">The Mirror</div><div class="mirror-text">'+mirror+'</div></div>';h+='<div style="margin-top:32px"><div class="section-label" style="margin-bottom:20px">Pattern Map \u2014 Where Survival Lives</div>';for(var j=0;j<sorted.length;j++){var z=sorted[j];var zm=dZM[z.key];var bL=z.pct>=50?'border-left:3px solid '+zm.color:'';h+='<div class="z-card" style="'+bL+'"><div class="z-head"><div class="z-name" style="color:'+zm.color+'">'+zm.name+'</div><div class="z-pct">'+z.pct+'%</div></div><div class="z-bar"><div class="z-fill" data-pct="'+z.pct+'" style="background:'+zm.color+'"></div></div>';if(z.pct>=33){h+='<div class="z-desc">'+zm.desc+'</div><div class="z-disc">Film Discipline: '+zm.disc+' \u2014 '+zm.dn+'</div>'}h+='</div>'}h+='</div>';h+='<div class="d-card" style="margin-top:32px;background:rgba(6,182,212,0.04);border-color:rgba(6,182,212,0.15)"><div class="mirror-label" style="color:var(--cyan)">Diagnostic Recommendation</div><div class="mirror-text">'+verdict+'</div></div>';h+='<div style="margin-top:32px;padding:20px 24px;background:rgba(255,255,255,0.03);border-radius:12px;border:1px solid var(--border)"><div style="font-family:var(--display);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--tx4);margin-bottom:12px;font-weight:400">The Science Behind This Diagnostic</div><div style="font-size:13px;line-height:1.8;color:var(--tx3)">Each question maps to a specific autonomic pattern documented in peer-reviewed research. Emotional contagion transfers the leader\u2019s nervous system state to teams within milliseconds (Barsade, 2002). Psychological safety \u2014 or its absence \u2014 determines whether problems surface in hours or in crises (Edmondson, 1999). Power reduces empathy and increases risk-taking when unchecked (Keltner, 2016). The organisation doesn\u2019t copy the leader\u2019s strategy. It copies the leader\u2019s nervous system.</div><div style="font-size:11px;color:var(--tx4);margin-top:12px">Research: Porges (Autonomic Regulation) \u00b7 Barsade (Emotional Contagion) \u00b7 Edmondson (Psychological Safety) \u00b7 Keltner (Power Paradox) \u00b7 Brown (Vulnerability & Trust)</div></div>';h+='<div style="display:flex;gap:12px;justify-content:center;margin-top:40px;flex-wrap:wrap"><a href="mailto:tom@thehumanorigin.com?subject=Trust%20Architecture%20Diagnostic&body=I%20completed%20the%20pulse%20check%20(score:%20'+pct+'%25).%20I%27d%20like%20to%20explore%20a%20diagnostic." class="d-btn d-btn-cyan">Start the Conversation</a><button class="d-btn d-btn-ghost" onclick="dReset()">Take Again</button></div>';document.getElementById('d-results').innerHTML=h;var sn=document.getElementById('dScoreNum'),counter=0,step=Math.max(1,Math.floor(pct/30));var iv=setInterval(function(){counter+=step;if(counter>=pct){counter=pct;clearInterval(iv)}sn.textContent=counter+'%'},40);setTimeout(function(){document.querySelectorAll('.z-card').forEach(function(c,i){setTimeout(function(){c.classList.add('show')},i*120)});setTimeout(function(){document.querySelectorAll('.z-fill').forEach(function(f){f.style.width=f.getAttribute('data-pct')+'%'})},200)},400)}
+function dReset(){dCur=0;dAns=new Array(9).fill(null);dShowPhase('d-intro')}
+
+// ── SCROLL ANIMATIONS ──
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}})},{threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
 </script>
 
 </body>
