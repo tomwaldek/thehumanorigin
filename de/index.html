@@ -223,7 +223,7 @@ section{position:relative;z-index:1;padding:var(--section-pad) 44px}
 .d-card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:32px 28px;margin-bottom:24px}
 .d-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
 .d-num{font-family:var(--display);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--tx4);font-weight:300}
-.d-disc{font-family:var(--display);display:inline-block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);border:1px solid rgba(249,115,22,0.25);border-radius:4px;padding:4px 10px;font-weight:400}
+.d-disc{font-family:var(--display);display:inline-block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(249,115,22,0.25);border-radius:4px;padding:4px 10px;font-weight:400}
 .d-text{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--white);line-height:1.5;margin-bottom:24px}
 .d-neuro{background:rgba(6,182,212,0.04);border:1px solid rgba(6,182,212,0.12);border-radius:8px;padding:14px 16px;margin-bottom:28px;max-height:500px;overflow:hidden;transition:max-height 0.4s ease,opacity 0.4s ease,margin 0.4s ease,padding 0.4s ease}
 .d-neuro.hidden{max-height:0;opacity:0;margin-bottom:0;padding:0 16px;border-color:transparent}
@@ -234,16 +234,16 @@ section{position:relative;z-index:1;padding:var(--section-pad) 44px}
 .d-opt:hover{border-color:rgba(255,255,255,0.1);background:rgba(255,255,255,0.04)}
 .d-opt.sel{border-color:var(--cyan);background:rgba(6,182,212,0.08);color:var(--white)}
 .d-nav{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
-.d-btn{display:inline-block;padding:14px 32px;border-radius:8px;border:none;font-size:14px;font-weight:500;letter-spacing:1px;cursor:pointer;transition:all 0.3s ease;font-family:'Inter',sans-serif;text-decoration:none}
-.d-btn-cyan{background:linear-gradient(135deg,var(--cyan),var(--cyan2));color:#080d12}
-.d-btn-ghost{background:transparent;border:1px solid var(--border);color:var(--tx3)}
+.d-btn{display:inline-block;padding:14px 36px;border-radius:100px;border:none;font-size:14px;font-weight:500;letter-spacing:1px;cursor:pointer;transition:all 0.3s ease;font-family:'Inter',sans-serif;text-decoration:none}
+.d-btn-cyan{background:linear-gradient(135deg,var(--cyan),var(--orange));color:var(--white);border-radius:100px;font-family:var(--display);font-weight:500}
+.d-btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--white);font-weight:300;backdrop-filter:blur(8px)}
 .d-btn.dis{opacity:0.3;pointer-events:none}
 .d-toggle{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:24px}
 .d-sw{width:40px;height:22px;border-radius:11px;cursor:pointer;position:relative;transition:background 0.3s ease}
-.d-sw.on{background:var(--cyan)}.d-sw.off{background:rgba(255,255,255,0.06)}
+.d-sw.on{background:var(--orange)}.d-sw.off{background:rgba(255,255,255,0.06)}
 .d-knob{width:16px;height:16px;border-radius:50%;background:#fff;position:absolute;top:3px;transition:left 0.3s ease}
 .d-sw.on .d-knob{left:21px}.d-sw.off .d-knob{left:3px}
-.d-info{margin:24px auto;max-width:480px;padding:20px 24px;background:rgba(255,255,255,0.03);border-radius:12px;border:1px solid var(--border);text-align:left}
+.d-info{margin:24px auto;max-width:480px;padding:20px 24px;background:rgba(6,182,212,0.03);border-radius:12px;border:1px solid rgba(6,182,212,0.15);text-align:left}
 .d-info-title{font-family:var(--display);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:12px;font-weight:400}
 .d-info-body{font-size:13px;line-height:1.8;color:var(--tx3)}
 .d-phase{display:none}.d-phase.active{display:block;animation:dFadeUp 0.4s ease}
@@ -261,6 +261,15 @@ section{position:relative;z-index:1;padding:var(--section-pad) 44px}
 .z-fill{height:100%;border-radius:2px;width:0;transition:width 1.2s cubic-bezier(0.23,1,0.32,1)}
 .z-desc{font-size:13px;line-height:1.6;color:var(--tx3);margin-top:8px}
 .z-disc{font-size:12px;color:var(--orange);margin-top:8px;font-style:italic}
+
+/* ═══ WHY SECTION ═══ */
+.why-section{text-align:center;position:relative}
+.why-photo{width:100%;max-width:640px;height:240px;margin:0 auto 32px;border-radius:12px;overflow:hidden;position:relative}
+.why-photo img{width:100%;height:100%;object-fit:cover;object-position:center 25%;filter:brightness(0.85)}
+.why-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,var(--bg) 100%)}
+.why-text{max-width:640px;margin:0 auto}
+.why-text p{font-weight:300;font-size:15px;color:var(--tx2);line-height:2;margin-bottom:24px;text-align:left}
+
 /* ═══ CTA ═══ */
 .cta-section{text-align:center;padding:var(--section-pad) 44px;position:relative}
 .cta-section::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:200px;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent)}
@@ -434,7 +443,7 @@ footer a:hover{color:var(--cyan)}
 <!-- THE ORIGIN POWER -->
 <section id="power" class="fade-in">
   <div class="wrap">
-    <div class="section-label stagger-1">Die Ursprungskraft, die niemand nutzt</div>
+    <div class="section-label stagger-1">Wo Kreativität zurückkehrt</div>
     <p class="sec-text stagger-2">Aber diese Fähigkeit kehrt nicht auf Befehl zurück. Überleben ist Wiederholung — derselbe Platz, dieselbe Reaktion, dieselbe Performance — und das Nervensystem wird sie immer wieder wählen, bis etwas die Schleife durchbricht. <strong>Kreativität ist dieser Bruch.</strong> Nicht als Kunst. Als Praxis.</p>
     <p class="sec-text stagger-3">Das Handy an einem anderen Ort platzieren. Einen Stuhl wählen, auf dem du noch nie gesessen hast. Jede Mikro-Störung sagt dem Nervensystem: <strong>Sicherheit braucht keine Gleichförmigkeit.</strong></p>
     <p class="sec-text stagger-4">Übe es im Kleinen und du baust die Fähigkeit auf, die zählt: das mutige Gespräch, die ehrliche Entscheidung, der Moment, in dem du aus dir heraus führst — nicht aus einer Rolle. <strong>The Human Origin lehrt nicht Kreativität. Es entfernt, was sie blockiert.</strong></p>
@@ -452,9 +461,9 @@ footer a:hover{color:var(--cyan)}
         <div class="proof-src">Gallup Workplace Research</div>
       </div>
       <div class="proof-card">
-        <div class="proof-num"><span class="proof-counter cyan" data-target="450" data-suffix="%">0%</span> bessere Entscheidungen</div>
+        <div class="proof-num"><span class="proof-counter cyan" data-target="7" data-suffix="×">0×</span> experimentierfreudiger</div>
         <div class="proof-label">In psychologisch sicheren Teams</div>
-        <div class="proof-src">Google Project Aristotle</div>
+        <div class="proof-src">Edmondson & Lei, 2014</div>
       </div>
       <div class="proof-card">
         <div class="proof-num"><span class="proof-counter orange" data-target="76" data-suffix="%">0%</span> mehr Engagement</div>
@@ -477,7 +486,7 @@ footer a:hover{color:var(--cyan)}
   <div class="wrap">
     <div class="section-label">Die Vertrauenskaskade</div>
     <p class="sec-text">Vertrauen ist kein Wert. Es ist eine Abfolge. Ein ehrliches Gespräch bringt ans Licht, was wirklich ist. Was wirklich ist, schafft Ausrichtung. Ausrichtung schafft Geschwindigkeit. Geschwindigkeit ohne Vertrauen ist nur Lärm. <strong>Das ist die Architektur unter der Performance.</strong></p>
-    <p class="sec-text-emphasis">Die Aura verändert sich. Nicht die Strategie. Nicht die Struktur. Der Raum wird wärmer, Vertrauen wird leichter, und Mut hört auf, eine Initiative zu sein — und wird zur Atmosphäre.</p>
+    <p class="sec-text">Die Aura verändert sich. Nicht die Strategie. Nicht die Struktur. Der Raum wird wärmer, Vertrauen wird leichter, und Mut hört auf, eine Initiative zu sein — <span style="color:var(--cyan)"><span style="color:var(--cyan)">und wird zur Atmosphäre.</span></span></p>
   </div>
 </section>
 
@@ -509,6 +518,7 @@ footer a:hover{color:var(--cyan)}
   <div class="wrap">
     <div class="section-label stagger-1">Die Methode</div>
     <div class="sec-head stagger-2" style="font-size:clamp(24px,3.5vw,36px);font-weight:500">Sechs Filmdisziplinen. Eine Führungsarchitektur.</div>
+    <p class="sec-text" style="text-align:center;margin-bottom:40px;font-style:italic;color:var(--cyan)">Jede Disziplin wird dort angewandt, wo Ihr Unternehmen tatsächlich operiert — in echten Meetings, echten Entscheidungen, echten Gesprächen. Dort, wo es zählt.</p>
     <div class="disc-grid stagger-3">
       <div class="disc-card">
         <div class="disc-num">01 — Drehbuch</div>
@@ -556,7 +566,7 @@ footer a:hover{color:var(--cyan)}
         <div class="phase-num">0</div>
         <div>
           <div class="phase-name">Erstgespräch</div>
-          <div class="phase-desc">Ein Gespräch auf Augenhöhe. Kein Pitch. Nur eine Frage — die richtige.</div>
+          <div class="phase-desc">Ein Gespräch auf Augenhöhe. Kein Pitch. Nur eine Frage — die wahrhaftige.</div>
         </div>
       </div>
       <div class="phase">
@@ -570,7 +580,7 @@ footer a:hover{color:var(--cyan)}
         <div class="phase-num">2</div>
         <div>
           <div class="phase-name">Origin Work</div>
-          <div class="phase-desc">Die Muster auflösen. Zugang zu dem, was darunter liegt. Was folgt, ist keine Erkenntnis — es ist ein neues Fundament. Und damit: die Fähigkeit zu handeln.</div>
+          <div class="phase-desc">Die Muster auflösen. Zugang zu dem, was darunter liegt. Was folgt, ist keine Erkenntnis — es ist ein neues Fundament. Entscheidungen vom Menschen — nicht von einer Rolle.</div>
         </div>
       </div>
       <div class="phase">
@@ -603,7 +613,7 @@ footer a:hover{color:var(--cyan)}
 <section id="diagnostic" class="fade-in">
   <div class="wrap">
     <div id="d-intro" class="d-phase active">
-      <div class="section-label">Ihr Unternehmen — ein Pulscheck</div>
+      <div class="section-label" style="color:var(--orange)">Ihr Unternehmen — ein Pulscheck</div>
       <div class="diag-container">
         <div class="diag-intro">
           <p><span class="count">9 Fragen. Unter 3 Minuten.</span></p>
@@ -615,9 +625,9 @@ footer a:hover{color:var(--cyan)}
         </div>
         <div class="d-toggle">
           <div id="dToggle" class="d-sw on" onclick="dToggleNeuro()"><div class="d-knob"></div></div>
-          <span style="font-size:13px;color:var(--tx3)">Neurowissenschaftliche Anmerkungen zeigen</span>
+          <span style="font-size:13px;color:var(--cyan)">Neurowissenschaftliche Anmerkungen zeigen</span>
         </div>
-        <div style="text-align:center"><button class="d-btn d-btn-cyan" onclick="dStart()">Diagnostik starten</button></div>
+        <div style="text-align:center"><button class="d-btn d-btn-cyan" onclick="dStart()">Pulscheck starten</button></div>
         <div style="margin-top:24px;font-family:var(--display);font-size:11px;color:var(--tx4);text-align:center;font-weight:300;letter-spacing:2px">Für C-Level · HR · Teamleitung · Teammitglieder</div>
       </div>
     </div>
@@ -635,11 +645,29 @@ footer a:hover{color:var(--cyan)}
 
 <div class="section-div"></div>
 
+<div class="section-div"></div>
+
+<!-- WARUM ES DIESE ARBEIT GIBT -->
+<section class="why-section fade-in">
+  <div class="wrap">
+    <div class="section-label">Warum es diese Arbeit gibt</div>
+    <div class="why-photo">
+      <img src="../TomWaldek_Actor_06.jpg" alt="Tom Waldek">
+    </div>
+    <div class="why-text">
+      <p>Diese Arbeit gibt es, weil ich dasselbe Muster überall gesehen habe: talentierte Menschen, die mit einem Bruchteil von sich selbst arbeiten. Nicht weil ihnen etwas fehlte. Weil der Raum fehlte, wirklich da zu sein — präsent, nicht die Performance von Präsenz.</p>
+      <p>Präsenz ist keine Haltung. Es ist ein Zustand des Nervensystems. Wenn er da ist, sehen Menschen einander. Entscheidungen kommen vom Menschen, nicht von einer Rolle. Verbindung hört auf, eine Anstrengung zu sein — und wird zum Normalzustand.</p>
+      <p>Das lässt sich nicht aus einem Framework kreieren. Es entsteht, wenn jemand beide Seiten kennt — die Räume, in denen alle performen, und die Räume, in denen jemand damit aufhört. Der Unterschied in dem, was dann möglich wird, ist alles, wofür diese Arbeit existiert.</p>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section id="contact" class="cta-section fade-in">
   <div class="section-label">Der nächste Schritt</div>
   <div class="cta-quote">„Zusammenkommen. Sagen, was wahr ist. Den Mut haben, eine Zukunft zu gestalten, zu der Ihr Team wirklich gehören will.“</div>
   <p class="sec-text" style="max-width:560px;margin:0 auto 16px;text-align:center">Wo Überlebensmuster Ihr Unternehmen steuern.<br>Drei Wochen, um die Gespräche an die Oberfläche zu bringen, die Ihr Team nicht führt.</p>
+    <p class="sec-text" style="max-width:560px;margin:16px auto;text-align:center">Führungskräfte, die sagen, was wahr ist — nicht was sicher ist. Teams, die Probleme ansprechen, bevor sie zu Krisen werden. Partner, die bleiben, weil die Zusammenarbeit sich anders anfühlt.</p>
   <p style="font-family:var(--display);font-weight:400;font-size:13px;color:var(--cyan);letter-spacing:2px;margin-bottom:40px">Eine Trust Architecture Diagnostic.</p>
   <div class="cta-avatar">
     <img src="../TomWaldek_Actor_01.jpg" alt="Tom Waldek">
