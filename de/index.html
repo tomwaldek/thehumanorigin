@@ -166,7 +166,7 @@ section{position:relative;z-index:1;padding:var(--section-pad) 44px}
 
 /* ═══ CONTENT SECTIONS ═══ */
 .sec-head{font-family:var(--serif);font-weight:600;font-size:clamp(32px,5vw,52px);line-height:1.15;margin-bottom:40px;color:var(--white);letter-spacing:-0.5px}
-.sec-text{font-weight:300;font-size:15px;color:var(--tx2);line-height:2;margin-bottom:24px}
+.sec-text{font-weight:400;font-size:16px;color:rgba(255,242,225,0.82);line-height:2;margin-bottom:24px}
 .sec-text strong{color:var(--cyan);font-weight:400}
 .sec-text-emphasis{font-weight:400;font-size:17px;color:rgba(255,245,230,0.88);line-height:1.9;margin-bottom:24px;letter-spacing:0.2px}
 
@@ -199,7 +199,7 @@ section{position:relative;z-index:1;padding:var(--section-pad) 44px}
 .disc-card:hover::after{opacity:1}
 .disc-num{font-family:var(--display);font-weight:500;font-size:14px;color:var(--orange);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
 .disc-name{font-family:var(--display);font-weight:300;font-size:20px;color:var(--cyan);margin-bottom:14px;letter-spacing:0.3px;line-height:1.4}
-.disc-desc{font-weight:300;font-size:13px;color:var(--tx3);line-height:1.8}
+.disc-desc{font-weight:400;font-size:14px;color:rgba(255,242,225,0.65);line-height:1.8}
 
 /* ═══ PROCESS ═══ */
 .phase-list{margin-top:40px;display:flex;flex-direction:column;gap:2px}
@@ -209,7 +209,7 @@ section{position:relative;z-index:1;padding:var(--section-pad) 44px}
 .phase:hover{background:var(--glass2);border-color:var(--border2)}
 .phase-num{font-family:var(--display);font-weight:200;font-size:32px;color:var(--cyan);opacity:0.4;min-width:40px;line-height:1}
 .phase-name{font-family:var(--display);font-weight:500;font-size:14px;color:var(--white);margin-bottom:6px;letter-spacing:0.5px}
-.phase-desc{font-weight:300;font-size:13px;color:var(--tx3);line-height:1.7}
+.phase-desc{font-weight:400;font-size:14px;color:rgba(255,242,225,0.65);line-height:1.7}
 
 
 /* ═══ DIAGNOSTIC ENHANCED ═══ */
@@ -280,7 +280,7 @@ section{position:relative;z-index:1;padding:var(--section-pad) 44px}
   background:linear-gradient(180deg,var(--bg) 0%,transparent 18%,transparent 70%,var(--bg) 100%),
   linear-gradient(90deg,var(--bg) 0%,transparent 12%,transparent 88%,var(--bg) 100%)}
 .why-text{max-width:640px;margin:0 auto}
-.why-text p{font-weight:300;font-size:15px;color:var(--tx2);line-height:2;margin-bottom:24px;text-align:left}
+.why-text p{font-weight:400;font-size:16px;color:rgba(255,242,225,0.82);line-height:2;margin-bottom:24px;text-align:left}
 
 /* ═══ CTA ═══ */
 .cta-section{text-align:center;padding:var(--section-pad) 44px;position:relative}
@@ -313,6 +313,17 @@ footer a:hover{color:var(--cyan)}
 .for-closing em{color:var(--cyan);font-style:normal;font-weight:500}
 
 /* ═══ SCROLL ANIM — with stagger support ═══ */
+
+/* ═══ HERO TITLE ANIMATION (H3) ═══ */
+.hero-content .hero-role{opacity:0;transform:translateY(10px);animation:heroFade 1.4s ease 0.3s forwards}
+.hero-content .hero-title .line-label{opacity:0;transform:translateY(12px);animation:heroFade 1.4s ease 0.5s forwards}
+.hero-content .hero-title .line-anchor{opacity:0;transform:translateY(20px);filter:blur(6px);animation:heroAnchor 2s cubic-bezier(0.16,1,0.3,1) 0.6s forwards}
+.hero-content .hero-tagline{opacity:0;transform:translateY(8px);animation:heroFade 1s ease 1s forwards}
+.hero-content .hero-sub{opacity:0;transform:translateY(8px);animation:heroFade 1s ease 1.2s forwards}
+.hero-content .hero-ctas{opacity:0;transform:translateY(8px);animation:heroFade 1s ease 1.4s forwards}
+@keyframes heroFade{from{opacity:0;transform:translateY(var(--y,10px))}to{opacity:1;transform:translateY(0)}}
+@keyframes heroAnchor{from{opacity:0;transform:translateY(20px);filter:blur(6px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+
 .fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.7s ease,transform 0.7s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
 .fade-in .stagger-1{opacity:0;transform:translateY(12px);transition:opacity 0.6s ease 0.1s,transform 0.6s ease 0.1s}
@@ -369,7 +380,7 @@ footer a:hover{color:var(--cyan)}
 
 
 
-  <div class="hero-content fade-in">
+  <div class="hero-content">
     <div class="hero-portrait" id="heroPortrait"><div class="hero-portrait-glow"></div><div class="hero-portrait-inner"><img src="../TomWaldek_Actor_01.jpg" alt="Tom Waldek"></div></div>
     <div class="hero-role">Tom Waldek — Human Leadership Architect</div>
     <h1 class="hero-title">
