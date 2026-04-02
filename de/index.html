@@ -314,16 +314,6 @@ footer a:hover{color:var(--cyan)}
 
 /* ═══ SCROLL ANIM — with stagger support ═══ */
 
-/* ═══ HERO TITLE ANIMATION (H3) ═══ */
-.hero-content .hero-role{opacity:0;transform:translateY(10px);animation:heroFade 1.4s ease 0.3s forwards}
-.hero-content .hero-title .line-label{opacity:0;transform:translateY(12px);animation:heroFade 1.4s ease 0.5s forwards}
-.hero-content .hero-title .line-anchor{opacity:0;transform:translateY(20px);filter:blur(6px);animation:heroAnchor 2s cubic-bezier(0.16,1,0.3,1) 0.6s forwards}
-.hero-content .hero-tagline{opacity:0;transform:translateY(8px);animation:heroFade 1s ease 1s forwards}
-.hero-content .hero-sub{opacity:0;transform:translateY(8px);animation:heroFade 1s ease 1.2s forwards}
-.hero-content .hero-ctas{opacity:0;transform:translateY(8px);animation:heroFade 1s ease 1.4s forwards}
-@keyframes heroFade{from{opacity:0;transform:translateY(var(--y,10px))}to{opacity:1;transform:translateY(0)}}
-@keyframes heroAnchor{from{opacity:0;transform:translateY(20px);filter:blur(6px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
-
 .fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.7s ease,transform 0.7s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
 .fade-in .stagger-1{opacity:0;transform:translateY(12px);transition:opacity 0.6s ease 0.1s,transform 0.6s ease 0.1s}
@@ -380,7 +370,7 @@ footer a:hover{color:var(--cyan)}
 
 
 
-  <div class="hero-content">
+  <div class="hero-content fade-in">
     <div class="hero-portrait" id="heroPortrait"><div class="hero-portrait-glow"></div><div class="hero-portrait-inner"><img src="../TomWaldek_Actor_01.jpg" alt="Tom Waldek"></div></div>
     <div class="hero-role">Tom Waldek — Human Leadership Architect</div>
     <h1 class="hero-title">
