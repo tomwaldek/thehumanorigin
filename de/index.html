@@ -716,7 +716,7 @@ footer a:hover{color:var(--cyan)}
 </footer>
 
 <!-- ═══ SCRIPTS ═══ -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // ── COUNTING ANIMATION ──
 function animateCounters(){
   const counters=document.querySelectorAll('.counter-val');
@@ -865,4 +865,14 @@ if (whyPhoto) {
     entries.forEach(e => {
       if (e.isIntersecting) {
         if (whyImg.complete) revealWhy();
-        else wh
+        else whyImg.onload = revealWhy;
+        whyObs.disconnect();
+      }
+    });
+  }, { threshold: 0.1 });
+  whyObs.observe(whyPhoto);
+}
+
+</script>
+</body>
+</html>
