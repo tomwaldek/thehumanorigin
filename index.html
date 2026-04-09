@@ -4,81 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Human Origin — Tom Waldek</title>
-<meta name="description" content="What people dare to say to each other — that's what the company actually runs on. Six film disciplines meet neurobiology.">
-<link rel="alternate" hreflang="en" href="en/">
-<link rel="alternate" hreflang="de" href="de/">
+<meta name="description" content="Six film disciplines meet organisational neurobiology. The methodology that surfaces the survival patterns running your organisation. Tom Waldek — Human Leadership Architect.">
+<link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/">
+<link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/">
+<link rel="alternate" hreflang="x-default" href="https://thehumanorigin.org/">
+<script>
+// Auto-redirect based on browser language — German browsers → /de/, everyone else → /en/
+(function(){
+  var lang = navigator.language || navigator.userLanguage || 'en';
+  if (lang.toLowerCase().startsWith('de')) {
+    window.location.replace('/de/');
+  } else {
+    window.location.replace('/en/');
+  }
+})();
+</script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500&display=swap');
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
---bg:#080d12;--cyan:#06b6d4;--cyan2:#0891b2;--orange:#f97316;
---white:#ffffff;--tx:#f0e8dc;--tx2:rgba(255,242,225,0.75);--tx3:rgba(255,242,225,0.48);
---tx4:rgba(255,255,255,0.25);--border:rgba(255,255,255,0.07);
---display:'Sora',sans-serif;--serif:'Playfair Display',serif;
-}
-html,body{height:100%}
-body{background:var(--bg);color:var(--white);font-family:var(--display);overflow:hidden;
--webkit-font-smoothing:antialiased;display:flex;align-items:center;justify-content:center}
-
-.mesh-layer{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.mesh-orb{position:absolute;border-radius:50%;filter:blur(120px);will-change:transform}
-.mesh-orb.c1{width:50vw;height:50vw;top:-15%;left:-10%;background:rgba(6,182,212,0.18);animation:orbA 22s ease-in-out infinite}
-.mesh-orb.o1{width:45vw;height:45vw;bottom:-10%;right:-15%;background:rgba(249,115,22,0.14);animation:orbB 28s ease-in-out infinite}
-.mesh-orb.c2{width:35vw;height:35vw;top:40%;right:20%;background:rgba(8,145,178,0.06);animation:orbC 25s ease-in-out infinite}
-.mesh-orb.o2{width:35vw;height:35vw;top:65%;left:5%;background:rgba(249,115,22,0.1);animation:orbA 30s ease-in-out infinite reverse}
-@keyframes orbA{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,40px)}}
-@keyframes orbB{0%,100%{transform:translate(0,0)}50%{transform:translate(-50px,-30px)}}
-@keyframes orbC{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,-50px)}}
-
-.splash{position:relative;z-index:2;text-align:center;padding:20px;max-width:800px}
-.splash-role{font-family:var(--display);font-size:15px;letter-spacing:6px;text-transform:uppercase;
-  color:var(--cyan);font-weight:300;margin-bottom:40px;opacity:0.75;
-  opacity:0;animation:fadeUp .8s ease .2s forwards}
-.splash-title{margin-bottom:20px;line-height:1;opacity:0;animation:fadeUp .8s ease .4s forwards}
-.splash-title .label{display:block;font-family:var(--display);font-size:clamp(28px,4.5vw,48px);
-  letter-spacing:10px;text-transform:uppercase;color:rgba(255,255,255,0.7);font-weight:200}
-.splash-title .anchor{display:block;font-family:var(--serif);font-size:clamp(68px,10vw,120px);
-  font-weight:800;line-height:1;margin-top:-6px;
-  background:linear-gradient(135deg,var(--white) 0%,var(--cyan) 35%,var(--orange) 65%,var(--white) 100%);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.splash-tagline{font-family:var(--display);font-weight:200;font-size:clamp(12px,1.5vw,15px);
-  letter-spacing:6px;text-transform:uppercase;color:var(--tx3);margin-bottom:44px;
-  opacity:0;animation:fadeUp .8s ease .55s forwards}
-.splash-hooks{margin-bottom:48px;opacity:0;animation:fadeUp .8s ease .7s forwards}
-.splash-hook-en{font-family:var(--serif);font-size:clamp(17px,2.2vw,22px);font-weight:400;
-  color:var(--tx);line-height:1.5;max-width:560px;margin:0 auto}
-.splash-hook-de{font-family:var(--serif);font-size:clamp(14px,1.8vw,18px);font-weight:400;
-  color:var(--tx3);line-height:1.5;max-width:560px;margin:14px auto 0;font-style:italic}
-.splash-lang{display:flex;gap:16px;justify-content:center;
-  opacity:0;animation:fadeUp .8s ease .9s forwards}
-.lang-btn{font-family:var(--display);font-size:13px;font-weight:400;letter-spacing:2px;
-  text-transform:uppercase;padding:14px 36px;border-radius:8px;text-decoration:none;
-  transition:all .4s ease;cursor:pointer}
-.lang-btn.primary{background:linear-gradient(135deg,var(--cyan),var(--cyan2));color:#080d12}
-.lang-btn.primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(6,182,212,0.25)}
-.lang-btn.ghost{border:1px solid var(--border);color:var(--tx3)}
-.lang-btn.ghost:hover{border-color:rgba(255,255,255,0.15);color:var(--tx2);transform:translateY(-2px)}
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:768px){.splash-title .label{letter-spacing:4px}}
+body{background:#080d12;color:rgba(255,255,255,0.5);font-family:'Inter',sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;text-align:center}
+a{color:rgba(6,182,212,0.7);text-decoration:none;margin:0 16px;font-size:14px;letter-spacing:2px}
 </style>
 </head>
 <body>
-<div class="mesh-layer"><div class="mesh-orb c1"></div><div class="mesh-orb o1"></div><div class="mesh-orb c2"></div><div class="mesh-orb o2"></div></div>
-<div class="splash">
-  <div class="splash-role">Tom Waldek — Human Leadership Architect</div>
-  <div class="splash-title">
-    <span class="label">The Human</span>
-    <span class="anchor">Origin</span>
-  </div>
-  <div class="splash-tagline">Six film disciplines meet neurobiology.</div>
-  <div class="splash-hooks">
-    <div class="splash-hook-en">What people dare to say to each other — that's what the company actually runs on.</div>
-    <div class="splash-hook-de">Worauf Unternehmen wirklich laufen? Auf das, was Menschen sich trauen zu sagen.</div>
-  </div>
-  <div class="splash-lang">
-    <a href="en/" class="lang-btn primary">English</a>
-    <a href="de/" class="lang-btn ghost">Deutsch</a>
-  </div>
-</div>
+<noscript>
+  <p style="font-size:12px;letter-spacing:3px;text-transform:uppercase;margin-bottom:24px">The Human Origin</p>
+  <a href="/en/">English</a>
+  <a href="/de/">Deutsch</a>
+</noscript>
 </body>
 </html>
