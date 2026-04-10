@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenschutzerklärung | The Human Origin</title>
+<meta name="description" content="Datenschutzerklärung gemäß DSGVO — The Human Origin, Tom Waldek. Informationen zur Verarbeitung personenbezogener Daten.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://thehumanorigin.org/de/datenschutz/">
+<link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/datenschutz/">
+<link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://thehumanorigin.org/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #080d12;
+  --cyan: #06b6d4;
+  --cyan2: #0891b2;
+  --cyan3: #164e63;
+  --orange: #f97316;
+  --orange2: #ea580c;
+  --white: #ffffff;
+  --tx: #f0e8dc;
+  --tx2: rgba(255,242,225,0.75);
+  --tx3: rgba(255,242,225,0.48);
+  --tx4: rgba(255,255,255,0.25);
+  --glass: rgba(6,182,212,0.04);
+  --glass2: rgba(6,182,212,0.06);
+  --border: rgba(6,182,212,0.1);
+  --ff: 'Inter', sans-serif;
+  --display: 'Sora', sans-serif;
+  --serif: 'Playfair Display', serif;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff);
+  background: var(--bg);
+  color: var(--tx2);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--cyan);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ── Nav ── */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 24px 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  background: rgba(8,13,18,0.7);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+  font-family: var(--display);
+  font-weight: 200;
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav-logo:hover {
+  text-decoration: none;
+  color: rgba(255,255,255,0.5);
+}
+
+.nav-logo span {
+  color: var(--cyan);
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+}
+
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 110;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: rgba(255,255,255,0.4);
+  transition: all 0.3s ease;
+}
+
+/* ── Content ── */
+.content {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 140px 44px 80px;
+}
+
+.page-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(28px, 4vw, 40px);
+  color: var(--white);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.page-subtitle {
+  font-family: var(--ff);
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--tx3);
+  margin-bottom: 48px;
+}
+
+.section-label {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--cyan);
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+
+.section-label:first-of-type {
+  margin-top: 0;
+}
+
+h3 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--cyan);
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-block {
+  margin-bottom: 32px;
+}
+
+.contact-block {
+  padding: 24px 28px;
+  background: var(--glass2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 24px;
+  line-height: 2;
+}
+
+.contact-block strong {
+  color: var(--white);
+  font-weight: 500;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 16px;
+}
+
+ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cyan);
+  opacity: 0.5;
+}
+
+strong {
+  color: var(--tx);
+  font-weight: 500;
+}
+
+/* ── Divider ── */
+.divider {
+  height: 1px;
+  margin: 48px 0;
+  background: linear-gradient(90deg, transparent, rgba(6,182,212,0.2), transparent);
+}
+
+/* ── Footer ── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 44px;
+  text-align: center;
+  font-family: var(--ff);
+  font-weight: 300;
+  font-size: 11px;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 1px;
+}
+
+footer a {
+  color: rgba(255,255,255,0.25);
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: var(--cyan);
+  text-decoration: none;
+}
+
+footer .footer-sep {
+  margin: 0 10px;
+  opacity: 0.4;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  nav {
+    padding: 16px 24px;
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(8,13,18,0.95);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    z-index: 105;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    letter-spacing: 3px;
+  }
+
+  .nav-hamburger {
+    display: flex;
+  }
+
+  .nav-hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 4px);
+  }
+
+  .nav-hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
+  }
+
+  .content {
+    padding: 120px 24px 60px;
+  }
+
+  footer {
+    padding: 28px 24px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <a href="/de/" class="nav-logo">THE HUMAN <span>ORIGIN</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="/de/#method" onclick="closeNav()">Methode</a>
+    <a href="/de/#process" onclick="closeNav()">Prozess</a>
+    <a href="/de/#diagnostic" onclick="closeNav()">Diagnostik</a>
+    <a href="/de/#contact" onclick="closeNav()">Kontakt</a>
+    <a href="../en/privacy.html" style="color:var(--orange);border:1px solid rgba(249,115,22,0.3);padding:4px 14px;border-radius:100px;font-size:10px;letter-spacing:2px;margin-left:12px">EN</a>
+  </div>
+  <div class="nav-hamburger" id="navHamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- Content -->
+<div class="content">
+
+  <h1 class="page-title">Datenschutzerklärung</h1>
+  <p class="page-subtitle">Informationen gemäß der Datenschutz-Grundverordnung (DSGVO)</p>
+
+  <!-- 1. Verantwortlicher -->
+  <h3>1. Verantwortlicher</h3>
+  <div class="legal-block">
+    <div class="contact-block">
+      <strong>Tom Waldek</strong><br>
+      The Human Origin<br>
+      Paradisgasse 35/4<br>
+      1190 Wien, Österreich<br>
+      E-Mail: <a href="mailto:tom@thehumanorigin.org">tom@thehumanorigin.org</a>
+    </div>
+    <p>Verantwortlicher im Sinne des Art. 4 Nr. 7 DSGVO ist die oben genannte natürliche Person.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 2. Überblick -->
+  <h3>2. Überblick der Verarbeitungen</h3>
+  <div class="legal-block">
+    <p>Diese Website erhebt und verarbeitet personenbezogene Daten nur in minimalem Umfang. Im Einzelnen:</p>
+    <ul>
+      <li>Es werden <strong>keine Cookies</strong> durch diese Website gesetzt.</li>
+      <li>Es werden <strong>keine Analyse- oder Tracking-Tools</strong> eingesetzt.</li>
+      <li>Es gibt <strong>keinen Newsletter</strong> und keine Nutzerkonten.</li>
+      <li>Die Kontaktaufnahme erfolgt ausschließlich per E-Mail.</li>
+      <li>Das Diagnostik-Tool (Pulse Check) verarbeitet Daten <strong>ausschließlich lokal</strong> in Ihrem Browser.</li>
+    </ul>
+    <p>Eine Verarbeitung personenbezogener Daten findet ausschließlich durch den Hostingdienst, die eingebundene Schriftarten-Bibliothek, das Terminbuchungssystem sowie bei direkter Kontaktaufnahme statt.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 3. Hosting -->
+  <h3>3. Hosting und Content Delivery</h3>
+  <div class="legal-block">
+    <p>Diese Website wird über <strong>GitHub Pages</strong> gehostet, einen Dienst der GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA.</p>
+    <p>Beim Aufruf dieser Website werden durch GitHub automatisch Zugriffsdaten erhoben und in sogenannten Server-Logfiles gespeichert. Dazu gehören:</p>
+    <ul>
+      <li>IP-Adresse des anfragenden Geräts</li>
+      <li>Datum und Uhrzeit des Zugriffs</li>
+      <li>Übertragene Datenmenge</li>
+      <li>Anfragender Browser und Betriebssystem</li>
+      <li>Referrer-URL</li>
+    </ul>
+    <p>Da GitHub seinen Sitz in den USA hat, kann eine Übermittlung personenbezogener Daten in die USA stattfinden. GitHub stützt sich hierbei auf <strong>Standardvertragsklauseln (Standard Contractual Clauses, SCCs)</strong> gemäß Art. 46 Abs. 2 lit. c DSGVO als Grundlage für die Datenübermittlung in Drittländer.</p>
+    <p>Rechtsgrundlage für die Datenverarbeitung ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der stabilen und sicheren Bereitstellung der Website).</p>
+    <p>Weitere Informationen finden Sie in der <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von GitHub</a>.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 4. Google Fonts -->
+  <h3>4. Google Fonts</h3>
+  <div class="legal-block">
+    <p>Diese Website verwendet Schriftarten von <strong>Google Fonts</strong>, einem Dienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Die Schriftarten werden über die Server von Google (fonts.googleapis.com, fonts.gstatic.com) geladen.</p>
+    <p>Beim Aufruf einer Seite, die Google Fonts einbindet, stellt Ihr Browser eine Verbindung zu den Servern von Google her. Dabei wird Ihre <strong>IP-Adresse an Google übermittelt</strong>. Google kann diese Daten zur Analyse und Optimierung des Dienstes verwenden.</p>
+    <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der einheitlichen typografischen Darstellung der Website).</p>
+    <p><strong>Hinweis:</strong> Das Landgericht München I hat in seinem Urteil vom 20. Januar 2022 (Az. 3 O 17493/20) entschieden, dass die dynamische Einbindung von Google Fonts ohne Einwilligung der Betroffenen einen Verstoß gegen die DSGVO darstellen kann, da die IP-Adresse des Besuchers an Google in die USA übermittelt wird. Eine Alternative wäre das lokale Hosting der Schriftarten (Self-Hosting), bei dem keine Verbindung zu Google-Servern hergestellt wird. Eine Umstellung auf Self-Hosting wird geprüft.</p>
+    <p>Weitere Informationen finden Sie in der <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Google</a> und den <a href="https://developers.google.com/fonts/faq/privacy" target="_blank" rel="noopener noreferrer">Google Fonts FAQ</a>.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 5. Cal.com -->
+  <h3>5. Cal.com Terminbuchung</h3>
+  <div class="legal-block">
+    <p>Für die Terminbuchung wird <strong>Cal.com</strong> eingesetzt, betrieben durch die Cal.com Europe B.V. Die Buchung erfolgt über die europäische Instanz <strong>cal.eu</strong>.</p>
+    <p>Wenn Sie das Buchungsfenster öffnen, wird eine Verbindung zu den Servern von Cal.com hergestellt. Bei einer Terminbuchung werden die von Ihnen eingegebenen Daten (z.B. Name, E-Mail-Adresse, gewünschter Termin) durch Cal.com verarbeitet.</p>
+    <p>Da Cal.com Europe B.V. ihren Sitz in der Europäischen Union hat, erfolgt die Datenverarbeitung innerhalb des europäischen Rechtsraums.</p>
+    <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Verarbeitung zur Durchführung vorvertraglicher Maßnahmen) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer effizienten Terminverwaltung).</p>
+    <p>Weitere Informationen finden Sie in der <a href="https://cal.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Cal.com</a>.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 6. E-Mail -->
+  <h3>6. Kontaktaufnahme per E-Mail</h3>
+  <div class="legal-block">
+    <p>Wenn Sie per E-Mail Kontakt aufnehmen, werden Ihre Angaben (E-Mail-Adresse, Name, Inhalt der Nachricht) zum Zweck der Bearbeitung Ihrer Anfrage und für den Fall von Anschlussfragen gespeichert.</p>
+    <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Verarbeitung zur Durchführung vorvertraglicher Maßnahmen bzw. Vertragserfüllung) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).</p>
+    <p>Ihre Daten werden gelöscht, sobald die Anfrage abschließend bearbeitet wurde und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 7. Pulse Check -->
+  <h3>7. Pulse Check / Diagnostik-Tool</h3>
+  <div class="legal-block">
+    <p>Das auf dieser Website angebotene Diagnostik-Tool (Pulse Check) wird <strong>vollständig im Browser (Client-side)</strong> ausgeführt. Sämtliche Eingaben und Ergebnisse werden ausschließlich lokal in Ihrem Browser mittels JavaScript verarbeitet.</p>
+    <p>Es werden <strong>keine Daten an einen Server übermittelt</strong>. Es erfolgt keine Speicherung, kein Tracking und keine Auswertung Ihrer Antworten durch uns oder durch Dritte.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 8. SSL/TLS -->
+  <h3>8. SSL/TLS-Verschlüsselung</h3>
+  <div class="legal-block">
+    <p>Diese Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung personenbezogener Daten eine <strong>SSL- bzw. TLS-Verschlüsselung</strong>. Sie erkennen eine verschlüsselte Verbindung an dem Schloss-Symbol in der Adresszeile Ihres Browsers sowie an der Adresse, die mit <strong>https://</strong> beginnt.</p>
+    <p>Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 9. Ihre Rechte -->
+  <h3>9. Ihre Rechte</h3>
+  <div class="legal-block">
+    <p>Ihnen stehen gemäß der DSGVO folgende Rechte in Bezug auf Ihre personenbezogenen Daten zu:</p>
+    <ul>
+      <li><strong>Recht auf Auskunft</strong> (Art. 15 DSGVO) — Sie haben das Recht, Auskunft über Ihre von uns verarbeiteten personenbezogenen Daten zu verlangen.</li>
+      <li><strong>Recht auf Berichtigung</strong> (Art. 16 DSGVO) — Sie haben das Recht, die Berichtigung unrichtiger oder die Vervollständigung unvollständiger Daten zu verlangen.</li>
+      <li><strong>Recht auf Löschung</strong> (Art. 17 DSGVO) — Sie haben das Recht, die Löschung Ihrer personenbezogenen Daten zu verlangen, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</li>
+      <li><strong>Recht auf Einschränkung der Verarbeitung</strong> (Art. 18 DSGVO) — Sie haben unter bestimmten Voraussetzungen das Recht, die Einschränkung der Verarbeitung Ihrer Daten zu verlangen.</li>
+      <li><strong>Recht auf Datenübertragbarkeit</strong> (Art. 20 DSGVO) — Sie haben das Recht, Ihre Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten oder die Übermittlung an einen anderen Verantwortlichen zu verlangen.</li>
+      <li><strong>Recht auf Widerspruch</strong> (Art. 21 DSGVO) — Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung Ihrer personenbezogenen Daten Widerspruch einzulegen, sofern die Verarbeitung auf Art. 6 Abs. 1 lit. f DSGVO beruht.</li>
+    </ul>
+    <p>Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: <a href="mailto:tom@thehumanorigin.org">tom@thehumanorigin.org</a></p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 10. Beschwerderecht -->
+  <h3>10. Beschwerderecht bei der Aufsichtsbehörde</h3>
+  <div class="legal-block">
+    <p>Wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen die DSGVO verstößt, haben Sie das Recht, sich bei einer Aufsichtsbehörde zu beschweren (Art. 77 DSGVO).</p>
+    <p>Die zuständige Aufsichtsbehörde in Österreich ist:</p>
+    <div class="contact-block">
+      <strong>Österreichische Datenschutzbehörde</strong><br>
+      Barichgasse 40-42<br>
+      1030 Wien, Österreich<br>
+      Website: <a href="https://www.dsb.gv.at" target="_blank" rel="noopener noreferrer">www.dsb.gv.at</a>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 11. Änderungen -->
+  <h3>11. Änderungen dieser Datenschutzerklärung</h3>
+  <div class="legal-block">
+    <p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen, um sie an geänderte Rechtslagen oder Änderungen des Dienstes sowie der Datenverarbeitung anzupassen. Die jeweils aktuelle Fassung ist stets auf dieser Seite abrufbar.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <p style="font-size:13px;color:var(--tx3);margin-top:32px;margin-bottom:0;">Stand: April 2026</p>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  &copy; 2026 The Human Origin
+  <span class="footer-sep">|</span>
+  <a href="/de/impressum.html">Impressum</a>
+  <span class="footer-sep">|</span>
+  <a href="/de/" style="color:rgba(255,255,255,0.25);">Startseite</a>
+</footer>
+
+<script>
+function toggleNav(){
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('navHamburger').classList.toggle('open');
+}
+function closeNav(){
+  document.getElementById('navLinks').classList.remove('open');
+  document.getElementById('navHamburger').classList.remove('open');
+}
+</script>
+
+</body>
+</html>
