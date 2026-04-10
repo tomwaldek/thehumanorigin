@@ -529,35 +529,72 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 /* ═══ PROCESS ═══ */
 .phase-frame{text-align:center;font-family:var(--display);font-weight:300;font-size:14px;color:var(--tx3);letter-spacing:1.5px;margin:0 auto 32px;max-width:560px;line-height:1.9}
 .phase-frame strong{color:var(--cyan);font-weight:400}
-.phase-list{margin-top:16px;display:flex;flex-direction:column;gap:2px}
-.phase{display:flex;align-items:flex-start;gap:24px;padding:28px 32px;background:var(--glass);border:1px solid var(--border);transition:all 0.3s;position:relative;text-align:left}
+/* ═══ PHASE-LIST — subtle background pattern to reveal transparency ═══ */
+.phase-list{margin-top:16px;display:flex;flex-direction:column;gap:2px;position:relative;padding:2px;border-radius:14px;background-image:
+  radial-gradient(circle at 1px 1px, rgba(6,182,212,0.06) 1px, transparent 0);
+  background-size:28px 28px}
+/* Secondary pattern layer via pseudo-element — faint diagonal lines */
+.phase-list::before{content:'';position:absolute;inset:0;border-radius:14px;opacity:0.35;pointer-events:none;z-index:0;
+  background:repeating-linear-gradient(
+    -35deg,
+    transparent,
+    transparent 40px,
+    rgba(6,182,212,0.03) 40px,
+    rgba(6,182,212,0.03) 41px
+  )}
+
+/* ═══ PHASE CARDS — glass with frosted reflection ═══ */
+.phase{display:flex;align-items:flex-start;gap:24px;padding:28px 32px;border:1px solid var(--border);transition:all 0.4s cubic-bezier(0.22,1,0.36,1);position:relative;text-align:left;z-index:1;overflow:hidden;
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 .phase:first-child{border-radius:12px 12px 0 0}
 .phase:last-child{border-radius:0 0 12px 12px}
-.phase:hover{background:var(--glass2);border-color:var(--border2)}
-.phase-num{font-family:var(--display);font-weight:200;font-size:32px;color:var(--cyan);opacity:0.4;min-width:40px;line-height:1}
-.phase-body{flex:1}
+.phase:hover{border-color:var(--border2)}
+/* Glass reflection highlight — diagonal shimmer across card */
+.phase::before{content:'';position:absolute;top:0;left:-75%;width:50%;height:100%;
+  background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,0.03) 45%,rgba(255,255,255,0.05) 50%,rgba(255,255,255,0.03) 55%,transparent 60%);
+  transition:opacity 0.4s;pointer-events:none;z-index:2}
+.phase:hover::before{left:125%;transition:left 0.8s cubic-bezier(0.22,1,0.36,1)}
+/* Subtle top-edge light catch */
+.phase::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent 10%,rgba(255,255,255,0.06) 30%,rgba(255,255,255,0.08) 50%,rgba(255,255,255,0.06) 70%,transparent 90%);
+  pointer-events:none;z-index:2;transition:opacity 0.4s}
+.phase-num{font-family:var(--display);font-weight:200;font-size:32px;color:var(--cyan);opacity:0.4;min-width:40px;line-height:1;position:relative;z-index:1}
+.phase-body{flex:1;position:relative;z-index:1}
 .phase-name{font-family:var(--display);font-weight:500;font-size:14px;color:var(--white);margin-bottom:6px;letter-spacing:0.5px}
 .phase-desc{font-weight:400;font-size:14px;color:rgba(255,242,225,0.65);line-height:1.7}
-.phase-fee{font-family:var(--display);font-weight:400;font-size:11px;color:var(--orange);letter-spacing:2px;text-transform:uppercase;min-width:88px;text-align:right;padding-top:6px;opacity:0.65;transition:all 0.3s}
+.phase-fee{font-family:var(--display);font-weight:400;font-size:11px;color:var(--orange);letter-spacing:2px;text-transform:uppercase;min-width:88px;text-align:right;padding-top:6px;opacity:0.65;transition:all 0.4s;position:relative;z-index:1}
 
 /* ═══ PROGRESSIVE TRANSPARENCY — trust deepens, walls dissolve ═══ */
-.phase-list>.phase:nth-child(1){background:rgba(6,182,212,0.08);border-color:rgba(6,182,212,0.18)}
+/* Phase 0: solid frosted glass — safety, first meeting */
+.phase-list>.phase:nth-child(1){background:rgba(6,182,212,0.09);border-color:rgba(6,182,212,0.20);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
 .phase-list>.phase:nth-child(1) .phase-fee{opacity:0.5}
-.phase-list>.phase:nth-child(2){background:rgba(6,182,212,0.06);border-color:rgba(6,182,212,0.14)}
+/* Diagnostic Debrief: slightly lighter */
+.phase-list>.phase:nth-child(2){background:rgba(6,182,212,0.065);border-color:rgba(6,182,212,0.15);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 .phase-list>.phase:nth-child(2) .phase-fee{opacity:0.6}
-.phase-list>.phase:nth-child(3){background:rgba(6,182,212,0.04);border-color:rgba(6,182,212,0.10)}
+/* Phase 1 TAD: glass thinning */
+.phase-list>.phase:nth-child(3){background:rgba(6,182,212,0.04);border-color:rgba(6,182,212,0.10);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .phase-list>.phase:nth-child(3) .phase-fee{opacity:0.75}
-.phase-list>.phase:nth-child(4){background:rgba(6,182,212,0.02);border-color:rgba(6,182,212,0.07)}
+/* Phase 2 Origin Work: barely there */
+.phase-list>.phase:nth-child(4){background:rgba(6,182,212,0.02);border-color:rgba(6,182,212,0.07);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
 .phase-list>.phase:nth-child(4) .phase-fee{opacity:0.85;font-size:12px}
-.phase-list>.phase:nth-child(5){background:rgba(6,182,212,0.008);border-color:rgba(6,182,212,0.04)}
+.phase-list>.phase:nth-child(4)::after{opacity:0.5}
+/* Phase 3 Integration: ghost */
+.phase-list>.phase:nth-child(5){background:rgba(6,182,212,0.008);border-color:rgba(6,182,212,0.04);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
 .phase-list>.phase:nth-child(5) .phase-fee{opacity:0.92}
-.phase-list>.phase:nth-child(6){background:rgba(6,182,212,0.003);border-color:rgba(6,182,212,0.025)}
+.phase-list>.phase:nth-child(5)::after{opacity:0.25}
+.phase-list>.phase:nth-child(5)::before{display:none}
+/* Phase 4 Review: open air — nothing left to hide */
+.phase-list>.phase:nth-child(6){background:rgba(6,182,212,0.003);border-color:rgba(6,182,212,0.025);backdrop-filter:none;-webkit-backdrop-filter:none}
 .phase-list>.phase:nth-child(6) .phase-fee{opacity:0.95}
-/* Hover: ghost cards still respond but stay lighter than Phase 0 */
+.phase-list>.phase:nth-child(6)::after{opacity:0}
+.phase-list>.phase:nth-child(6)::before{display:none}
+/* Hover states — lighter cards hover lighter */
+.phase-list>.phase:nth-child(1):hover{background:rgba(6,182,212,0.12)}
+.phase-list>.phase:nth-child(2):hover{background:rgba(6,182,212,0.085)}
 .phase-list>.phase:nth-child(3):hover{background:rgba(6,182,212,0.06)}
-.phase-list>.phase:nth-child(4):hover{background:rgba(6,182,212,0.04)}
-.phase-list>.phase:nth-child(5):hover{background:rgba(6,182,212,0.02)}
-.phase-list>.phase:nth-child(6):hover{background:rgba(6,182,212,0.01)}
+.phase-list>.phase:nth-child(4):hover{background:rgba(6,182,212,0.035)}
+.phase-list>.phase:nth-child(5):hover{background:rgba(6,182,212,0.015)}
+.phase-list>.phase:nth-child(6):hover{background:rgba(6,182,212,0.008)}
 
 /* ═══ NOT-THIS ═══ */
 .notthis{max-width:680px;margin:16px auto 0;padding:28px 36px;border-left:2px solid var(--orange);background:rgba(249,115,22,0.04);border-radius:0 12px 12px 0;text-align:left}
