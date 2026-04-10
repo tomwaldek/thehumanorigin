@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Root language selector -->
+  <url>
+    <loc>https://thehumanorigin.org/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thehumanorigin.org/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- English homepage -->
+  <url>
+    <loc>https://thehumanorigin.org/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- German homepage -->
+  <url>
+    <loc>https://thehumanorigin.org/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Pulse Check EN -->
+  <url>
+    <loc>https://thehumanorigin.org/en/pulse-check/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/pulse-check/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/pulscheck/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Pulse Check DE -->
+  <url>
+    <loc>https://thehumanorigin.org/de/pulscheck/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/pulscheck/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/pulse-check/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Legal Notice EN -->
+  <url>
+    <loc>https://thehumanorigin.org/en/imprint/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/imprint/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/impressum/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Impressum DE -->
+  <url>
+    <loc>https://thehumanorigin.org/de/impressum/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/impressum/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/imprint/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Privacy Policy EN -->
+  <url>
+    <loc>https://thehumanorigin.org/en/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/datenschutz/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Datenschutz DE -->
+  <url>
+    <loc>https://thehumanorigin.org/de/datenschutz/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/datenschutz/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/privacy/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!--
+    Add these entries as the pages ship:
+    <url><loc>https://thehumanorigin.org/en/lexicon/survival-architecture/</loc><priority>0.8</priority></url>
+    <url><loc>https://thehumanorigin.org/en/lexicon/trust-architecture/</loc><priority>0.7</priority></url>
+    <url><loc>https://thehumanorigin.org/en/method/</loc><priority>0.7</priority></url>
+    <url><loc>https://thehumanorigin.org/en/method/intimacy-coordination/</loc><priority>0.7</priority></url>
+    <url><loc>https://thehumanorigin.org/en/origin-work/</loc><priority>0.7</priority></url>
+    <url><loc>https://thehumanorigin.org/en/tom-waldek/</loc><priority>0.7</priority></url>
+  -->
+
+</urlset>
