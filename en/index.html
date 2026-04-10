@@ -549,11 +549,25 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 .phase:first-child{border-radius:12px 12px 0 0}
 .phase:last-child{border-radius:0 0 12px 12px}
 .phase:hover{border-color:var(--border2)}
-/* Glass reflection highlight — diagonal shimmer across card */
+/* Glass shimmer — auto-plays on first appear, replays on hover */
+@keyframes glassShimmer{
+  0%{left:-75%}
+  100%{left:125%}
+}
 .phase::before{content:'';position:absolute;top:0;left:-75%;width:50%;height:100%;
   background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,0.03) 45%,rgba(255,255,255,0.05) 50%,rgba(255,255,255,0.03) 55%,transparent 60%);
-  transition:opacity 0.4s;pointer-events:none;z-index:2}
-.phase:hover::before{left:125%;transition:left 0.8s cubic-bezier(0.22,1,0.36,1)}
+  pointer-events:none;z-index:2}
+/* Auto-shimmer on first appear — staggered per card */
+.phase.visible::before{animation:glassShimmer 1.6s cubic-bezier(0.22,1,0.36,1) forwards}
+.phase:nth-of-type(1).visible::before{animation-delay:0.3s}
+.phase:nth-of-type(2).visible::before{animation-delay:0.6s}
+.phase:nth-of-type(3).visible::before{animation-delay:0.9s}
+.phase:nth-of-type(4).visible::before{animation-delay:1.2s}
+.phase:nth-of-type(5).visible::before{animation-delay:1.5s}
+.phase:nth-of-type(6).visible::before{animation-delay:1.8s}
+.phase:nth-of-type(7).visible::before{animation-delay:2.1s}
+/* Hover re-triggers shimmer — slower, more deliberate */
+.phase:hover::before{animation:glassShimmer 1.8s cubic-bezier(0.22,1,0.36,1) forwards}
 /* Subtle top-edge light catch */
 .phase::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;
   background:linear-gradient(90deg,transparent 10%,rgba(255,255,255,0.06) 30%,rgba(255,255,255,0.08) 50%,rgba(255,255,255,0.06) 70%,transparent 90%);
