@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | The Human Origin</title>
+<meta name="description" content="Privacy policy pursuant to GDPR — The Human Origin, Tom Waldek. How we handle your data.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://thehumanorigin.org/en/privacy/">
+<link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/privacy/">
+<link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/datenschutz/">
+<link rel="alternate" hreflang="x-default" href="https://thehumanorigin.org/">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#080d12;--cyan:#06b6d4;--orange:#f97316;--white:#ffffff;
+  --tx:#f0e8dc;--tx2:rgba(255,242,225,0.75);--tx3:rgba(255,242,225,0.48);
+  --tx4:rgba(255,255,255,0.25);--border:rgba(6,182,212,0.1);
+  --ff:'Inter',sans-serif;--display:'Sora',sans-serif;--serif:'Playfair Display',serif;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--tx2);font-family:var(--ff);font-weight:400;font-size:15px;line-height:1.85;-webkit-font-smoothing:antialiased;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 44px;display:flex;justify-content:space-between;align-items:center;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);background:rgba(8,13,18,0.7);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:var(--display);font-weight:200;font-size:12px;color:rgba(255,255,255,0.35);letter-spacing:6px;text-transform:uppercase;text-decoration:none;}
+.nav-logo span{color:var(--cyan);font-weight:400;opacity:0.5;}
+.nav-links{display:flex;align-items:center;gap:28px;}
+.nav-links a{font-family:var(--display);font-weight:300;font-size:11px;color:rgba(255,255,255,0.35);letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:color 0.3s;}
+.nav-links a:hover{color:var(--cyan);}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:101;}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,0.5);transition:all 0.3s;}
+.nav-hamburger.open span:nth-child(1){transform:rotate(45deg) translate(4px,5px);}
+.nav-hamburger.open span:nth-child(2){opacity:0;}
+.nav-hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(4px,-5px);}
+
+/* CONTENT */
+.privacy-wrap{max-width:760px;margin:0 auto;padding:140px 24px 80px;}
+.page-title{font-family:var(--serif);font-weight:600;font-size:clamp(28px,4vw,40px);color:var(--white);margin-bottom:12px;}
+.page-subtitle{font-size:13px;color:var(--tx3);margin-bottom:56px;}
+h2{font-family:var(--display);font-weight:400;font-size:13px;text-transform:uppercase;letter-spacing:4px;color:var(--cyan);margin-top:48px;margin-bottom:16px;}
+h3{font-family:var(--display);font-weight:500;font-size:14px;color:var(--white);letter-spacing:0.3px;margin-top:28px;margin-bottom:8px;}
+p{margin-bottom:14px;}
+a{color:var(--cyan);text-decoration:none;transition:all 0.3s;}
+a:hover{text-decoration:underline;}
+ul{list-style:none;padding-left:0;margin-bottom:14px;}
+ul li{position:relative;padding-left:20px;margin-bottom:6px;}
+ul li::before{content:'';position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:var(--cyan);opacity:0.5;}
+strong{color:var(--white);font-weight:500;}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:32px 44px;text-align:center;}
+footer p{font-family:var(--ff);font-weight:300;font-size:11px;color:var(--tx4);letter-spacing:1px;margin:0;}
+footer a{color:var(--tx4);font-size:11px;}
+footer a:hover{color:var(--cyan);}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{padding:16px 24px;}
+  .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(8,13,18,0.95);flex-direction:column;justify-content:center;align-items:center;gap:32px;z-index:100;}
+  .nav-links.open{display:flex;}
+  .nav-hamburger{display:flex;}
+  .privacy-wrap{padding:110px 20px 60px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/en/" class="nav-logo">THE HUMAN <span>ORIGIN</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="/en/#method" onclick="closeNav()">Method</a>
+    <a href="/en/#process" onclick="closeNav()">Process</a>
+    <a href="/en/#diagnostic" onclick="closeNav()">Diagnostic</a>
+    <a href="/en/#contact" onclick="closeNav()">Contact</a>
+    <a href="../de/datenschutz.html" style="color:var(--orange);border:1px solid rgba(249,115,22,0.3);padding:4px 14px;border-radius:100px;font-size:10px;letter-spacing:2px;margin-left:12px">DE</a>
+  </div>
+  <div class="nav-hamburger" id="navHamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+</nav>
+
+<main class="privacy-wrap">
+
+  <h1 class="page-title">Privacy Policy</h1>
+  <p class="page-subtitle">Pursuant to the EU General Data Protection Regulation (GDPR)</p>
+
+  <!-- 1. DATA CONTROLLER -->
+  <h2>1. Data Controller</h2>
+  <p>The controller responsible for data processing on this website within the meaning of Art. 4(7) GDPR is:</p>
+  <p>
+    <strong>Tom Waldek</strong><br>
+    The Human Origin<br>
+    Paradisgasse 35/4<br>
+    1190 Vienna, Austria<br>
+    Email: <a href="mailto:tom@thehumanorigin.org">tom@thehumanorigin.org</a>
+  </p>
+
+  <!-- 2. OVERVIEW -->
+  <h2>2. Overview of Data Processing</h2>
+  <p>This website is designed to collect as little personal data as possible. There are no cookies, no analytics or tracking tools, no newsletter sign-ups, and no user accounts. The following sections describe the limited processing that does occur when you visit or interact with this site.</p>
+
+  <!-- 3. HOSTING -->
+  <h2>3. Hosting</h2>
+  <p>This website is hosted on <strong>GitHub Pages</strong>, a service provided by GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA.</p>
+  <p>When you access this website, GitHub automatically collects and stores certain information in server log files that your browser transmits. This may include:</p>
+  <ul>
+    <li>Your IP address</li>
+    <li>Date and time of the request</li>
+    <li>The page requested</li>
+    <li>Browser type and version</li>
+    <li>Referring URL</li>
+  </ul>
+  <p>This data is processed by GitHub to deliver the website to you. We have no access to these server logs.</p>
+  <h3>Data transfer to the USA</h3>
+  <p>GitHub is based in the United States. The transfer of data to the US is covered by <strong>Standard Contractual Clauses (SCCs)</strong> pursuant to Art. 46(2)(c) GDPR, which GitHub has adopted as part of its data processing agreements.</p>
+  <p><strong>Legal basis:</strong> Art. 6(1)(f) GDPR — legitimate interest in the reliable and secure provision of this website.</p>
+
+  <!-- 4. GOOGLE FONTS -->
+  <h2>4. Google Fonts</h2>
+  <p>This website uses fonts provided by <strong>Google Fonts</strong> (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland). These fonts are loaded externally from Google's servers (<code>fonts.googleapis.com</code> and <code>fonts.gstatic.com</code>).</p>
+  <p>When you load a page on this site, your browser establishes a connection to Google's servers. In the process, your <strong>IP address</strong> is transmitted to Google. Google may process this data on servers in the United States.</p>
+  <p>We are aware that the Regional Court of Munich (LG M&uuml;nchen I, Az. 3 O 17493/20, 20 January 2022) found that the external loading of Google Fonts without user consent can constitute a violation of the GDPR, as it transmits the visitor's IP address to Google without a sufficient legal basis. We are evaluating a transition to self-hosted fonts.</p>
+  <p><strong>Legal basis:</strong> Art. 6(1)(f) GDPR — legitimate interest in the consistent and optimised presentation of our website. You can object to this processing (see Section 9).</p>
+  <p>Further information: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
+
+  <!-- 5. CAL.COM BOOKING -->
+  <h2>5. Cal.com Booking</h2>
+  <p>We use <strong>Cal.com</strong> to allow you to book a conversation directly from this website. The service is operated by <strong>Cal.com Europe B.V.</strong> and runs on the European instance at <code>cal.eu</code>. Your data is processed and stored within the European Union.</p>
+  <p>When you use the booking function, the following data is collected:</p>
+  <ul>
+    <li>Your name</li>
+    <li>Your email address</li>
+    <li>Your selected date and time</li>
+  </ul>
+  <p>This data is used solely to schedule and confirm your booking. It is not used for marketing or shared with third parties.</p>
+  <p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR — processing necessary for the performance of pre-contractual measures taken at your request.</p>
+
+  <!-- 6. EMAIL CONTACT -->
+  <h2>6. Email Contact</h2>
+  <p>If you contact us by email at <a href="mailto:tom@thehumanorigin.org">tom@thehumanorigin.org</a>, your email address and the content of your message will be stored for the purpose of handling your enquiry.</p>
+  <p>This data will not be shared with third parties. It will be deleted once your enquiry has been fully addressed, unless retention is required by law.</p>
+  <p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR — processing necessary for pre-contractual or contractual purposes at your request.</p>
+
+  <!-- 7. PULSE CHECK DIAGNOSTIC -->
+  <h2>7. Pulse Check Diagnostic Tool</h2>
+  <p>This website includes an interactive diagnostic tool called the <strong>Pulse Check</strong>. It runs entirely in your browser using client-side JavaScript. Your answers and results are processed locally on your device.</p>
+  <p><strong>No data from the Pulse Check is transmitted to any server.</strong> Nothing is stored, logged, or tracked. When you close or refresh the page, all data is discarded.</p>
+
+  <!-- 8. SSL/TLS -->
+  <h2>8. SSL/TLS Encryption</h2>
+  <p>This website uses SSL/TLS encryption (recognisable by <code>https://</code> in the browser address bar) to protect the transmission of data between your browser and our server. This prevents third parties from reading data in transit.</p>
+
+  <!-- 9. YOUR RIGHTS -->
+  <h2>9. Your Rights Under the GDPR</h2>
+  <p>Under the General Data Protection Regulation, you have the following rights regarding your personal data:</p>
+  <ul>
+    <li><strong>Right of access</strong> (Art. 15 GDPR) — You can request confirmation of whether we process your personal data, and if so, obtain a copy.</li>
+    <li><strong>Right to rectification</strong> (Art. 16 GDPR) — You can request correction of inaccurate data or completion of incomplete data.</li>
+    <li><strong>Right to erasure</strong> (Art. 17 GDPR) — You can request deletion of your personal data where there is no legal obligation to retain it.</li>
+    <li><strong>Right to restriction of processing</strong> (Art. 18 GDPR) — You can request that processing of your data be restricted under certain conditions.</li>
+    <li><strong>Right to data portability</strong> (Art. 20 GDPR) — You can request your data in a structured, commonly used, machine-readable format.</li>
+    <li><strong>Right to object</strong> (Art. 21 GDPR) — You can object to processing based on legitimate interest (Art. 6(1)(f)) at any time, on grounds relating to your particular situation.</li>
+  </ul>
+  <p>To exercise any of these rights, contact us at: <a href="mailto:tom@thehumanorigin.org">tom@thehumanorigin.org</a></p>
+
+  <!-- 10. SUPERVISORY AUTHORITY -->
+  <h2>10. Right to Lodge a Complaint</h2>
+  <p>If you believe that the processing of your personal data violates the GDPR, you have the right to lodge a complaint with a supervisory authority, in particular in the EU member state of your habitual residence, place of work, or the place of the alleged infringement.</p>
+  <p>The competent authority for Austria is:</p>
+  <p>
+    <strong>&Ouml;sterreichische Datenschutzbeh&ouml;rde</strong><br>
+    Barichgasse 40-42<br>
+    1030 Vienna, Austria<br>
+    Phone: +43 1 52 152-0<br>
+    Website: <a href="https://www.dsb.gv.at" target="_blank" rel="noopener noreferrer">dsb.gv.at</a>
+  </p>
+
+  <!-- 11. CHANGES -->
+  <h2>11. Changes to This Policy</h2>
+  <p>We may update this privacy policy to reflect changes in our data processing practices or legal requirements. The current version is always available on this page.</p>
+
+  <!-- 12. LAST UPDATED -->
+  <h2>12. Last Updated</h2>
+  <p>April 2026</p>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 The Human Origin &nbsp;&middot;&nbsp; <a href="/en/impressum.html">Legal Notice</a></p>
+</footer>
+
+<script>
+function toggleNav(){
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('navHamburger').classList.toggle('open');
+}
+function closeNav(){
+  document.getElementById('navLinks').classList.remove('open');
+  document.getElementById('navHamburger').classList.remove('open');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legal Notice | The Human Origin</title>
+<meta name="description" content="Legal notice and imprint pursuant to ECG §5 — The Human Origin, Tom Waldek, Vienna, Austria.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://thehumanorigin.org/en/imprint/">
+<link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/imprint/">
+<link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/impressum/">
+<link rel="alternate" hreflang="x-default" href="https://thehumanorigin.org/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#080d12;
+  --cyan:#06b6d4;
+  --orange:#f97316;
+  --white:#ffffff;
+  --tx:#f0e8dc;
+  --tx2:rgba(255,242,225,0.75);
+  --tx3:rgba(255,242,225,0.48);
+  --border:rgba(6,182,212,0.1);
+  --ff:'Inter',sans-serif;
+  --display:'Sora',sans-serif;
+  --serif:'Playfair Display',serif;
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--tx2);
+  font-family:var(--ff);
+  font-weight:400;
+  font-size:15px;
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+a{text-decoration:none;color:var(--cyan);transition:all 0.25s}
+a:hover{text-decoration:underline}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:24px 44px;
+  display:flex;justify-content:space-between;align-items:center;
+  backdrop-filter:blur(24px);
+  background:rgba(8,13,18,0.7);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{
+  font-family:var(--display);font-weight:200;font-size:12px;
+  color:rgba(255,255,255,0.35);letter-spacing:6px;text-transform:uppercase;
+  text-decoration:none;
+}
+.nav-logo:hover{text-decoration:none}
+.nav-logo span{color:var(--cyan);font-weight:400;opacity:0.5}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{
+  font-family:var(--display);font-weight:300;font-size:11px;
+  color:rgba(255,255,255,0.35);letter-spacing:2px;text-transform:uppercase;
+  text-decoration:none;
+}
+.nav-links a:hover{color:var(--cyan);text-decoration:none}
+
+/* HAMBURGER */
+.nav-hamburger{
+  display:none;flex-direction:column;justify-content:center;align-items:center;
+  gap:5px;cursor:pointer;width:32px;height:32px;z-index:110;
+}
+.nav-hamburger span{
+  display:block;width:20px;height:1.5px;
+  background:rgba(255,255,255,0.4);
+  transition:all 0.3s;
+}
+.nav-hamburger.open span:nth-child(1){transform:rotate(45deg) translate(4px,4px)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* CONTENT */
+.imprint-content{
+  max-width:760px;
+  margin:0 auto;
+  padding:140px 44px 80px;
+}
+.page-title{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:clamp(28px,4vw,40px);
+  color:var(--white);
+  margin-bottom:48px;
+  line-height:1.3;
+}
+.section-label{
+  font-family:var(--display);
+  font-weight:400;
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:4px;
+  color:var(--cyan);
+  margin-top:48px;
+  margin-bottom:16px;
+}
+.imprint-content p{
+  margin-bottom:12px;
+}
+.imprint-content p:last-child{
+  margin-bottom:0;
+}
+
+/* FOOTER */
+footer{
+  border-top:1px solid var(--border);
+  padding:32px 44px;
+  text-align:center;
+  font-family:var(--ff);
+  font-weight:300;
+  font-size:11px;
+  color:rgba(255,255,255,0.25);
+  letter-spacing:1px;
+}
+footer a{
+  color:rgba(255,255,255,0.25);
+}
+footer a:hover{
+  color:var(--cyan);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{padding:16px 24px}
+  .nav-links{
+    display:none;
+    position:fixed;top:0;left:0;right:0;bottom:0;
+    background:rgba(8,13,18,0.97);
+    flex-direction:column;justify-content:center;align-items:center;
+    gap:32px;z-index:105;
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{font-size:13px;letter-spacing:3px}
+  .nav-hamburger{display:flex}
+  .imprint-content{padding:120px 24px 60px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/en/" class="nav-logo">THE HUMAN <span>ORIGIN</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="/en/#method" onclick="closeNav()">Method</a>
+    <a href="/en/#process" onclick="closeNav()">Process</a>
+    <a href="/en/#diagnostic" onclick="closeNav()">Diagnostic</a>
+    <a href="/en/#contact" onclick="closeNav()">Contact</a>
+    <a href="../de/impressum.html" style="color:var(--orange);border:1px solid rgba(249,115,22,0.3);padding:4px 14px;border-radius:100px;font-size:10px;letter-spacing:2px;margin-left:12px">DE</a>
+  </div>
+  <div class="nav-hamburger" id="navHamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+</nav>
+
+<main class="imprint-content">
+
+  <h1 class="page-title">Legal Notice</h1>
+
+  <h2 class="section-label">Information pursuant to ECG &sect;5</h2>
+  <p>Austrian E-Commerce Act (E-Commerce-Gesetz)</p>
+  <p>Tom Waldek<br>The Human Origin</p>
+  <p>Paradisgasse 35/4<br>1190 Vienna<br>Austria</p>
+  <p>Small business exemption pursuant to &sect;6 Abs. 1 Z 27 UStG. No VAT identification number.</p>
+
+  <h2 class="section-label">Contact</h2>
+  <p>Email: <a href="mailto:tom@thehumanorigin.org">tom@thehumanorigin.org</a></p>
+
+  <h2 class="section-label">Responsible for content</h2>
+  <p>Tom Waldek<br>Paradisgasse 35/4<br>1190 Vienna, Austria</p>
+
+  <h2 class="section-label">EU Online Dispute Resolution</h2>
+  <p>The European Commission provides a platform for online dispute resolution (ODR):<br>
+  <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a></p>
+  <p>We are neither obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+
+  <h2 class="section-label">Liability for content</h2>
+  <p>The contents of this website have been created with the greatest possible care. However, no guarantee is given for the accuracy, completeness, or timeliness of the content provided. As a service provider, we are responsible for our own content on these pages in accordance with general legislation. However, we are not obliged to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.</p>
+  <p>Obligations to remove or block the use of information in accordance with general legislation remain unaffected. Any liability in this regard is only possible from the point in time at which a concrete infringement of the law becomes known. If we become aware of any such infringements, we will remove this content immediately.</p>
+
+  <h2 class="section-label">Liability for links</h2>
+  <p>This website contains links to external third-party websites over whose content we have no influence. Therefore, no guarantee can be given for this third-party content. The respective provider or operator of the linked pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognisable at the time of linking.</p>
+  <p>Permanent monitoring of the content of the linked pages is not reasonable without concrete evidence of a legal violation. If we become aware of any infringements, we will remove such links immediately.</p>
+
+  <h2 class="section-label">Copyright</h2>
+  <p>The content and works created by the site operator on these pages are subject to Austrian copyright law. Duplication, processing, distribution, or any form of commercialisation of such material beyond the scope of copyright law requires the prior written consent of Tom Waldek. Downloads and copies of this site are only permitted for private, non-commercial use.</p>
+  <p>Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. Should you nevertheless become aware of a copyright infringement, please notify us accordingly. If we become aware of any infringements, we will remove such content immediately.</p>
+
+</main>
+
+<footer>
+  &copy; 2026 The Human Origin &nbsp;&middot;&nbsp; <a href="/en/privacy/">Privacy Policy</a>
+</footer>
+
+<script>
+function toggleNav(){
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('navHamburger').classList.toggle('open');
+}
+function closeNav(){
+  document.getElementById('navLinks').classList.remove('open');
+  document.getElementById('navHamburger').classList.remove('open');
+}
+</script>
+</body>
+</html>
