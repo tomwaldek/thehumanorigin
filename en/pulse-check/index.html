@@ -259,15 +259,17 @@ var CAL_BOOKING_URL = "tomwaldek/entry-conversation";
   var s=d.createElement("script");
   s.src=A;s.async=true;
   d.head.appendChild(s);
-  C.Cal("init",{origin:"https://cal.eu"});
+  C.Cal("init",{origin:"https://app.cal.eu"});
   C.Cal("ui",{theme:"dark",styles:{branding:{brandColor:"#06b6d4"}},hideEventTypeDetails:false,layout:"month_view"});
+  C.Cal("preload",{calLink:CAL_BOOKING_URL});
 })(window,"https://app.cal.eu/embed/embed.js","init");
 function openBooking(e){
+  var mailto="mailto:tom@thehumanorigin.org?subject=Trust%20Architecture%20Diagnostic";
   if(e)e.preventDefault();
-  if(window.Cal && CAL_BOOKING_URL !== "YOUR-SLUG/entry-conversation"){
-    Cal("openModal",{calLink:CAL_BOOKING_URL,config:{layout:"month_view",theme:"dark"}});
-  } else {
-    window.location.href="mailto:tom@thehumanorigin.org?subject=Trust%20Architecture%20Diagnostic";
+  try{
+    Cal("modal",{calLink:CAL_BOOKING_URL,config:{layout:"month_view",theme:"dark"}});
+  }catch(err){
+    window.location.href=mailto;
   }
 }
 </script>
