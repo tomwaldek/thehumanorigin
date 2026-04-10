@@ -2050,8 +2050,9 @@ var CAL_BOOKING_URL = "tomwaldek/erstgespraech";
   C.Cal.ns={};C.Cal.loaded=false;
   var s=d.createElement("script");
   s.src=A;s.async=true;
+  s.onload=function(){window.__calScriptLoaded=true;};
   d.head.appendChild(s);
-  C.Cal("init",{origin:"https://cal.eu"});
+  C.Cal("init",{origin:"https://app.cal.eu"});
   C.Cal("ui",{
     theme:"dark",
     styles:{branding:{brandColor:"#06b6d4"}},
@@ -2062,14 +2063,15 @@ var CAL_BOOKING_URL = "tomwaldek/erstgespraech";
 
 function openBooking(e){
   var mailto="mailto:tom@thehumanorigin.org?subject=Trust%20Architecture%20Diagnostic";
-  if(window.Cal && Cal.loaded && CAL_BOOKING_URL !== "YOUR-SLUG/erstgespraech" && CAL_BOOKING_URL !== ""){
+  var calReady=window.__calScriptLoaded && window.Cal && typeof Cal==="function";
+  if(calReady && CAL_BOOKING_URL && CAL_BOOKING_URL.indexOf("YOUR-SLUG")===-1){
     if(e)e.preventDefault();
     try{
       Cal("openModal",{calLink:CAL_BOOKING_URL,config:{layout:"month_view",theme:"dark"}});
       setTimeout(function(){
-        var m=document.querySelector('[data-cal-namespace],.cal-embed,.cal-modal-overlay');
+        var m=document.querySelector('[data-cal-namespace],[class*="cal-modal"],[class*="Cal"],.cal-embed');
         if(!m){window.location.href=mailto;}
-      },2000);
+      },2500);
     }catch(err){window.location.href=mailto;}
   }
   /* If Cal not loaded, let the native mailto href fire naturally (no preventDefault) */
