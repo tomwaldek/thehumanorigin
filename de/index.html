@@ -1186,7 +1186,7 @@ footer a:hover{color:var(--cyan)}
     <div class="hero-tagline">Sechs Filmdisziplinen treffen auf die Neurobiologie von Organisationen.</div>
     <p class="hero-sub">Das Muster, das alle in Ihrem Unternehmen spüren — aber niemand benennt.</p>
     <div class="hero-ctas">
-      <a href="mailto:tom@thehumanorigin.org?subject=Erstgespr%C3%A4ch" class="btn-primary" onclick="openBooking(event)">45-Minuten-Erstgespräch buchen — kostenfrei</a>
+      <a href="mailto:tom@thehumanorigin.org?subject=Erstgespr%C3%A4ch" class="btn-primary" data-cal-link="tomwaldek/erstgespraech" data-cal-config='{"layout":"month_view","theme":"dark"}'>45-Minuten-Erstgespräch buchen — kostenfrei</a>
       <a href="#diagnostic" class="btn-ghost">Zum Pulscheck</a>
     </div>
   </div>
@@ -1817,7 +1817,7 @@ footer a:hover{color:var(--cyan)}
   </div>
   <div class="cta-avatar-name">Tom Waldek</div>
   <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-    <a href="mailto:tom@thehumanorigin.org?subject=Trust%20Architecture%20Diagnostic" class="btn-primary" onclick="openBooking(event)">45-Minuten-Erstgespräch buchen — kostenfrei, kein Pitch</a>
+    <a href="mailto:tom@thehumanorigin.org?subject=Trust%20Architecture%20Diagnostic" class="btn-primary" data-cal-link="tomwaldek/erstgespraech" data-cal-config='{"layout":"month_view","theme":"dark"}'>45-Minuten-Erstgespräch buchen — kostenfrei, kein Pitch</a>
   </div>
 </section>
 
@@ -2050,7 +2050,6 @@ var CAL_BOOKING_URL = "tomwaldek/erstgespraech";
   C.Cal.ns={};C.Cal.loaded=false;
   var s=d.createElement("script");
   s.src=A;s.async=true;
-  s.onload=function(){window.__calScriptLoaded=true;};
   d.head.appendChild(s);
   C.Cal("init",{origin:"https://app.cal.eu"});
   C.Cal("ui",{
@@ -2059,22 +2058,17 @@ var CAL_BOOKING_URL = "tomwaldek/erstgespraech";
     hideEventTypeDetails:false,
     layout:"month_view"
   });
+  C.Cal("preload",{calLink:CAL_BOOKING_URL});
 })(window,"https://app.cal.eu/embed/embed.js","init");
 
 function openBooking(e){
   var mailto="mailto:tom@thehumanorigin.org?subject=Trust%20Architecture%20Diagnostic";
-  var calReady=window.__calScriptLoaded && window.Cal && typeof Cal==="function";
-  if(calReady && CAL_BOOKING_URL && CAL_BOOKING_URL.indexOf("YOUR-SLUG")===-1){
-    if(e)e.preventDefault();
-    try{
-      Cal("openModal",{calLink:CAL_BOOKING_URL,config:{layout:"month_view",theme:"dark"}});
-      setTimeout(function(){
-        var m=document.querySelector('[data-cal-namespace],[class*="cal-modal"],[class*="Cal"],.cal-embed');
-        if(!m){window.location.href=mailto;}
-      },2500);
-    }catch(err){window.location.href=mailto;}
+  if(e)e.preventDefault();
+  try{
+    Cal("modal",{calLink:CAL_BOOKING_URL,config:{layout:"month_view",theme:"dark"}});
+  }catch(err){
+    window.location.href=mailto;
   }
-  /* If Cal not loaded, let the native mailto href fire naturally (no preventDefault) */
 }
 </script>
 </body>
