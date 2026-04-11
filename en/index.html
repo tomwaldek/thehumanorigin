@@ -341,10 +341,10 @@
         },
         {
           "@type": "Question",
-          "name": "Do you work internationally?",
+          "name": "Do you work in German and across Europe?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. German and English, based in Europe. The primary practice covers the DACH region and wider Europe — but the work travels. International engagements are welcome and fully supported. Engagements run in the language of the leadership team. All materials, diagnostics, and integration work are available in both languages."
+            "text": "Yes. German and English, across Europe. The Human Origin is based in Europe with an EN/DE bilingual practice. Engagements typically run in the language of the leadership team. All materials, diagnostics, and integration work are available in both languages."
           }
         }
       ]
@@ -460,8 +460,9 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
   margin-bottom:32px;margin-top:28px;line-height:1.4;
 }
 
-.hero-sub{font-weight:300;font-size:16px;color:var(--tx2);line-height:1.8;max-width:640px;margin:0 auto 40px}
+.hero-sub{font-weight:300;font-size:16px;color:var(--tx2);line-height:1.8;max-width:640px;margin:0 auto 20px}
 .hero-sub strong{color:rgba(255,245,230,0.88);font-weight:400}
+.hero-method{font-family:var(--display);font-weight:300;font-size:12px;color:var(--tx3);letter-spacing:3px;text-transform:uppercase;margin-bottom:36px}
 .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
 .btn-primary{padding:14px 36px;border-radius:100px;background:linear-gradient(135deg,var(--cyan),var(--orange));color:var(--white);font-family:var(--display);font-weight:500;font-size:13px;border:none;cursor:pointer;letter-spacing:1px;transition:all 0.3s;text-decoration:none}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(6,182,212,0.3)}
@@ -529,86 +530,35 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 /* ═══ PROCESS ═══ */
 .phase-frame{text-align:center;font-family:var(--display);font-weight:300;font-size:14px;color:var(--tx3);letter-spacing:1.5px;margin:0 auto 32px;max-width:560px;line-height:1.9}
 .phase-frame strong{color:var(--cyan);font-weight:400}
-/* ═══ PHASE-LIST — subtle background pattern to reveal transparency ═══ */
-.phase-list{margin-top:16px;display:flex;flex-direction:column;gap:2px;position:relative;padding:2px;border-radius:14px;background-image:
-  radial-gradient(circle at 1px 1px, rgba(6,182,212,0.06) 1px, transparent 0);
-  background-size:28px 28px}
-/* Secondary pattern layer via pseudo-element — faint diagonal lines */
-.phase-list::before{content:'';position:absolute;inset:0;border-radius:14px;opacity:0.35;pointer-events:none;z-index:0;
-  background:repeating-linear-gradient(
-    -35deg,
-    transparent,
-    transparent 40px,
-    rgba(6,182,212,0.03) 40px,
-    rgba(6,182,212,0.03) 41px
-  )}
-
-/* ═══ PHASE CARDS — glass with frosted reflection ═══ */
-.phase{display:flex;align-items:flex-start;gap:24px;padding:28px 32px;border:1px solid var(--border);transition:all 0.4s cubic-bezier(0.22,1,0.36,1);position:relative;text-align:left;z-index:1;overflow:hidden;
-  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.phase-list{margin-top:16px;display:flex;flex-direction:column;gap:2px}
+.phase{display:flex;align-items:flex-start;gap:24px;padding:28px 32px;background:var(--glass);border:1px solid var(--border);transition:all 0.3s;position:relative;text-align:left}
 .phase:first-child{border-radius:12px 12px 0 0}
 .phase:last-child{border-radius:0 0 12px 12px}
-.phase:hover{border-color:var(--border2)}
-/* Glass shimmer — auto-plays on first appear, replays on hover */
-@keyframes glassShimmer{
-  0%{left:-75%}
-  100%{left:125%}
-}
-.phase::before{content:'';position:absolute;top:0;left:-75%;width:50%;height:100%;
-  background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,0.03) 45%,rgba(255,255,255,0.05) 50%,rgba(255,255,255,0.03) 55%,transparent 60%);
-  pointer-events:none;z-index:2}
-/* Auto-shimmer on first appear — staggered per card */
-.phase.visible::before{animation:glassShimmer 1.6s cubic-bezier(0.22,1,0.36,1) forwards}
-.phase:nth-of-type(1).visible::before{animation-delay:0.3s}
-.phase:nth-of-type(2).visible::before{animation-delay:0.6s}
-.phase:nth-of-type(3).visible::before{animation-delay:0.9s}
-.phase:nth-of-type(4).visible::before{animation-delay:1.2s}
-.phase:nth-of-type(5).visible::before{animation-delay:1.5s}
-.phase:nth-of-type(6).visible::before{animation-delay:1.8s}
-.phase:nth-of-type(7).visible::before{animation-delay:2.1s}
-/* Hover re-triggers shimmer — slower, more deliberate */
-.phase:hover::before{animation:glassShimmer 1.8s cubic-bezier(0.22,1,0.36,1) forwards}
-/* Subtle top-edge light catch */
-.phase::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;
-  background:linear-gradient(90deg,transparent 10%,rgba(255,255,255,0.06) 30%,rgba(255,255,255,0.08) 50%,rgba(255,255,255,0.06) 70%,transparent 90%);
-  pointer-events:none;z-index:2;transition:opacity 0.4s}
-.phase-num{font-family:var(--display);font-weight:200;font-size:32px;color:var(--cyan);opacity:0.4;min-width:40px;line-height:1;position:relative;z-index:1}
-.phase-body{flex:1;position:relative;z-index:1}
+.phase:hover{background:var(--glass2);border-color:var(--border2)}
+.phase-num{font-family:var(--display);font-weight:200;font-size:32px;color:var(--cyan);opacity:0.4;min-width:40px;line-height:1}
+.phase-body{flex:1}
 .phase-name{font-family:var(--display);font-weight:500;font-size:14px;color:var(--white);margin-bottom:6px;letter-spacing:0.5px}
 .phase-desc{font-weight:400;font-size:14px;color:rgba(255,242,225,0.65);line-height:1.7}
-.phase-fee{font-family:var(--display);font-weight:400;font-size:11px;color:var(--orange);letter-spacing:2px;text-transform:uppercase;min-width:88px;text-align:right;padding-top:6px;opacity:0.65;transition:all 0.4s;position:relative;z-index:1}
+.phase-fee{font-family:var(--display);font-weight:400;font-size:11px;color:var(--orange);letter-spacing:2px;text-transform:uppercase;min-width:88px;text-align:right;padding-top:6px;opacity:0.65;transition:all 0.3s}
 
 /* ═══ PROGRESSIVE TRANSPARENCY — trust deepens, walls dissolve ═══ */
-/* Phase 0: solid frosted glass — safety, first meeting */
-.phase-list>.phase:nth-child(1){background:rgba(6,182,212,0.09);border-color:rgba(6,182,212,0.20);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.phase-list>.phase:nth-child(1){background:rgba(6,182,212,0.045);border-color:rgba(6,182,212,0.12)}
 .phase-list>.phase:nth-child(1) .phase-fee{opacity:0.5}
-/* Diagnostic Debrief: slightly lighter */
-.phase-list>.phase:nth-child(2){background:rgba(6,182,212,0.065);border-color:rgba(6,182,212,0.15);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.phase-list>.phase:nth-child(2){background:rgba(6,182,212,0.035);border-color:rgba(6,182,212,0.10)}
 .phase-list>.phase:nth-child(2) .phase-fee{opacity:0.6}
-/* Phase 1 TAD: glass thinning */
-.phase-list>.phase:nth-child(3){background:rgba(6,182,212,0.04);border-color:rgba(6,182,212,0.10);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-.phase-list>.phase:nth-child(3) .phase-fee{opacity:0.75}
-/* Phase 2 Origin Work: barely there */
-.phase-list>.phase:nth-child(4){background:rgba(6,182,212,0.02);border-color:rgba(6,182,212,0.07);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.phase-list>.phase:nth-child(3){background:rgba(6,182,212,0.025);border-color:rgba(6,182,212,0.08)}
+.phase-list>.phase:nth-child(3) .phase-fee{opacity:0.72}
+.phase-list>.phase:nth-child(4){background:rgba(6,182,212,0.015);border-color:rgba(6,182,212,0.065)}
 .phase-list>.phase:nth-child(4) .phase-fee{opacity:0.85;font-size:12px}
-.phase-list>.phase:nth-child(4)::after{opacity:0.5}
-/* Phase 3 Integration: ghost */
-.phase-list>.phase:nth-child(5){background:rgba(6,182,212,0.008);border-color:rgba(6,182,212,0.04);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
-.phase-list>.phase:nth-child(5) .phase-fee{opacity:0.92}
-.phase-list>.phase:nth-child(5)::after{opacity:0.25}
-.phase-list>.phase:nth-child(5)::before{display:none}
-/* Phase 4 Review: open air — nothing left to hide */
-.phase-list>.phase:nth-child(6){background:rgba(6,182,212,0.003);border-color:rgba(6,182,212,0.025);backdrop-filter:none;-webkit-backdrop-filter:none}
-.phase-list>.phase:nth-child(6) .phase-fee{opacity:0.95}
-.phase-list>.phase:nth-child(6)::after{opacity:0}
-.phase-list>.phase:nth-child(6)::before{display:none}
-/* Hover states — lighter cards hover lighter */
-.phase-list>.phase:nth-child(1):hover{background:rgba(6,182,212,0.12)}
-.phase-list>.phase:nth-child(2):hover{background:rgba(6,182,212,0.085)}
-.phase-list>.phase:nth-child(3):hover{background:rgba(6,182,212,0.06)}
-.phase-list>.phase:nth-child(4):hover{background:rgba(6,182,212,0.035)}
+.phase-list>.phase:nth-child(5){background:rgba(6,182,212,0.008);border-color:rgba(6,182,212,0.05)}
+.phase-list>.phase:nth-child(5) .phase-fee{opacity:0.9}
+.phase-list>.phase:nth-child(6){background:rgba(6,182,212,0.004);border-color:rgba(6,182,212,0.04)}
+.phase-list>.phase:nth-child(6) .phase-fee{opacity:0.9}
+/* Hover: ghost cards still respond but stay lighter than Phase 0 */
+.phase-list>.phase:nth-child(3):hover{background:rgba(6,182,212,0.035)}
+.phase-list>.phase:nth-child(4):hover{background:rgba(6,182,212,0.025)}
 .phase-list>.phase:nth-child(5):hover{background:rgba(6,182,212,0.015)}
-.phase-list>.phase:nth-child(6):hover{background:rgba(6,182,212,0.008)}
+.phase-list>.phase:nth-child(6):hover{background:rgba(6,182,212,0.01)}
 
 /* ═══ NOT-THIS ═══ */
 .notthis{max-width:680px;margin:16px auto 0;padding:28px 36px;border-left:2px solid var(--orange);background:rgba(249,115,22,0.04);border-radius:0 12px 12px 0;text-align:left}
@@ -1186,11 +1136,12 @@ footer a:hover{color:var(--cyan)}
       <span class="line-label">The Human</span>
       <span class="line-anchor">Origin</span>
     </h1>
-    <div class="hero-tagline">Six film disciplines meet neurobiology.</div>
-    <p class="hero-sub">The pattern everyone in your organisation can feel — but no one has named.</p>
+    <div class="hero-tagline">The pattern everyone in your organisation can feel — but no one has named.</div>
+    <p class="hero-sub">Your best people hold back. Decisions circle. The team performs instead of connects. This work surfaces why — and <strong>changes it where it actually lives.</strong></p>
+    <div class="hero-method">Six film disciplines meet organisational neurobiology.</div>
     <div class="hero-ctas">
-      <a href="#diagnostic" class="btn-primary">Start Your Pulse Check</a>
-      <a href="#book" class="btn-ghost" data-cal-link="tomwaldek/entry-conversation" data-cal-config='{"layout":"month_view","theme":"dark"}'>Book an Entry Conversation</a>
+      <a href="#contact" class="btn-primary" onclick="openBooking(event)">Book a 45-min Entry Conversation — no fee</a>
+      <a href="#diagnostic" class="btn-ghost">Take the Pulse Check</a>
     </div>
   </div>
 </section>
@@ -1204,7 +1155,7 @@ footer a:hover{color:var(--cyan)}
     </div>
     <div>
       <div class="stat-num"><span class="counter-val" data-target="56" data-suffix="%">0%</span></div>
-      <div class="stat-desc">Leaders say their team hides real problems</div>
+      <div class="stat-desc">Leaders report their team doesn't surface real problems</div>
     </div>
     <div>
       <div class="stat-num"><span class="counter-val" data-target="21" data-suffix="%">0%</span></div>
@@ -1263,13 +1214,73 @@ footer a:hover{color:var(--cyan)}
 <section id="problem" class="fade-in">
   <div class="wrap">
     <h2 class="section-label stagger-1">The Problem No One's Measuring</h2>
-    <p class="sec-text stagger-2">It's never a people problem. It's one condition: an organisation running on <strong>survival architecture</strong> — the operating system it defaulted to under pressure and never switched off.</p>
+    <p class="sec-text stagger-2">It's never a people problem. It's one condition: an organisation running on <strong>survival architecture</strong> — the pattern your team learned to protect themselves with under pressure, and never switched off. It decides who speaks, who stays silent, what gets escalated, and what gets buried.</p>
     <p class="sec-text stagger-3">You see it in the hire who leaves at month four. In the feedback no one gives honestly. In the conversation after the meeting — the one that contradicts it. The nervous system decides safety or threat before anyone in the room is conscious of it.</p>
     <p class="sec-text stagger-3">That's the layer no restructure reaches. No software sees it. <strong>Because everyone accepts it.</strong></p>
     <blockquote class="quote-block stagger-4" cite="https://thehumanorigin.org/en/#quote2">
       <div class="quote-text">"Most organisations perform the company they wish they were — not the one they actually are."</div>
       <div class="quote-attr">Tom Waldek</div>
     </blockquote>
+  </div>
+</section>
+
+<div class="section-div"></div>
+
+<!-- POSITIVE PROOF — moved up for outcome speed (research: outcome before method) -->
+<section id="proof" class="fade-in">
+  <div class="wrap">
+    <h2 class="section-label">Positive Proof</h2>
+    <p class="proof-frame">Not aspirations. <strong>Measured shifts.</strong> What this looks like on your P&L.</p>
+    <div class="proof-grid" id="proof-section">
+      <div class="proof-card">
+        <div class="proof-num"><span class="proof-counter cyan" data-target="67" data-suffix="%">0%</span> less turnover</div>
+        <div class="proof-label">The largest hidden line item in any mid-market P&L — cut by two-thirds when the survival pattern lifts.</div>
+        <div class="proof-src">Gallup Workplace Research</div>
+      </div>
+      <div class="proof-card">
+        <div class="proof-num"><span class="proof-counter cyan" data-target="7" data-suffix="×">0×</span> more experimentation</div>
+        <div class="proof-label">Seven times the innovation velocity in psychologically safe teams — without hiring one additional person.</div>
+        <div class="proof-src">Edmondson & Lei, 2014</div>
+      </div>
+      <div class="proof-card">
+        <div class="proof-num"><span class="proof-counter orange" data-target="76" data-suffix="%">0%</span> more engagement</div>
+        <div class="proof-label">The capacity you're already paying for, finally delivered. The variable: whether your leaders act from themselves or perform a role.</div>
+        <div class="proof-src">Psychological Capital Research</div>
+      </div>
+      <div class="proof-card">
+        <div class="proof-num"><span class="proof-counter orange" data-target="3" data-suffix="×">0×</span> innovation rate</div>
+        <div class="proof-label">Three times the ideas reaching the decision table — the ones that don't get killed in the silence.</div>
+        <div class="proof-src">Edmondson, Harvard</div>
+      </div>
+    </div>
+    <p class="sec-text" style="margin-top:40px;text-align:center;max-width:720px;margin-left:auto;margin-right:auto">Across EU organisations, stress-related absence alone averages roughly <strong>€3,000 per employee per year</strong> (derived from EU-OSHA). For a 500-person company, that's <strong>€1.5 million annually</strong>. Before counting stalled decisions, suppressed ideas, and departures no one saw coming. <strong>The survival architecture is on your P&L whether you measure it or not.</strong></p>
+
+    <!-- WHAT SUCCESS LOOKS LIKE — outcome block (extracted from FAQ #6 for visibility) -->
+    <blockquote class="quote-block" style="margin-top:48px">
+      <div class="quote-text" style="font-size:16px;letter-spacing:0.8px;line-height:1.9">The decisions that were circling for weeks get made in one honest conversation. The hire who was about to leave stays — because someone finally asked the real question. The leadership table stops performing alignment and starts building it. Partners renew because decisions come faster and your team stopped hedging every commitment.</div>
+      <div class="quote-attr">What Changes When The Pattern Lifts</div>
+    </blockquote>
+  </div>
+</section>
+
+<div class="section-div"></div>
+
+<!-- WHO THIS IS FOR — moved up for outcome speed (research: audience recognition before method) -->
+<section id="for" class="fade-in">
+  <div class="wrap">
+    <h2 class="section-label stagger-1" style="color:var(--orange)">Who This Is For</h2>
+    <div class="for-statements">
+      <div class="for-block stagger-2">
+        <p>Leaders shaped by a story that <em>no longer serves</em>.</p>
+      </div>
+      <div class="for-block stagger-3">
+        <p>Organisations running patterns they've <em>never examined</em>.</p>
+      </div>
+      <div class="for-block stagger-4">
+        <p>Teams performing a version of themselves that <em>everyone maintains and no one believes</em>.</p>
+      </div>
+    </div>
+    <p class="for-closing stagger-4">Not because something is broken. Because the gap between how your organisation performs and what your people are actually capable of has become too expensive to ignore.</p>
   </div>
 </section>
 
@@ -1311,9 +1322,7 @@ footer a:hover{color:var(--cyan)}
   <div class="wrap">
     <h2 class="section-label">The Opportunity No One's Automating</h2>
     <div class="feature-card feature-orange">
-      <p class="sec-text">Every organisation is asking what AI will replace. Almost none are asking what it's already revealed.</p>
-      <p class="sec-text">The real disruption isn't the technology. It's the patterns the technology exposes.</p>
-      <p class="sec-text">When a system can replicate your team's output, the only thing left that matters is what no system can replicate: the capacity to be present, to decide from origin rather than habit, and to build trust that compounds. That survival architecture is hiding the most valuable thing in your organisation: <strong>the full capacity of your people.</strong> Reading a room, making the real calls, being right. Not soft skill. The original technology.</p>
+      <p class="sec-text">That survival architecture is hiding the most valuable thing in your organisation: <strong>the full capacity of your people.</strong> Everything no dashboard captures and no AI replicates — reading a room, making the real calls, being right. Not soft skill. The original technology. We play safe because once, it was the smartest thing we had. And we never stopped.</p>
     </div>
   </div>
 </section>
@@ -1332,37 +1341,6 @@ footer a:hover{color:var(--cyan)}
   </div>
 </section>
 
-<!-- POSITIVE PROOF -->
-<section id="proof" class="fade-in">
-  <div class="wrap">
-    <h2 class="section-label">Positive Proof</h2>
-    <p class="proof-frame">Not aspirations. <strong>Measured shifts.</strong> What this looks like on your P&L.</p>
-    <div class="proof-grid" id="proof-section">
-      <div class="proof-card">
-        <div class="proof-num"><span class="proof-counter cyan" data-target="67" data-suffix="%">0%</span> less turnover</div>
-        <div class="proof-label">The largest hidden line item in mid-market P&L — cut by two-thirds when survival patterns lift.</div>
-        <div class="proof-src">Gallup Workplace Research</div>
-      </div>
-      <div class="proof-card">
-        <div class="proof-num"><span class="proof-counter cyan" data-target="7" data-suffix="×">0×</span> more experimentation</div>
-        <div class="proof-label">Seven times the innovation velocity in psychologically safe teams — without hiring anyone.</div>
-        <div class="proof-src">Edmondson & Lei, 2014</div>
-      </div>
-      <div class="proof-card">
-        <div class="proof-num"><span class="proof-counter orange" data-target="76" data-suffix="%">0%</span> more engagement</div>
-        <div class="proof-label">Capacity you're already paying for, finally delivered. The variable: leading from themselves or performing a role.</div>
-        <div class="proof-src">Psychological Capital Research</div>
-      </div>
-      <div class="proof-card">
-        <div class="proof-num"><span class="proof-counter orange" data-target="3" data-suffix="×">0×</span> innovation rate</div>
-        <div class="proof-label">Three times the ideas reaching the decision table — the ones that don't get killed in the silence.</div>
-        <div class="proof-src">Edmondson, Harvard</div>
-      </div>
-    </div>
-    <p class="sec-text" style="margin-top:40px;text-align:center;max-width:720px;margin-left:auto;margin-right:auto">Across EU organisations, stress-related absence alone averages roughly <strong>€3,000 per employee per year</strong> (derived from EU-OSHA). For a 500-person company, that's <strong>€1.5 million annually</strong>. Before counting stalled decisions, suppressed ideas, and departures no one saw coming. <strong>The survival architecture is on your P&L whether you measure it or not.</strong></p>
-  </div>
-</section>
-
 <div class="section-div"></div>
 
 <!-- TRUST CASCADE — LOCKED COPY per claude.md §16 -->
@@ -1372,27 +1350,6 @@ footer a:hover{color:var(--cyan)}
     <p class="sec-text">The leader's nervous system is the organisation's first operating system. Not metaphorically. Neurologically.</p>
     <p class="sec-text">When <strong>survival architecture</strong> is running the leader, it runs the room. <strong>Because everyone accepts it.</strong> It starts being the atmosphere — the unspoken agreement about what can and cannot be said, decided, or risked.</p>
     <p class="sec-text"><strong>Control replaces connection.</strong> Performance replaces presence.</p>
-  </div>
-</section>
-
-<div class="section-div"></div>
-
-<!-- WHO THIS IS FOR -->
-<section id="for" class="fade-in">
-  <div class="wrap">
-    <h2 class="section-label stagger-1" style="color:var(--orange)">Who This Is For</h2>
-    <div class="for-statements">
-      <div class="for-block stagger-2">
-        <p>Leaders shaped by a story that <em>no longer serves</em>.</p>
-      </div>
-      <div class="for-block stagger-3">
-        <p>Organisations running patterns they've <em>never examined</em>.</p>
-      </div>
-      <div class="for-block stagger-4">
-        <p>Teams performing a version of themselves that <em>everyone maintains and no one believes</em>.</p>
-      </div>
-    </div>
-    <p class="for-closing stagger-4">Not because something is broken. Because the gap between how your organisation performs and what your people are actually capable of has become too expensive to ignore.</p>
   </div>
 </section>
 
@@ -1425,17 +1382,17 @@ footer a:hover{color:var(--cyan)}
       <div class="disc-card">
         <div class="disc-num">01 — Writing</div>
         <h3 class="disc-name">Shaping the narrative before anyone performs it.</h3>
-        <div class="disc-desc">Character is built from personal story, not job description. Surfacing the narratives everyone carries beneath the performance.</div>
+        <div class="disc-desc">Character is built from personal story, not job description. This discipline surfaces the narratives everyone is carrying beneath the performance.</div>
       </div>
       <div class="disc-card">
         <div class="disc-num">02 — Directing</div>
         <h3 class="disc-name">Creating conditions where truth shows up.</h3>
-        <div class="disc-desc">A director never tells anyone what to feel. They adjust the room until what's real has no choice but to appear. Between meetings, where culture lives.</div>
+        <div class="disc-desc">A director never tells anyone what to feel. They adjust the room until what's real has no choice but to appear. Applied between meetings, where culture lives.</div>
       </div>
       <div class="disc-card">
         <div class="disc-num">03 — Acting</div>
         <h3 class="disc-name">The difference between performed safety and real presence.</h3>
-        <div class="disc-desc">An actor's craft: accessing what's true and acting from there. Replacing the version pressure taught everyone to perform with something genuine.</div>
+        <div class="disc-desc">An actor's craft: accessing what's true and acting from there. Applied to entire teams — replacing the version pressure taught everyone to perform with something genuine.</div>
       </div>
       <div class="disc-card">
         <div class="disc-num">04 — Editing</div>
@@ -1449,8 +1406,8 @@ footer a:hover{color:var(--cyan)}
       </div>
       <div class="disc-card">
         <div class="disc-num">06 — Intimacy Coordination</div>
-        <h3 class="disc-name">Where vulnerability is possible without exposure. Why trust forms.</h3>
-        <div class="disc-desc">Film's newest discipline. Where anyone can say 'I don't know' or 'I disagree' without it costing safety or belonging.</div>
+        <h3 class="disc-name">Creating conditions where vulnerability is possible without exposure. The reason trust forms.</h3>
+        <div class="disc-desc">Film's newest discipline. The architecture where anyone — leaders, teams, partners — can say 'I don't know' or 'I disagree' without it costing them safety or belonging.</div>
       </div>
     </div>
     <p class="sec-text stagger-4" style="margin-top:36px">A director doesn't tell actors what to feel. A director creates conditions where truth shows up. The Human Origin works the same way — regulate the nervous system, structural and personal, surface the survival narrative hiding behind reputation and performance, and watch what your teams are actually capable of.</p>
@@ -1538,7 +1495,7 @@ footer a:hover{color:var(--cyan)}
         <div class="phase-num">0</div>
         <div class="phase-body">
           <div class="phase-name">Entry Conversation</div>
-          <div class="phase-desc">It starts with a Pulse Check — 3 minutes, 9 questions. Then 45 minutes at eye level. No pitch. One question — the real one.</div>
+          <div class="phase-desc">45 minutes. A conversation at eye level. No pitch. One question — the real one.</div>
         </div>
         <div class="phase-fee">No fee</div>
       </div>
@@ -1547,7 +1504,7 @@ footer a:hover{color:var(--cyan)}
         <div class="phase-body">
           <div class="phase-eyebrow">Optional · before Phase 1</div>
           <div class="phase-name">Diagnostic Debrief</div>
-          <div class="phase-desc">90 minutes. A documented assessment of the most active survival patterns in your leadership team — with a recommendation on whether a full diagnostic applies.</div>
+          <div class="phase-desc">90 minutes. You receive a documented initial assessment of the most active survival patterns in your leadership team — with a concrete recommendation on whether and where a full diagnostic applies.</div>
         </div>
         <div class="phase-fee">€2,500</div>
       </div>
@@ -1571,7 +1528,7 @@ footer a:hover{color:var(--cyan)}
         <div class="phase-num">3</div>
         <div class="phase-body">
           <div class="phase-name">Integration</div>
-          <div class="phase-desc">Final 4–6 weeks of Origin Work. New conversation structures, decision processes, and feedback formats embedded in daily operations — guided application in the real business.</div>
+          <div class="phase-desc">Concurrent with the final 4–6 weeks of Origin Work. New conversation structures, decision processes, and feedback formats are embedded in daily operations — with guided application in the real business.</div>
         </div>
         <div class="phase-fee">Included</div>
       </div>
@@ -1588,7 +1545,7 @@ footer a:hover{color:var(--cyan)}
         <div class="phase-body">
           <div class="phase-eyebrow">Optional · after Phase 4</div>
           <div class="phase-name">Retained Advisory</div>
-          <div class="phase-desc">Ongoing after Origin Work. Monthly leadership-table observation, direct access for critical decisions, quarterly pattern review.</div>
+          <div class="phase-desc">Ongoing. Available following Origin Work completion. Monthly leadership-table observation, direct access for critical decisions, quarterly pattern review.</div>
         </div>
         <div class="phase-fee">€3K – €5K / mo</div>
       </div>
@@ -1796,12 +1753,12 @@ footer a:hover{color:var(--cyan)}
 
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-text">Do you work internationally?</div>
+          <div class="faq-q-text">Do you work in German and across Europe?</div>
           <div class="faq-icon">+</div>
         </div>
         <div class="faq-a">
           <div class="faq-a-inner">
-            <p><strong>Yes. German and English, based in Europe.</strong> The primary practice covers the DACH region and wider Europe — but the work travels. International engagements are welcome and fully supported. Engagements run in the language of the leadership team. All materials, diagnostics, and integration work are available in both languages.</p>
+            <p><strong>Yes. German and English, across Europe.</strong> The Human Origin is based in Europe with an EN/DE bilingual practice. Engagements typically run in the language of the leadership team. All materials, diagnostics, and integration work are available in both languages.</p>
           </div>
         </div>
       </div>
@@ -1822,9 +1779,8 @@ footer a:hover{color:var(--cyan)}
     <img src="../TomWaldek_Actor_01.jpg" alt="Tom Waldek — book an Entry Conversation">
   </div>
   <div class="cta-avatar-name">Tom Waldek</div>
-  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;flex-direction:column;align-items:center">
-    <a href="#diagnostic" class="btn-primary">Start Your Pulse Check — 3 minutes</a>
-    <a href="#book" class="btn-ghost" data-cal-link="tomwaldek/entry-conversation" data-cal-config='{"layout":"month_view","theme":"dark"}' style="font-size:12px;opacity:0.6">Already completed? Book your Entry Conversation</a>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+    <a href="mailto:tom@thehumanorigin.org?subject=Trust%20Architecture%20Diagnostic" class="btn-primary" onclick="openBooking(event)">Book a 45-min Entry Conversation — no fee, no pitch</a>
   </div>
 </section>
 
@@ -2058,23 +2014,21 @@ var CAL_BOOKING_URL = "tomwaldek/entry-conversation";
   var s=d.createElement("script");
   s.src=A;s.async=true;
   d.head.appendChild(s);
-  C.Cal("init",{origin:"https://app.cal.eu"});
+  C.Cal("init",{origin:"https://cal.eu"});
   C.Cal("ui",{
     theme:"dark",
     styles:{branding:{brandColor:"#06b6d4"}},
     hideEventTypeDetails:false,
     layout:"month_view"
   });
-  C.Cal("preload",{calLink:CAL_BOOKING_URL});
 })(window,"https://app.cal.eu/embed/embed.js","init");
 
 function openBooking(e){
-  var mailto="mailto:tom@thehumanorigin.org?subject=Trust%20Architecture%20Diagnostic";
   if(e)e.preventDefault();
-  try{
-    Cal("modal",{calLink:CAL_BOOKING_URL,config:{layout:"month_view",theme:"dark"}});
-  }catch(err){
-    window.location.href=mailto;
+  if(window.Cal && CAL_BOOKING_URL !== "YOUR-SLUG/entry-conversation" && CAL_BOOKING_URL !== ""){
+    Cal("openModal",{calLink:CAL_BOOKING_URL,config:{layout:"month_view",theme:"dark"}});
+  } else {
+    window.location.href="mailto:tom@thehumanorigin.org?subject=Trust%20Architecture%20Diagnostic";
   }
 }
 </script>
