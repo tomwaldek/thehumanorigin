@@ -966,14 +966,14 @@ footer a:hover{color:var(--cyan)}
 /* ═══ THE ARCHITECTURE — clean minimalist stack with hover glow ═══ */
 .architecture{padding:var(--section-pad) 44px;position:relative;z-index:1}
 .arch-intro{text-align:center;max-width:720px;margin:0 auto 48px}
-.arch-header{display:grid;grid-template-columns:1.3fr 1fr 1.35fr 1.2fr;gap:16px;max-width:1100px;margin:0 auto 14px;padding:0 26px}
+.arch-header{display:grid;grid-template-columns:1.3fr 1.2fr 1.35fr 1fr;gap:16px;max-width:1100px;margin:0 auto 14px;padding:0 26px}
 .arch-col-label{font-family:var(--display);font-weight:400;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--cyan);opacity:0.6}
 .arch-stack{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:10px;position:relative}
 .arch-stack::before{content:'';position:absolute;left:-14px;top:12px;bottom:12px;width:2px;background:linear-gradient(180deg,var(--cyan) 0%,var(--orange) 100%);opacity:0;transform:scaleY(0);transform-origin:top;transition:opacity 1.2s ease 0.2s,transform 1.4s cubic-bezier(0.22,1,0.36,1) 0.2s;border-radius:2px}
 .architecture.fade-in.visible .arch-stack::before{opacity:0.35;transform:scaleY(1)}
 .arch-row{
   display:grid;
-  grid-template-columns:1.3fr 1fr 1.35fr 1.2fr;
+  grid-template-columns:1.3fr 1.2fr 1.35fr 1fr;
   gap:16px;
   padding:28px 26px;
   background:linear-gradient(135deg,rgba(6,182,212,0.06) 0%,rgba(6,182,212,0.02) 55%,rgba(249,115,22,0.045) 100%);
@@ -1006,6 +1006,15 @@ footer a:hover{color:var(--cyan)}
 .arch-change{font-family:var(--display);font-weight:400;font-size:13px;color:var(--orange);line-height:1.6;letter-spacing:0.2px}
 .arch-closer{text-align:center;font-family:var(--display);font-weight:300;font-size:14px;color:var(--tx3);letter-spacing:1.5px;margin:44px auto 0;max-width:720px;line-height:1.85}
 .arch-closer strong{color:var(--cyan);font-weight:400}
+/* Column reorder: What Changes → position 2 for F-pattern scanning (benefit before detail) */
+.arch-header .arch-col-label:nth-child(1){order:1}
+.arch-header .arch-col-label:nth-child(2){order:4}
+.arch-header .arch-col-label:nth-child(3){order:3}
+.arch-header .arch-col-label:nth-child(4){order:2}
+.arch-row .arch-discipline{order:1}
+.arch-row .arch-change{order:2}
+.arch-row .arch-zone{order:3}
+.arch-row .arch-research{order:4}
 
 /* ═══ PROGRESSIVE REVEAL — every card/block scroll-triggered individually ═══ */
 .standapart-card,
@@ -1141,7 +1150,7 @@ footer a:hover{color:var(--cyan)}
     <div class="hero-method">Six film disciplines meet organisational neurobiology.</div>
     <div class="hero-ctas">
       <a href="#contact" class="btn-primary" onclick="openBooking(event)">Book a 45-min Entry Conversation — no fee</a>
-      <a href="#diagnostic" class="btn-ghost">Take the Pulse Check</a>
+      <a href="#diagnostic" class="btn-ghost">See where the patterns are — 3 minutes</a>
     </div>
   </div>
 </section>
@@ -1532,7 +1541,8 @@ footer a:hover{color:var(--cyan)}
         </div>
         <div class="phase-fee">€40K</div>
       </div>
-      <div class="phase">
+      <div style="padding:12px 0 4px;text-align:center;font-family:var(--display);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--tx4)">Included in Origin Work</div>
+      <div class="phase" style="opacity:0.7">
         <div class="phase-num">3</div>
         <div class="phase-body">
           <div class="phase-name">Integration</div>
@@ -1540,7 +1550,7 @@ footer a:hover{color:var(--cyan)}
         </div>
         <div class="phase-fee">Included</div>
       </div>
-      <div class="phase">
+      <div class="phase" style="opacity:0.7">
         <div class="phase-num">4</div>
         <div class="phase-body">
           <div class="phase-name">Review</div>
@@ -1548,6 +1558,7 @@ footer a:hover{color:var(--cyan)}
         </div>
         <div class="phase-fee">Included</div>
       </div>
+      <div style="padding:12px 0 4px;text-align:center;font-family:var(--display);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--tx4)">Optional</div>
       <div class="phase phase-optional">
         <div class="phase-num">+</div>
         <div class="phase-body">
