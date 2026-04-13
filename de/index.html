@@ -1127,7 +1127,7 @@ footer a:hover{color:var(--cyan)}
     <p class="hero-sub">Ihre besten Leute halten sich zurück, Entscheidungen kreisen — und das Team funktioniert, statt sich zu verbinden. Diese Arbeit macht das Muster darunter sichtbar — damit <strong>die Entscheidung fällt, der Mensch bleibt und die Inszenierung aufhört.</strong></p>
     <div class="hero-method">Sechs Filmdisziplinen treffen auf organisationale Neurobiologie.</div>
     <div class="hero-ctas">
-      <a href="#contact" class="btn-primary" onclick="openBooking(event)">45-Minuten-Erstgespräch buchen — kostenfrei</a>
+      <a href="https://cal.eu/tomwaldek/erstgespraech" target="_blank" class="btn-primary" onclick="openBooking(event)">45-Minuten-Erstgespräch buchen — kostenfrei</a>
       <a href="#diagnostic" class="btn-ghost">Sehen, wo die Muster laufen — 3 Minuten</a>
     </div>
   </div>
@@ -1777,7 +1777,7 @@ footer a:hover{color:var(--cyan)}
   </div>
   <div class="cta-avatar-name">Tom Waldek</div>
   <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-    <a href="mailto:tom@thehumanorigin.org?subject=Trust%20Architecture%20Diagnostic" class="btn-primary" onclick="openBooking(event)">45-Minuten-Erstgespräch buchen — kostenfrei, kein Pitch</a>
+    <a href="https://cal.eu/tomwaldek/erstgespraech" target="_blank" class="btn-primary" onclick="openBooking(event)">45-Minuten-Erstgespräch buchen — kostenfrei, kein Pitch</a>
   </div>
 </section>
 
@@ -2021,12 +2021,14 @@ var CAL_BOOKING_URL = "tomwaldek/erstgespraech";
 })(window,"https://app.cal.eu/embed/embed.js","init");
 
 function openBooking(e){
-  if(e)e.preventDefault();
-  if(window.Cal && CAL_BOOKING_URL !== "YOUR-SLUG/erstgespraech" && CAL_BOOKING_URL !== ""){
-    Cal("openModal",{calLink:CAL_BOOKING_URL,config:{layout:"month_view",theme:"dark"}});
-  } else {
-    window.location.href="mailto:tom@thehumanorigin.org?subject=Trust%20Architecture%20Diagnostic";
-  }
+  var slug=CAL_BOOKING_URL;
+  if(!slug||slug.indexOf("YOUR-SLUG")!==-1)return;
+  try{
+    if(window.Cal&&window.Cal.loaded){
+      e.preventDefault();
+      Cal("openModal",{calLink:slug,config:{layout:"month_view",theme:"dark"}});
+    }
+  }catch(err){}
 }
 </script>
 </body>

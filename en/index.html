@@ -1149,7 +1149,7 @@ footer a:hover{color:var(--cyan)}
     <p class="hero-sub">Your best people hold back and decisions circle. The team performs instead of connecting. This work surfaces the pattern underneath — so <strong>the decision gets made, the hire stays, and the room stops performing.</strong></p>
     <div class="hero-method">Six film disciplines meet organisational neurobiology.</div>
     <div class="hero-ctas">
-      <a href="#contact" class="btn-primary" onclick="openBooking(event)">Book a 45-min Entry Conversation — no fee</a>
+      <a href="https://cal.eu/tomwaldek/entry-conversation" target="_blank" class="btn-primary" onclick="openBooking(event)">Book a 45-min Entry Conversation — no fee</a>
       <a href="#diagnostic" class="btn-ghost">See where the patterns are — 3 minutes</a>
     </div>
   </div>
@@ -1799,7 +1799,7 @@ footer a:hover{color:var(--cyan)}
   </div>
   <div class="cta-avatar-name">Tom Waldek</div>
   <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-    <a href="mailto:tom@thehumanorigin.org?subject=Trust%20Architecture%20Diagnostic" class="btn-primary" onclick="openBooking(event)">Book a 45-min Entry Conversation — no fee, no pitch</a>
+    <a href="https://cal.eu/tomwaldek/entry-conversation" target="_blank" class="btn-primary" onclick="openBooking(event)">Book a 45-min Entry Conversation — no fee, no pitch</a>
   </div>
 </section>
 
@@ -2043,12 +2043,14 @@ var CAL_BOOKING_URL = "tomwaldek/entry-conversation";
 })(window,"https://app.cal.eu/embed/embed.js","init");
 
 function openBooking(e){
-  if(e)e.preventDefault();
-  if(window.Cal && CAL_BOOKING_URL !== "YOUR-SLUG/entry-conversation" && CAL_BOOKING_URL !== ""){
-    Cal("openModal",{calLink:CAL_BOOKING_URL,config:{layout:"month_view",theme:"dark"}});
-  } else {
-    window.location.href="mailto:tom@thehumanorigin.org?subject=Trust%20Architecture%20Diagnostic";
-  }
+  var slug=CAL_BOOKING_URL;
+  if(!slug||slug.indexOf("YOUR-SLUG")!==-1)return;
+  try{
+    if(window.Cal&&window.Cal.loaded){
+      e.preventDefault();
+      Cal("openModal",{calLink:slug,config:{layout:"month_view",theme:"dark"}});
+    }
+  }catch(err){}
 }
 </script>
 </body>
