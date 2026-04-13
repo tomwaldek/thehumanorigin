@@ -1046,6 +1046,21 @@ footer a:hover{color:var(--cyan)}
 .faq-a-inner{padding:4px 0 28px;font-size:14px;line-height:1.85;color:rgba(255,255,255,0.58)}
 .faq-a-inner p{margin:0}
 .faq-a-inner strong{color:var(--cyan);font-weight:400}
+.nav-logo{text-decoration:none;cursor:pointer}
+.nav-right{display:flex;align-items:center;gap:14px}
+.nav-lang{font-family:var(--display);font-size:10px;font-weight:400;letter-spacing:2px;color:var(--orange);border:1px solid rgba(249,115,22,0.3);padding:4px 14px;border-radius:100px;text-decoration:none;text-transform:uppercase;transition:all 0.3s}
+.nav-lang:hover{background:rgba(249,115,22,0.1);border-color:rgba(249,115,22,0.5)}
+.overview-steps{display:grid;gap:1px;margin:32px auto;max-width:720px;background:var(--border);border-radius:12px;overflow:hidden}
+.overview-step{display:flex;align-items:center;gap:20px;padding:18px 28px;background:var(--bg)}
+.overview-num{font-family:var(--display);font-weight:200;font-size:22px;color:var(--cyan);opacity:0.5;min-width:28px}
+.overview-body{flex:1}
+.overview-name{font-family:var(--display);font-weight:500;font-size:13px;color:var(--white);letter-spacing:0.5px}
+.overview-detail{font-size:13px;color:var(--tx3);line-height:1.5;margin-top:2px}
+.overview-price{font-family:var(--display);font-weight:300;font-size:14px;color:var(--orange);white-space:nowrap}
+.overview-link{text-align:center;margin-top:20px}
+.overview-link a{font-family:var(--display);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--tx4);text-decoration:none;transition:color 0.3s}
+.overview-link a:hover{color:var(--cyan)}
+.section-signpost{text-align:center;max-width:560px;margin:0 auto 8px;font-family:var(--display);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--tx4)}
 
 /* ═══ RESPONSIVE ═══ */
 @media(max-width:768px){
@@ -1085,6 +1100,9 @@ footer a:hover{color:var(--cyan)}
   .arch-cell{position:relative;padding-top:2px}
   .arch-cell::before{content:attr(data-label);display:block;font-family:var(--display);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);opacity:0.6;margin-bottom:4px;font-weight:400}
   .arch-closer{margin-top:32px;font-size:13px}
+  .overview-step{padding:14px 20px;gap:14px}
+  .overview-num{font-size:18px;min-width:24px}
+  .overview-price{font-size:12px}
 }
 </style>
 </head>
@@ -1102,15 +1120,17 @@ footer a:hover{color:var(--cyan)}
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">THE HUMAN <span>ORIGIN</span></div>
+  <a href="#" class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">THE HUMAN <span>ORIGIN</span></a>
   <div class="nav-links" id="navLinks">
     <a href="#method" onclick="closeNav()">Methode</a>
     <a href="#process" onclick="closeNav()">Prozess</a>
     <a href="#diagnostic" onclick="closeNav()">Diagnostik</a>
     <a href="#contact" onclick="closeNav()">Kontakt</a>
-    <a href="../en/" style="color:var(--orange);border:1px solid rgba(249,115,22,0.3);padding:4px 14px;border-radius:100px;font-size:10px;letter-spacing:2px;margin-left:12px">EN</a>
   </div>
-  <div class="nav-hamburger" id="navHamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  <div class="nav-right">
+    <a href="../en/" class="nav-lang">EN</a>
+    <div class="nav-hamburger" id="navHamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -1130,6 +1150,7 @@ footer a:hover{color:var(--cyan)}
       <a href="https://cal.eu/tomwaldek/erstgespraech" target="_blank" class="btn-primary" onclick="openBooking(event)">45-Minuten-Erstgespräch buchen — kostenfrei</a>
       <a href="#diagnostic" class="btn-ghost">Sehen, wo die Muster laufen — 3 Minuten</a>
     </div>
+    <div style="text-align:center;margin-top:14px"><a href="#process" style="font-family:var(--display);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--tx4);text-decoration:none;transition:color 0.3s">Vollständiger Ablauf und Investition ↓</a></div>
   </div>
 </section>
 
@@ -1168,6 +1189,49 @@ footer a:hover{color:var(--cyan)}
     </div>
   </div>
 </div>
+
+<!-- SO FUNKTIONIERT DIE ARBEIT — kompakte Prozessübersicht -->
+<section class="fade-in" style="padding:48px 44px">
+  <div class="wrap" style="max-width:720px">
+    <h2 class="section-label stagger-1" style="margin-bottom:24px">So funktioniert die Arbeit</h2>
+    <div class="overview-steps stagger-2">
+      <div class="overview-step">
+        <span class="overview-num">01</span>
+        <div class="overview-body">
+          <div class="overview-name">Erstgespräch</div>
+          <div class="overview-detail">45 Minuten. Auf Augenhöhe. Kein Pitch, kein Honorar.</div>
+        </div>
+      </div>
+      <div class="overview-step">
+        <span class="overview-num">02</span>
+        <div class="overview-body">
+          <div class="overview-name">Trust Architecture Diagnostic</div>
+          <div class="overview-detail">3–4 Wochen, vor Ort. Eine Landkarte, wo Überlebensmuster am meisten kosten.</div>
+        </div>
+        <span class="overview-price">€12K</span>
+      </div>
+      <div class="overview-step">
+        <span class="overview-num">03</span>
+        <div class="overview-body">
+          <div class="overview-name">Origin Work</div>
+          <div class="overview-detail">3–5 Monate, vor Ort. Muster dort auflösen, wo sie wirken — in echten Meetings, echten Entscheidungen.</div>
+        </div>
+        <span class="overview-price">€40K</span>
+      </div>
+      <div class="overview-step">
+        <span class="overview-num">04</span>
+        <div class="overview-body">
+          <div class="overview-name">Integration + Überprüfung</div>
+          <div class="overview-detail">Neue Strukturen im Alltag verankert. Ehrliche Bilanz nach 6 Monaten.</div>
+        </div>
+        <span style="font-family:var(--display);font-weight:300;font-size:12px;color:var(--tx4);white-space:nowrap">Enthalten</span>
+      </div>
+    </div>
+    <div class="overview-link stagger-3"><a href="#process">Vollständiger Ablauf und Investition ↓</a></div>
+  </div>
+</section>
+
+<div class="section-div"></div>
 
 <!-- THE COMPOSITION — USP micro-section -->
 <section class="standapart fade-in">
@@ -1275,6 +1339,8 @@ footer a:hover{color:var(--cyan)}
 
 <div class="section-div"></div>
 
+<div class="section-signpost fade-in">Drei Grundlagen der Methode — dann die Methode selbst.</div>
+
 <!-- THE ORIGIN OF EVERY PATTERN — thesis elevated from quote -->
 <section id="origin" class="fade-in">
   <div class="wrap">
@@ -1284,16 +1350,10 @@ footer a:hover{color:var(--cyan)}
     </blockquote>
     <p class="sec-text stagger-3">Keine Metapher. Neurologisch messbar. Jede ungelöste persönliche Geschichte, die eine Führungskraft trägt, wird zum Betriebssystem, in dem das Team atmet — und Keltners Forschung bestätigt, was jeder Raum bereits weiß: Macht ohne Selbstwahrnehmung zerstört die Empathie, die der Mensch dahinter aufgebaut hat.</p>
     <p class="sec-text stagger-4" style="color:rgba(255,242,225,0.65)">Die Diagnostik bildet genau ab, wo diese Erosion Ihr Unternehmen kostet — in Entscheidungstempo, Fluktuation und den Gesprächen, die niemand führt.</p>
-  </div>
-</section>
 
-<div class="section-div"></div>
-
-<!-- WARUM VOR WIE — LOCKED COPY per claude.md §15 · card: cyan -->
-<section class="fade-in">
-  <div class="wrap">
-    <h2 class="section-label stagger-1">Warum vor Wie</h2>
-    <div class="feature-card feature-cyan stagger-2">
+    <!-- WARUM VOR WIE — LOCKED COPY per claude.md §15 (merged with Origin) -->
+    <h2 class="section-label" style="margin-top:56px">Warum vor Wie</h2>
+    <div class="feature-card feature-cyan">
       <p class="sec-text">Frankl hat es vor allen in der Wirtschaft gesehen: Menschen fallen nicht in Überlebensmuster, weil sie schwach sind. Sondern weil sie den Zugang zu dem verloren haben, was zählt — <strong>ihrem eigenen Sinn.</strong> Die Rolle ersetzt den Grund. Darstellung füllt die Leere, wo einmal ein Warum gelebt hat. Jedes Überlebensmuster in einem Unternehmen führt auf diese eine Abwesenheit zurück — ein Warum, nach dem nie gefragt wurde. Und ein Mensch, der aufgehört hat zu glauben, dass es zählt. Darstellung. Kontrolle. Konformität. Was wie ein Führungsproblem aussieht, ist <strong>ein Sinnproblem.</strong> Wird der Zugang zum Warum wiederhergestellt, hat das Muster nichts mehr, woran es sich halten kann.</p>
       <p class="sec-text" style="text-align:center">Die Arbeit beginnt dort. Vor der Strategie. Vor der Methode. Beim Warum.</p>
       <p class="sec-text" style="color:rgba(255,242,225,0.65);margin-top:16px">Wenn die Arbeit dort beginnt, fallen die Entscheidungen, die feststeckten. Die Menschen, die gehen wollten, bleiben.</p>
@@ -1301,14 +1361,7 @@ footer a:hover{color:var(--cyan)}
   </div>
 </section>
 
-<!-- BRIDGE: visual transition from Warum vor Wie → Die Chance -->
-<div class="section-bridge fade-in">
-  <div class="section-bridge-line"></div>
-  <div class="section-bridge-dot"></div>
-  <div class="section-bridge-text">Und was es verbirgt</div>
-</div>
-
-<!-- THE OPPORTUNITY · feature-card orange -->
+<!-- THE OPPORTUNITY + CREATIVITY — merged to reduce cognitive load -->
 <section id="opportunity" class="fade-in">
   <div class="wrap">
     <h2 class="section-label">Die Chance, die niemand automatisiert</h2>
@@ -1317,19 +1370,13 @@ footer a:hover{color:var(--cyan)}
       <p class="sec-text">Die Angst vor KI war immer da — weil das Verhalten nie einzigartig, nie persönlich, nie wirklich menschlich war. Überlebensarchitektur erzeugt genau das: Muster, die sich wiederholen, Reaktionen, die vorhersagbar sind, Inszenierung, die jedes System reproduzieren kann. Wer funktioniert, statt zu führen, war schon ersetzbar, bevor das Wort Algorithmus in einem Sitzungszimmer fiel.</p>
       <p class="sec-text">Was kein System replizieren kann, ist das, was diese Überlebensarchitektur verbirgt: <strong>die volle Kapazität Ihrer Menschen.</strong> Einen Raum lesen, echte Entscheidungen treffen, intuitiv das Richtige erkennen. Kein Soft Skill. Die eigentliche Fähigkeit. Sie entsteht dort, wo ein Mensch aus sich selbst heraus handelt — nicht aus der Rolle. Nicht aus dem Muster. Aus der Präsenz, die übrig bleibt, wenn die Inszenierung aufhört.</p>
     </div>
-  </div>
-</section>
 
-<div class="section-div"></div>
-
-<!-- WHERE CREATIVITY RETURNS · card: cyan→orange blend · du (informal) per spec -->
-<section id="power" class="fade-in">
-  <div class="wrap">
-    <h2 class="section-label stagger-1">Wo Kreativität zurückkehrt</h2>
-    <div class="feature-card feature-blend stagger-2">
+    <!-- WO KREATIVITÄT ZURÜCKKEHRT — merged with Opportunity -->
+    <h2 class="section-label" style="margin-top:56px">Wo Kreativität zurückkehrt</h2>
+    <div class="feature-card feature-blend">
       <p class="sec-text">Aber diese Fähigkeit kehrt nicht auf Befehl zurück. Überleben ist Wiederholung — derselbe Platz, dieselbe Reaktion, dieselbe Inszenierung — und das Nervensystem wird sie immer wieder wählen, bis etwas die Schleife durchbricht.</p>
       <div class="creativity-display">Kreativität ist <span class="accent">dieser Bruch.</span></div>
-      <p class="sec-text">Nicht als Kunst. Als Praxis. Eine andere Eröffnungsfrage. Eine neu strukturierte Agenda. Ein Platzwechsel am Führungstisch — jede Mikro-Störung sagt dem Nervensystem: <strong>Sicherheit braucht keine Gleichförmigkeit.</strong></p>
+      <p class="sec-text">Nicht als Kunst. Als Praxis. Eine andere Eröffnungsfrage, eine neu strukturierte Agenda, ein Platzwechsel am Führungstisch — jede Mikro-Störung sagt dem Nervensystem: <strong>Sicherheit braucht keine Gleichförmigkeit.</strong></p>
       <p class="sec-text">Übe es im Kleinen, und du baust die Fähigkeit auf, auf die es ankommt: das mutige Gespräch, die ehrliche Entscheidung, der Moment, in dem du aus dir heraus führst — nicht aus einer Rolle heraus. <strong>The Human Origin lehrt nicht Kreativität. Es entfernt, was sie blockiert.</strong></p>
     </div>
   </div>
@@ -1345,20 +1392,6 @@ footer a:hover{color:var(--cyan)}
     <p class="sec-text">Wenn <strong>Überlebensarchitektur</strong> die Führung steuert, steuert sie den Raum. <strong>Weil alle es hinnehmen.</strong> Es wird zur Atmosphäre: die unausgesprochene Vereinbarung darüber, was gesagt, entschieden und riskiert werden darf.</p>
     <p class="sec-text"><strong>Kontrolle ersetzt Verbindung.</strong> Darstellung ersetzt Präsenz.</p>
     <p class="sec-text" style="color:rgba(255,242,225,0.65)">Die Kosten sind messbar: Jede unausgesprochene Wahrheit an Ihrem Führungstisch hat einen Posten in Ihrer Bilanz.</p>
-  </div>
-</section>
-
-<div class="section-div"></div>
-
-<!-- WHERE THIS OPERATES -->
-<section id="where-operates" class="fade-in">
-  <div class="wrap">
-    <h2 class="section-label stagger-1">Wo diese Arbeit wirkt</h2>
-    <div class="feature-card feature-orange stagger-2">
-      <p class="sec-text">Das Nervensystem scannt nach Sicherheit oder Bedrohung, bevor ein bewusster Gedanke entsteht (Porges, Polyvagal-Theorie). Emotionale Ansteckung überträgt den Zustand einer Führungskraft innerhalb von Millisekunden auf das Team, unterhalb bewusster Wahrnehmung (Barsade, 2002). Macht erodiert systematisch die Empathie, die sie aufgebaut hat — sobald die Position gesichert ist (Keltner, 2016).</p>
-      <p class="sec-text">Die meiste Führungsarbeit erreicht nur das, worüber Menschen bewusst reflektieren können, oder das, was ihnen beigebracht wurde. Sie erreicht die Ebene der Entscheidungen, die Menschen benennen können. Der Verhaltensweisen, die sie beschreiben können. Der Absichten, die sie verteidigen können.</p>
-      <p class="sec-text">Die Muster, die diese Arbeit sichtbar macht, laufen unter dieser Ebene — <strong>im Nervensystem der Führungskraft, in echten Meetings, in den Entscheidungen, die bereits in Bewegung sind, bevor jemand sie wählt.</strong> Das ist der Raum, den diese Arbeit betritt. Dort setzt sie an.</p>
-    </div>
   </div>
 </section>
 
@@ -1490,7 +1523,7 @@ footer a:hover{color:var(--cyan)}
         <div class="phase-num">0</div>
         <div class="phase-body">
           <div class="phase-name">Erstgespräch</div>
-          <div class="phase-desc">45 Minuten. Ein Gespräch auf Augenhöhe. Kein Pitch. Eine Frage — die wahrhaftige.</div>
+          <div class="phase-desc">45 Minuten. Einzelgespräch mit Tom Waldek, vor Ort oder per Video. Auf Augenhöhe. Kein Pitch. Eine Frage — die wahrhaftige. Keine Vorbereitung nötig.</div>
         </div>
         <div class="phase-fee">Kostenfrei</div>
       </div>
@@ -1499,7 +1532,7 @@ footer a:hover{color:var(--cyan)}
         <div class="phase-body">
           <div class="phase-eyebrow">Optional · vor Phase 1</div>
           <div class="phase-name">Diagnostic Debrief</div>
-          <div class="phase-desc">90 Minuten. Sie erhalten eine dokumentierte Ersteinschätzung der aktivsten Überlebensmuster in Ihrem Führungsteam — mit konkreter Empfehlung, ob und wo eine vollständige Diagnostik ansetzt.</div>
+          <div class="phase-desc">90 Minuten, vor Ort oder per Video, mit Ihnen allein. Eine dokumentierte Ersteinschätzung der aktivsten Überlebensmuster in Ihrem Führungsteam — mit konkreter Empfehlung, ob und wo eine vollständige Diagnostik ansetzt. Ergebnis: schriftlicher Debrief-Bericht.</div>
         </div>
         <div class="phase-fee">€2.500</div>
       </div>
@@ -1507,7 +1540,7 @@ footer a:hover{color:var(--cyan)}
         <div class="phase-num">1</div>
         <div class="phase-body">
           <div class="phase-name">Trust Architecture Diagnostic</div>
-          <div class="phase-desc">3–4 Wochen. Fünf Beobachtungskontexte. Einzelgespräche. Eine Karte, wo Überlebensmuster am meisten kosten.</div>
+          <div class="phase-desc">3–4 Wochen, vor Ort. Fünf Beobachtungskontexte in den echten Meetings und Entscheidungsmomenten Ihres Führungsteams. Einzelgespräche mit jeder Führungskraft. Ergebnis: Trust Architecture Map — dokumentiert, wo Muster aktiv sind, was sie kosten und wo die Arbeit beginnt.</div>
         </div>
         <div class="phase-fee">€12K</div>
       </div>
@@ -1515,7 +1548,7 @@ footer a:hover{color:var(--cyan)}
         <div class="phase-num">2</div>
         <div class="phase-body">
           <div class="phase-name">Origin Work</div>
-          <div class="phase-desc">3–5 Monate. Die Muster dort auflösen, wo sie wirken — in echten Gesprächen, echten Entscheidungen, den Momenten, die Menschen normalerweise durchspielen. Entscheidungen vom Menschen — nicht vom Muster.</div>
+          <div class="phase-desc">3–5 Monate, vor Ort, in der Regel 2–3 Tage pro Monat. Strukturelle Interventionen in echten Meetings, Einzelgespräche mit Führungskräften, Musterarbeit auf Team-Ebene — eingebettet in den realen Arbeitsalltag Ihres Führungsteams. Entscheidungen vom Menschen — nicht vom Muster.</div>
         </div>
         <div class="phase-fee">€40K</div>
       </div>
@@ -1532,7 +1565,7 @@ footer a:hover{color:var(--cyan)}
         <div class="phase-num">4</div>
         <div class="phase-body">
           <div class="phase-name">Überprüfung</div>
-          <div class="phase-desc">Standard: 6 Monate nach Abschluss. Hat die Veränderung gehalten? Ehrliche Bestandsaufnahme. Kurskorrektur. Zeitpunkt nach Vereinbarung anpassbar.</div>
+          <div class="phase-desc">Halber Tag vor Ort, 6 Monate nach Abschluss. Gemessen an der ursprünglichen Diagnostik: was sich verändert hat, was gehalten hat, was Aufmerksamkeit braucht. Ehrliche Bestandsaufnahme. Kurskorrektur. Zeitpunkt nach Vereinbarung anpassbar.</div>
         </div>
         <div class="phase-fee">Inklusive</div>
       </div>

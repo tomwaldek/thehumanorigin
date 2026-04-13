@@ -1068,6 +1068,21 @@ footer a:hover{color:var(--cyan)}
 .faq-a-inner{padding:4px 0 28px;font-size:14px;line-height:1.85;color:rgba(255,255,255,0.58)}
 .faq-a-inner p{margin:0}
 .faq-a-inner strong{color:var(--cyan);font-weight:400}
+.nav-logo{text-decoration:none;cursor:pointer}
+.nav-right{display:flex;align-items:center;gap:14px}
+.nav-lang{font-family:var(--display);font-size:10px;font-weight:400;letter-spacing:2px;color:var(--orange);border:1px solid rgba(249,115,22,0.3);padding:4px 14px;border-radius:100px;text-decoration:none;text-transform:uppercase;transition:all 0.3s}
+.nav-lang:hover{background:rgba(249,115,22,0.1);border-color:rgba(249,115,22,0.5)}
+.overview-steps{display:grid;gap:1px;margin:32px auto;max-width:720px;background:var(--border);border-radius:12px;overflow:hidden}
+.overview-step{display:flex;align-items:center;gap:20px;padding:18px 28px;background:var(--bg)}
+.overview-num{font-family:var(--display);font-weight:200;font-size:22px;color:var(--cyan);opacity:0.5;min-width:28px}
+.overview-body{flex:1}
+.overview-name{font-family:var(--display);font-weight:500;font-size:13px;color:var(--white);letter-spacing:0.5px}
+.overview-detail{font-size:13px;color:var(--tx3);line-height:1.5;margin-top:2px}
+.overview-price{font-family:var(--display);font-weight:300;font-size:14px;color:var(--orange);white-space:nowrap}
+.overview-link{text-align:center;margin-top:20px}
+.overview-link a{font-family:var(--display);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--tx4);text-decoration:none;transition:color 0.3s}
+.overview-link a:hover{color:var(--cyan)}
+.section-signpost{text-align:center;max-width:560px;margin:0 auto 8px;font-family:var(--display);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--tx4)}
 
 /* ═══ RESPONSIVE ═══ */
 @media(max-width:768px){
@@ -1107,6 +1122,9 @@ footer a:hover{color:var(--cyan)}
   .arch-cell{position:relative;padding-top:2px}
   .arch-cell::before{content:attr(data-label);display:block;font-family:var(--display);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);opacity:0.6;margin-bottom:4px;font-weight:400}
   .arch-closer{margin-top:32px;font-size:13px}
+  .overview-step{padding:14px 20px;gap:14px}
+  .overview-num{font-size:18px;min-width:24px}
+  .overview-price{font-size:12px}
 }
 </style>
 </head>
@@ -1124,15 +1142,17 @@ footer a:hover{color:var(--cyan)}
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">THE HUMAN <span>ORIGIN</span></div>
+  <a href="#" class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">THE HUMAN <span>ORIGIN</span></a>
   <div class="nav-links" id="navLinks">
     <a href="#method" onclick="closeNav()">Method</a>
     <a href="#process" onclick="closeNav()">Process</a>
     <a href="#diagnostic" onclick="closeNav()">Diagnostic</a>
     <a href="#contact" onclick="closeNav()">Contact</a>
-    <a href="../de/" style="color:var(--orange);border:1px solid rgba(249,115,22,0.3);padding:4px 14px;border-radius:100px;font-size:10px;letter-spacing:2px;margin-left:12px">DE</a>
   </div>
-  <div class="nav-hamburger" id="navHamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  <div class="nav-right">
+    <a href="../de/" class="nav-lang">DE</a>
+    <div class="nav-hamburger" id="navHamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -1152,6 +1172,7 @@ footer a:hover{color:var(--cyan)}
       <a href="https://cal.eu/tomwaldek/entry-conversation" target="_blank" class="btn-primary" onclick="openBooking(event)">Book a 45-min Entry Conversation — no fee</a>
       <a href="#diagnostic" class="btn-ghost">See where the patterns are — 3 minutes</a>
     </div>
+    <div style="text-align:center;margin-top:14px"><a href="#process" style="font-family:var(--display);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--tx4);text-decoration:none;transition:color 0.3s">Full process and pricing ↓</a></div>
   </div>
 </section>
 
@@ -1190,6 +1211,49 @@ footer a:hover{color:var(--cyan)}
     </div>
   </div>
 </div>
+
+<!-- HOW THIS WORKS — compact process overview for immediate offer clarity -->
+<section class="fade-in" style="padding:48px 44px">
+  <div class="wrap" style="max-width:720px">
+    <h2 class="section-label stagger-1" style="margin-bottom:24px">How This Works</h2>
+    <div class="overview-steps stagger-2">
+      <div class="overview-step">
+        <span class="overview-num">01</span>
+        <div class="overview-body">
+          <div class="overview-name">Entry Conversation</div>
+          <div class="overview-detail">45 minutes. At eye level. No pitch, no fee.</div>
+        </div>
+      </div>
+      <div class="overview-step">
+        <span class="overview-num">02</span>
+        <div class="overview-body">
+          <div class="overview-name">Trust Architecture Diagnostic</div>
+          <div class="overview-detail">3–4 weeks, on-site. A map of where survival patterns cost the most.</div>
+        </div>
+        <span class="overview-price">€12K</span>
+      </div>
+      <div class="overview-step">
+        <span class="overview-num">03</span>
+        <div class="overview-body">
+          <div class="overview-name">Origin Work</div>
+          <div class="overview-detail">3–5 months, on-site. Dissolving patterns in real meetings, real decisions.</div>
+        </div>
+        <span class="overview-price">€40K</span>
+      </div>
+      <div class="overview-step">
+        <span class="overview-num">04</span>
+        <div class="overview-body">
+          <div class="overview-name">Integration + Review</div>
+          <div class="overview-detail">New structures embedded in daily operations. Honest assessment at 6 months.</div>
+        </div>
+        <span style="font-family:var(--display);font-weight:300;font-size:12px;color:var(--tx4);white-space:nowrap">Included</span>
+      </div>
+    </div>
+    <div class="overview-link stagger-3"><a href="#process">Full process detail and pricing ↓</a></div>
+  </div>
+</section>
+
+<div class="section-div"></div>
 
 <!-- THE COMPOSITION — USP micro-section · open layout (no dark frame) -->
 <section class="standapart fade-in">
@@ -1298,6 +1362,8 @@ footer a:hover{color:var(--cyan)}
 
 <div class="section-div"></div>
 
+<div class="section-signpost fade-in">Three ideas behind the method — then the method itself.</div>
+
 <!-- THE ORIGIN OF EVERY PATTERN — thesis elevated from quote -->
 <section id="origin" class="fade-in">
   <div class="wrap">
@@ -1307,16 +1373,10 @@ footer a:hover{color:var(--cyan)}
     </blockquote>
     <p class="sec-text stagger-3">Not a metaphor. Neurologically. Every unresolved story a leader carries becomes the operating system the team breathes. Keltner's research confirms what every room already knows: power without self-awareness erodes the empathy that built it.</p>
     <p class="sec-text stagger-4" style="color:rgba(255,242,225,0.65)">The diagnostic maps exactly where that erosion is costing your organisation — in decision speed, in retention, in the conversations no one is having.</p>
-  </div>
-</section>
 
-<div class="section-div"></div>
-
-<!-- WHY BEFORE HOW — LOCKED COPY per claude.md §15 · card: cyan -->
-<section class="fade-in">
-  <div class="wrap">
-    <h2 class="section-label stagger-1">Why Before How</h2>
-    <div class="feature-card feature-cyan stagger-2">
+    <!-- WHY BEFORE HOW — LOCKED COPY per claude.md §15 (merged with Origin) -->
+    <h2 class="section-label" style="margin-top:56px">Why Before How</h2>
+    <div class="feature-card feature-cyan">
       <p class="sec-text">Frankl saw it before anyone in business did: people don't default to survival because they're weak. They default because they've lost access to what matters — <strong>their own meaning.</strong> The role replaces the reason. Performance fills the void where purpose used to live. Every survival pattern in an organisation traces back to this one absence — a WHY that was never asked for, and a person who stopped believing it mattered. Performance. Control. Compliance. What looks like a leadership problem is <strong>a meaning problem.</strong> Restore access to the WHY, and the pattern has nothing left to run on.</p>
       <p class="sec-text" style="text-align:center">The work starts there. Before strategy. Before method. At the WHY.</p>
       <p class="sec-text" style="color:rgba(255,242,225,0.65);margin-top:16px">When it starts there, the decisions that were stalling start landing. The people who were leaving stop.</p>
@@ -1324,14 +1384,7 @@ footer a:hover{color:var(--cyan)}
   </div>
 </section>
 
-<!-- BRIDGE: visual transition from Why Before How → The Opportunity -->
-<div class="section-bridge fade-in">
-  <div class="section-bridge-line"></div>
-  <div class="section-bridge-dot"></div>
-  <div class="section-bridge-text">And what it hides</div>
-</div>
-
-<!-- THE OPPORTUNITY · feature-card orange (visually paired with Why Before How via bridge) -->
+<!-- THE OPPORTUNITY + CREATIVITY — merged to reduce cognitive load -->
 <section id="opportunity" class="fade-in">
   <div class="wrap">
     <h2 class="section-label">The Opportunity No One's Automating</h2>
@@ -1339,16 +1392,10 @@ footer a:hover{color:var(--cyan)}
       <p class="sec-text">Every organisation asking what AI will replace is answering its own question. The behaviour most at risk was never creative, never personal, never present. It was pattern. Optimised performance. Managed risk. The anxiety isn't that AI will take something from you. It's the recognition that what you've been performing was never uniquely yours to begin with.</p>
       <p class="sec-text">What no system replicates is what that architecture has been hiding: <strong>the full capacity of your people.</strong> Reading a room. Making the real calls. Being right — not from data, but from something a nervous system knows before language does. Not soft skill. The original technology.</p>
     </div>
-  </div>
-</section>
 
-<div class="section-div"></div>
-
-<!-- THE ORIGIN POWER · card: cyan→orange blend · Playfair display for "Creativity is that break" -->
-<section id="power" class="fade-in">
-  <div class="wrap">
-    <h2 class="section-label stagger-1">Where Creativity Returns</h2>
-    <div class="feature-card feature-blend stagger-2">
+    <!-- WHERE CREATIVITY RETURNS — merged with Opportunity -->
+    <h2 class="section-label" style="margin-top:56px">Where Creativity Returns</h2>
+    <div class="feature-card feature-blend">
       <p class="sec-text">That capacity doesn't return on command. Survival is repetition — same seat, same response, same performance — and the nervous system keeps choosing it until something breaks the loop.</p>
       <div class="creativity-display">Creativity is <span class="accent">that break.</span></div>
       <p class="sec-text">Not as art. As practice. A different opening question. A restructured agenda. A seat change at the leadership table — each micro-disruption signals to the nervous system: <strong>safety doesn't require sameness.</strong></p>
@@ -1367,20 +1414,6 @@ footer a:hover{color:var(--cyan)}
     <p class="sec-text">When <strong>survival architecture</strong> is running the leader, it runs the room. <strong>Because everyone accepts it.</strong> It starts being the atmosphere — the unspoken agreement about what can and cannot be said, decided, or risked.</p>
     <p class="sec-text"><strong>Control replaces connection.</strong> Performance replaces presence.</p>
     <p class="sec-text" style="color:rgba(255,242,225,0.65)">The cost is measurable: every unspoken truth at your leadership table has a line item on your P&L.</p>
-  </div>
-</section>
-
-<div class="section-div"></div>
-
-<!-- WHERE THIS OPERATES — renamed from What This Is Not · removes spreading-activation priming per review agent fix 3 -->
-<section id="where-operates" class="fade-in">
-  <div class="wrap">
-    <h2 class="section-label stagger-1">Where This Operates</h2>
-    <div class="feature-card feature-orange stagger-2">
-      <p class="sec-text">The nervous system scans for safety or threat before any conscious thought (Porges, polyvagal theory). Emotional contagion transfers a leader's affective state to the team within milliseconds, below conscious awareness (Barsade, 2002). Power systematically erodes the empathy that built leadership once leadership is secured (Keltner, 2016).</p>
-      <p class="sec-text">Most leadership work addresses what people consciously reflect on, or what they're taught. It reaches the layer of decisions people can name, behaviours they can describe, and intentions they can defend.</p>
-      <p class="sec-text">The patterns this work surfaces run beneath that layer — <strong>in the leader's nervous system, in real meetings, in the decisions already in motion before anyone chooses them.</strong> That's the room this work enters. That's where it happens.</p>
-    </div>
   </div>
 </section>
 
@@ -1512,7 +1545,7 @@ footer a:hover{color:var(--cyan)}
         <div class="phase-num">0</div>
         <div class="phase-body">
           <div class="phase-name">Entry Conversation</div>
-          <div class="phase-desc">45 minutes. A conversation at eye level. No pitch. One question — the real one.</div>
+          <div class="phase-desc">45 minutes. One-on-one with Tom Waldek, on-site or video. A conversation at eye level. No pitch. One question — the real one. No preparation needed.</div>
         </div>
         <div class="phase-fee">No fee</div>
       </div>
@@ -1521,7 +1554,7 @@ footer a:hover{color:var(--cyan)}
         <div class="phase-body">
           <div class="phase-eyebrow">Optional · before Phase 1</div>
           <div class="phase-name">Diagnostic Debrief</div>
-          <div class="phase-desc">90 minutes. You receive a documented initial assessment of the most active survival patterns in your leadership team — with a concrete recommendation on whether and where a full diagnostic applies.</div>
+          <div class="phase-desc">90 minutes, on-site or video, with you alone. A documented initial assessment of the most active survival patterns in your leadership team — with a concrete recommendation on whether and where a full diagnostic applies. Deliverable: written debrief report.</div>
         </div>
         <div class="phase-fee">€2,500</div>
       </div>
@@ -1529,7 +1562,7 @@ footer a:hover{color:var(--cyan)}
         <div class="phase-num">1</div>
         <div class="phase-body">
           <div class="phase-name">Trust Architecture Diagnostic</div>
-          <div class="phase-desc">3–4 weeks. Five observation contexts. One-on-one conversations. A map of where survival patterns cost the most.</div>
+          <div class="phase-desc">3–4 weeks, on-site. Five observation contexts in your leadership team's real meetings and decision moments. One-on-one conversations with each leader. Deliverable: Trust Architecture Map — documenting where patterns are active, what they cost, and where the work begins.</div>
         </div>
         <div class="phase-fee">€12K</div>
       </div>
@@ -1537,7 +1570,7 @@ footer a:hover{color:var(--cyan)}
         <div class="phase-num">2</div>
         <div class="phase-body">
           <div class="phase-name">Origin Work</div>
-          <div class="phase-desc">3–5 months. Dissolving the patterns where they operate — in live conversations, real decisions, the moments people normally perform through. Decisions from the person — not the pattern.</div>
+          <div class="phase-desc">3–5 months, on-site, typically 2–3 days per month. Structural interventions in live meetings, one-on-one sessions with leaders, team-level pattern work embedded in your leadership team's real work. Decisions from the person — not the pattern.</div>
         </div>
         <div class="phase-fee">€40K</div>
       </div>
@@ -1554,7 +1587,7 @@ footer a:hover{color:var(--cyan)}
         <div class="phase-num">4</div>
         <div class="phase-body">
           <div class="phase-name">Review</div>
-          <div class="phase-desc">Default: 6 months after completion. Has the shift held? Honest assessment. Course correction. Timing adjustable by mutual agreement.</div>
+          <div class="phase-desc">Half-day on-site, 6 months after completion. Measured against the original diagnostic: what shifted, what held, what needs attention. Honest assessment. Course correction. Timing adjustable by mutual agreement.</div>
         </div>
         <div class="phase-fee">Included</div>
       </div>
