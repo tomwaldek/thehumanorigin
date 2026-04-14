@@ -1049,9 +1049,11 @@ footer a:hover{color:var(--cyan)}
 .faq-a-inner p{margin:0}
 .faq-a-inner strong{color:var(--cyan);font-weight:400}
 .nav-logo{text-decoration:none;cursor:pointer}
-.nav-right{display:flex;align-items:center;gap:14px}
-.nav-lang{font-family:var(--display);font-size:10px;font-weight:400;letter-spacing:2px;color:var(--orange);border:1px solid rgba(249,115,22,0.3);padding:4px 14px;border-radius:100px;text-decoration:none;text-transform:uppercase;transition:all 0.3s}
-.nav-lang:hover{background:rgba(249,115,22,0.1);border-color:rgba(249,115,22,0.5)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.nav-pulse{font-family:var(--display);font-size:10px;font-weight:400;letter-spacing:2px;color:var(--orange);border:1px solid rgba(249,115,22,0.3);padding:4px 14px;border-radius:100px;text-decoration:none;text-transform:uppercase;transition:all 0.3s;white-space:nowrap}
+.nav-pulse:hover{background:rgba(249,115,22,0.1);border-color:rgba(249,115,22,0.5);color:var(--orange)}
+.nav-lang{font-family:var(--display);font-size:10px;font-weight:400;letter-spacing:2px;color:rgba(255,255,255,0.35);border:1px solid rgba(255,255,255,0.12);padding:4px 14px;border-radius:100px;text-decoration:none;text-transform:uppercase;transition:all 0.3s}
+.nav-lang:hover{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.25);color:rgba(255,255,255,0.6)}
 .overview-steps{display:grid;gap:1px;margin:32px auto;max-width:720px;background:var(--border);border-radius:12px;overflow:hidden}
 .overview-step{display:flex;align-items:center;gap:20px;padding:18px 28px;background:var(--bg)}
 .overview-num{font-family:var(--display);font-weight:200;font-size:22px;color:var(--cyan);opacity:0.5;min-width:28px}
@@ -1076,6 +1078,7 @@ footer a:hover{color:var(--cyan)}
   .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(8,13,18,0.95);backdrop-filter:blur(24px);flex-direction:column;align-items:center;justify-content:center;gap:32px;z-index:200}
   .nav-links.open{display:flex}
   .nav-links.open a{font-size:14px;letter-spacing:3px}
+  .nav-pulse{font-size:9px;padding:3px 10px;letter-spacing:1.5px}
   .nav-hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;z-index:201;padding:8px}
   .nav-hamburger span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,0.5);transition:all 0.3s}
   .nav-hamburger.open span:nth-child(1){transform:rotate(45deg) translate(4px,4px)}
@@ -1130,6 +1133,7 @@ footer a:hover{color:var(--cyan)}
     <a href="#contact" onclick="closeNav()">Kontakt</a>
   </div>
   <div class="nav-right">
+    <a href="#diagnostic" class="nav-pulse">Pulscheck</a>
     <a href="../en/" class="nav-lang">EN</a>
     <div class="nav-hamburger" id="navHamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
   </div>
