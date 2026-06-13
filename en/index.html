@@ -1,359 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- ═══════════════════════════════════════════════════════════
-     THE HUMAN ORIGIN · /en/index.html · Rebuild 2026-04
-     Week-1 fixes per THO_Optimisation_Brief_2026-04.md
-     Decisions applied: D1, D2, D3, D4, D5, D7, D8, D9, D10
-     D6 (Problem section JTBD reframe): deferred — see brief §7
-     FAQ section: flagged as separate deliverable (see note below)
-     ═══════════════════════════════════════════════════════════ -->
-
-<!-- BASIC -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Leadership Problem That Looks Like Success | Tom Waldek</title>
-<meta name="description" content="The methodology that surfaces why teams perform instead of connect — and what becomes possible when they stop. Trust Architecture Diagnostic, Origin Work, Retained Advisory. Tom Waldek, Vienna.">
-<meta name="author" content="Tom Waldek">
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<!-- CANONICAL + HREFLANG (absolute URLs) -->
-<link rel="canonical" href="https://thehumanorigin.org/en/">
-<link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/">
-<link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/">
-<link rel="alternate" hreflang="x-default" href="https://thehumanorigin.org/">
-
-<!-- OPEN GRAPH -->
-<meta property="og:type" content="profile">
-<meta property="og:title" content="The Leadership Problem That Looks Like Success | The Human Origin">
-<meta property="og:description" content="Your organisation looks successful. The question is what it costs to keep it that way. Six film disciplines meet neuroscience. Tom Waldek — Founder, The Human Origin.">
-<meta property="og:url" content="https://thehumanorigin.org/en/">
-<meta property="og:site_name" content="The Human Origin">
-<meta property="og:image" content="https://thehumanorigin.org/TomWaldek_Actor_01.jpg">
-<meta property="og:image:alt" content="Tom Waldek, founder of The Human Origin">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="1200">
-<meta property="og:locale" content="en_GB">
-<meta property="og:locale:alternate" content="de_DE">
-<meta property="profile:first_name" content="Tom">
-<meta property="profile:last_name" content="Waldek">
-
-<!-- TWITTER CARD -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Leadership Problem That Looks Like Success | Tom Waldek">
-<meta name="twitter:description" content="Your organisation looks successful. The question is what it costs to keep it that way.">
-<meta name="twitter:image" content="https://thehumanorigin.org/TomWaldek_Actor_01.jpg">
-
-<!-- STRUCTURED DATA — Person, Organization, WebPage, Quotation ×2, ResearchProject -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://thehumanorigin.org/#tom",
-      "name": "Tom Waldek",
-      "jobTitle": "Founder, The Human Origin",
-      "description": "Founder of The Human Origin. Applies six film disciplines to neuroscience to surface the survival patterns running organisations and unlock the capacity underneath.",
-      "image": "https://thehumanorigin.org/TomWaldek_Actor_01.jpg",
-      "url": "https://thehumanorigin.org/en/",
-      "email": "tom@thehumanorigin.org",
-      "knowsAbout": [
-        "Leadership",
-        "Organisational Neurobiology",
-        "Psychological Safety",
-        "Polyvagal Theory",
-        "Trust Architecture",
-        "Survival Architecture",
-        "Film Directing",
-        "Intimacy Coordination"
-      ],
-      "sameAs": ["https://www.imdb.com/name/nm3989173/","https://vimeo.com/tomwaldek","https://www.filmmakers.eu/en/actors/tom-waldek"],
-      "worksFor": { "@id": "https://thehumanorigin.org/#org" }
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://thehumanorigin.org/#org",
-      "name": "The Human Origin",
-      "url": "https://thehumanorigin.org/",
-      "logo": "https://thehumanorigin.org/TomWaldek_Actor_01.jpg",
-      "founder": { "@id": "https://thehumanorigin.org/#tom" },
-      "description": "A methodology that surfaces the survival patterns running organisations — applying six film disciplines to neuroscience.",
-      "areaServed": ["Europe", "International"],
-      "sameAs": ["https://www.imdb.com/name/nm3989173/","https://vimeo.com/tomwaldek","https://www.filmmakers.eu/en/actors/tom-waldek"]
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://thehumanorigin.org/en/#webpage",
-      "url": "https://thehumanorigin.org/en/",
-      "name": "Surfacing Survival Patterns in Leadership — The Human Origin",
-      "inLanguage": "en",
-      "isPartOf": { "@id": "https://thehumanorigin.org/#org" },
-      "about": { "@id": "https://thehumanorigin.org/#tom" },
-      "primaryImageOfPage": "https://thehumanorigin.org/TomWaldek_Actor_01.jpg"
-    },
-    {
-      "@type": "Quotation",
-      "@id": "https://thehumanorigin.org/en/#quote1",
-      "text": "The organisation doesn't copy the leader's strategy. It copies the leader's nervous system.",
-      "creator": { "@id": "https://thehumanorigin.org/#tom" }
-    },
-    {
-      "@type": "Quotation",
-      "@id": "https://thehumanorigin.org/en/#quote2",
-      "text": "Most organisations perform the company they wish they were — not the one they actually are.",
-      "creator": { "@id": "https://thehumanorigin.org/#tom" }
-    },
-    {
-      "@type": "Quotation",
-      "@id": "https://thehumanorigin.org/en/#quote3",
-      "text": "Truth leads. Facade costs.",
-      "creator": { "@id": "https://thehumanorigin.org/#tom" }
-    },
-    {
-      "@type": "Quotation",
-      "@id": "https://thehumanorigin.org/en/#quote4",
-      "text": "Control replaces connection. Performance replaces presence.",
-      "creator": { "@id": "https://thehumanorigin.org/#tom" }
-    },
-    {
-      "@type": "Quotation",
-      "@id": "https://thehumanorigin.org/en/#quote5",
-      "text": "Performance fills the void where purpose used to live.",
-      "creator": { "@id": "https://thehumanorigin.org/#tom" }
-    },
-    {
-      "@type": "DefinedTermSet",
-      "@id": "https://thehumanorigin.org/#lexicon",
-      "name": "The Human Origin Lexicon",
-      "description": "The proprietary vocabulary of The Human Origin methodology — a set of terms defining the conceptual architecture of Tom Waldek's work on neuroscience and leadership nervous-system regulation.",
-      "creator": { "@id": "https://thehumanorigin.org/#tom" }
-    },
-    {
-      "@type": "DefinedTerm",
-      "@id": "https://thehumanorigin.org/#term-survival-architecture",
-      "name": "Survival Architecture",
-      "termCode": "THO-SA-01",
-      "description": "The hidden operating system an organisation defaults to under pressure and rarely switches off. A state in which the leader's unregulated nervous system silently dictates the conditions of safety, dissent, and decision-making for the entire team. Not a metaphor — neurologically measurable.",
-      "inDefinedTermSet": { "@id": "https://thehumanorigin.org/#lexicon" },
-      "creator": { "@id": "https://thehumanorigin.org/#tom" }
-    },
-    {
-      "@type": "DefinedTerm",
-      "@id": "https://thehumanorigin.org/#term-trust-architecture",
-      "name": "Trust Architecture",
-      "termCode": "THO-TA-02",
-      "description": "The underlying structural conditions that determine whether trust can form in an organisation — distinct from stated values, culture statements, or training programmes. The architecture underneath performance, grounded in the regulated nervous system of the leader.",
-      "inDefinedTermSet": { "@id": "https://thehumanorigin.org/#lexicon" },
-      "creator": { "@id": "https://thehumanorigin.org/#tom" }
-    },
-    {
-      "@type": "DefinedTerm",
-      "@id": "https://thehumanorigin.org/#term-return-to-origin",
-      "name": "Return to Origin",
-      "termCode": "THO-RO-03",
-      "description": "The movement by which a leader and their organisation move from survival architecture back to access of capacity — creative intelligence, emotional depth, meaning, and the ability to make decisions from the person rather than the pattern.",
-      "inDefinedTermSet": { "@id": "https://thehumanorigin.org/#lexicon" },
-      "creator": { "@id": "https://thehumanorigin.org/#tom" }
-    },
-    {
-      "@type": "DefinedTerm",
-      "@id": "https://thehumanorigin.org/#term-origin-work",
-      "name": "Origin Work",
-      "termCode": "THO-OW-04",
-      "description": "The 3–5 month engagement phase of The Human Origin methodology. Dissolves survival patterns where they actually operate — in live conversations, real decisions, and the moments people normally perform through. Results in decisions made from the person, not from the pattern.",
-      "inDefinedTermSet": { "@id": "https://thehumanorigin.org/#lexicon" },
-      "creator": { "@id": "https://thehumanorigin.org/#tom" }
-    },
-    {
-      "@type": "DefinedTerm",
-      "@id": "https://thehumanorigin.org/#term-human-leadership-architect",
-      "name": "Founder, The Human Origin",
-      "termCode": "THO-HLA-05",
-      "description": "The professional title held by Tom Waldek. A practitioner who applies six film disciplines (Writing, Directing, Acting, Editing, Producing, Intimacy Coordination) to the diagnosis and re-architecture of organisational nervous-system patterns at the leadership level.",
-      "inDefinedTermSet": { "@id": "https://thehumanorigin.org/#lexicon" },
-      "creator": { "@id": "https://thehumanorigin.org/#tom" }
-    },
-    {
-      "@type": "DefinedTerm",
-      "@id": "https://thehumanorigin.org/#term-trust-cascade",
-      "name": "The Trust Cascade",
-      "termCode": "THO-TC-06",
-      "description": "The sequence by which an organisation's nervous-system state propagates outward from the leader to the leadership table to the team to clients and partners. Grounded in Porges (polyvagal theory), Barsade (emotional contagion), and Keltner (power paradox).",
-      "inDefinedTermSet": { "@id": "https://thehumanorigin.org/#lexicon" },
-      "creator": { "@id": "https://thehumanorigin.org/#tom" }
-    },
-    {
-      "@type": "DefinedTerm",
-      "@id": "https://thehumanorigin.org/#term-six-film-disciplines",
-      "name": "Six Film Disciplines",
-      "termCode": "THO-SFD-07",
-      "description": "The set of six film-craft disciplines that form the diagnostic system of The Human Origin methodology: Writing (narrative surfacing), Directing (conditions for truth), Acting (real presence vs performed safety), Editing (cutting what no longer serves), Producing (the backbone that holds people), and Intimacy Coordination (vulnerability practiced at the leadership table — protocol from set, applied daily).",
-      "inDefinedTermSet": { "@id": "https://thehumanorigin.org/#lexicon" },
-      "creator": { "@id": "https://thehumanorigin.org/#tom" }
-    },
-    {
-      "@type": "HowTo",
-      "@id": "https://thehumanorigin.org/en/#methodology-architecture",
-      "name": "The Human Origin Methodology Architecture",
-      "description": "The integrated methodology of The Human Origin: six film-craft disciplines mapped to nine diagnostic zones of organisational nervous-system architecture, each anchored in peer-reviewed research.",
-      "author": { "@id": "https://thehumanorigin.org/#tom" },
-      "supply": [
-        { "@type": "HowToSupply", "name": "A leader willing to examine what they've been performing" },
-        { "@type": "HowToSupply", "name": "A team ready to say what's true" },
-        { "@type": "HowToSupply", "name": "Observational access to real meetings and real decisions" }
-      ],
-      "step": [
-        {
-          "@type": "HowToStep",
-          "position": 1,
-          "name": "Writing — Narrative Surfacing",
-          "text": "Character is built from personal story, not job description. Surfaces the narratives everyone is carrying beneath the performance. Anchored in Frankl (logotherapy) and Barsade (emotional contagion). Addresses the diagnostic zones: Meaning Access and Narrative Gap. Outcome: the story told matches the story lived."
-        },
-        {
-          "@type": "HowToStep",
-          "position": 2,
-          "name": "Intimacy Coordination — Vulnerability as Daily Practice",
-          "text": "The protocol from set, applied at the leadership table — vulnerability integrated into daily actions, so 'I don't know' and 'I disagree' have somewhere to land. Anchored in Brown (vulnerability research) and Rodis (SAG-AFTRA intimacy coordination protocols). Addresses the diagnostic zones: Attachment and Safety & Honesty. Outcome: vulnerability integrated into daily actions and mindsets."
-        },
-        {
-          "@type": "HowToStep",
-          "position": 3,
-          "name": "Directing — Conditions for Truth",
-          "text": "A director never tells anyone what to feel. They adjust the room until what is real has no choice but to appear. Anchored in Porges (polyvagal theory) and Edmondson (psychological safety). Addresses the diagnostic zones: Survival Architecture and Safety & Honesty. Outcome: conditions where truth shows up, not silence."
-        },
-        {
-          "@type": "HowToStep",
-          "position": 4,
-          "name": "Acting — Real Presence",
-          "text": "Accessing what is true inside and acting from there. Replaces the version pressure taught everyone to perform with something genuine. Anchored in Barsade (emotional contagion) and Keltner (power paradox). Addresses the diagnostic zones: Peer Dynamics and The Origin. Outcome: real presence replaces performed safety."
-        },
-        {
-          "@type": "HowToStep",
-          "position": 5,
-          "name": "Editing — Cutting What Hides",
-          "text": "Cutting the rituals, hierarchies, and unspoken rules that exist to keep people hiding instead of serving the work. Anchored in Keltner (power paradox) and Edmondson (psychological safety). Addresses the diagnostic zone: External Trust Signal. Outcome: cutting what keeps people hiding."
-        },
-        {
-          "@type": "HowToStep",
-          "position": 6,
-          "name": "Producing — The Backbone",
-          "text": "The structural support that lets people do their best work — support, communication, protection. The backbone that holds people so they can stop holding it together alone. Anchored in Porges (co-regulation). Addresses the diagnostic zone: Relational Pattern. Outcome: the backbone so people stop holding it alone."
-        }
-      ]
-    },
-    {
-      "@type": "ResearchProject",
-      "@id": "https://thehumanorigin.org/#research",
-      "name": "The Human Origin — Trust Architecture Diagnostic",
-      "description": "A layered diagnostic of where survival patterns live in organisations, what they cost, and what the leader's space actually permits. Grounded in Polyvagal Theory (Porges), Psychological Safety research (Edmondson), Emotional Contagion (Barsade), the Power Paradox (Keltner), and Logotherapy (Frankl).",
-      "founder": { "@id": "https://thehumanorigin.org/#tom" },
-      "parentOrganization": { "@id": "https://thehumanorigin.org/#org" }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://thehumanorigin.org/en/#faq",
-      "inLanguage": "en",
-      "isPartOf": { "@id": "https://thehumanorigin.org/en/#webpage" },
-      "about": { "@id": "https://thehumanorigin.org/#org" },
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is this therapy, coaching, or a training programme?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A diagnostic and re-architecture of the survival patterns your organisation runs on without knowing it — surfaced and changed inside your real meetings and your real decisions. The methodology comes from film, where trust is built under pressure with no second take."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is this different from leadership development?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Leadership development adds skills to the person. This work removes the survival patterns running them. Survival architecture is the hidden operating system most leadership programmes politely work around. The Human Origin makes it visible and addresses it at the source — the leader's nervous system. The nervous system, not the behaviour. Outcomes that show up in turnover, decision speed, and partner retention."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "My organisation is performing well. Why would I consider this?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Performing and thriving are not the same. Most organisations that look healthy on the numbers are running survival architecture underneath — the capacity already in the building, held back by patterns no one has named. The question isn't whether you're performing. It's how much decision speed, honest escalation, and initiative you're losing to a pattern that looks like professionalism but functions as self-protection."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What does the engagement require from us?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A leader willing to examine what they've been performing. A team ready to say what's true. Calendar time: 45 minutes for the Entry Conversation, 3\u20134 weeks for the Trust Architecture Diagnostic, 3\u20135 months for Origin Work \u2014 the full engagement. The work happens in your real meetings and your real decisions \u2014 where the survival patterns are already running."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does it take?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Entry Conversation: 45 minutes. Trust Architecture Diagnostic: 3–4 weeks. Origin Work (optional): 3–5 months. Integration runs concurrently with the final weeks of Origin Work. Review: 6 months after completion. Total elapsed time for the full arc: 6–9 months. The diagnostic stands alone as a complete deliverable."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What does success look like?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The decisions that were circling for weeks get made in one honest conversation. The hire who was about to leave stays — because someone finally asked the real question. The leadership table stops performing alignment — and starts making it real. Partnerships renew. Because every conversation stopped being a performance. Measured against turnover cost, decision velocity, and partner retention."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "We've tried leadership development before. Why would this be different?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Leadership development works on what leaders do. This work addresses what runs them. Most programmes assume the leader is the one who needs upgrading. This one starts with the leader's nervous system as the organisation's operating system — Porges, Edmondson, Keltner, Frankl. The science is current. The programmes you've tried aren't."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is everything confidential?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Every conversation in every phase. Observation notes, diagnostic findings, and the full Trust Architecture Map are delivered to you alone. Nothing is shared internally or externally without your explicit written consent. The work surfaces things people haven't said aloud before — confidentiality is the condition that makes that possible."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the investment?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Transparent and on this page. Entry Conversation: no fee. Trust Architecture Diagnostic: €12,000. Diagnostic Debrief, Origin Work, and Retained Advisory: by application, scoped after the diagnostic. No hidden costs, no expanded scopes mid-engagement."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you have evidence this works?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The methodology is grounded in peer-reviewed research: Porges (Polyvagal Theory), Edmondson (Psychological Safety), Barsade (Emotional Contagion), Keltner (Power Paradox), Frankl (Logotherapy). The film-discipline application is new and proprietary. Case evidence is shared under NDA in the Entry Conversation — not in marketing material. Specifically: documented engagements with measurable outcomes in turnover, decision speed, and partner retention."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you work internationally?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Based in Europe. Working wherever the patterns are. Engagements run on-site — in your real meetings, your real decisions, your building — because survival architecture lives in the room, not on a screen. The suitcase is always packed. Native German, fluent English. The methodology and the commitment travel. The work happens where you are."
-          }
-        }
-      ]
-    }
-  ]
-}
-</script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Human Origin &mdash; Tom Waldek</title>
+  <meta name="description" content="When was the last time something true was said in one of your meetings? Six film disciplines meet organisational neuroscience.">
+  <link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/"><link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
 <style>
+
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@100;200;300;400;500;600&display=swap');
 
 *{margin:0;padding:0;box-sizing:border-box}
@@ -1139,28 +796,97 @@ footer a:hover{color:var(--cyan)}
 .why-verse p:last-child{color:rgba(255,245,230,0.60);font-style:italic}
 .why-precision{margin-top:40px;padding:28px 32px;background:rgba(6,182,212,0.04);border:1px solid rgba(6,182,212,0.12);border-radius:12px}
 .why-precision-heading{font-family:var(--display);font-weight:500;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--cyan);margin:0 0 16px}
+
+/* ═══ EPISODE SYSTEM ═══ */
+.episode{position:relative;z-index:1;padding:100px 44px}
+.episode-wrap{max-width:820px;margin:0 auto}
+.ep-meta{display:flex;align-items:flex-start;gap:18px;margin-bottom:26px}
+.ep-num{font-family:var(--display);font-weight:200;font-size:60px;color:var(--cyan);opacity:0.18;line-height:1;min-width:68px;margin-top:-6px;letter-spacing:-2px}
+.ep-label{font-family:var(--display);font-weight:400;font-size:11px;color:var(--cyan);letter-spacing:6px;text-transform:uppercase;opacity:0.75;padding-top:5px}
+.ep-q{font-family:var(--serif);font-weight:600;font-style:italic;font-size:clamp(26px,4.2vw,48px);line-height:1.12;color:var(--white);margin-bottom:16px;letter-spacing:-0.5px}
+.ep-q em{font-style:normal;background:linear-gradient(135deg,var(--cyan),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.ep-ans{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.9vw,19px);color:rgba(255,242,225,0.50);line-height:1.65;margin-bottom:22px;max-width:640px}
+.ep-body p{font-weight:400;font-size:16px;color:rgba(255,242,225,0.82);line-height:2;margin-bottom:16px}
+.ep-body p:last-child{margin-bottom:0}
+.ep-body p strong{color:var(--cyan);font-weight:400}
+.ep-closer{font-family:var(--serif);font-style:italic;font-size:17px;color:rgba(255,245,230,0.88);margin-top:24px;padding-top:22px;border-top:1px solid var(--border)}
+.ep-sci{font-family:var(--display);font-size:10px;color:var(--tx4);letter-spacing:2px;margin-top:14px}
+/* Personal anchor */
+.pa{margin:20px 0 24px;padding:22px 32px;border-left:2px solid;border-image:linear-gradient(180deg,var(--cyan),var(--orange)) 1;background:rgba(6,182,212,0.03);border-radius:0 10px 10px 0}
+.pa-text{font-family:var(--display);font-weight:200;font-size:16px;color:rgba(255,245,230,0.78);line-height:1.8;letter-spacing:0.5px;margin-bottom:8px}
+.pa-attr{font-family:var(--display);font-weight:300;font-size:10px;color:var(--tx4);letter-spacing:4px;text-transform:uppercase}
+/* Stat callout — animated counters inside episodes */
+.stat-call{display:inline-flex;align-items:flex-start;gap:14px;margin:14px 0;padding:16px 22px;background:rgba(249,115,22,0.05);border:1px solid rgba(249,115,22,0.14);border-radius:10px}
+.sc-block{text-align:center;min-width:56px}
+.sc-num{font-family:var(--display);font-weight:200;font-size:30px;line-height:1;background:linear-gradient(135deg,var(--cyan),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:block}
+.sc-src{font-family:var(--display);font-size:8px;color:var(--tx4);letter-spacing:2px;text-transform:uppercase;margin-top:3px;display:block}
+.sc-txt{font-size:13px;color:var(--tx2);line-height:1.6;padding-top:4px}
+.stats-row{display:flex;gap:14px;flex-wrap:wrap;margin:20px 0}
+/* Outcome block */
+.outcome{margin:22px 0 0;padding:18px 26px;background:rgba(6,182,212,0.05);border:1px solid rgba(6,182,212,0.15);border-radius:10px;display:flex;align-items:flex-start;gap:12px}
+.outcome-label{font-family:var(--display);font-size:9px;color:var(--cyan);letter-spacing:3px;text-transform:uppercase;white-space:nowrap;margin-top:3px;flex-shrink:0;opacity:0.8}
+.outcome-text{font-size:14px;color:var(--tx2);line-height:1.65}
+.outcome-text strong{color:var(--white);font-weight:400}
+/* Bridge */
+.bridge{position:relative;z-index:1;padding:72px 44px 52px;text-align:center}
+.bridge p{font-family:var(--serif);font-weight:500;font-size:clamp(18px,2.4vw,28px);color:rgba(255,255,255,0.78);line-height:1.55;letter-spacing:-0.2px;max-width:640px;margin:0 auto}
+.bridge em{font-style:italic;color:rgba(255,255,255,0.44)}
+.bridge strong{font-weight:700;color:var(--white)}
+/* Soft CTA */
+.soft-cta{display:inline-block;padding:10px 28px;border:1px solid rgba(6,182,212,0.25);border-radius:100px;font-family:var(--display);font-size:11px;color:var(--cyan);letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all 0.3s}
+.soft-cta:hover{background:rgba(6,182,212,0.07);border-color:rgba(6,182,212,0.5)}
+/* Enhanced discipline cards */
+.disc-enhanced{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:32px}
+.disc-e{background:var(--glass2);border:1px solid var(--border);border-radius:14px;padding:26px 26px;position:relative;overflow:hidden;transition:border-color 0.3s}
+.disc-e:hover{border-color:rgba(6,182,212,0.28)}
+.disc-e::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(6,182,212,0.14),transparent)}
+.de-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
+.de-num{font-family:var(--display);font-size:10px;color:var(--orange);letter-spacing:3px;text-transform:uppercase}
+.de-tag{font-family:var(--display);font-size:9px;color:var(--tx4);letter-spacing:2px;text-transform:uppercase}
+.de-name{font-family:var(--serif);font-weight:600;font-size:clamp(15px,1.5vw,19px);color:var(--white);margin-bottom:8px;line-height:1.25}
+.de-q{font-family:var(--serif);font-style:italic;font-size:13px;color:rgba(255,242,225,0.46);margin-bottom:12px;line-height:1.5}
+.de-catches{padding:9px 13px;background:rgba(0,0,0,0.2);border-left:2px solid rgba(249,115,22,0.35);margin-bottom:11px}
+.de-catches-label{font-family:var(--display);font-size:8px;color:var(--orange);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:4px;opacity:0.8}
+.de-catches-text{font-size:12px;color:var(--tx2);line-height:1.55}
+.de-delivers{font-size:12px;color:rgba(255,242,225,0.52);line-height:1.6;padding-top:9px;border-top:1px solid var(--border)}
+.de-delivers strong{color:var(--cyan);font-weight:400}
+/* Who For */
+.who-ep{position:relative;z-index:1;padding:80px 44px}
+.who-list{max-width:720px;margin:22px auto 0}
+.who-item{padding:18px 0;border-bottom:1px solid var(--border);font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.9vw,20px);color:var(--tx2);line-height:1.5;display:flex;align-items:flex-start;gap:14px}
+.who-item:last-child{border-bottom:none}
+.who-item::before{content:'&#8212;';color:var(--cyan);font-family:var(--display);font-size:13px;margin-top:3px;flex-shrink:0;opacity:0.7}
+/* Clinical */
+.clinical{position:relative;padding:32px 38px;margin:0 0 24px;background:rgba(6,182,212,0.04);border:1px solid rgba(6,182,212,0.14);border-radius:14px}
+.clinical::before{content:'Personal Foundation';position:absolute;top:-1px;left:22px;transform:translateY(-50%);font-family:var(--display);font-size:9px;letter-spacing:3px;color:var(--cyan);background:var(--bg);padding:0 10px;text-transform:uppercase}
+.clinical-anchor{font-family:var(--serif);font-weight:600;font-style:italic;font-size:clamp(16px,2vw,23px);color:var(--white);line-height:1.35;margin-bottom:16px}
+.clinical p{font-size:15px;line-height:1.9;color:var(--tx2);margin-bottom:12px}
+.clinical p:last-child{margin-bottom:0}
+.clinical-stamp{font-family:var(--display);font-size:10px;color:var(--cyan);letter-spacing:3px;text-transform:uppercase;margin-top:16px;padding-top:13px;border-top:1px solid var(--border)}
+/* Differentiators */
+.diff-section{position:relative;z-index:1;padding:80px 44px}
+.diff-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
+.diff-card{background:var(--glass2);border:1px solid var(--border);border-radius:14px;padding:28px 24px;position:relative;overflow:hidden}
+.diff-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(6,182,212,0.18),transparent)}
+.diff-n{font-family:var(--display);font-size:10px;color:var(--orange);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.diff-h{font-family:var(--serif);font-size:clamp(14px,1.4vw,18px);color:var(--white);margin-bottom:11px;line-height:1.3;font-weight:600}
+.diff-b{font-size:13px;line-height:1.85;color:rgba(255,242,225,0.58)}
+.diff-b strong{color:var(--cyan);font-weight:400}
+.diff-sci{font-family:var(--display);font-size:10px;color:var(--tx4);letter-spacing:1.5px;margin-top:11px}
+/* Responsive */
+@media(max-width:900px){.disc-enhanced{grid-template-columns:1fr}.diff-3{grid-template-columns:1fr}}
+@media(max-width:768px){.episode,.diff-section,.who-ep,.bridge{padding-left:24px;padding-right:24px}.ep-num{font-size:44px;min-width:50px}.clinical{padding:24px 20px}.stats-row{flex-direction:column}}
+
 </style>
 </head>
 <body>
 
-<!-- FULL-PAGE MESH -->
-<div class="bg-warmth" id="bgWarmth"></div>
-<div class="mesh-layer">
-  <div class="mesh-orb cyan1"></div>
-  <div class="mesh-orb orange1"></div>
-  <div class="mesh-orb cyan2"></div>
-  <div class="mesh-orb orange2"></div>
-  <div class="mesh-orb orange3"></div>
-</div>
-
-<!-- NAV -->
+<div class="mesh-bg"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div><div class="orb orb-4"></div></div>
 <nav>
   <a href="#" class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">THE HUMAN <span>ORIGIN</span></a>
   <div class="nav-links" id="navLinks">
-    <a href="#method" onclick="closeNav()">Method</a>
-    <a href="#process" onclick="closeNav()">Process</a>
-    <a href="#diagnostic" onclick="closeNav()">Diagnostic</a>
-    <a href="#contact" onclick="closeNav()">Contact</a>
+    <a href="#episodes">The Work</a><a href="#method">Method</a>
+    <a href="#diagnostic">Diagnostic</a><a href="#contact">Contact</a>
   </div>
   <div class="nav-right">
     <a href="#diagnostic" class="nav-pulse">Pulse Check</a>
@@ -1168,501 +894,172 @@ footer a:hover{color:var(--cyan)}
     <div class="nav-hamburger" id="navHamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
   </div>
 </nav>
-
-<!-- HERO -->
 <section class="hero">
   <div class="hero-mesh"></div>
   <div class="hero-content fade-in">
-    <div class="hero-portrait" id="heroPortrait"><div class="hero-portrait-glow"></div><div class="hero-portrait-inner"><img src="../TomWaldek_Actor_01.jpg" alt="Tom Waldek, founder of The Human Origin"></div></div>
-    <div class="hero-role">Tom Waldek — Founder, The Human Origin</div>
-    <h1 class="hero-title" aria-label="Surfacing the survival patterns running your organisation — Tom Waldek, Founder, The Human Origin">
-      <span class="line-label">The Human</span>
-      <span class="line-anchor">Origin</span>
-    </h1>
-    <div class="hero-tagline">The pattern everyone in your organisation can feel — but no one has named.</div>
-    <p class="hero-sub">Your best people hold back and decisions circle. The team performs instead of connecting. This work surfaces the pattern underneath — so <strong>the decision gets made, the hire stays, and the room stops performing.</strong></p>
-    <div class="hero-method">Six film disciplines, one leadership table.</div>
+    <div class="hero-portrait" id="heroPortrait"><div class="hero-portrait-glow"></div><div class="hero-portrait-inner"><img src="../TomWaldek_Actor_01.jpg" alt="Tom Waldek, Human Leadership Architect"></div></div>
+    <div class="hero-role">Tom Waldek &mdash; Human Leadership Architect</div>
+    <h1 class="hero-title"><span class="line-label">The Human</span><span class="line-anchor">Origin</span></h1>
+    <div class="hero-tagline" style="font-family:var(--serif);font-style:italic;font-size:clamp(17px,2.3vw,24px);color:rgba(255,255,255,0.72);letter-spacing:-0.2px;margin-bottom:14px">When was the last time something true was said in one of your meetings?</div>
+    <p class="hero-sub">Not diplomatic. Not strategic. <strong>Not the version everyone agreed would land safely.</strong></p>
+    <div class="hero-method">Six film disciplines &middot; Nine diagnostic zones &middot; One engagement.</div>
     <div class="hero-ctas">
-      <a href="#diagnostic" class="btn-primary">Start Pulse Check — 3 minutes</a>
-      <a href="mailto:tom@thehumanorigin.org?subject=Trust%20Architecture%20Diagnostic" class="btn-ghost" onclick="openBooking(event)">Book a 45-min Entry Conversation — no fee</a>
+      <a href="#diagnostic" class="btn-primary">Start Pulse Check &mdash; 3 min</a>
+      <a href="mailto:tom@thehumanorigin.org?subject=Entry%20Conversation" class="btn-ghost" onclick="openBooking(event)">Book Entry Conversation &mdash; no fee</a>
     </div>
     <p class="hero-teaser" style="margin:20px 0 6px"><em>I learned the difference in my body before I had a word for it.</em></p>
-    <div style="text-align:center;margin-top:14px"><a href="#process" style="font-family:var(--display);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--tx4);text-decoration:none;transition:color 0.3s">Full process and pricing ↓</a></div>
+    <div style="text-align:center;margin-top:14px"><a href="#episodes" style="font-family:var(--display);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--tx4);text-decoration:none">Read the work &#8595;</a></div>
+  </div>
+</section>
+<div class="stats"><div class="stats-grid fade-in" id="stats-section"><div><div class="stat-num"><span class="counter-val" data-target="617" data-prefix="&euro;" data-suffix="B">&euro;0B</span></div><div class="stat-desc">EU annual cost of work-related stress</div></div>
+<div><div class="stat-num"><span class="counter-val" data-target="56" data-prefix="" data-suffix="&#37;">0&#37;</span></div><div class="stat-desc">Leaders report team doesn&#8217;t surface real problems</div></div>
+<div><div class="stat-num"><span class="counter-val" data-target="7" data-prefix="" data-suffix="&#215;">0&#215;</span></div><div class="stat-desc">Higher innovation in psychologically safe teams &mdash; Edmondson &amp; Lei 2014</div></div>
+<div><div class="stat-num"><span class="counter-val" data-target="74" data-prefix="" data-suffix="&#37;">0&#37;</span></div><div class="stat-desc">Higher oxytocin &#8594; higher trust and productivity &mdash; Zak 2017</div></div>
+</div></div>
+<div class="bridge fade-in"><p>You&#8217;ve watched talented people operate at a fraction of what they actually are.<br><em>Not from lack of skill.</em> <strong>Because the space to be anything else didn&#8217;t exist.</strong></p></div>
+
+<div class="section-div"></div>
+<div id="episodes"></div>
+<section class="episode fade-in">
+<div class="episode-wrap">
+<div class="ep-meta"><span class="ep-num">01</span><span class="ep-label">The Pattern</span></div><h2 class="ep-q">What&#8217;s everyone in your room pretending not to notice?</h2><p class="ep-ans">There&#8217;s an unspoken agreement in most leadership rooms about what can and cannot be said. It didn&#8217;t start with a decision. It accumulated.</p><div class="pa"><div class="pa-text">&#8220;I have been that person &mdash; the one in the room whose nervous system was already deciding what was safe to say before anyone opened their mouth.&#8221;</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>It&#8217;s never a people problem. It&#8217;s one condition: an organisation running on <strong>survival architecture</strong> &mdash; the operating system it defaulted to under pressure and never switched off. It decides who speaks, who stays silent, what gets escalated, and what gets buried.</p><p>The nervous system decides safety or threat before anyone in the room is conscious of it. The pattern predates the organisation. It predates the leader&#8217;s first day. In most cases, it predates their first word.</p></div><div class="stats-row"><div class="stat-call"><div class="sc-block"><span class="sc-num" data-target="56" data-prefix="" data-suffix="&#37;">0&#37;</span><span class="sc-src">PMI</span></div><div class="sc-txt">of leaders report their team doesn&#8217;t surface real problems to them</div></div><div class="stat-call"><div class="sc-block"><span class="sc-num" data-target="3" data-prefix="&euro;" data-suffix="K">&euro;0K</span><span class="sc-src">EU&#8209;OSHA</span></div><div class="sc-txt">average annual cost per employee in stress-related absence alone</div></div></div><p class="ep-closer">That&#8217;s the layer no restructure reaches. No software sees it. Because it looks like normal.</p><div class="outcome"><span class="outcome-label">What changes</span><span class="outcome-text"><strong>The conversation after the meeting stops contradicting the meeting.</strong> Problems surface before crises. The hire who was leaving stays &mdash; because someone finally asked the right question.</span></div><div class="ep-sci">Porges (2011) &middot; Barsade (2002) &middot; EU&#8209;OSHA (2022)</div>
+</div>
+</section>
+<div class="section-div"></div>
+<section class="episode fade-in">
+<div class="episode-wrap">
+<div class="ep-meta"><span class="ep-num">02</span><span class="ep-label">The Origin</span></div><h2 class="ep-q">Where does the pattern come from?</h2><p class="ep-ans">The internal voice running beneath every decision was built before you could speak &mdash; for the environment you were born into, not the room you&#8217;re leading now.</p><div class="pa"><div class="pa-text">&#8220;I recognise this pattern because I carried one for most of my adult life &mdash; formed before I had language for it.&#8221;</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Research by Charles Fernyhough demonstrates that the default mode network runs a continuous self-referential narrative built from the relational data of the earliest environment &mdash; operating automatically, beneath conscious deliberation. <strong>It is not examined in standard leadership development.</strong> Its architecture affects every significant decision made at senior level.</p><p>One pattern never changes: the unresolved story doesn&#8217;t stay personal. It migrates into leadership behaviour. <strong>Control replaces connection.</strong> Performance replaces presence. Not maliciously. Automatically. The gap between who a leader is and who they perform becomes the operating system of the entire organisation.</p></div><div class="stats-row"><div class="stat-call"><div class="sc-block"><span class="sc-num" data-target="7" data-prefix="" data-suffix="&#215;">0&#215;</span><span class="sc-src">Edmondson &amp; Lei 2014</span></div><div class="sc-txt">higher innovation output in teams with genuine psychological safety &mdash; the direct result of removing this pattern</div></div></div><div class="quote-block"><div class="quote-text">&#8220;The organisation doesn&#8217;t copy the leader&#8217;s strategy. It copies the leader&#8217;s nervous system.&#8221;</div><div class="quote-attr">Tom Waldek</div></div><div class="outcome"><span class="outcome-label">What changes</span><span class="outcome-text"><strong>The pattern becomes visible &mdash; and therefore workable.</strong> Not through more insight. Through diagnostic precision about where it began and what keeps it running.</span></div><div class="ep-sci">Fernyhough (2016) &middot; Keltner (2016) &middot; Edmondson &amp; Lei (2014)</div>
+</div>
+</section>
+<div class="section-div"></div>
+<section class="episode fade-in">
+<div class="episode-wrap">
+<div class="ep-meta"><span class="ep-num">03</span><span class="ep-label">The Cascade</span></div><h2 class="ep-q">Why does the room change when you walk in?</h2><p class="ep-ans">Not because of what you say. Because of what your nervous system broadcasts before you say anything.</p><div class="pa"><div class="pa-text">&#8220;I know what it is to be the leader setting that temperature &mdash; long before I understood that&#8217;s what I was doing.&#8221;</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>The leader&#8217;s nervous system is the organisation&#8217;s first operating system. Not metaphorically. Neurologically. The conditions that shaped that nervous system &mdash; long before the first leadership role, sometimes before the first memory &mdash; are <strong>already in the room.</strong></p><p>When <strong>survival architecture</strong> is running the leader, it runs the room. Because everyone accepts it. It starts being the atmosphere &mdash; the unspoken agreement about what can and cannot be said, decided, or risked. Control replaces connection. Performance replaces presence.</p></div><div class="quote-block"><div class="quote-text">&#8220;The aura changes. Not the strategy. Not the structure. The room gets warmer, trust gets easier, and courage stops being an initiative and starts being the atmosphere.&#8221;</div><div class="quote-attr">Tom Waldek</div></div><div class="outcome"><span class="outcome-label">What changes</span><span class="outcome-text"><strong>The room changes permanently &mdash; not just while the work is happening.</strong> Decisions that were circling land. The P&amp;L effect is measurable: every unspoken truth at your leadership table had a line item.</span></div><div class="ep-sci">Porges (2011) &middot; Edmondson (1999) &middot; Zak (2017)</div>
+</div>
+</section>
+<div class="section-div"></div>
+<section class="episode fade-in">
+<div class="episode-wrap">
+<div class="ep-meta"><span class="ep-num">04</span><span class="ep-label">The Capacity</span></div><h2 class="ep-q">What does AI actually make <em>visible</em>?</h2><p class="ep-ans">Every organisation asking what AI will replace is answering its own question. The behaviour most at risk was never creative, never personal, never present.</p><div class="pa"><div class="pa-text">&#8220;Twenty-five years on set &mdash; watching talented people working at a fraction of what they actually were. Not from lack of skill. Because the space to be that didn&#8217;t exist.&#8221;</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>It was pattern. Optimised performance. Managed risk. The anxiety isn&#8217;t that AI will take something from you. It&#8217;s the recognition that <strong>what you&#8217;ve been performing was never uniquely yours to begin with.</strong></p><p>What no system replicates is what that survival architecture has been hiding: the full capacity of your people. Reading a room before anyone speaks. Making the call no dataset supports &mdash; and being right. Not from data, but from something a nervous system knows before language does.</p></div><p class="ep-closer">Not soft skill. The original technology.</p><div class="outcome"><span class="outcome-label">What changes</span><span class="outcome-text"><strong>Your people are needed as themselves &mdash; not as the role.</strong> What they build from there couldn&#8217;t have been built any other way. That&#8217;s the capacity no competitor can replicate.</span></div><div class="ep-sci">Edmondson &amp; Lei (2014) &middot; Zak (2017)</div>
+</div>
+</section>
+
+<div class="section-div"></div>
+
+<div style="text-align:center;padding:20px 44px 56px;position:relative;z-index:1">
+  <a href="mailto:tom@thehumanorigin.org?subject=Entry%20Conversation" class="soft-cta" onclick="openBooking(event)">Book Entry Conversation &mdash; no fee</a>
+</div>
+
+<div class="section-div"></div>
+
+<section class="episode fade-in">
+<div class="episode-wrap">
+<div class="ep-meta"><span class="ep-num">05</span><span class="ep-label">The Method</span></div><h2 class="ep-q">What does film have to do with leadership?</h2><p class="ep-ans">Film is the only discipline where truth and performance are both required &mdash; and where the gap between them becomes measurable in real time.</p><div class="pa"><div class="pa-text">&#8220;The camera does not negotiate. Over twenty-five years I watched what bodies do when performance stops being enough to hide behind.&#8221;</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Most leadership diagnostics observe what a leader performs. Film records what they cannot &mdash; the involuntary physiological signatures that appear under creative and relational pressure: breath hold, vocal tightening, avoidance sequencing, the timing patterns of a nervous system under sustained load.</p><p><strong>This is not coaching. It is diagnostic work.</strong> Six disciplines applied in live organisational settings &mdash; not removed workshop environments. Each maps to a specific zone of organisational nervous-system architecture. Each produces something a standard diagnostic cannot.</p></div>
+</div>
+</section>
+<section style="position:relative;z-index:1;padding:0 44px 90px" class="fade-in">
+  <div style="max-width:1060px;margin:0 auto">
+    <div class="disc-enhanced"><div class="disc-e">
+  <div class="de-top"><span class="de-num">01 &mdash; Writing</span><span class="de-tag">Narrative Zone</span></div>
+  <h3 class="de-name">Shaping the narrative before anyone performs it.</h3>
+  <p class="de-q">&ldquo;What story is the organisation actually living inside &mdash; and what story is it telling itself?&rdquo;</p>
+  <div class="de-catches"><div class="de-catches-label">What it catches</div><div class="de-catches-text">The gap between the narrative leadership performs and the one the organisation actually lives. When these diverge, trust erodes neurologically &mdash; not just culturally.</div></div>
+  <div class="de-delivers"><strong>Delivers:</strong> Clarity on where narrative and reality have separated &mdash; and what closing that gap unlocks in decision speed and retention.</div>
+</div><div class="disc-e">
+  <div class="de-top"><span class="de-num">02 &mdash; Directing</span><span class="de-tag">Safety Zone</span></div>
+  <h3 class="de-name">Creating conditions where truth shows up.</h3>
+  <p class="de-q">&ldquo;A director never tells anyone what to feel. They adjust the room until what&rsquo;s real has no choice but to appear.&rdquo;</p>
+  <div class="de-catches"><div class="de-catches-label">What it catches</div><div class="de-catches-text">The atmospheric contract &mdash; the unspoken agreement about what can and cannot be said in this room. Invisible to the people inside it. Visible on film.</div></div>
+  <div class="de-delivers"><strong>Delivers:</strong> Psychological safety conditions that don&rsquo;t require courage to maintain. The 7&times; innovation effect (Edmondson) comes from here.</div>
+</div><div class="disc-e">
+  <div class="de-top"><span class="de-num">03 &mdash; Acting</span><span class="de-tag">Presence Zone</span></div>
+  <h3 class="de-name">The gap between performed safety and real presence.</h3>
+  <p class="de-q">&ldquo;What does the body do when performance stops being enough to hide behind?&rdquo;</p>
+  <div class="de-catches"><div class="de-catches-label">What it catches</div><div class="de-catches-text">The performance cost: the metabolic load of maintaining a version of yourself that pressure demands. Measurable in breath patterns, vocal register, avoidance timing.</div></div>
+  <div class="de-delivers"><strong>Delivers:</strong> Leadership that holds under sustained pressure without the performance overhead. The decision made from presence &mdash; not from management.</div>
+</div><div class="disc-e">
+  <div class="de-top"><span class="de-num">04 &mdash; Editing</span><span class="de-tag">Decision Zone</span></div>
+  <h3 class="de-name">Cutting what no longer serves. Strengthening what carries.</h3>
+  <p class="de-q">&ldquo;What&rsquo;s staying in the room that should have been cut three years ago?&rdquo;</p>
+  <div class="de-catches"><div class="de-catches-label">What it catches</div><div class="de-catches-text">The structural patterns that are no longer serving &mdash; the habits, dynamics, conversations that once protected but now constrain. The block on decision speed.</div></div>
+  <div class="de-delivers"><strong>Delivers:</strong> Decision speed. The blocked conversation that finally happens. The clarity that&rsquo;s been circling for months &mdash; made visible, then made permanent.</div>
+</div><div class="disc-e">
+  <div class="de-top"><span class="de-num">05 &mdash; Producing</span><span class="de-tag">Capacity Zone</span></div>
+  <h3 class="de-name">The backbone that holds people so they can stop holding it together alone.</h3>
+  <p class="de-q">&ldquo;Who is holding everything together &mdash; and what happens when they stop?&rdquo;</p>
+  <div class="de-catches"><div class="de-catches-label">What it catches</div><div class="de-catches-text">Single-point-of-failure leadership: the person or dynamic that the whole system depends on. Invisible from inside. Clear on film.</div></div>
+  <div class="de-delivers"><strong>Delivers:</strong> Distributed organisational capacity. The team that doesn&rsquo;t collapse when one person leaves &mdash; or finally takes a week off without their phone.</div>
+</div><div class="disc-e">
+  <div class="de-top"><span class="de-num">06 &mdash; Intimacy Coordination</span><span class="de-tag">Relational Zone</span></div>
+  <h3 class="de-name">Vulnerability as daily practice at the leadership table.</h3>
+  <p class="de-q">&ldquo;Is &lsquo;I don&rsquo;t know&rsquo; somewhere safe to land in this room &mdash; or does it cost something?&rdquo;</p>
+  <div class="de-catches"><div class="de-catches-label">What it catches</div><div class="de-catches-text">The silences that aren&rsquo;t agreement. The dissent that lives in the corridor after the meeting. The question nobody asked because they calculated the cost first.</div></div>
+  <div class="de-delivers"><strong>Delivers:</strong> The honest conversation. The disagreement that gets said in the room. The protocol that makes courage easier than performance.</div>
+</div></div>
+    <p style="text-align:center;font-family:var(--display);font-size:10px;color:var(--tx4);letter-spacing:2.5px;text-transform:uppercase;margin-top:28px">All six active across nine diagnostic zones &middot; Applied in live settings &mdash; not workshops</p>
   </div>
 </section>
 
-<!-- STATS + COMMITMENTS -->
-<div class="stats">
-  <div class="stats-grid fade-in" id="stats-section">
-    <div>
-      <div class="stat-num"><span class="counter-val" data-target="617" data-prefix="€" data-suffix="B">€0B</span></div>
-      <div class="stat-desc">Stress-related cost across the EU annually</div>
-    </div>
-    <div>
-      <div class="stat-num"><span class="counter-val" data-target="56" data-suffix="%">0%</span></div>
-      <div class="stat-desc">Leaders report their team doesn't surface real problems</div>
-    </div>
-    <div>
-      <div class="stat-num"><span class="counter-val" data-target="21" data-suffix="%">0%</span></div>
-      <div class="stat-desc">Higher profitability in engaged organisations</div>
-    </div>
-    <div>
-      <div class="stat-num"><span class="counter-val" data-target="74" data-suffix="%">0%</span></div>
-      <div class="stat-desc">Less stress in high-trust organisations</div>
-    </div>
+<div class="section-div"></div>
+
+<div class="who-ep fade-in">
+  <div style="max-width:720px;margin:0 auto;text-align:center">
+    <h2 class="section-label">Is This For You?</h2>
+    <h2 style="font-family:var(--serif);font-weight:600;font-style:italic;font-size:clamp(28px,4vw,46px);color:var(--white);margin-bottom:6px">Is this for you?</h2>
   </div>
-  <div class="commitments fade-in">
-    <div class="commitment">
-      <div class="commitment-label">The First Conversation</div>
-      <div class="commitment-text">45 minutes. Candid. <strong>No fee.</strong> Follow-up only if you ask.</div>
+  <div class="who-list"><div class="who-item">You&#8217;ve watched talented people operate at a fraction of what they actually are &mdash; not from lack of skill, but because the space to be anything else didn&#8217;t exist.</div><div class="who-item">You&#8217;ve been in a room where the wrong decision was made because the right one was too expensive to say out loud.</div><div class="who-item">You&#8217;ve felt the gap between what your organisation shows and what it costs &mdash; internally &mdash; to maintain that performance.</div><div class="who-item">You&#8217;ve tried leadership development before. Something shifted. Then the room went back to how it was.</div></div>
+</div>
+
+<div class="section-div"></div>
+
+<section class="episode fade-in" id="why">
+  <div class="episode-wrap">
+    <div class="ep-meta"><span class="ep-num">06</span><span class="ep-label">Why This Work Exists</span></div>
+    <h2 class="ep-q">Why me, <em>specifically</em>?</h2>
+    <div class="clinical">
+      <div class="clinical-anchor">&#8220;I was kept alive by a machine before I was ever held in human arms.&#8221;</div>
+      <p>I was born three months early. The first five months of my life ran inside an incubator &mdash; no skin contact, no co-regulation. In my second year: chemotherapy and surgery for liver cancer. The window when a nervous system learns safety through another body&#8217;s warmth and rhythm &mdash; I spent it being kept alive by machines. The foundation most people receive by default was never built.</p><p>That is not confession. It is clinical evidence of what we are discussing: the nervous system learns from whatever data it has, and it does not update through insight. I know this from inside the deficit. Everything I have built over twenty-five years in this work began there.</p>
+      <div class="clinical-stamp">That is the foundation of every diagnostic I conduct. &mdash; Tom Waldek</div>
     </div>
-    <div class="commitment">
-      <div class="commitment-label">Confidentiality</div>
-      <div class="commitment-text"><strong>Confidential by default.</strong> What surfaces in this work stays with you. No logos, no case studies, no names — ever.</div>
+    <div class="why-text">
+      <div class="why-verse"><p>I was kept alive by a machine before I was ever held in human arms.</p><p>I learned the difference in my body before I had a word for it.</p><p>A whole world is now making the same trade &mdash; and calling it connection.</p></div>
+      <p class="why-break">It isn&#8217;t.</p>
+      <p style="font-size:16px;line-height:2;color:rgba(255,242,225,0.82);margin-bottom:16px">I built capacity from inside the deficit. In an incubator, on set, in rooms I wasn&#8217;t supposed to be in, and in rooms where I finally stopped pretending otherwise. That capacity still runs in my life. It is not history. It is how I live now &mdash; and it is why I recognise the pattern in others before they have named it.</p>
+      <p style="font-size:16px;line-height:2;color:rgba(255,242,225,0.82)">Making it visible is my mission. Making it permanent is this work.</p>
     </div>
-    <div class="commitment">
-      <div class="commitment-label">The Fit Test</div>
-      <div class="commitment-text">If the work isn't the right fit for your organisation, <strong>I will tell you first.</strong></div>
-    </div>
+    <div class="why-photo" style="margin-top:36px"><img src="../TomWaldek_cinema_seats.jpg" alt="Tom Waldek"></div>
+  </div>
+</section>
+
+<div class="section-div"></div>
+
+<div class="diff-section fade-in">
+  <div style="max-width:1060px;margin:0 auto;text-align:center">
+    <h2 class="section-label">Why This Is Different</h2>
+    <h2 style="font-family:var(--serif);font-weight:600;font-size:clamp(26px,4vw,44px);color:var(--white);margin-bottom:12px;letter-spacing:-0.4px">Every methodology looks at output.<br>This one examines what runs underneath it.</h2>
+    <p style="font-size:15px;color:var(--tx3);max-width:520px;margin:0 auto 8px;line-height:1.7">Three structural differences. Not in philosophy. In mechanism.</p>
+    <div class="diff-3"><div class="diff-card"><div class="diff-n">01 &middot; The Unexamined Layer</div><h3 class="diff-h">&ldquo;We look where no standard diagnostic looks.&rdquo;</h3><p class="diff-b">The internal voice running beneath a leader&#8217;s decisions was built for their early survival environment. <strong>Standard leadership development does not examine this layer.</strong> This diagnostic does.</p><div class="diff-sci">Fernyhough (2016) &middot; Morin (2011)</div></div><div class="diff-card"><div class="diff-n">02 &middot; The Instrument</div><h3 class="diff-h">&ldquo;The camera does not negotiate.&rdquo;</h3><p class="diff-b">Six film disciplines in live settings record the regulatory state that deliberate performance cannot fully mask. Movement, breath, vocal register, interpersonal timing. <strong>The body&#8217;s actual operating state &mdash; not self-report.</strong></p><div class="diff-sci">Unique to THO</div></div><div class="diff-card"><div class="diff-n">03 &middot; The Mechanism</div><h3 class="diff-h">&ldquo;Insight cannot update a prediction prior. Somatic experience can.&rdquo;</h3><p class="diff-b">The brain confirms its existing model before it updates it. <strong>Every insight-based programme that failed your organisation failed at this junction.</strong> This is why the work lasts.</p><div class="diff-sci">Barrett (2017) &middot; Friston (2010)</div></div></div>
   </div>
 </div>
 
-<!-- HOW THIS WORKS — compact process overview for immediate offer clarity -->
-<section class="fade-in" style="padding:48px 44px">
-  <div class="wrap" style="max-width:720px">
-    <h2 class="section-label stagger-1" style="margin-bottom:24px">How This Works</h2>
-    <div class="overview-steps stagger-2">
-      <div class="overview-step">
-        <span class="overview-num">01</span>
-        <div class="overview-body">
-          <div class="overview-name">Entry Conversation</div>
-          <div class="overview-detail">45 minutes. At eye level. No fee.</div>
-        </div>
-      </div>
-      <div class="overview-step">
-        <span class="overview-num">02</span>
-        <div class="overview-body">
-          <div class="overview-name">Trust Architecture Diagnostic</div>
-          <div class="overview-detail">3–4 weeks, on-site. A map of where survival patterns cost the most.</div>
-        </div>
-      </div>
-      <div class="overview-step">
-        <span class="overview-num">03</span>
-        <div class="overview-body">
-          <div class="overview-name">Origin Work</div>
-          <div class="overview-detail">3–5 months, on-site. Dissolving patterns in real meetings, real decisions.</div>
-        </div>
-      </div>
-      <div class="overview-step">
-        <span class="overview-num">04</span>
-        <div class="overview-body">
-          <div class="overview-name">Integration + Review</div>
-          <div class="overview-detail">New structures embedded in daily operations. Honest assessment at 6 months.</div>
-        </div>
-        <span style="font-family:var(--display);font-weight:300;font-size:12px;color:var(--tx4);white-space:nowrap">Included</span>
-      </div>
-    </div>
-    <div class="overview-link stagger-3"><a href="#process">Full process detail and pricing ↓</a></div>
-  </div>
-</section>
-
 <div class="section-div"></div>
 
-<!-- THE COMPOSITION — USP micro-section · open layout (no dark frame) -->
-<section class="standapart fade-in">
+<section id="diagnostic" class="fade-in" style="padding:var(--section-pad) 44px">
   <div class="wrap">
-    <h2 class="section-label stagger-1">The Composition</h2>
-    <div class="standapart-grid stagger-2">
-      <div class="standapart-card">
-        <div class="standapart-label">01 · Origin</div>
-        <div class="standapart-title">25 Years Inside The Film Industry</div>
-        <p class="standapart-body">Writing. Directing. Acting. Editing. Producing. Intimacy Coordination. Six disciplines from <strong>a craft where trust is built under pressure, with no second take.</strong></p>
-      </div>
-      <div class="standapart-card">
-        <div class="standapart-label">02 · Method</div>
-        <div class="standapart-title">Six Disciplines · One Diagnostic</div>
-        <p class="standapart-body">A diagnostic system mapped to <strong>nine zones of organisational nervous-system architecture.</strong> Applied in live conversations, in real decisions, in the rooms where it matters.</p>
-      </div>
-      <div class="standapart-card">
-        <div class="standapart-label">03 · Grounding</div>
-        <div class="standapart-title">Anchored In Neurobiology</div>
-        <p class="standapart-body">Porges. Edmondson. Barsade. Keltner. Frankl. Brown. <strong>The research on why organisations default to survival</strong> — and the conditions for return.</p>
-      </div>
-    </div>
-    <p class="standapart-punch">Three things worth knowing before we begin. The first one isn't a career fact.</p>
+    <h2 class="section-label">Your Organisation &mdash; A Pulse Check</h2>
+    <h2 style="font-family:var(--serif);font-weight:600;font-style:italic;font-size:clamp(28px,4.5vw,50px);line-height:1.12;color:var(--white);margin-bottom:20px;letter-spacing:-0.5px">How much is the pattern costing you right now?</h2>
+    <p class="sec-text" style="max-width:560px;margin:0 auto">Nine questions. Three minutes. The result is a pattern map &mdash; not a score.</p>
   </div>
-</section>
-
-<div class="section-div"></div>
-
-<!-- THE PROBLEM -->
-<!-- NOTE: D6 reframe deferred. Current copy preserved unchanged. -->
-<section id="problem" class="fade-in">
-  <div class="wrap">
-    <h2 class="section-label stagger-1">The Problem No One's Measuring</h2>
-    <p class="sec-text stagger-2">It's never a people problem. It's one condition: an organisation running on <strong>survival architecture</strong> — the pattern your team learned to protect themselves with under pressure, and never switched off. It decides who speaks, who stays silent, what gets escalated, and what gets buried.</p>
-    <p class="sec-text stagger-3">You see it in the hire who leaves at month four. In the feedback no one gives honestly. In the conversation after the meeting — the one that contradicts it. The nervous system decides safety or threat before anyone in the room is conscious of it. The pattern predates the organisation. It predates the leader's first day. In most cases, it predates their first word.</p>
-    <p class="sec-text stagger-3">That's the layer no restructure reaches. No software sees it. <strong>Because everyone accepts it.</strong></p>
-    <blockquote class="quote-block stagger-4" cite="https://thehumanorigin.org/en/#quote2">
-      <div class="quote-text">"Most organisations perform the company they wish they were — not the one they actually are."</div>
-      <div class="quote-attr">Tom Waldek</div>
-    </blockquote>
-  </div>
-</section>
-
-<div class="section-div"></div>
-
-<!-- POSITIVE PROOF — moved up for outcome speed (research: outcome before method) -->
-<section id="proof" class="fade-in">
-  <div class="wrap">
-    <h2 class="section-label">Positive Proof</h2>
-    <p class="proof-frame">Not aspirations. <strong>Measured shifts.</strong> What this looks like on your P&L.</p>
-    <div class="proof-grid" id="proof-section">
-      <div class="proof-card">
-        <div class="proof-num"><span class="proof-counter cyan" data-target="67" data-suffix="%">0%</span> less turnover</div>
-        <div class="proof-label">The largest hidden line item in any mid-market P&L — cut by two-thirds when the survival pattern lifts.</div>
-        <div class="proof-src">Gallup Workplace Research</div>
-      </div>
-      <div class="proof-card">
-        <div class="proof-num"><span class="proof-counter cyan" data-target="7" data-suffix="×">0×</span> more experimentation</div>
-        <div class="proof-label">Seven times the innovation velocity in psychologically safe teams — without hiring one additional person.</div>
-        <div class="proof-src">Edmondson & Lei, 2014</div>
-      </div>
-      <div class="proof-card">
-        <div class="proof-num"><span class="proof-counter orange" data-target="76" data-suffix="%">0%</span> more engagement</div>
-        <div class="proof-label">The capacity you're already paying for, finally delivered. The variable: whether your leaders act from themselves or perform a role.</div>
-        <div class="proof-src">Psychological Capital Research</div>
-      </div>
-      <div class="proof-card">
-        <div class="proof-num"><span class="proof-counter orange" data-target="3" data-suffix="×">0×</span> innovation rate</div>
-        <div class="proof-label">Three times the ideas reaching the decision table — the ones that don't get killed in the silence.</div>
-        <div class="proof-src">Edmondson, Harvard</div>
+  <div class="d-widget" style="max-width:700px;margin:40px auto 0">
+    <div class="d-phase active" id="d-intro">
+      <div style="text-align:center;padding:40px 20px">
+        <div class="section-label" style="margin-bottom:16px">Pulse Check</div>
+        <div style="font-family:var(--serif);font-size:22px;color:var(--white);margin-bottom:14px;font-weight:600">9 questions &middot; 3 minutes &middot; Anonymous</div>
+        <p style="font-size:15px;color:var(--tx2);line-height:1.7;margin-bottom:28px;max-width:460px;margin-left:auto;margin-right:auto">Each question maps to a specific zone of organisational nervous-system architecture. The results show where survival architecture is active &mdash; and what it&#8217;s costing.</p>
+        <button class="btn-primary" onclick="dStart()">Start Pulse Check</button>
       </div>
     </div>
-    <p class="sec-text" style="margin-top:40px;text-align:center;max-width:720px;margin-left:auto;margin-right:auto">Across EU organisations, stress-related absence alone averages roughly <strong>€3,000 per employee per year</strong> (derived from EU-OSHA). For a 500-person company, that's <strong>€1.5 million annually</strong>. Before counting stalled decisions, suppressed ideas, and departures no one saw coming. <strong>The survival architecture is on your P&L whether you measure it or not.</strong></p>
-
-    <!-- WHAT SUCCESS LOOKS LIKE — outcome block (extracted from FAQ #6 for visibility) -->
-    <blockquote class="quote-block" style="margin-top:48px">
-      <div class="quote-text" style="font-size:16px;letter-spacing:0.8px;line-height:1.9">The decisions that were circling for weeks get made in one honest conversation. The hire who was about to leave stays — because someone finally asked the real question. The leadership table stops performing alignment — and starts making it real. Partnerships renew. Because every conversation stopped being a performance.</div>
-      <div class="quote-attr">What Changes When The Pattern Lifts</div>
-    </blockquote>
-
-    <!-- LAYER 2: FELT EXPERIENCE — the Tuesday morning after the engagement -->
-    <p class="sec-text" style="margin-top:36px;text-align:center;max-width:660px;margin-left:auto;margin-right:auto;color:rgba(255,245,230,0.78);line-height:2">The meeting starts and you notice it: <strong>you're not bracing.</strong> The room isn't performing. Someone says what they actually think — and <strong>no one flinches.</strong> You make the call you've been circling for weeks, and it lands. Not because you found the right strategy. Because <strong>you stopped leading from the pattern.</strong></p>
-  </div>
-</section>
-
-<div class="section-div"></div>
-
-<!-- WHO THIS IS FOR — moved up for outcome speed (research: audience recognition before method) -->
-<section id="for" class="fade-in">
-  <div class="wrap">
-    <h2 class="section-label stagger-1" style="color:var(--orange)">Who This Is For</h2>
-    <div class="for-statements">
-      <div class="for-block stagger-2">
-        <p>Leaders shaped by a story that <em>no longer serves</em>. Sometimes a story that was running before they had language for it.</p>
-      </div>
-      <div class="for-block stagger-3">
-        <p>Organisations running patterns they've <em>never examined</em>.</p>
-      </div>
-      <div class="for-block stagger-4">
-        <p>Teams performing a version of themselves that <em>everyone maintains and no one believes</em>.</p>
-      </div>
-    </div>
-    <p class="for-closing stagger-4">Not because something is broken. Because the gap between how your organisation performs and what your people are actually capable of has become too expensive to ignore.</p>
-  </div>
-</section>
-
-<div class="section-div"></div>
-
-<div class="section-signpost fade-in">Three ideas behind the method — then the method itself.</div>
-
-<!-- THE ORIGIN OF EVERY PATTERN — thesis elevated from quote -->
-<section id="origin" class="fade-in">
-  <div class="wrap">
-    <h2 class="section-label stagger-1">The Origin of Every Pattern</h2>
-    <blockquote class="thesis stagger-2" cite="https://thehumanorigin.org/en/#quote1" style="border:0">
-      <p class="thesis-text">The organisation doesn't copy the leader's strategy.<br>It copies <span class="highlight">the leader's nervous system.</span></p>
-    </blockquote>
-    <p class="sec-text stagger-2" style="font-style:italic;color:rgba(255,242,225,0.60)">I recognise this pattern because I carried one for most of my adult life — formed before I had language for it.</p>
-    <p class="sec-text stagger-3">Not a metaphor. Neurologically. Every unresolved story a leader carries becomes the operating system the team breathes. The story doesn't have to be remembered to run. Some of the most expensive patterns in your organisation began before language was possible. Keltner's research confirms what every room already knows: power without self-awareness erodes the empathy that built it.</p>
-
-
-    <!-- WHY BEFORE HOW — LOCKED COPY per claude.md §15 (merged with Origin) -->
-    <h2 class="section-label" style="margin-top:56px">Why Before How</h2>
-    <div class="feature-card feature-cyan">
-      <p class="sec-text">Frankl saw it before anyone in business did: people don't default to survival because they're weak. They default because they've lost access to what matters — <strong>their own meaning.</strong> The role replaces the reason. Performance fills the void where purpose used to live. Every survival pattern in an organisation traces back to this one absence — a WHY that was never asked for, and a person who stopped believing it mattered. Performance. Control. Compliance. What looks like a leadership problem is <strong>a meaning problem.</strong> Restore access to the WHY, and the pattern has nothing left to run on.</p>
-      <p class="sec-text" style="text-align:center">The work starts there. Before strategy. Before method. At the WHY.</p>
-
-    </div>
-  </div>
-</section>
-
-<!-- THE OPPORTUNITY + CREATIVITY — merged to reduce cognitive load -->
-<section id="opportunity" class="fade-in">
-  <div class="wrap">
-    <h2 class="section-label">The Opportunity No One's Automating</h2>
-    <div class="feature-card feature-orange">
-      <p class="sec-text">Every organisation asking what AI will replace is answering its own question. The behaviour most at risk was never creative, never personal, never present. It was pattern. Optimised performance. Managed risk. The anxiety isn't that AI will take something from you. It's the recognition that what you've been performing was never uniquely yours to begin with.</p>
-      <p class="sec-text">What no system replicates is what that architecture has been hiding: <strong>the full capacity of your people.</strong> Reading a room. Making the real calls. Being right — not from data, but from something a nervous system knows before language does. Not soft skill. The original technology.</p>
-    </div>
-
-    <!-- WHERE CREATIVITY RETURNS — merged with Opportunity -->
-    <h2 class="section-label" style="margin-top:56px">Where Creativity Returns</h2>
-    <div class="feature-card feature-blend">
-      <p class="sec-text">That capacity doesn't return on command. Survival is repetition — same seat, same response, same performance — and the nervous system keeps choosing it until something breaks the loop.</p>
-      <div class="creativity-display">Creativity is <span class="accent">that break.</span></div>
-      <p class="sec-text">Not as art. As practice. A different opening question. A restructured agenda. A seat change at the leadership table — each micro-disruption signals to the nervous system: <strong>safety doesn't require sameness.</strong></p>
-      <p class="sec-text">Start small and you build the capacity for what matters: the brave conversation, the honest decision, the moment you lead from yourself — not from the role. <strong>The Human Origin doesn't teach creativity. It removes what blocks it.</strong> What it uncovers was always yours. It was there before anyone taught you it wasn't welcome.</p>
-    </div>
-  </div>
-</section>
-
-<div class="section-div"></div>
-
-<!-- TRUST CASCADE — LOCKED COPY per claude.md §16 -->
-<section id="trust" class="fade-in">
-  <div class="wrap">
-    <h2 class="section-label">The Trust Cascade</h2>
-    <p class="sec-text stagger-1" style="font-style:italic;color:rgba(255,242,225,0.60)">I have been that person — the one in the room whose nervous system was already deciding what was safe to say before anyone opened their mouth.</p>
-    <p class="sec-text">The leader's nervous system is the organisation's first operating system. Not metaphorically. Neurologically. Which means the conditions that shaped that nervous system — long before the first leadership role, sometimes before the first memory — are already in the room.</p>
-    <p class="sec-text">When <strong>survival architecture</strong> is running the leader, it runs the room. <strong>Because everyone accepts it.</strong> It starts being the atmosphere — the unspoken agreement about what can and cannot be said, decided, or risked.</p>
-    <p class="sec-text"><strong>Control replaces connection.</strong> Performance replaces presence.</p>
-    <p class="sec-text" style="color:rgba(255,242,225,0.65)">The cost is measurable: every unspoken truth at your leadership table has a line item on your P&L.</p>
-    <blockquote class="quote-block">
-      <div class="quote-text">&ldquo;The aura changes. Not the strategy. Not the structure. The room gets warmer, trust gets easier, and courage stops being an initiative and starts being the atmosphere.&rdquo;</div>
-      <div class="quote-attr">Tom Waldek</div>
-    </blockquote>
-  </div>
-</section>
-
-<div class="section-div"></div>
-
-<!-- METHOD -->
-<section id="method" class="fade-in">
-  <div class="wrap">
-    <h2 class="section-label stagger-1">The Method</h2>
-    <div class="sec-head stagger-2" style="font-size:clamp(24px,3.5vw,36px);font-weight:500">Six Film Disciplines. One Leadership Architecture.</div>
-    <p class="sec-text" style="text-align:center;margin-bottom:28px;color:var(--cyan)">Each discipline is applied where your organisation actually operates — in real meetings, real decisions, real conversations. In the room where it matters.</p>
-    <div class="method-anchor stagger-2">
-      Most of what follows will sound familiar to anyone who has read enough leadership books. <strong>One discipline will not.</strong> It is the only one in this methodology that no other consultant in the world is applying to leadership — and it is where the work goes deepest.
-    </div>
-    <div class="disc-grid stagger-3">
-      <div class="disc-card">
-        <div class="disc-num">01 — Writing</div>
-        <h3 class="disc-name">Shaping the narrative before anyone performs it.</h3>
-        <div class="disc-desc">Character is built from personal story, not job description. This discipline surfaces the narratives everyone is carrying beneath the performance.</div>
-      </div>
-      <div class="disc-card">
-        <div class="disc-num">02 — Intimacy Coordination</div>
-        <h3 class="disc-name">Vulnerability as daily practice — protocol from set, applied at the leadership table. The reason trust forms.</h3>
-        <div class="disc-desc">Film's newest discipline. The protocol set before pressure arrives — vulnerability integrated into daily actions, so 'I don't know' and 'I disagree' have somewhere to land at the leadership table.</div>
-      </div>
-      <div class="disc-card">
-        <div class="disc-num">03 — Directing</div>
-        <h3 class="disc-name">Creating conditions where truth shows up.</h3>
-        <div class="disc-desc">A director never tells anyone what to feel. They adjust the room until what's real has no choice but to appear. Applied between meetings, where culture lives.</div>
-      </div>
-      <div class="disc-card">
-        <div class="disc-num">04 — Acting</div>
-        <h3 class="disc-name">The difference between performed safety and real presence.</h3>
-        <div class="disc-desc">An actor's craft: accessing what's true and acting from there. Applied to entire teams — replacing the version pressure taught everyone to perform with something genuine.</div>
-      </div>
-      <div class="disc-card">
-        <div class="disc-num">05 — Editing</div>
-        <h3 class="disc-name">Cutting what no longer serves the story. Strengthening what carries it.</h3>
-        <div class="disc-desc">Cutting the rituals, hierarchies, and unspoken rules that exist to keep people hiding instead of serving the work.</div>
-      </div>
-      <div class="disc-card">
-        <div class="disc-num">06 — Producing</div>
-        <h3 class="disc-name">Turning creative vision into operational reality.</h3>
-        <div class="disc-desc">The backbone that lets people do their best work — support, communication, protection. So they can stop holding it together alone.</div>
-      </div>
-    </div>
-    <p class="sec-text stagger-4" style="margin-top:36px">A director doesn't tell actors what to feel. A director creates conditions where truth shows up. The Human Origin works the same way — regulate the nervous system, structural and personal, surface the survival narrative hiding behind reputation and performance, and watch what your teams are actually capable of. Measured in decisions made, people retained, and trust that shows up in the numbers.</p>
-  </div>
-</section>
-
-<div class="section-div"></div>
-
-<!-- THE ARCHITECTURE — synthesis section integrating research + zones + disciplines + outcomes -->
-<section id="architecture" class="architecture fade-in">
-  <div class="wrap">
-    <h2 class="section-label stagger-1">The Architecture</h2>
-    <div class="sec-head stagger-2" style="font-size:clamp(24px,3.5vw,36px);font-weight:500;line-height:1.25">Six Disciplines. Nine Zones.<br><span style="background:linear-gradient(135deg,var(--cyan),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:600;display:inline-block;margin-top:8px">One System.</span></div>
-    <p class="sec-text arch-intro stagger-2">The methodology is not six disciplines applied independently. It is six disciplines applied to nine zones of organisational nervous-system architecture. Each zone anchored in peer-reviewed research. Each discipline operating in a specific engagement phase. <strong>This is the map.</strong></p>
-
-    <div class="arch-header stagger-3">
-      <div class="arch-col-label">Discipline</div>
-      <div class="arch-col-label">Research Anchor</div>
-      <div class="arch-col-label">Diagnostic Zone</div>
-      <div class="arch-col-label">What Changes</div>
-    </div>
-
-    <div class="arch-stack">
-
-      <div class="arch-row">
-        <div class="arch-discipline"><span class="arch-num">01</span><span class="arch-title">Writing</span></div>
-        <div class="arch-cell arch-research" data-label="Research">Frankl · Barsade</div>
-        <div class="arch-cell arch-zone" data-label="Diagnostic Zone">Meaning Access · Narrative Gap</div>
-        <div class="arch-cell arch-change" data-label="What Changes">The story told matches the story lived</div>
-      </div>
-
-      <div class="arch-row">
-        <div class="arch-discipline"><span class="arch-num">02</span><span class="arch-title">Intimacy Coordination</span></div>
-        <div class="arch-cell arch-research" data-label="Research">Brown · Rodis (SAG-AFTRA)</div>
-        <div class="arch-cell arch-zone" data-label="Diagnostic Zone">Attachment · Safety & Honesty</div>
-        <div class="arch-cell arch-change" data-label="What Changes">Vulnerability as daily practice</div>
-      </div>
-
-      <div class="arch-row">
-        <div class="arch-discipline"><span class="arch-num">03</span><span class="arch-title">Directing</span></div>
-        <div class="arch-cell arch-research" data-label="Research">Porges · Edmondson</div>
-        <div class="arch-cell arch-zone" data-label="Diagnostic Zone">Survival Architecture · Safety & Honesty</div>
-        <div class="arch-cell arch-change" data-label="What Changes">Conditions where truth shows up, not silence</div>
-      </div>
-
-      <div class="arch-row">
-        <div class="arch-discipline"><span class="arch-num">04</span><span class="arch-title">Acting</span></div>
-        <div class="arch-cell arch-research" data-label="Research">Barsade · Keltner</div>
-        <div class="arch-cell arch-zone" data-label="Diagnostic Zone">Peer Dynamics · The Origin</div>
-        <div class="arch-cell arch-change" data-label="What Changes">Real presence replaces performed safety</div>
-      </div>
-
-      <div class="arch-row">
-        <div class="arch-discipline"><span class="arch-num">05</span><span class="arch-title">Editing</span></div>
-        <div class="arch-cell arch-research" data-label="Research">Keltner · Edmondson</div>
-        <div class="arch-cell arch-zone" data-label="Diagnostic Zone">External Trust Signal</div>
-        <div class="arch-cell arch-change" data-label="What Changes">Cutting what keeps people hiding</div>
-      </div>
-
-      <div class="arch-row">
-        <div class="arch-discipline"><span class="arch-num">06</span><span class="arch-title">Producing</span></div>
-        <div class="arch-cell arch-research" data-label="Research">Porges (co-regulation)</div>
-        <div class="arch-cell arch-zone" data-label="Diagnostic Zone">Relational Pattern</div>
-        <div class="arch-cell arch-change" data-label="What Changes">The backbone so people stop holding it alone</div>
-      </div>
-
-    </div>
-
-    <p class="arch-closer">When the diagnostic runs, this is the map being populated. When Origin Work begins, <strong>the highest-cost zones are addressed first — measured against decision speed, turnover, and partner trust.</strong></p>
-  </div>
-</section>
-
-<div class="section-div"></div>
-
-<!-- PROCESS — dark card frame matching WHY section -->
-<section id="process" class="fade-in">
-  <div class="wrap">
-    <div class="process-frame">
-      <div class="process-frame-inner">
-        <h2 class="section-label">How The Work Happens</h2>
-        <p class="phase-frame">Nothing hidden. The price on the page is the price on the invoice. <strong>No expanded scope. No retroactive surcharges.</strong></p>
-        <p style="font-family:var(--ff);font-weight:400;font-size:14px;color:rgba(255,242,225,0.85);line-height:1.7;text-align:center;max-width:720px;margin:0 auto 32px">Investment: <strong>€12,000</strong> for the diagnostic. Origin Work and Retained Advisory: scoped after the diagnostic. ROI benchmark: EU-OSHA data shows stress-related absence alone costs <strong>€3,000 per employee per year</strong> — €1.5M annually for a 500-person company. One retained senior hire pays for the diagnostic.</p>
-        <div class="phase-list">
-      <div class="phase">
-        <div class="phase-num">0</div>
-        <div class="phase-body">
-          <div class="phase-name">Entry Conversation</div>
-          <div class="phase-desc">45 minutes. One-on-one with Tom Waldek, on-site or video. A conversation at eye level. One question — the real one.</div>
-        </div>
-        <div class="phase-fee">No fee</div>
-      </div>
-      <div class="phase phase-optional">
-        <div class="phase-num">+</div>
-        <div class="phase-body">
-          <div class="phase-eyebrow">Optional · before Phase 1</div>
-          <div class="phase-name">Diagnostic Debrief</div>
-          <div class="phase-desc">90 minutes, on-site or video, with you alone. A documented initial assessment of the most active survival patterns in your leadership team — with a concrete recommendation on whether a full diagnostic applies — and where. Deliverable: written debrief report.</div>
-        </div>
-        <div class="phase-fee">By application</div>
-      </div>
-      <div class="phase">
-        <div class="phase-num">1</div>
-        <div class="phase-body">
-          <div class="phase-name">Trust Architecture Diagnostic</div>
-          <div class="phase-desc">3–4 weeks, on-site. Five observation contexts in your leadership team's real meetings and decision moments. One-on-one conversations with each leader. Deliverable: Trust Architecture Map — documenting where patterns are active, what they cost and where the work begins.</div>
-        </div>
-        <div class="phase-fee">€12K</div>
-      </div>
-      <div class="phase">
-        <div class="phase-num">2</div>
-        <div class="phase-body">
-          <div class="phase-name">Origin Work</div>
-          <div class="phase-desc">3–5 months, on-site, typically 2–3 days per month. Structural interventions in live meetings, one-on-one sessions with leaders, team-level pattern work embedded in daily operations. Decisions from the person — not the pattern.</div>
-        </div>
-        <div class="phase-fee">By application</div>
-      </div>
-      <div style="padding:12px 0 4px;text-align:center;font-family:var(--display);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--tx4)">Included in Origin Work</div>
-      <div class="phase" style="opacity:0.7">
-        <div class="phase-num">3</div>
-        <div class="phase-body">
-          <div class="phase-name">Integration</div>
-          <div class="phase-desc">Concurrent with the final 4–6 weeks of Origin Work. New conversation structures, decision processes, and feedback formats are embedded in daily operations — with guided application in the real business.</div>
-        </div>
-        <div class="phase-fee">Included</div>
-      </div>
-      <div class="phase" style="opacity:0.7">
-        <div class="phase-num">4</div>
-        <div class="phase-body">
-          <div class="phase-name">Review</div>
-          <div class="phase-desc">Half-day on-site, 6 months after completion. Measured against the original diagnostic: what shifted, what held, what needs attention. Honest assessment. Course correction if needed — timing adjustable by mutual agreement.</div>
-        </div>
-        <div class="phase-fee">Included</div>
-      </div>
-      <div style="padding:12px 0 4px;text-align:center;font-family:var(--display);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--tx4)">Optional</div>
-      <div class="phase phase-optional">
-        <div class="phase-num">+</div>
-        <div class="phase-body">
-          <div class="phase-eyebrow">Optional · after Phase 4</div>
-          <div class="phase-name">Retained Advisory</div>
-          <div class="phase-desc">Ongoing. Available following Origin Work completion. Monthly leadership-table observation, direct access for critical decisions, quarterly pattern review.</div>
-        </div>
-        <div class="phase-fee">By application</div>
-      </div>
-    </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="section-div"></div>
-
-<!-- DIAGNOSTIC ENHANCED — prominence upgrade, integrated with feature-card system -->
-<section id="diagnostic" class="fade-in">
-  <div class="wrap">
-    <div id="d-intro" class="d-phase active">
-      <div class="diag-headline stagger-1">Your Organisation — <span class="accent">A Pulse Check</span></div>
-      <div class="feature-card feature-blend diag-card stagger-2">
-        <div class="diag-stats" id="diag-stats-section">
-          <div class="diag-stat">
-            <span class="diag-stat-num diag-counter" data-target="9">0</span>
-            <span class="diag-stat-label">Questions</span>
-          </div>
-          <div class="diag-stat-divider"></div>
-          <div class="diag-stat">
-            <span class="diag-stat-num diag-counter" data-target="9">0</span>
-            <span class="diag-stat-label">Zones</span>
-          </div>
-          <div class="diag-stat-divider"></div>
-          <div class="diag-stat">
-            <span class="diag-stat-num diag-counter" data-target="3">0</span>
-            <span class="diag-stat-label">Minutes</span>
-          </div>
-        </div>
-        <p class="diag-subtitle">No data stored. The result is yours alone — an honest mirror of what's running underneath.</p>
-        <div class="diag-measures">
-          <div class="diag-measures-label">What This Measures</div>
-          <div class="diag-measures-body">Each question maps to a zone where survival patterns operate. Your results show where the patterns are active — and what they cost.</div>
-        </div>
-        <div class="diag-cta-wrap">
-          <button class="d-btn d-btn-cyan" onclick="dStart()">Start Pulse Check</button>
-          <p class="diag-standalone">Or take it as a standalone page — <a href="/en/pulse-check/">thehumanorigin.org/en/pulse-check</a></p>
-          <div class="diag-audience">For C-Level · HR · Team Leaders · Team Members</div>
-        </div>
-      </div>
-    </div>
-    <div id="d-questions" class="d-phase">
+    <div class="d-phase" id="d-questions">
       <div id="d-prog" class="d-prog"></div>
       <div id="d-qcard" class="d-card"></div>
       <div class="d-nav">
@@ -1670,342 +1067,119 @@ footer a:hover{color:var(--cyan)}
         <button id="d-next" class="d-btn d-btn-cyan dis" onclick="dNext()">Next &#8594;</button>
       </div>
     </div>
-    <div id="d-results" class="d-phase"></div>
+    <div class="d-phase" id="d-results"></div>
   </div>
 </section>
 
 <div class="section-div"></div>
 
-<!-- WHY THIS WORK EXISTS — cinematic upgrade · shortened from claude.md §14 (session amendment) -->
-<section class="why-section fade-in">
-  <div class="wrap">
-    <div class="why-frame">
-      <div class="why-frame-inner">
-        <h2 class="section-label">Why This Work Exists</h2>
-        <div class="why-eyebrow">The Origin Story</div>
-        <div class="why-photo" id="why-photo">
-          <img src="../TomWaldek_cinema_seats.jpg" alt="Empty cinema seats — the origin of Tom Waldek's methodology bridging film disciplines and organisational leadership">
-        </div>
-<div class="why-text">
-<div class="why-verse">
-  <p>I was kept alive by a machine before I was ever held in human arms.</p>
-  <p>I learned the difference in my body before I had a word for it.</p>
-  <p>A whole world is now making the same trade &#8212; and calling it connection.</p>
-</div>
-<p class="why-break">It isn&#8217;t.</p>
-
-<p>I was born three months early. The first five months of my life ran inside an incubator &#8212; no skin contact recorded. In my second year: chemotherapy and surgery for liver cancer. The window when a nervous system learns safety through another body&#8217;s warmth and rhythm &#8212; I spent it being kept alive by machines. The foundation most people receive by default was never built. Increasingly, neither is anyone else&#8217;s. The only difference is that most never learn what it cost them.</p>
-
-<p>My pattern wasn&#8217;t numbness. It was reaction &#8212; fast, specific, outside my reach in the moment it was happening. Under sustained external pressure, autopilot. But in nature, at sea, in genuine intimacy &#8212; I was there. Fully. That told me the capacity was never lost. It just needed the right conditions. The work was learning to bring those conditions inside &#8212; into the body I was already living in.</p>
-
-<p>I built capacity from inside the deficit. In an incubator, on set, in rooms I wasn&#8217;t supposed to be in, and in rooms where I finally stopped pretending otherwise. That capacity still runs in my life. It is not history. It is how I live now &#8212; and it is why I recognise the pattern in others before they have named it. Making it visible is my mission. Making it permanent is this work.</p>
-
-<div class="why-precision">
-  <p class="why-precision-heading">Where the precision comes from</p>
-  <p>My diagnostic precision has a specific origin: a nervous system shaped by the absence of co-regulation from the first weeks of life, rebuilt deliberately from inside that pattern &#8212; not as a professional project, but as the work of living. That is not biography. It is the foundation of every diagnostic I conduct, and the reason I recognise what others have learned to overlook.</p>
-</div>
-</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ — §16 per claude.md §7 · 11 items per §12 · GEO-optimised for LLM ingestion -->
-<section id="faq" class="fade-in">
-  <div class="wrap">
-    <div class="sec-head stagger-1" style="font-family:var(--serif);font-weight:600;font-size:clamp(28px,4vw,42px);color:var(--white);letter-spacing:-0.4px;text-align:center;margin-bottom:48px">Common Questions</div>
-    <div class="faq-wrap stagger-2">
-
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-text">Is this therapy, coaching, or a training programme?</div>
-          <div class="faq-icon">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            <p><strong>A diagnostic and re-architecture of the survival patterns your organisation runs on without knowing it</strong> — surfaced and changed inside your real meetings and your real decisions. The methodology comes from film, where trust is built under pressure with no second take.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-text">How is this different from leadership development?</div>
-          <div class="faq-icon">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            <p>Leadership development adds skills to the person. <strong>This work removes the survival patterns running them.</strong> Survival architecture is the hidden operating system most leadership programmes politely work around. The Human Origin makes it visible and addresses it at the source — the leader's nervous system. The nervous system, not the behaviour. Outcomes that show up in turnover, decision speed, and partner retention.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-text">My organisation is performing well. Why would I consider this?</div>
-          <div class="faq-icon">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            <p>Performing and thriving are not the same. Most organisations that look healthy on the numbers are running survival architecture underneath — <strong>the capacity already in the building, held back by patterns no one has named.</strong> The question isn't whether you're performing. It's how much decision speed, honest escalation, and initiative you're losing to a pattern that looks like professionalism but functions as self-protection.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-text">What does the engagement require from us?</div>
-          <div class="faq-icon">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            <p>A leader willing to examine what they've been performing. A team ready to say what's true. <strong>Calendar time: 45 minutes for the Entry Conversation, 3–4 weeks for the Trust Architecture Diagnostic, 3–5 months for Origin Work — the full engagement.</strong> The work happens in your real meetings and your real decisions — where the survival patterns are already running.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-text">How long does it take?</div>
-          <div class="faq-icon">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            <p>Entry Conversation: 45 minutes. Trust Architecture Diagnostic: 3–4 weeks. Origin Work (optional): 3–5 months. Integration runs concurrently with the final weeks of Origin Work. Review: 6 months after completion. <strong>Total elapsed time for the full arc: 6–9 months.</strong> The diagnostic stands alone as a complete deliverable.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-text">What does success look like?</div>
-          <div class="faq-icon">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            <p>The decisions that were circling for weeks get made in one honest conversation. The hire who was about to leave stays — because someone finally asked the real question. The leadership table stops performing alignment — and starts making it real. Partnerships renew. Because every conversation stopped being a performance. <strong>Measured against turnover cost, decision velocity, and partner retention.</strong></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-text">We've tried leadership development before. Why would this be different?</div>
-          <div class="faq-icon">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            <p>Leadership development works on what leaders do. <strong>This work addresses what runs them.</strong> Most programmes assume the leader is the one who needs upgrading. This one starts with the leader's nervous system as the organisation's operating system — Porges, Edmondson, Keltner, Frankl. The science is current. The programmes you've tried aren't.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-text">Is everything confidential?</div>
-          <div class="faq-icon">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            <p><strong>Yes.</strong> Every conversation in every phase. Observation notes, diagnostic findings, and the full Trust Architecture Map are delivered to you alone. Nothing is shared internally or externally without your explicit written consent. The work surfaces things people haven't said aloud before — confidentiality is the condition that makes that possible.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-text">What is the investment?</div>
-          <div class="faq-icon">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            <p><strong>Transparent and on this page.</strong> Entry Conversation: no fee. Trust Architecture Diagnostic: <strong>€12,000.</strong> Diagnostic Debrief, Origin Work, and Retained Advisory: by application, scoped after the diagnostic. No hidden costs, no expanded scopes mid-engagement.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-text">Do you have evidence this works?</div>
-          <div class="faq-icon">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            <p>The methodology is grounded in peer-reviewed research: <strong>Porges (Polyvagal Theory), Edmondson (Psychological Safety), Barsade (Emotional Contagion), Keltner (Power Paradox), Frankl (Logotherapy).</strong> The film-discipline application is new and proprietary. Case evidence is shared under NDA in the Entry Conversation — not in marketing material. Specifically: documented engagements with measurable outcomes in turnover, decision speed, and partner retention.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-text">Do you work internationally?</div>
-          <div class="faq-icon">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            <p><strong>Based in Europe. Working wherever the patterns are.</strong> Engagements run on-site — in your real meetings, your real decisions, your building — because survival architecture lives in the room, not on a screen. The suitcase is always packed. Native German, fluent English. The methodology and the commitment travel. The work happens where you are.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
+<section id="process" class="fade-in" style="padding:var(--section-pad) 44px">
+  <div class="wrap" style="max-width:760px;text-align:left">
+    <h2 class="section-label" style="text-align:center">How The Work Happens</h2>
+    <h2 style="font-family:var(--serif);font-weight:600;font-size:clamp(26px,4vw,44px);line-height:1.15;color:var(--white);margin-bottom:8px;text-align:center;letter-spacing:-0.4px">Five phases. No workshops.</h2>
+    <div class="quote-block" style="max-width:560px;margin:28px auto 48px"><div class="quote-text">&#8220;Not dishonest. Not weak. Just never given the conditions for anything braver. Create them, and people flourish. The work follows.&#8221;</div><div class="quote-attr">Tom Waldek</div></div>
+    <div class="phase-list"><div class="phase"><div class="phase-num">0</div><div class="phase-content"><div class="phase-name">Entry Conversation</div><p class="phase-desc">45 minutes. A conversation at eye level. No pitch. Just one question &mdash; the real one.</p></div><div class="phase-fee">No fee</div></div><div class="phase"><div class="phase-num">1</div><div class="phase-content"><div class="phase-name">Trust Architecture Diagnostic</div><p class="phase-desc">3&ndash;4 weeks on-site. Five observation contexts in live meetings. <strong>Deliverable: Trust Architecture Map</strong> &mdash; the first diagnostic of the specific operating system running your organisation.</p></div><div class="phase-fee">&euro;12K</div></div><div class="phase"><div class="phase-num">2</div><div class="phase-content"><div class="phase-name">Origin Work</div><p class="phase-desc">3&ndash;5 months on-site. Dissolving patterns in live conversations, real decisions. <strong>Deliverable: Decisions from the person &mdash; not the pattern.</strong> The room that holds after the engagement ends.</p></div><div class="phase-fee">On request</div></div><div class="phase"><div class="phase-num">3</div><div class="phase-content"><div class="phase-name">Integration</div><p class="phase-desc">Embedding the new operating conditions into permanent structure. Concurrent with the final weeks of Origin Work.</p></div><div class="phase-fee">Included</div></div><div class="phase"><div class="phase-num">4</div><div class="phase-content"><div class="phase-name">Review</div><p class="phase-desc">6 months after completion. One day on-site. Confirming what held, catching what shifted.</p></div><div class="phase-fee">Included</div></div></div>
   </div>
 </section>
 
 <div class="section-div"></div>
 
-<!-- CTA — LOCKED COPY per claude.md §13 -->
-<section id="contact" class="cta-section fade-in">
-  <h2 class="section-label">The Next Step</h2>
-  <div class="cta-quote">"Come together. Say what's true. Have the courage to create a future your team actually wants to be part of."</div>
-  <p class="sec-text" style="max-width:560px;margin:0 auto 24px;text-align:center">Leaders who say what's true instead of what's safe. Teams that surface problems before they become crises. Partners who stay because working with you feels different.</p>
-  <p style="font-family:var(--display);font-weight:400;font-size:13px;color:var(--cyan);letter-spacing:2px;margin-bottom:40px">A Trust Architecture Diagnostic.</p>
-  <div class="cta-avatar">
-    <img src="../TomWaldek_Actor_01.jpg" alt="Tom Waldek — book an Entry Conversation">
-  </div>
-  <div class="cta-avatar-name">Tom Waldek</div>
-  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-    <a href="mailto:tom@thehumanorigin.org?subject=Trust%20Architecture%20Diagnostic" class="btn-primary" onclick="openBooking(event)">Book a 45-min Entry Conversation — no fee, no pitch</a>
+<section id="contact" class="fade-in" style="padding:var(--section-pad) 44px;text-align:center">
+  <div class="wrap">
+    <h2 class="section-label">The Next Step</h2>
+    <h2 style="font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(26px,4vw,50px);color:var(--white);margin-bottom:18px;letter-spacing:-0.5px;line-height:1.15">Ready to stop performing the organisation you wish you were?</h2>
+    <p class="sec-text" style="max-width:480px;margin:0 auto 14px">Leaders who say what&#8217;s true instead of what&#8217;s safe. Teams that surface problems before they become crises. Partners who stay because working with you feels different.</p>
+    <p style="font-family:var(--display);font-size:12px;color:var(--tx3);letter-spacing:3px;text-transform:uppercase;margin-bottom:40px">A Trust Architecture Diagnostic.</p>
+    <div class="hero-ctas">
+      <a href="mailto:tom@thehumanorigin.org?subject=Entry%20Conversation" class="btn-primary" onclick="openBooking(event)">Book Entry Conversation &mdash; no fee</a>
+      <a href="#diagnostic" class="btn-ghost">Start Pulse Check First</a>
+    </div>
+    <p style="margin-top:24px;font-size:13px;color:var(--tx4)">tom@thehumanorigin.org</p>
   </div>
 </section>
-
-<!-- FOOTER -->
-<footer>
-  <p class="footer-core">Truth leads. Facade costs.</p>
-  <p>© 2026 The Human Origin — Tom Waldek</p>
-  <p class="footer-identity"><a href="mailto:tom@thehumanorigin.org">tom@thehumanorigin.org</a></p>
-  <p class="footer-sources">Scientific grounding: Porges · Edmondson · Barsade · Keltner · Frankl · Brown</p>
-  <p style="margin-top:20px;font-size:11px">
-    <a href="#diagnostic" style="color:var(--tx4);text-decoration:none;margin:0 8px;transition:color 0.3s">Pulse Check</a>
-    <span style="color:var(--tx4)">·</span>
-    <a href="/en/imprint/" style="color:var(--tx4);text-decoration:none;margin:0 8px;transition:color 0.3s">Legal Notice</a>
-    <span style="color:var(--tx4)">·</span>
-    <a href="/en/privacy/" style="color:var(--tx4);text-decoration:none;margin:0 8px;transition:color 0.3s">Privacy Policy</a>
-  </p>
+<footer style="padding:44px;border-top:1px solid var(--border);text-align:center;position:relative;z-index:1">
+  <p style="font-family:var(--serif);font-style:italic;font-size:18px;color:var(--tx2);margin-bottom:12px">Truth leads. Facade costs.</p>
+  <p style="font-family:var(--display);font-size:10px;color:var(--tx4);letter-spacing:2px">&copy; 2026 The Human Origin &middot; Tom Waldek &middot; thehumanorigin.org</p>
+  <p style="font-family:var(--display);font-size:10px;color:var(--tx4);letter-spacing:1px;margin-top:8px">Porges &middot; Fernyhough &middot; Edmondson &middot; Keltner &middot; Frankl &middot; Barrett &middot; Barsade &middot; Friston</p>
 </footer>
 
-<!-- ═══ SCRIPTS ═══ -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
-// ── MOBILE NAV ──
-function toggleNav(){document.getElementById('navLinks').classList.toggle('open');document.getElementById('navHamburger').classList.toggle('open')}
-function closeNav(){document.getElementById('navLinks').classList.remove('open');document.getElementById('navHamburger').classList.remove('open')}
+function toggleNav(){var l=document.getElementById('navLinks');l.classList.toggle('open')}
+function closeNav(){document.getElementById('navLinks').classList.remove('open')}
 
-// ── COUNTING ANIMATION ──
-function animateCounters(){
-  const counters=document.querySelectorAll('.counter-val');
-  counters.forEach(el=>{
-    const target=parseInt(el.dataset.target);
-    const prefix=el.dataset.prefix||'';
-    const suffix=el.dataset.suffix||'';
-    const duration=2000;
-    const startTime=performance.now();
-    function update(now){
-      const elapsed=now-startTime;
-      const progress=Math.min(elapsed/duration,1);
-      const eased=1-Math.pow(1-progress,3);
-      const current=Math.round(target*eased);
-      el.textContent=prefix+current+suffix;
-      if(progress<1)requestAnimationFrame(update);
-    }
-    requestAnimationFrame(update);
-  });
-}
-
-// ── SCROLL OBSERVER — counters fire once ──
-let countersFired=false;
-const statsObs=new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting&&!countersFired){
-      countersFired=true;
-      animateCounters();
-    }
-  });
-},{threshold:0.3});
-const statsEl=document.getElementById('stats-section');
-if(statsEl)statsObs.observe(statsEl);
-
-// ── PROOF COUNTING ANIMATION ──
-function animateProofCounters(){
-  const counters=document.querySelectorAll('.proof-counter');
-  counters.forEach(el=>{
-    const target=parseInt(el.dataset.target);
-    const suffix=el.dataset.suffix||'';
-    const duration=2000;
-    const startTime=performance.now();
-    function update(now){
-      const elapsed=now-startTime;
-      const progress=Math.min(elapsed/duration,1);
-      const eased=1-Math.pow(1-progress,3);
-      const current=Math.round(target*eased);
-      el.textContent=current+suffix;
-      if(progress<1)requestAnimationFrame(update);
-    }
-    requestAnimationFrame(update);
-  });
-}
-let proofFired=false;
-const proofObs=new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting&&!proofFired){
-      proofFired=true;
-      animateProofCounters();
-    }
-  });
-},{threshold:0.3});
-const proofEl=document.getElementById('proof-section');
-if(proofEl)proofObs.observe(proofEl);
-
-// ── FADE IN OBSERVER — sections + section dividers ──
-const fadeObs=new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting)e.target.classList.add('visible');
-  });
-},{threshold:0.1});
-document.querySelectorAll('.fade-in,.section-div').forEach(el=>fadeObs.observe(el));
-
-// ── PROGRESSIVE CARD REVEAL — every card/block scroll-triggered individually ──
-// Each element gets .visible added only when IT enters the viewport (not when its parent does)
-const cardObs=new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.classList.add('visible');
-      cardObs.unobserve(e.target);
-    }
-  });
-},{threshold:0.15,rootMargin:'0px 0px -60px 0px'});
-document.querySelectorAll('.standapart-card,.proof-card,.for-block,.disc-card,.phase,.faq-item,.arch-row').forEach(el=>cardObs.observe(el));
-
-// ── WARM GRADIENT SHIFT ──
-const bgWarmth=document.getElementById('bgWarmth');
-if(bgWarmth){
-  function updateWarmth(){
-    const scrollY=window.scrollY||window.pageYOffset;
-    const docH=document.documentElement.scrollHeight-window.innerHeight;
-    const progress=Math.min(scrollY/(docH*0.7),1);
-    bgWarmth.style.opacity=progress*0.85;
-    requestAnimationFrame(updateWarmth);
+// ── STAT COUNTERS (hero stats + episode callouts) ──
+function animateCounter(el){
+  var raw=el.dataset.target||'0';
+  var prefix=el.dataset.prefix||'';
+  var suffix=el.dataset.suffix||'';
+  var target=parseFloat(raw);
+  var isFloat=raw.indexOf('.')>-1;
+  var start=null,dur=1600;
+  function step(ts){
+    if(!start)start=ts;
+    var p=Math.min((ts-start)/dur,1);
+    var e=1-Math.pow(1-p,3);
+    var val=e*target;
+    el.textContent=prefix+(isFloat?val.toFixed(1):Math.floor(val))+suffix;
+    if(p<1)requestAnimationFrame(step);
   }
-  requestAnimationFrame(updateWarmth);
+  requestAnimationFrame(step);
 }
 
-// ── PORTRAIT SCROLL DISSOLVE ──
-const portraitEl=document.getElementById('heroPortrait');
-if(portraitEl){
-  function updatePortrait(){
-    const scrollY=window.scrollY||window.pageYOffset;
-    const fadeEnd=window.innerHeight*0.3;
-    const progress=Math.min(scrollY/fadeEnd,1);
-    const scale=1-progress*0.2;
-    const opacity=1-progress;
-    portraitEl.style.transform='scale('+scale+')';
-    portraitEl.style.opacity=Math.max(opacity,0);
-    requestAnimationFrame(updatePortrait);
-  }
-  requestAnimationFrame(updatePortrait);
+// Fire hero stats when stats section enters view
+var statsEl=document.getElementById('stats-section');
+if(statsEl){
+  var sObs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        statsEl.querySelectorAll('.counter-val').forEach(animateCounter);
+        sObs.disconnect();
+      }
+    });
+  },{threshold:0.2});
+  sObs.observe(statsEl);
 }
 
-// ── DIAGNOSTIC ENHANCED ──
+// Fire episode stat callouts when they enter view
+var epStatEls=document.querySelectorAll('.sc-num[data-target]');
+if(epStatEls.length){
+  var epObs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        animateCounter(e.target);
+        epObs.unobserve(e.target);
+      }
+    });
+  },{threshold:0.5});
+  epStatEls.forEach(function(el){epObs.observe(el)});
+}
+
+// ── FADE IN ──
+var fObs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible')});},{threshold:0.07});
+document.querySelectorAll('.fade-in').forEach(function(el){fObs.observe(el)});
+
+// ── SECTION DIVIDERS ──
+var sdObs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:0.5});
+document.querySelectorAll('.section-div').forEach(function(d){sdObs.observe(d)});
+
+// ── WHY PHOTO REVEAL ──
+var wp=document.querySelector('.why-photo');
+if(wp){var wi=wp.querySelector('img');var rw=function(){wp.classList.add('revealed')};
+  var wo=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){if(wi&&wi.complete)rw();else if(wi)wi.onload=rw;wo.disconnect()}})},{threshold:0.1});
+  wo.observe(wp);
+}
+
+function openBooking(e){e.preventDefault();window.location.href="mailto:tom@thehumanorigin.org?subject=Trust%20Architecture%20Diagnostic"}
+
+function dReset(){dCur=0;dAns=new Array(9).fill(null);dShowPhase('d-intro')}
+function dRenderProg(){var h='';for(var i=0;i<dQs.length;i++){var c='d-dot';if(i<dCur)c+=' done';if(i===dCur)c+=' cur';h+='<div class="'+c+'"></div>'}document.getElementById('d-prog').innerHTML=h}
+function dRenderQ(){var q=dQs[dCur];var nxt=document.getElementById('d-next');var h='<div class="d-head"><div class="d-num">Question '+(dCur+1)+' of '+dQs.length+'</div></div><div class="d-text">'+q.t+'</div>';for(var i=0;i<q.opts.length;i++){h+='<button class="d-opt'+(dAns[dCur]===i?' sel':'')+'" onclick="dPick('+i+')">'+q.opts[i].l+'</button>'}document.getElementById('d-qcard').innerHTML=h;dRenderProg();document.getElementById('d-prev').className=dCur===0?'d-btn d-btn-ghost dis':'d-btn d-btn-ghost';nxt.className=dAns[dCur]!==null?'d-btn d-btn-cyan':'d-btn d-btn-cyan dis';nxt.textContent=dCur===dQs.length-1?'See Results':'Next \u2192'}
+function dPick(i){dAns[dCur]=i;dRenderQ()}
+function dNext(){if(dAns[dCur]===null)return;if(dCur===dQs.length-1){dShowResults();return}dCur++;dShowPhase('d-questions');dRenderQ()}
+function dPrev(){if(dCur>0){dCur--;dRenderQ()}}
+function dShowPhase(id){document.querySelectorAll('.d-phase').forEach(function(p){p.classList.remove('active')});document.getElementById(id).classList.add('active')}
+function dStart(){dCur=0;dShowPhase('d-questions');dRenderQ()}
+
 var dCur=0,dAns=new Array(9).fill(null);
 var dQs=[
 {zone:"survival",disc:"Directing",t:"When was the last time someone openly contradicted the most senior person in the room?",neuro:"Neuroception \u2014 the nervous system scans for threat before conscious thought. Silence around authority signals danger detection, not agreement.",ref:"Porges, Autonomic Regulation",opts:[{l:"This week",s:0},{l:"This month",s:1},{l:"Months ago",s:2},{l:"I can\u2019t remember",s:3}]},
@@ -2031,105 +1205,14 @@ function dShowResults(){dShowPhase('d-results');var total=0,maxT=dQs.length*3;fo
 function dReset(){dCur=0;dAns=new Array(9).fill(null);dShowPhase('d-intro')}
 function dGeneratePDF(){var r=window._pulseResult;if(!r||!r.sorted)return;var isDE=r.lang==='de';var doc=new jspdf.jsPDF('p','pt','a4');var w=doc.internal.pageSize.getWidth();var pg=doc.internal.pageSize.getHeight();var m=44,cw=w-2*m,y=0;var sc=r.pct<=25?[34,197,94]:r.pct<=50?[6,182,212]:r.pct<=75?[249,115,22]:[239,68,68];function hx(h){return[parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)]}function np(){doc.addPage();doc.setFillColor(8,13,18);doc.rect(0,0,w,pg,'F');y=44}function ck(n){if(y+n>pg-44)np()}function grad(x1,x2,yp){var s=80,sw=(x2-x1)/s;for(var i=0;i<s;i++){var t=i/(s-1);doc.setFillColor(Math.round(6+(249-6)*t),Math.round(182+(115-182)*t),Math.round(212+(22-212)*t));doc.rect(x1+i*sw,yp,sw+0.5,0.5,'F')}}function bcard(bx,by,bw,bh,br,bg,bb){doc.setFillColor(12,18,26);doc.roundedRect(bx,by,bw,bh,6,6,'F');doc.setDrawColor(br,bg,bb);doc.setLineWidth(0.5);doc.roundedRect(bx,by,bw,bh,6,6,'S')}doc.setFillColor(8,13,18);doc.rect(0,0,w,pg,'F');y=44;doc.setFontSize(8);doc.setFont('helvetica','normal');doc.setTextColor(70,75,90);doc.text('THE HUMAN ORIGIN',w/2,y,{align:'center'});y+=10;doc.setDrawColor(6,182,212);doc.setLineWidth(0.4);doc.line(w/2-28,y,w/2+28,y);y+=28;doc.setFontSize(22);doc.setTextColor(255,255,255);doc.setFont('helvetica','bold');doc.text(isDE?'Pulscheck \u2014 Ergebnisse':'Pulse Check \u2014 Results',w/2,y,{align:'center'});y+=36;var ccx=w/2,ccy=y+16;doc.setDrawColor(sc[0],sc[1],sc[2]);doc.setLineWidth(1.5);doc.circle(ccx,ccy,24,'S');doc.setFontSize(30);doc.setTextColor(sc[0],sc[1],sc[2]);doc.setFont('helvetica','bold');doc.text(r.pct+'%',ccx,ccy+5,{align:'center'});doc.setFontSize(6);doc.setTextColor(110,110,120);doc.setFont('helvetica','normal');doc.text(isDE?'\u00dcBERLEBEN AKTIV':'SURVIVAL ACTIVE',ccx,ccy+20,{align:'center'});y=ccy+34;grad(m,w-m,y);y+=16;doc.setFontSize(10);doc.setFont('helvetica','normal');var ml=doc.splitTextToSize(r.mirror,cw-32);var mh=ml.length*14+44;ck(mh+10);bcard(m,y,cw,mh,Math.round(sc[0]*0.25+10),Math.round(sc[1]*0.25+10),Math.round(sc[2]*0.25+10));doc.setFontSize(7);doc.setTextColor(sc[0],sc[1],sc[2]);doc.setFont('helvetica','bold');doc.text(isDE?'DER SPIEGEL':'THE MIRROR',m+16,y+20);doc.setFontSize(10);doc.setTextColor(195,188,160);doc.setFont('helvetica','normal');doc.text(ml,m+16,y+36);y+=mh+14;ck(24);doc.setFontSize(7);doc.setTextColor(6,182,212);doc.setFont('helvetica','bold');doc.text(isDE?'MUSTER-KARTE \u2014 WO \u00dcBERLEBEN WIRKT':'PATTERN MAP \u2014 WHERE SURVIVAL LIVES',m,y);y+=16;r.sorted.forEach(function(z){var zm=dZM[z.key];var c=hx(zm.color);var hasD=z.pct>=33;var dl=hasD?doc.splitTextToSize(zm.desc,cw-8):[];var bh=hasD?28+dl.length*11+16:24;ck(bh);doc.setFontSize(10);doc.setTextColor(c[0],c[1],c[2]);doc.setFont('helvetica','bold');doc.text(zm.name,m,y);doc.setTextColor(120,120,130);doc.setFont('helvetica','normal');doc.text(z.pct+'%',w-m,y,{align:'right'});y+=8;doc.setFillColor(20,25,38);doc.roundedRect(m,y,cw,3,1.5,1.5,'F');if(z.pct>0){doc.setFillColor(c[0],c[1],c[2]);doc.roundedRect(m,y,Math.max(3,cw*z.pct/100),3,1.5,1.5,'F')}y+=9;if(hasD){doc.setFontSize(8);doc.setTextColor(155,148,125);doc.setFont('helvetica','normal');doc.text(dl,m,y);y+=dl.length*11+3;doc.setFontSize(7);doc.setTextColor(80,80,95);doc.text((isDE?'Filmdisziplin: ':'Film Discipline: ')+zm.disc+' \u2014 '+zm.dn,m,y);y+=14}else{y+=6}});y+=6;ck(18);grad(m,w-m,y);y+=16;doc.setFontSize(10);doc.setFont('helvetica','normal');var vl=doc.splitTextToSize(r.verdict,cw-32);var vh=vl.length*14+44;ck(vh+10);bcard(m,y,cw,vh,10,50,58);doc.setFontSize(7);doc.setTextColor(6,182,212);doc.setFont('helvetica','bold');doc.text(isDE?'DIAGNOSTIK-EMPFEHLUNG':'DIAGNOSTIC RECOMMENDATION',m+16,y+20);doc.setFontSize(10);doc.setTextColor(195,188,160);doc.setFont('helvetica','normal');doc.text(vl,m+16,y+36);y+=vh+20;ck(56);doc.setDrawColor(30,35,48);doc.setLineWidth(0.3);doc.line(m,y,w-m,y);y+=14;doc.setFontSize(8);doc.setTextColor(6,182,212);doc.setFont('helvetica','bold');doc.text('THE HUMAN ORIGIN',m,y);y+=12;doc.setFontSize(8);doc.setTextColor(130,130,145);doc.setFont('helvetica','normal');doc.text('Tom Waldek \u2014 Founder, The Human Origin',m,y);y+=12;doc.setTextColor(6,182,212);doc.text('tom@thehumanorigin.org',m,y);doc.setTextColor(80,80,95);doc.text('thehumanorigin.org',w-m,y,{align:'right'});y+=14;doc.setFontSize(7);doc.setTextColor(50,50,65);var dt=new Date().toLocaleDateString(isDE?'de-DE':'en-GB');doc.text((isDE?'Vertraulich \u2014 erstellt am ':'Confidential \u2014 generated ')+dt,m,y);doc.setTextColor(249,115,22);doc.text(isDE?'Wahrheit f\u00fchrt. Fassade kostet.':'Truth leads. Facade costs.',w-m,y,{align:'right'});doc.save(isDE?'pulscheck-ergebnisse.pdf':'pulse-check-results.pdf')}
 function dSendResults(){var email=document.getElementById('d-optin-email').value.trim();if(!email||email.indexOf('@')===-1){document.getElementById('d-optin-email').style.borderColor='#f97316';return}var r=window._pulseResult||{pct:0,zones:''};var btn=document.querySelector('#d-optin button');if(btn){btn.textContent='Sending...';btn.disabled=true}document.getElementById('d-optin').innerHTML='<div style="font-family:var(--display);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:10px;font-weight:400">\u2713 Sent</div><div style="font-size:14px;color:var(--tx2);line-height:1.7">We\u2019ll send your complete pattern map to <span style="color:var(--cyan)">'+email+'</span>.</div>';fetch('https://formspree.io/f/xvzdodor',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:email,score:r.pct+'% Survival Active',patterns:r.zones,language:'en',_subject:'Pulse Check \u2014 '+r.pct+'% Survival Active'})}).catch(function(){})}
-
-// ── SCROLL ANIMATIONS ──
-const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}})},{threshold:0.1});
-document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
-
-// WHY photo scroll reveal
-const whyPhoto = document.querySelector('.why-photo');
-if (whyPhoto) {
-  const whyImg = whyPhoto.querySelector('img');
-  const revealWhy = () => whyPhoto.classList.add('revealed');
-  const whyObs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        if (whyImg.complete) revealWhy();
-        else whyImg.onload = revealWhy;
-        whyObs.disconnect();
-      }
-    });
-  }, { threshold: 0.1 });
-  whyObs.observe(whyPhoto);
-}
-
-// ── DIAGNOSTIC STAT COUNTING ──
-function animateDiagCounters(){
-  document.querySelectorAll('.diag-counter').forEach(function(el,i){
-    var target=parseInt(el.dataset.target);
-    setTimeout(function(){
-      var dur=800,start=performance.now();
-      function tick(now){
-        var p=Math.min((now-start)/dur,1);
-        var eased=1-Math.pow(1-p,3);
-        el.textContent=Math.round(target*eased);
-        if(p<1)requestAnimationFrame(tick);
-      }
-      requestAnimationFrame(tick);
-    },i*300);
-  });
-}
-var diagFired=false;
-var diagStatsEl=document.getElementById('diag-stats-section');
-if(diagStatsEl){
-  var diagObs=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting&&!diagFired){diagFired=true;animateDiagCounters();}
-    });
-  },{threshold:0.3});
-  diagObs.observe(diagStatsEl);
-}
-
-// ── FAQ ACCORDION — one open at a time, + icon rotates 45° on open ──
-function toggleFaq(qEl){
-  var item = qEl.closest('.faq-item');
-  var wasOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(function(i){ i.classList.remove('open'); });
-  if(!wasOpen) item.classList.add('open');
-}
-
-// ── CAL.COM POPUP BOOKING ──
-// HOW TO ACTIVATE:
-// 1. Create your Cal.com account at cal.com
-// 2. Create an event type (e.g. "entry-conversation", 45 min)
-// 3. Replace "YOUR-SLUG" below with your Cal.com username
-// 4. Replace "entry-conversation" with your event type slug
-// 5. Done — all CTA buttons will open the Cal.com popup
-var CAL_BOOKING_URL = "tomwaldek/entry-conversation";
-
-(function(C,A,L){
-  var p=function(a,ar){a.q=a.q||[];a.q.push(ar)};
-  var d=C.document;
-  C.Cal=C.Cal||function(){p(C.Cal,arguments)};
-  C.Cal.ns={};C.Cal.loaded=false;
-  var s=d.createElement("script");
-  s.src=A;s.async=true;
-  d.head.appendChild(s);
-  C.Cal("init",{origin:"https://cal.eu"});
-  C.Cal("ui",{
-    theme:"dark",
-    styles:{branding:{brandColor:"#06b6d4"}},
-    hideEventTypeDetails:false,
-    layout:"month_view"
-  });
-})(window,"https://app.cal.eu/embed/embed.js","init");
-
-function openBooking(e){
-  if(e) e.preventDefault();
-  var slug=CAL_BOOKING_URL;
-  var opened=false;
-  if(slug&&slug.indexOf("YOUR-SLUG")===-1){
-    try{
-      if(window.Cal&&window.Cal.loaded){
-        Cal("openModal",{calLink:slug,config:{layout:"month_view",theme:"dark"}});
-        opened=true;
-      }
-    }catch(err){}
-  }
-  if(!opened){
-    window.location.href="mailto:tom@thehumanorigin.org?subject=Trust%20Architecture%20Diagnostic";
-  }
-}
+function dReset(){dCur=0;dAns=new Array(9).fill(null);dShowPhase('d-intro')}
+function dRenderProg(){var h='';for(var i=0;i<dQs.length;i++){var c='d-dot';if(i<dCur)c+=' done';if(i===dCur)c+=' cur';h+='<div class="'+c+'"></div>'}document.getElementById('d-prog').innerHTML=h}
+function dRenderQ(){var q=dQs[dCur];var nxt=document.getElementById('d-next');var h='<div class="d-head"><div class="d-num">Question '+(dCur+1)+' of '+dQs.length+'</div></div><div class="d-text">'+q.t+'</div>';for(var i=0;i<q.opts.length;i++){h+='<button class="d-opt'+(dAns[dCur]===i?' sel':'')+'" onclick="dPick('+i+')">'+q.opts[i].l+'</button>'}document.getElementById('d-qcard').innerHTML=h;dRenderProg();document.getElementById('d-prev').className=dCur===0?'d-btn d-btn-ghost dis':'d-btn d-btn-ghost';nxt.className=dAns[dCur]!==null?'d-btn d-btn-cyan':'d-btn d-btn-cyan dis';nxt.textContent=dCur===dQs.length-1?'See Results':'Next →'}
+function dPick(i){dAns[dCur]=i;dRenderQ()}
+function dNext(){if(dAns[dCur]===null)return;if(dCur===dQs.length-1){dShowResults();return}dCur++;dShowPhase('d-questions');dRenderQ()}
+function dPrev(){if(dCur>0){dCur--;dRenderQ()}}
+function dShowPhase(id){document.querySelectorAll('.d-phase').forEach(function(p){p.classList.remove('active')});document.getElementById(id).classList.add('active')}
+function dStart(){dCur=0;dShowPhase('d-questions');dRenderQ()}
 </script>
 </body>
 </html>
