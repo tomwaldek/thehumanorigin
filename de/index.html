@@ -110,12 +110,7 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 @keyframes gradShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 
 /* TAGLINE — Playfair serif, echoes method header */
-.hero-tagline{
-  font-family:var(--serif);font-weight:500;
-  font-size:clamp(18px,2.5vw,26px);
-  color:rgba(255,255,255,0.75);letter-spacing:-0.3px;
-  margin-bottom:32px;margin-top:28px;line-height:1.4;
-}
+.hero-tagline{font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(17px,2.3vw,24px);color:rgba(255,255,255,0.72);letter-spacing:-0.2px;margin-bottom:14px;text-align:center}
 
 .hero-sub{font-weight:300;font-size:16px;color:var(--tx2);line-height:1.8;max-width:640px;margin:0 auto 20px}
 .hero-sub strong{color:rgba(255,245,230,0.88);font-weight:400}
@@ -128,14 +123,8 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 
 /* ═══ STATS — counting ═══ */
 .stats{padding:60px 44px 40px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(6,182,212,0.04);position:relative;z-index:1}
-/* Commitments strip — 3 Tom promises under the stats counters */
-.commitments{max-width:960px;margin:44px auto 0;padding:32px 44px 0;display:grid;grid-template-columns:1fr 1fr 1fr;gap:36px;border-top:1px solid rgba(6,182,212,0.12);position:relative}
-.commitments::before{content:'';position:absolute;top:-1px;left:50%;transform:translateX(-50%);width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--orange),transparent);opacity:0.65}
-.commitment{text-align:center}
-.commitment-label{font-family:var(--display);font-weight:400;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--orange);margin-bottom:12px;opacity:0.75}
-.commitment-text{font-family:var(--ff);font-weight:300;font-size:14px;color:rgba(255,242,225,0.82);line-height:1.55}
-.commitment-text strong{color:var(--cyan);font-weight:400}
-@media(max-width:768px){.commitments{grid-template-columns:1fr;gap:22px;padding:26px 20px 0;margin-top:32px}}
+
+@media(max-width:768px){}
 .stats-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:40px;text-align:center}
 .stat-num{font-family:var(--display);font-weight:200;font-size:36px;letter-spacing:-1px;margin-bottom:6px}
 .stat-num .counter-val{background:linear-gradient(135deg,var(--cyan),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
@@ -239,7 +228,7 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 .diag-subtitle{font-family:var(--ff);font-weight:300;font-size:14px;color:rgba(255,242,225,0.72);line-height:1.7;text-align:center;max-width:520px;margin:0 auto 32px}
 .diag-measures{padding:22px 28px;background:rgba(6,182,212,0.04);border-radius:12px;border:1px solid rgba(6,182,212,0.15);margin:0 auto 40px;max-width:560px;text-align:left}
 .diag-measures-label{font-family:var(--display);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--cyan);margin-bottom:10px;font-weight:400;opacity:0.88}
-.diag-measures-body{font-family:var(--ff);font-size:13px;line-height:1.75;color:rgba(255,242,225,0.78)}
+
 .diag-cta-wrap{text-align:center}
 .diag-cta-wrap .d-btn{font-size:14px;padding:18px 44px;letter-spacing:1.5px}
 .diag-audience{margin-top:26px;font-family:var(--display);font-size:10px;letter-spacing:2px;color:var(--tx4);font-weight:300;text-align:center}
@@ -262,11 +251,11 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 .d-neuro-icon{font-family:var(--display);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:6px;font-weight:500}
 .d-neuro-text{font-size:13px;line-height:1.6;color:rgba(255,255,255,0.45)}
 .d-neuro-ref{font-size:11px;color:var(--tx4);margin-top:8px}
-.d-opt{padding:14px 18px;margin-bottom:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:14px;color:var(--tx2);transition:all 0.2s ease;font-family:'Inter',sans-serif;width:100%;text-align:left}
+.d-opt{padding:14px 18px;margin-bottom:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:14px;color:var(--tx2);transition:all 0.2s ease;font-family:var(--ff);width:100%;text-align:left}
 .d-opt:hover{border-color:rgba(255,255,255,0.1);background:rgba(255,255,255,0.04)}
 .d-opt.sel{border-color:var(--cyan);background:rgba(6,182,212,0.08);color:var(--white)}
 .d-nav{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
-.d-btn{display:inline-block;padding:14px 36px;border-radius:100px;border:none;font-size:14px;font-weight:500;letter-spacing:1px;cursor:pointer;transition:all 0.3s ease;font-family:'Inter',sans-serif;text-decoration:none}
+.d-btn{display:inline-block;padding:14px 36px;border-radius:100px;border:none;font-size:14px;font-weight:500;letter-spacing:1px;cursor:pointer;transition:all 0.3s ease;font-family:var(--ff);text-decoration:none}
 .d-btn-cyan{background:linear-gradient(135deg,var(--cyan),var(--orange));background-size:200% 200%;background-position:0% 50%;color:var(--white);border-radius:100px;font-family:var(--display);font-weight:500;box-shadow:0 4px 16px -6px rgba(6,182,212,0.25);transition:background-position 0.6s cubic-bezier(0.22,1,0.36,1),transform 0.35s cubic-bezier(0.22,1,0.36,1),box-shadow 0.35s cubic-bezier(0.22,1,0.36,1),filter 0.35s}
 .d-btn-cyan:hover{background-position:100% 50%;transform:translateY(-2px) scale(1.02);box-shadow:0 14px 32px -8px rgba(6,182,212,0.45),0 0 30px -10px rgba(249,115,22,0.3);filter:brightness(1.08)}
 .d-btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--white);font-weight:300;backdrop-filter:blur(8px)}
@@ -386,123 +375,8 @@ footer a:hover{color:var(--cyan)}
 .fade-in.visible .stagger-4{opacity:1;transform:translateY(0)}
 
 /* ═══ THE COMPOSITION — USP micro-section (v2: subtle) ═══ */
-.standapart{padding:80px 44px 60px;position:relative;z-index:1}
-.standapart-grid{max-width:1100px;margin:40px auto 28px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.standapart-card{
-  padding:38px 32px;
-  background:linear-gradient(135deg,rgba(6,182,212,0.07) 0%,rgba(6,182,212,0.025) 45%,rgba(249,115,22,0.055) 100%);
-  border:1px solid rgba(6,182,212,0.14);
-  border-radius:14px;
-  text-align:left;
-  transition:all 0.4s cubic-bezier(0.22,1,0.36,1);
-  position:relative;
-  overflow:hidden;
-  backdrop-filter:blur(14px);
-}
-.standapart-card::before{
-  content:'';
-  position:absolute;
-  top:0;left:0;right:0;
-  height:1px;
-  background:linear-gradient(90deg,transparent,rgba(6,182,212,0.45),rgba(249,115,22,0.3),transparent);
-}
-.standapart-card:hover{
-  background:linear-gradient(135deg,rgba(6,182,212,0.1) 0%,rgba(6,182,212,0.04) 45%,rgba(249,115,22,0.08) 100%);
-  transform:translateY(-2px);
-  border-color:rgba(6,182,212,0.28);
-}
-.standapart-label{
-  font-family:var(--display);
-  font-weight:400;
-  font-size:10px;
-  letter-spacing:2.5px;
-  text-transform:uppercase;
-  color:var(--cyan);
-  margin-bottom:22px;
-  opacity:0.7;
-}
-.standapart-title{
-  font-family:var(--display);
-  font-weight:400;
-  font-size:clamp(15px,1.8vw,17px);
-  color:var(--orange);
-  letter-spacing:2.5px;
-  text-transform:uppercase;
-  line-height:1.45;
-  margin-bottom:22px;
-  opacity:0.92;
-}
-.standapart-body{
-  font-family:var(--ff);
-  font-weight:300;
-  font-size:14px;
-  color:var(--tx2);
-  line-height:1.85;
-}
-.standapart-body strong{
-  color:rgba(255,245,230,0.92);
-  font-weight:400;
-}
-.standapart-punch{
-  text-align:center;
-  font-family:var(--display);
-  font-weight:300;
-  font-size:14px;
-  color:var(--tx3);
-  letter-spacing:2px;
-  margin-top:36px;
-  opacity:0.72;
-  max-width:560px;
-  margin-left:auto;
-  margin-right:auto;
-  line-height:1.8;
-}
 
 /* ═══ THESIS DISPLAY — elevated from quote-block ═══ */
-.thesis{
-  max-width:880px;
-  margin:32px auto 40px;
-  padding:20px 24px;
-  position:relative;
-  text-align:center;
-}
-.thesis::before{
-  content:'';
-  position:absolute;
-  top:0;
-  left:50%;
-  transform:translateX(-50%);
-  width:80px;
-  height:1px;
-  background:linear-gradient(90deg,transparent,var(--cyan),var(--orange),transparent);
-}
-.thesis::after{
-  content:'';
-  position:absolute;
-  bottom:0;
-  left:50%;
-  transform:translateX(-50%);
-  width:80px;
-  height:1px;
-  background:linear-gradient(90deg,transparent,var(--orange),var(--cyan),transparent);
-}
-.thesis-text{
-  font-family:var(--serif);
-  font-weight:500;
-  font-size:clamp(26px,4.2vw,42px);
-  line-height:1.28;
-  color:var(--white);
-  letter-spacing:-0.4px;
-  margin:36px auto;
-  max-width:760px;
-}
-.thesis-text .highlight{
-  background:linear-gradient(135deg,var(--cyan) 0%,var(--orange) 100%);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
-  font-weight:600;
-}
 
 /* ═══ PHASE OPTIONAL — inline Debrief + Retained Advisory ═══ */
 .phase.phase-optional{
@@ -589,106 +463,21 @@ footer a:hover{color:var(--cyan)}
 .feature-card .sec-text:last-child{margin-bottom:0}
 .feature-card.feature-orange .sec-text strong{color:var(--orange);font-weight:400}
 
-/* Creativity display line — Playfair bold, thesis-family treatment */
-.creativity-display{
-  font-family:var(--serif);
-  font-weight:500;
-  font-size:clamp(26px,4vw,42px);
-  line-height:1.2;
-  color:var(--white);
-  text-align:center;
-  margin:40px auto;
-  letter-spacing:-0.4px;
-  padding:28px 0;
-  position:relative;
-  max-width:620px;
-}
-.creativity-display::before,
-.creativity-display::after{
-  content:'';
-  position:absolute;
-  left:50%;
-  transform:translateX(-50%);
-  width:90px;
-  height:1px;
-  background:linear-gradient(90deg,transparent,var(--cyan),var(--orange),transparent);
-  opacity:0.55;
-}
-.creativity-display::before{top:0}
-.creativity-display::after{bottom:0}
-.creativity-display .accent{
-  background:linear-gradient(135deg,var(--cyan),var(--orange));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
-  font-weight:600;
-}
-
 /* ═══ THE ARCHITECTURE — clean minimalist stack with hover glow ═══ */
 .architecture{padding:var(--section-pad) 44px;position:relative;z-index:1}
-.arch-intro{text-align:center;max-width:720px;margin:0 auto 48px}
-.arch-header{display:grid;grid-template-columns:1.3fr 1.2fr 1.35fr 1fr;gap:16px;max-width:1100px;margin:0 auto 14px;padding:0 26px}
-.arch-col-label{font-family:var(--display);font-weight:400;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--cyan);opacity:0.6}
-.arch-stack{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:10px;position:relative}
-.arch-stack::before{content:'';position:absolute;left:-14px;top:12px;bottom:12px;width:2px;background:linear-gradient(180deg,var(--cyan) 0%,var(--orange) 100%);opacity:0;transform:scaleY(0);transform-origin:top;transition:opacity 1.2s ease 0.2s,transform 1.4s cubic-bezier(0.22,1,0.36,1) 0.2s;border-radius:2px}
-.architecture.fade-in.visible .arch-stack::before{opacity:0.35;transform:scaleY(1)}
-.arch-row{
-  display:grid;
-  grid-template-columns:1.3fr 1.2fr 1.35fr 1fr;
-  gap:16px;
-  padding:28px 26px;
-  background:linear-gradient(135deg,rgba(6,182,212,0.06) 0%,rgba(6,182,212,0.02) 55%,rgba(249,115,22,0.045) 100%);
-  border:1px solid rgba(6,182,212,0.13);
-  border-radius:12px;
-  align-items:center;
-  transition:all 0.7s cubic-bezier(0.22,1,0.36,1);
-  position:relative;
-  backdrop-filter:blur(10px);
-  opacity:0;
-  transform:translateY(22px);
-}
-.arch-row.visible{opacity:1;transform:translateY(0)}
-.arch-row::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(6,182,212,0.45),rgba(249,115,22,0.3),transparent);opacity:0.7}
-.arch-row:hover{
-  transform:translateY(-4px);
-  background:linear-gradient(135deg,rgba(6,182,212,0.11) 0%,rgba(6,182,212,0.04) 55%,rgba(249,115,22,0.08) 100%);
-  border-color:rgba(6,182,212,0.32);
-  box-shadow:0 20px 55px -18px rgba(6,182,212,0.35),0 0 40px -14px rgba(249,115,22,0.2);
-}
-.arch-discipline{display:flex;align-items:center;gap:16px}
-.arch-num{font-family:var(--display);font-weight:200;font-size:24px;color:var(--orange);opacity:0.6;letter-spacing:0.5px;line-height:1}
-.arch-title{font-family:var(--display);font-weight:400;font-size:13px;color:var(--white);letter-spacing:2px;text-transform:uppercase;line-height:1.3}
-.arch-cell{font-family:var(--ff);font-weight:300;font-size:13px;color:var(--tx2);line-height:1.6}
+
+.architecture.fade-in.visible 
+
 /* Research: quiet white reference */
-.arch-research{font-family:var(--display);font-weight:300;font-size:11px;color:rgba(255,255,255,0.68);letter-spacing:0.5px;text-transform:none;opacity:1}
+
 /* Zone: Sora display, cyan emphasis */
-.arch-zone{font-family:var(--display);font-weight:400;font-size:13px;color:var(--cyan);line-height:1.55;letter-spacing:0.2px}
+
 /* Change: Sora display, orange emphasis */
-.arch-change{font-family:var(--display);font-weight:400;font-size:13px;color:var(--orange);line-height:1.6;letter-spacing:0.2px}
-.arch-closer{text-align:center;font-family:var(--display);font-weight:300;font-size:14px;color:var(--tx3);letter-spacing:1.5px;margin:44px auto 0;max-width:720px;line-height:1.85}
-.arch-closer strong{color:var(--cyan);font-weight:400}
+
 /* Column reorder: What Changes → position 2 for F-pattern scanning (benefit before detail) */
-.arch-header .arch-col-label:nth-child(1){order:1}
-.arch-header .arch-col-label:nth-child(2){order:4}
-.arch-header .arch-col-label:nth-child(3){order:3}
-.arch-header .arch-col-label:nth-child(4){order:2}
-.arch-row .arch-discipline{order:1}
-.arch-row .arch-change{order:2}
-.arch-row .arch-zone{order:3}
-.arch-row .arch-research{order:4}
 
 /* ═══ PROGRESSIVE REVEAL — every card/block scroll-triggered individually ═══ */
-.standapart-card,
-.proof-card,
-.for-block,
-.disc-card,
-.phase,
-.faq-item,
-.arch-row{
-  opacity:0;
-  transform:translateY(20px);
-  transition:opacity 0.7s cubic-bezier(0.22,1,0.36,1),transform 0.7s cubic-bezier(0.22,1,0.36,1);
-}
+
 /* Phase rows reveal slower with incremental stagger */
 .phase{transition:opacity 1.1s cubic-bezier(0.22,1,0.36,1),transform 1.1s cubic-bezier(0.22,1,0.36,1)}
 .phase:nth-of-type(1).visible{transition-delay:0s}
@@ -698,16 +487,7 @@ footer a:hover{color:var(--cyan)}
 .phase:nth-of-type(5).visible{transition-delay:1.2s}
 .phase:nth-of-type(6).visible{transition-delay:1.5s}
 .phase:nth-of-type(7).visible{transition-delay:1.8s}
-.standapart-card.visible,
-.proof-card.visible,
-.for-block.visible,
-.disc-card.visible,
-.phase.visible,
-.faq-item.visible,
-.arch-row.visible{
-  opacity:1;
-  transform:translateY(0);
-}
+
 /* For-blocks reveal slower and with incremental delay for a more deliberate cadence */
 .for-block{transition:opacity 1s cubic-bezier(0.22,1,0.36,1),transform 1s cubic-bezier(0.22,1,0.36,1)}
 .for-block:nth-of-type(1).visible{transition-delay:0s}
@@ -771,21 +551,21 @@ footer a:hover{color:var(--cyan)}
   .phase{flex-wrap:wrap}
   .phase-fee{min-width:auto;text-align:left;padding-top:12px;width:100%}
   .notthis{padding:22px 24px}
-  .standapart{padding:60px 24px 40px}
-  .standapart-grid{grid-template-columns:1fr;gap:14px;margin:28px auto 20px}
-  .standapart-card{padding:24px 22px}
+  
+  
+  
   .feature-card{padding:32px 26px}
-  .creativity-display{font-size:clamp(22px,5vw,32px);padding:22px 0;margin:30px auto}
-  .creativity-display::before,.creativity-display::after{width:60px}
+  
+  
   .architecture{padding:80px 24px}
-  .arch-header{display:none}
-  .arch-stack{gap:14px}
-  .arch-stack::before{left:-8px}
-  .arch-row{grid-template-columns:1fr;gap:14px;padding:24px 22px}
-  .arch-discipline{border-bottom:1px solid rgba(6,182,212,0.18);padding-bottom:14px;margin-bottom:4px}
-  .arch-cell{position:relative;padding-top:2px}
-  .arch-cell::before{content:attr(data-label);display:block;font-family:var(--display);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);opacity:0.6;margin-bottom:4px;font-weight:400}
-  .arch-closer{margin-top:32px;font-size:13px}
+  
+  
+  
+  
+  
+  
+  
+  
   .overview-step{padding:14px 20px;gap:14px}
   .overview-num{font-size:18px;min-width:24px}
   .overview-price{font-size:12px}
@@ -873,6 +653,14 @@ footer a:hover{color:var(--cyan)}
 .diff-b{font-size:13px;line-height:1.85;color:rgba(255,242,225,0.58)}
 .diff-b strong{color:var(--cyan);font-weight:400}
 .diff-sci{font-family:var(--display);font-size:10px;color:var(--tx4);letter-spacing:1.5px;margin-top:11px}
+
+/* ── UNIFIED HEADING CLASSES ── */
+/* Sora: all non-question section headings */
+.h2-sora{font-family:var(--display);font-weight:400;font-size:clamp(24px,3.8vw,44px);color:var(--white);line-height:1.2;letter-spacing:-0.3px;margin-bottom:14px}
+.h2-sora.sm{font-size:clamp(20px,3vw,34px)}
+/* Playfair: reader-facing questions (hero, CTA) */
+.h2-serif{font-family:var(--serif);font-weight:600;font-style:italic;font-size:clamp(26px,4vw,50px);color:var(--white);line-height:1.15;letter-spacing:-0.4px;margin-bottom:16px}
+
 /* Responsive */
 @media(max-width:900px){.disc-enhanced{grid-template-columns:1fr}.diff-3{grid-template-columns:1fr}}
 @media(max-width:768px){.episode,.diff-section,.who-ep,.bridge{padding-left:24px;padding-right:24px}.ep-num{font-size:44px;min-width:50px}.clinical{padding:24px 20px}.stats-row{flex-direction:column}}
@@ -900,7 +688,7 @@ footer a:hover{color:var(--cyan)}
     <div class="hero-portrait" id="heroPortrait"><div class="hero-portrait-glow"></div><div class="hero-portrait-inner"><img src="../TomWaldek_Actor_01.jpg" alt="Tom Waldek, Founder, The Human Origin"></div></div>
     <div class="hero-role">Tom Waldek &mdash; Gr&uuml;nder, The Human Origin</div>
     <h1 class="hero-title"><span class="line-label">The Human</span><span class="line-anchor">Origin</span></h1>
-    <div class="hero-tagline" style="font-family:var(--serif);font-style:italic;font-size:clamp(17px,2.3vw,24px);color:rgba(255,255,255,0.72);letter-spacing:-0.2px;margin-bottom:14px">Wann haben Sie zuletzt etwas wirklich Wahres in einem Ihrer Meetings gesagt?</div>
+    <div class="hero-tagline" class="hero-tagline">Wann haben Sie zuletzt etwas wirklich Wahres in einem Ihrer Meetings gesagt?</div>
     <p class="hero-sub">Nicht diplomatisch. Nicht strategisch. <strong>Nicht die Version, auf die sich alle geeinigt haben.</strong></p>
     <div class="hero-method">Sechs Filmdisziplinen &middot; Neun diagnostische Zonen &middot; Ein Engagement.</div>
     <div class="hero-ctas">
@@ -1005,7 +793,7 @@ footer a:hover{color:var(--cyan)}
 <div class="who-ep fade-in">
   <div style="max-width:720px;margin:0 auto;text-align:center">
     <h2 class="section-label">Ist das f&uuml;r Sie?</h2>
-    <h2 style="font-family:var(--serif);font-weight:600;font-style:italic;font-size:clamp(28px,4vw,46px);color:var(--white);margin-bottom:6px">Ist das f&uuml;r Sie?</h2>
+    <h2 class="h2-sora">Ist das f&uuml;r Sie?</h2>
   </div>
   <div class="who-list"><div class="who-item">Sie haben talentierte Menschen beobachtet, die mit einem Bruchteil von sich selbst arbeiteten &mdash; nicht aus Mangel an K&ouml;nnen, sondern weil der Raum f&uuml;r mehr nie existierte.</div><div class="who-item">Sie waren in einem Raum, in dem die falsche Entscheidung getroffen wurde, weil die richtige zu teuer war, um ausgesprochen zu werden.</div><div class="who-item">Sie haben die L&uuml;cke zwischen dem gesp&uuml;rt, was Ihre Organisation zeigt, und dem, was es kostet &mdash; intern &mdash; diese Darstellung aufrechtzuerhalten.</div><div class="who-item">Sie haben F&uuml;hrungsentwicklung ausprobiert. Etwas hat sich ver&auml;ndert. Dann ist der Raum zur&uuml;ckgegangen, wie er war.</div></div>
 </div>
@@ -1036,7 +824,7 @@ footer a:hover{color:var(--cyan)}
 <div class="diff-section fade-in">
   <div style="max-width:1060px;margin:0 auto;text-align:center">
     <h2 class="section-label">Warum das anders ist</h2>
-    <h2 style="font-family:var(--serif);font-weight:600;font-size:clamp(26px,4vw,44px);color:var(--white);margin-bottom:12px;letter-spacing:-0.4px">Jede Methodik schaut auf den Output.<br>Diese untersucht, was darunter l&auml;uft.</h2>
+    <h2 class="h2-sora">Jede Methodik schaut auf den Output.<br>Diese untersucht, was darunter l&auml;uft.</h2>
     <p style="font-size:15px;color:var(--tx3);max-width:520px;margin:0 auto 8px;line-height:1.7">Drei strukturelle Unterschiede. Nicht in der Philosophie. Im Mechanismus.</p>
     <div class="diff-3"><div class="diff-card"><div class="diff-n">01 &middot; Die untersuchte Schicht</div><h3 class="diff-h">&bdquo;Wir schauen, wo keine Standarddiagnostik hinschaut.&ldquo;</h3><p class="diff-b">Die innere Stimme unter den Entscheidungen eines Leaders wurde f&uuml;r sein fr&uuml;hes &Uuml;berlebensumfeld gebaut. <strong>Standardm&auml;&szlig;ige F&uuml;hrungsentwicklung untersucht diese Schicht nicht.</strong> Diese Diagnostik schon.</p><div class="diff-sci">Fernyhough (2016) &middot; Morin (2011)</div></div><div class="diff-card"><div class="diff-n">02 &middot; Das Instrument</div><h3 class="diff-h">&bdquo;Die Kamera verhandelt nicht.&ldquo;</h3><p class="diff-b">Sechs Filmdisziplinen in echten Settings zeichnen den regulatorischen Zustand auf, den bewusste Darstellung nicht vollst&auml;ndig verbergen kann. Bewegung, Atem, Stimmregister, interpersonelles Timing. <strong>Der tats&auml;chliche Betriebszustand des K&ouml;rpers &mdash; kein Selbstbericht.</strong></p><div class="diff-sci">Einzigartig f&uuml;r THO</div></div><div class="diff-card"><div class="diff-n">03 &middot; Der Mechanismus</div><h3 class="diff-h">&bdquo;Einsicht kann einen Pr&auml;diktions-Prior nicht aktualisieren. Somatische Erfahrung schon.&ldquo;</h3><p class="diff-b">Das Gehirn best&auml;tigt sein bestehendes Modell, bevor es es aktualisiert. <strong>Jedes einsichtsbasierte Programm, das in Ihrer Organisation scheiterte, scheiterte an genau dieser Stelle.</strong> Deshalb h&auml;lt die Wirkung an.</p><div class="diff-sci">Barrett (2017) &middot; Friston (2010)</div></div></div>
   </div>
@@ -1047,7 +835,7 @@ footer a:hover{color:var(--cyan)}
 <section id="diagnostic" class="fade-in" style="padding:var(--section-pad) 44px">
   <div class="wrap">
     <h2 class="section-label">Ihre Organisation &mdash; Ein Pulscheck</h2>
-    <h2 style="font-family:var(--serif);font-weight:600;font-style:italic;font-size:clamp(28px,4.5vw,50px);line-height:1.12;color:var(--white);margin-bottom:20px;letter-spacing:-0.5px">Was kostet das Muster Ihre Organisation gerade?</h2>
+    <h2 class="h2-sora" style="margin-bottom:20px">Was kostet das Muster Ihre Organisation gerade?</h2>
     <p class="sec-text" style="max-width:560px;margin:0 auto">Neun Fragen. Drei Minuten. Das Ergebnis ist eine Musterkarte &mdash; kein Score.</p>
   </div>
   <div class="d-widget" style="max-width:700px;margin:40px auto 0">
@@ -1076,7 +864,7 @@ footer a:hover{color:var(--cyan)}
 <section id="process" class="fade-in" style="padding:var(--section-pad) 44px">
   <div class="wrap" style="max-width:760px;text-align:left">
     <h2 class="section-label" style="text-align:center">Wie die Arbeit abl&auml;uft</h2>
-    <h2 style="font-family:var(--serif);font-weight:600;font-size:clamp(26px,4vw,44px);line-height:1.15;color:var(--white);margin-bottom:8px;text-align:center;letter-spacing:-0.4px">F&uuml;nf Phasen. Keine Workshops.</h2>
+    <h2 class="h2-sora" style="text-align:center;margin-bottom:8px">F&uuml;nf Phasen. Keine Workshops.</h2>
     <div class="quote-block" style="max-width:560px;margin:28px auto 48px"><div class="quote-text">&#8220;Nicht unehrlich. Nicht schwach. Einfach nie die Bedingungen bekommen f&uuml;r etwas Mutigeres. Schaffen Sie sie, und Menschen bl&uuml;hen auf. Die Arbeit folgt.&#8221;</div><div class="quote-attr">Tom Waldek</div></div>
     <div class="phase-list"><div class="phase"><div class="phase-num">0</div><div class="phase-content"><div class="phase-name">Erstgespr&auml;ch</div><p class="phase-desc">45 Minuten. Auf Augenh&ouml;he. Kein Pitch. Eine Frage &mdash; die wahrhaftige.</p></div><div class="phase-fee">Kostenlos</div></div><div class="phase"><div class="phase-num">1</div><div class="phase-content"><div class="phase-name">Trust Architecture Diagnostic</div><p class="phase-desc">3&ndash;4 Wochen vor Ort. F&uuml;nf Beobachtungskontexte in echten Meetings und Entscheidungen. <strong>Ergebnis: Trust Architecture Map.</strong></p></div><div class="phase-fee">&euro;12K</div></div><div class="phase"><div class="phase-num">2</div><div class="phase-content"><div class="phase-name">Origin Work</div><p class="phase-desc">3&ndash;5 Monate vor Ort. Aufl&ouml;sung von Mustern in echten Gespr&auml;chen. <strong>Ergebnis: Entscheidungen vom Menschen &mdash; nicht vom Muster.</strong></p></div><div class="phase-fee">Auf Anfrage</div></div><div class="phase"><div class="phase-num">3</div><div class="phase-content"><div class="phase-name">Integration</div><p class="phase-desc">Verankerung der neuen Betriebsbedingungen in dauerhafter Struktur. Parallel zu den letzten Wochen von Origin Work.</p></div><div class="phase-fee">Inbegriffen</div></div><div class="phase"><div class="phase-num">4</div><div class="phase-content"><div class="phase-name">&Uuml;berpr&uuml;fung</div><p class="phase-desc">6 Monate nach Abschluss. Ein Tag vor Ort. Konfirmation, was gehalten hat, was sich ver&auml;ndert hat.</p></div><div class="phase-fee">Inbegriffen</div></div></div>
   </div>
@@ -1087,7 +875,7 @@ footer a:hover{color:var(--cyan)}
 <section id="contact" class="fade-in" style="padding:var(--section-pad) 44px;text-align:center">
   <div class="wrap">
     <h2 class="section-label">Der n&auml;chste Schritt</h2>
-    <h2 style="font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(26px,4vw,50px);color:var(--white);margin-bottom:18px;letter-spacing:-0.5px;line-height:1.15">Bereit, aufzuh&ouml;ren, die Organisation zu inszenieren, die Sie gerne w&auml;ren?</h2>
+    <h2 class="h2-serif" style="margin-bottom:18px">Bereit, aufzuh&ouml;ren, die Organisation zu inszenieren, die Sie gerne w&auml;ren?</h2>
     <p class="sec-text" style="max-width:480px;margin:0 auto 14px">F&uuml;hrungskr&auml;fte, die sagen, was wahr ist &mdash; nicht was sicher ist. Teams, die Probleme ansprechen, bevor sie zu Krisen werden. Partner, die bleiben, weil die Zusammenarbeit sich anders anf&uuml;hlt.</p>
     <p style="font-family:var(--display);font-size:12px;color:var(--tx3);letter-spacing:3px;text-transform:uppercase;margin-bottom:40px">Ein Trust Architecture Diagnostic.</p>
     <div class="hero-ctas">
