@@ -635,7 +635,7 @@ footer a:hover{color:var(--cyan)}
 .who-list{max-width:720px;margin:22px auto 0}
 .who-item{padding:18px 0;border-bottom:1px solid var(--border);font-family:var(--ff);font-weight:400;font-size:clamp(15px,1.7vw,18px);color:var(--tx2);line-height:1.65;display:flex;align-items:flex-start;gap:14px}
 .who-item:last-child{border-bottom:none}
-.who-item::before{content:'&#8212;';color:var(--cyan);font-family:var(--display);font-size:13px;margin-top:3px;flex-shrink:0;opacity:0.7}
+.who-item::before{content:'\2014';color:var(--cyan);font-family:var(--display);font-size:13px;margin-top:3px;flex-shrink:0;opacity:0.7}
 /* Clinical */
 .clinical{position:relative;padding:32px 38px;margin:0 0 24px;background:rgba(6,182,212,0.04);border:1px solid rgba(6,182,212,0.14);border-radius:14px}
 .clinical::before{content:'Personal Foundation';position:absolute;top:-1px;left:22px;transform:translateY(-50%);font-family:var(--display);font-size:9px;letter-spacing:3px;color:var(--cyan);background:var(--bg);padding:0 10px;text-transform:uppercase}
@@ -696,7 +696,6 @@ footer a:hover{color:var(--cyan)}
       <a href="mailto:tom@thehumanorigin.org?subject=Entry%20Conversation" class="btn-ghost" onclick="openBooking(event)">Erstgespr&auml;ch buchen &mdash; kostenlos</a>
     </div>
     <p class="hero-teaser" style="margin:20px 0 6px"><em>Ich lernte den Unterschied in meinem K&ouml;rper &mdash; bevor ich ein Wort daf&uuml;r hatte.</em></p>
-    <div style="text-align:center;margin-top:14px"><a href="#episodes" style="font-family:var(--display);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--tx4);text-decoration:none">Die Arbeit lesen &#8595;</a></div>
   </div>
 </section>
 <div class="stats"><div class="stats-grid fade-in" id="stats-section"><div><div class="stat-num"><span class="counter-val" data-target="617" data-prefix="€" data-suffix="B">€0B</span></div><div class="stat-desc">J&auml;hrliche EU-Kosten durch Arbeitsstress</div></div>
@@ -792,7 +791,6 @@ footer a:hover{color:var(--cyan)}
 
 <div class="who-ep fade-in">
   <div style="max-width:720px;margin:0 auto;text-align:center">
-    <h2 class="section-label">Ist das f&uuml;r Sie?</h2>
     <h2 class="h2-sora">Ist das f&uuml;r Sie?</h2>
   </div>
   <div class="who-list"><div class="who-item">Sie haben talentierte Menschen beobachtet, die mit einem Bruchteil von sich selbst arbeiteten. Nicht aus Mangel an K&ouml;nnen. Der Raum f&uuml;r mehr existierte nicht.</div><div class="who-item">Sie waren in einem Raum, in dem die falsche Entscheidung getroffen wurde, weil die richtige zu teuer war, um ausgesprochen zu werden.</div><div class="who-item">Sie haben die L&uuml;cke gesp&uuml;rt zwischen dem, was Ihre Organisation zeigt, und dem, was es kostet, das aufrechtzuerhalten.</div><div class="who-item">Sie haben F&uuml;hrungsentwicklung ausprobiert. Etwas hat sich ver&auml;ndert. Dann ist der Raum zur&uuml;ckgegangen, wie er war.</div></div>
@@ -823,7 +821,7 @@ footer a:hover{color:var(--cyan)}
 
 <div class="diff-section fade-in">
   <div style="max-width:1060px;margin:0 auto;text-align:center">
-    <h2 class="section-label">Warum das anders ist</h2>
+    <div class="section-label">Warum das anders ist</div>
     <h2 class="h2-sora">Jede Methodik schaut auf den Output.<br>Diese untersucht, was darunter l&auml;uft.</h2>
     <p style="font-size:15px;color:var(--tx3);max-width:520px;margin:0 auto 8px;line-height:1.7">Drei strukturelle Unterschiede. Nicht in der Philosophie. Im Mechanismus.</p>
     <div class="diff-3"><div class="diff-card"><div class="diff-n">01 &middot; Die untersuchte Schicht</div><h3 class="diff-h">&bdquo;Wir schauen, wo keine Standarddiagnostik hinschaut.&ldquo;</h3><p class="diff-b"><strong>Standardm&auml;&szlig;ige F&uuml;hrungsentwicklung untersucht die innere Stimme nicht.</strong> Die, die unter jeder Entscheidung l&auml;uft. Diese Diagnostik schon.</p><div class="diff-sci">Fernyhough (2016) &middot; Morin (2011)</div></div><div class="diff-card"><div class="diff-n">02 &middot; Das Instrument</div><h3 class="diff-h">&bdquo;Die Kamera verhandelt nicht.&ldquo;</h3><p class="diff-b">Sechs Filmdisziplinen in echten Settings zeichnen den regulatorischen Zustand auf, den bewusste Darstellung nicht vollst&auml;ndig verbergen kann. Bewegung, Atem, Stimmregister, interpersonelles Timing. <strong>Der tats&auml;chliche Betriebszustand des K&ouml;rpers &mdash; kein Selbstbericht.</strong></p><div class="diff-sci">Einzigartig f&uuml;r THO</div></div><div class="diff-card"><div class="diff-n">03 &middot; Der Mechanismus</div><h3 class="diff-h">&bdquo;Einsicht kann einen Pr&auml;diktions-Prior nicht aktualisieren. Somatische Erfahrung schon.&ldquo;</h3><p class="diff-b">Das Gehirn best&auml;tigt sein bestehendes Modell, bevor es es aktualisiert. <strong>Jedes einsichtsbasierte Programm, das in Ihrer Organisation scheiterte, scheiterte an genau dieser Stelle.</strong> Deshalb h&auml;lt die Wirkung an.</p><div class="diff-sci">Barrett (2017) &middot; Friston (2010)</div></div></div>
@@ -834,7 +832,7 @@ footer a:hover{color:var(--cyan)}
 
 <section id="diagnostic" class="fade-in" style="padding:var(--section-pad) 44px">
   <div class="wrap">
-    <h2 class="section-label">Ihre Organisation &mdash; Ein Pulscheck</h2>
+    <div class="section-label">Ihre Organisation &mdash; Ein Pulscheck</div>
     <h2 class="h2-sora" style="margin-bottom:20px">Was kostet das Muster Ihre Organisation gerade?</h2>
     <p class="sec-text" style="max-width:560px;margin:0 auto">Neun Fragen. Drei Minuten. Das Ergebnis ist eine Musterkarte &mdash; kein Score.</p>
   </div>
@@ -863,7 +861,7 @@ footer a:hover{color:var(--cyan)}
 
 <section id="process" class="fade-in" style="padding:var(--section-pad) 44px">
   <div class="wrap" style="max-width:760px;text-align:left">
-    <h2 class="section-label" style="text-align:center">Wie die Arbeit abl&auml;uft</h2>
+    <div class="section-label" style="text-align:center">Wie die Arbeit abl&auml;uft</div>
     <h2 class="h2-sora" style="text-align:center;margin-bottom:8px">F&uuml;nf Phasen. Keine Workshops.</h2>
     <div class="quote-block" style="max-width:560px;margin:28px auto 48px"><div class="quote-text">&#8220;Nicht unehrlich. Nicht schwach. Einfach nie die Bedingungen bekommen f&uuml;r etwas Mutigeres. Schaffen Sie sie, und Menschen bl&uuml;hen auf. Die Arbeit folgt.&#8221;</div><div class="quote-attr">Tom Waldek</div></div>
     <div class="phase-list"><div class="phase"><div class="phase-num">0</div><div class="phase-content"><div class="phase-name">Erstgespr&auml;ch</div><p class="phase-desc">Kein Pitch. Eine Frage &mdash; die wahrhaftige.</p></div><div class="phase-fee">Kostenlos</div></div><div class="phase"><div class="phase-num">1</div><div class="phase-content"><div class="phase-name">Trust Architecture Diagnostic</div><p class="phase-desc">3&ndash;4 Wochen vor Ort. F&uuml;nf Beobachtungskontexte in echten Meetings und Entscheidungen. <strong>Ergebnis: Trust Architecture Map.</strong></p></div><div class="phase-fee">&euro;12K</div></div><div class="phase"><div class="phase-num">2</div><div class="phase-content"><div class="phase-name">Origin Work</div><p class="phase-desc">3&ndash;5 Monate vor Ort. Aufl&ouml;sung von Mustern in echten Gespr&auml;chen. <strong>Ergebnis: Entscheidungen vom Menschen &mdash; nicht vom Muster.</strong></p></div><div class="phase-fee">Auf Anfrage</div></div><div class="phase"><div class="phase-num">3</div><div class="phase-content"><div class="phase-name">Integration</div><p class="phase-desc">Verankerung der neuen Betriebsbedingungen in dauerhafter Struktur. Parallel zu den letzten Wochen von Origin Work.</p></div><div class="phase-fee">Inbegriffen</div></div><div class="phase"><div class="phase-num">4</div><div class="phase-content"><div class="phase-name">&Uuml;berpr&uuml;fung</div><p class="phase-desc">6 Monate nach Abschluss. Ein Tag vor Ort. Konfirmation, was gehalten hat, was sich ver&auml;ndert hat.</p></div><div class="phase-fee">Inbegriffen</div></div></div>
@@ -877,7 +875,7 @@ footer a:hover{color:var(--cyan)}
 
 <section id="faq" style="padding:var(--section-pad) 44px;position:relative;z-index:1" class="fade-in">
   <div style="max-width:760px;margin:0 auto;text-align:center">
-    <h2 class="section-label">Häufige Fragen</h2>
+    <div class="section-label">Häufige Fragen</div>
     <h2 class="h2-sora" style="margin-bottom:40px">Fragen, die es wert sind, gestellt zu werden.</h2>
   </div>
   <div class="faq-wrap">
@@ -963,7 +961,6 @@ footer a:hover{color:var(--cyan)}
 
 <section id="contact" class="fade-in" style="padding:var(--section-pad) 44px;text-align:center">
   <div class="wrap">
-    <h2 class="section-label">Der n&auml;chste Schritt</h2>
     <h2 class="h2-serif" style="margin-bottom:18px">Bereit, aufzuh&ouml;ren, die Organisation zu inszenieren, die Sie gerne w&auml;ren?</h2>
     <p class="sec-text" style="max-width:480px;margin:0 auto 14px">F&uuml;hrungskr&auml;fte, die sagen, was wahr ist. Teams, die Probleme ansprechen, bevor sie zu Krisen werden. Partner, die bleiben.</p>
     <p style="font-family:var(--display);font-size:12px;color:var(--tx3);letter-spacing:3px;text-transform:uppercase;margin-bottom:40px">Ein Trust Architecture Diagnostic.</p>
