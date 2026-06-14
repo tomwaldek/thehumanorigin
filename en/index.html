@@ -726,12 +726,12 @@ strong,b{font-weight:400}
 
 
 /* ══ WHO FOR — card grid with rounded dots ══ */
-.who-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:760px;margin:32px auto 0}
-.who-card{padding:22px 24px;background:rgba(6,182,212,0.025);border:1px solid rgba(6,182,212,0.08);border-radius:10px;display:flex;gap:14px;align-items:flex-start;transition:border-color 0.2s}
-.who-card:hover{border-color:rgba(6,182,212,0.18)}
-.who-dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);opacity:0.5;flex-shrink:0;margin-top:7px}
-.who-card p{font-family:var(--display);font-weight:300;font-size:clamp(13px,1.4vw,15px);color:var(--tx2);line-height:1.7;margin:0}
-@media(max-width:768px){.who-grid{grid-template-columns:1fr}}
+
+
+
+
+
+@media(max-width:768px){}
 
 
 /* ══ WHY UNIFIED CARD ══ */
@@ -770,7 +770,7 @@ strong,b{font-weight:400}
 .de-top{display:flex;align-items:center;gap:10px;margin-bottom:14px;position:relative;z-index:1}
 .de-num{font-family:var(--display);font-weight:200;font-size:11px;color:var(--orange);letter-spacing:3px;opacity:0.9}
 .de-disc{font-family:var(--display);font-weight:300;font-size:10px;color:rgba(249,115,22,0.5);letter-spacing:2.5px;text-transform:uppercase}
-.de-name{font-family:var(--display);font-weight:300;font-size:clamp(13px,1.4vw,15px);color:rgba(255,255,255,0.92);line-height:1.55;margin:0 0 10px;position:relative;z-index:1}
+.de-name{font-family:var(--display);font-weight:300;font-size:clamp(13px,1.4vw,15px);color:var(--cyan);line-height:1.55;margin:0 0 10px;position:relative;z-index:1}
 .de-desc{font-family:var(--ff);font-weight:400;font-size:13px;color:var(--tx3);line-height:1.65;margin:0 0 14px;position:relative;z-index:1}
 .de-result{
   font-family:var(--display);font-weight:200;font-size:12px;
@@ -781,6 +781,15 @@ strong,b{font-weight:400}
   position:relative;z-index:1}
 @media(max-width:768px){.disc-enhanced{grid-template-columns:1fr}}
 
+
+/* WHO-FOR CARDS */
+.who-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:760px;margin:32px auto 0}
+.who-card{padding:22px 24px;background:linear-gradient(145deg,rgba(6,182,212,0.06) 0%,rgba(6,182,212,0.02) 100%);backdrop-filter:blur(8px);border:1px solid rgba(6,182,212,0.15);border-radius:10px;position:relative;overflow:hidden;transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s}
+.who-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(6,182,212,0.6),transparent)}
+.who-card:hover{border-color:rgba(6,182,212,0.35);transform:translateY(-2px);box-shadow:0 8px 28px rgba(6,182,212,0.08)}
+.who-num{font-family:var(--display);font-weight:200;font-size:10px;color:rgba(6,182,212,0.55);letter-spacing:3px;display:block;margin-bottom:10px;position:relative;z-index:1}
+.who-card p{font-family:var(--display);font-weight:300;font-size:clamp(13px,1.4vw,15px);color:var(--tx2);line-height:1.7;margin:0;position:relative;z-index:1}
+@media(max-width:768px){.who-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -855,15 +864,21 @@ strong,b{font-weight:400}
     <h2 class="h2-sora">Is this for you?</h2>
   </div>
   <div class="who-grid">
-<div class="who-card"><div class="who-dot"></div><p>You&#8217;ve watched talented people work at a fraction of what they are. Not from lack of skill. The space to be anything else didn&#8217;t exist.</p></div>
-<div class="who-card"><div class="who-dot"></div><p>You&#8217;ve been in a room where the wrong decision was made because the right one was too expensive to say out loud.</p></div>
-<div class="who-card"><div class="who-dot"></div><p>You&#8217;ve felt the gap between what your organisation shows and what it costs to maintain that.</p></div>
-<div class="who-card"><div class="who-dot"></div><p>You&#8217;ve tried leadership development before. Something shifted. Then the room went back to how it was.</p></div>
+<div class="who-card"><span class="who-num">01</span><p></p></div>
+<div class="who-card"><span class="who-num">02</span><p></p></div>
+<div class="who-card"><span class="who-num">03</span><p></p></div>
+<div class="who-card"><span class="who-num">04</span><p></p></div>
 </div>
   <div style="text-align:center;padding:32px 44px 56px;position:relative;z-index:1">
     <a href="https://cal.eu/tomwaldek/entry-conversation" data-cal-link="tomwaldek/entry-conversation" data-cal-origin="https://cal.eu" data-cal-config='{"layout":"month_view","theme":"dark"}' class="soft-cta">Get your free conversation</a>
   </div>
 </section>
+<section id="method" class="episode fade-in">
+<div class="episode-wrap">
+<div class="ep-meta"><span class="ep-num">05</span><span class="ep-label">Why Film</span></div><h2 class="ep-q">What does film have to do with leadership?</h2><p class="ep-ans">Film is the only discipline where truth and performance are both required &mdash; and where the gap between them becomes measurable in real time.</p><div class="pa"><div class="pa-text">“The camera does not negotiate. Over twenty-five years I watched what bodies do when performance stops being enough to hide behind.”</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Most leadership diagnostics observe what a leader performs. Film records what they cannot &mdash; the involuntary physiological signatures that appear under creative and relational pressure: breath hold, vocal register, avoidance timing.</p><p>This is not coaching. It is diagnostic work. Six disciplines in live settings &mdash; not workshops. In the room where it matters.</p></div>
+</div>
+</section>
+<div class="section-div"></div>
 <section style="position:relative;z-index:1;padding:0 44px 90px" class="fade-in">
   <div style="max-width:1060px;margin:0 auto">
     <div class="disc-enhanced">
