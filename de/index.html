@@ -632,10 +632,10 @@ footer a:hover{color:var(--cyan)}
 
 /* Who For */
 .who-ep{position:relative;z-index:1;padding:80px 44px}
-.who-list{max-width:720px;margin:22px auto 0}
-.who-item{padding:18px 0;border-bottom:1px solid var(--border);font-family:var(--ff);font-weight:400;font-size:clamp(15px,1.7vw,18px);color:var(--tx2);line-height:1.65;display:flex;align-items:flex-start;gap:14px}
-.who-item:last-child{border-bottom:none}
-.who-item::before{content:'\2014';color:var(--cyan);font-family:var(--display);font-size:13px;margin-top:3px;flex-shrink:0;opacity:0.7}
+
+
+
+
 /* Clinical */
 .clinical{position:relative;padding:32px 38px;margin:0 0 24px;background:rgba(6,182,212,0.04);border:1px solid rgba(6,182,212,0.14);border-radius:14px}
 .clinical::before{content:'Personal Foundation';position:absolute;top:-1px;left:22px;transform:translateY(-50%);font-family:var(--display);font-size:9px;letter-spacing:3px;color:var(--cyan);background:var(--bg);padding:0 10px;text-transform:uppercase}
@@ -683,7 +683,7 @@ footer a:hover{color:var(--cyan)}
 .sec-text{line-height:1.75}
 .ep-body p{line-height:1.75}
 .ep-ans{line-height:1.65}
-.who-item{line-height:1.65}
+
 .faq-a-inner{line-height:1.75}
 .why-text p{line-height:1.75}
 .phase-desc{line-height:1.65}
@@ -719,9 +719,8 @@ footer a:hover{color:var(--cyan)}
 /* ── NO ITALIC, NO BOLD IN CONTENT — global override ── */
 em,i{font-style:normal}
 strong,b{font-weight:400}
-.ep-body em,.ep-body i,.ep-ans em,.bridge em,.who-item em,
-.sec-text em,.proof-frame em,.phase-desc em,.faq-a-inner em{font-style:normal}
-.ep-body strong,.ep-ans strong,.bridge strong,.who-item strong{font-weight:300}
+.ep-body em,.ep-body i,.ep-ans em,.bridge em,
+.ep-body strong,.ep-ans strong,.bridge strong,
 
 /* ══ DISC CARDS — simplified 3-element ══ */
 .disc-enhanced{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
@@ -733,6 +732,15 @@ strong,b{font-weight:400}
 .de-name{font-family:var(--display);font-weight:300;font-size:14px;color:rgba(255,255,255,0.88);line-height:1.55;margin-bottom:10px}
 .de-desc{font-family:var(--ff);font-weight:400;font-size:13px;color:var(--tx3);line-height:1.65}
 @media(max-width:768px){.disc-enhanced{grid-template-columns:1fr}}
+
+
+/* ══ WHO FOR — card grid with rounded dots ══ */
+.who-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:760px;margin:32px auto 0}
+.who-card{padding:22px 24px;background:rgba(6,182,212,0.025);border:1px solid rgba(6,182,212,0.08);border-radius:10px;display:flex;gap:14px;align-items:flex-start;transition:border-color 0.2s}
+.who-card:hover{border-color:rgba(6,182,212,0.18)}
+.who-dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);opacity:0.5;flex-shrink:0;margin-top:7px}
+.who-card p{font-family:var(--display);font-weight:300;font-size:clamp(13px,1.4vw,15px);color:var(--tx2);line-height:1.7;margin:0}
+@media(max-width:768px){.who-grid{grid-template-columns:1fr}}
 
 </style>
 </head>
@@ -804,20 +812,18 @@ strong,b{font-weight:400}
 <div class="section-div"></div>
 
 <div class="who-ep fade-in">
-  <div style="max-width:720px;margin:0 auto;text-align:center">
+  <div style="max-width:760px;margin:0 auto;text-align:center">
     <h2 class="h2-sora">Ist das f&uuml;r Sie?</h2>
   </div>
-
-<div style="text-align:center;padding:20px 44px 56px;position:relative;z-index:1">
-  <a href="https://cal.eu/tomwaldek/erstgespraech" data-cal-link="tomwaldek/erstgespraech" data-cal-origin="https://cal.eu" data-cal-config='{"layout":"month_view","theme":"dark"}' class="soft-cta" >Ihr freies Gespräch sichern</a>
+  <div class="who-grid">
+<div class="who-card"><div class="who-dot"></div><p>Sie haben talentierte Menschen beobachtet, die mit einem Bruchteil von sich selbst arbeiteten. Nicht aus Mangel an K&ouml;nnen. Der Raum f&uuml;r mehr existierte nicht.</p></div>
+<div class="who-card"><div class="who-dot"></div><p>Sie waren in einem Raum, in dem die falsche Entscheidung getroffen wurde, weil die richtige zu teuer war, um sie laut auszusprechen.</p></div>
+<div class="who-card"><div class="who-dot"></div><p>Sie haben die L&uuml;cke gesp&uuml;rt zwischen dem, was Ihre Organisation zeigt, und dem, was es kostet, das aufrechtzuerhalten.</p></div>
+<div class="who-card"><div class="who-dot"></div><p>Sie haben F&uuml;hrungskr&auml;fteentwicklung versucht. Etwas hat sich ver&auml;ndert. Dann war der Raum wieder so wie vorher.</p></div>
 </div>
-
-<div class="section-div"></div>
-
-<section id="method" class="episode fade-in">
-<div class="episode-wrap">
-<div class="ep-meta"><span class="ep-num">05</span><span class="ep-label">Die Methode</span></div><h2 class="ep-q">Was hat Film mit F&uuml;hrung zu tun?</h2><p class="ep-ans">Film ist die einzige Disziplin, in der Wahrheit und Darstellung gleichzeitig gefordert sind &mdash; und in der die L&uuml;cke zwischen beiden in Echtzeit messbar wird.</p><div class="pa"><div class="pa-text">“Die Kamera verhandelt nicht. In f&uuml;nfundzwanzig Jahren habe ich gesehen, was K&ouml;rper tun, wenn die Darstellung nicht mehr ausreicht, um sich zu verbergen.”</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Die meisten F&uuml;hrungsdiagnostiken beobachten, was ein Leader darstellt. Film zeigt, was er nicht kann &mdash; die unwillk&uuml;rlichen physiologischen Signaturen unter Druck: gehaltener Atem, Stimmverengung, Ausweich-Timing.</p><p><strong>Das ist kein Coaching. Es ist diagnostische Arbeit.</strong> Sechs Disziplinen in echten Settings &mdash; keine Workshops. Im Raum, wo es z&auml;hlt.</p></div>
-</div>
+  <div style="text-align:center;padding:32px 44px 56px;position:relative;z-index:1">
+    <a href="https://cal.eu/tomwaldek/erstgespraech" data-cal-link="tomwaldek/erstgespraech" data-cal-origin="https://cal.eu" data-cal-config='{"layout":"month_view","theme":"dark"}' class="soft-cta">Ihr freies Gespr&auml;ch sichern</a>
+  </div>
 </section>
 <section style="position:relative;z-index:1;padding:0 44px 90px" class="fade-in">
   <div style="max-width:1060px;margin:0 auto">
@@ -854,8 +860,7 @@ strong,b{font-weight:400}
 </div>
 </div>
 </section>
-
-  <div class="who-list"><div class="who-item">Sie haben talentierte Menschen beobachtet, die mit einem Bruchteil von sich selbst arbeiteten. Nicht aus Mangel an K&ouml;nnen. Der Raum f&uuml;r mehr existierte nicht.</div><div class="who-item">Sie waren in einem Raum, in dem die falsche Entscheidung getroffen wurde, weil die richtige zu teuer war, um ausgesprochen zu werden.</div><div class="who-item">Sie haben die L&uuml;cke gesp&uuml;rt zwischen dem, was Ihre Organisation zeigt, und dem, was es kostet, das aufrechtzuerhalten.</div><div class="who-item">Sie haben F&uuml;hrungsentwicklung ausprobiert. Etwas hat sich ver&auml;ndert. Dann ist der Raum zur&uuml;ckgegangen, wie er war.</div></div>
+<div class="who-item">Sie waren in einem Raum, in dem die falsche Entscheidung getroffen wurde, weil die richtige zu teuer war, um ausgesprochen zu werden.</div><div class="who-item">Sie haben die L&uuml;cke gesp&uuml;rt zwischen dem, was Ihre Organisation zeigt, und dem, was es kostet, das aufrechtzuerhalten.</div><div class="who-item">Sie haben F&uuml;hrungsentwicklung ausprobiert. Etwas hat sich ver&auml;ndert. Dann ist der Raum zur&uuml;ckgegangen, wie er war.</div></div>
 </div>
 
 <div class="section-div"></div>
