@@ -169,7 +169,7 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 .disc-card:hover{border-color:rgba(249,115,22,0.28);transform:translateY(-2px);background:linear-gradient(135deg,rgba(6,182,212,0.04) 0%,rgba(249,115,22,0.09) 100%);box-shadow:0 12px 36px -10px rgba(249,115,22,0.18)}
 .disc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--orange));opacity:0;transition:opacity 0.3s}
 .disc-card:hover::after{opacity:1}
-.disc-num{font-family:var(--display);font-weight:400;font-size:12px;color:var(--cyan);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(6,182,212,0.15);opacity:0.88}
+.disc-num{font-family:var(--display);font-weight:300;font-size:12px;color:var(--cyan);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(6,182,212,0.15);opacity:0.88}
 .disc-name{font-family:var(--display);font-weight:300;font-size:19px;color:rgba(255,255,255,0.95);margin-bottom:14px;letter-spacing:0.2px;line-height:1.4}
 .disc-desc{font-weight:400;font-size:14px;color:rgba(255,242,225,0.62);line-height:1.8}
 
@@ -185,7 +185,7 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 .phase:hover{background:var(--glass2);border-color:var(--border2)}
 .phase-num{font-family:var(--display);font-weight:200;font-size:32px;color:var(--cyan);opacity:0.4;min-width:40px;line-height:1}
 .phase-body{flex:1}
-.phase-name{font-family:var(--display);font-weight:500;font-size:14px;color:var(--white);margin-bottom:6px;letter-spacing:0.5px}
+.phase-name{font-family:var(--display);font-weight:300;font-size:14px;color:var(--white);margin-bottom:6px;letter-spacing:0.5px}
 .phase-desc{font-weight:400;font-size:14px;color:rgba(255,242,225,0.65);line-height:1.7}
 .phase-fee{font-family:var(--display);font-weight:400;font-size:11px;color:var(--orange);letter-spacing:2px;text-transform:uppercase;min-width:88px;text-align:right;padding-top:6px;opacity:0.65;transition:all 0.3s}
 
@@ -234,7 +234,7 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 .diag-audience{margin-top:26px;font-family:var(--display);font-size:10px;letter-spacing:2px;color:var(--tx4);font-weight:300;text-align:center}
 .diag-intro{text-align:center;margin-bottom:32px}
 .diag-intro p{font-weight:300;font-size:14px;color:var(--tx3)}
-.diag-intro .count{font-family:var(--display);font-weight:500;color:var(--cyan)}
+.diag-intro .count{font-family:var(--display);font-weight:300;color:var(--cyan)}
 .diag-standalone{margin-top:20px;font-family:var(--display);font-weight:300;font-size:11px;color:var(--tx4);letter-spacing:1.5px;text-align:center}
 .diag-standalone a{color:var(--cyan);text-decoration:none;border-bottom:1px solid rgba(6,182,212,0.3);transition:all 0.3s}
 .diag-standalone a:hover{border-bottom-color:var(--cyan);color:var(--white)}
@@ -248,15 +248,15 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 .d-text{font-family:var(--display);font-weight:300;font-size:18px;color:var(--white);line-height:1.55;margin-bottom:22px}
 .d-neuro{background:rgba(6,182,212,0.04);border:1px solid rgba(6,182,212,0.12);border-radius:8px;padding:14px 16px;margin-bottom:28px;max-height:500px;overflow:hidden;transition:max-height 0.4s ease,opacity 0.4s ease,margin 0.4s ease,padding 0.4s ease}
 .d-neuro.hidden{max-height:0;opacity:0;margin-bottom:0;padding:0 16px;border-color:transparent}
-.d-neuro-icon{font-family:var(--display);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:6px;font-weight:500}
+.d-neuro-icon{font-family:var(--display);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:6px;font-weight:400}
 .d-neuro-text{font-size:13px;line-height:1.6;color:rgba(255,255,255,0.45)}
 .d-neuro-ref{font-size:11px;color:var(--tx4);margin-top:8px}
 .d-opt{padding:14px 18px;margin-bottom:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:14px;color:var(--tx2);transition:all 0.2s ease;font-family:var(--ff);width:100%;text-align:left}
 .d-opt:hover{border-color:rgba(255,255,255,0.1);background:rgba(255,255,255,0.04)}
 .d-opt.sel{border-color:var(--cyan);background:rgba(6,182,212,0.08);color:var(--white)}
 .d-nav{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
-.d-btn{display:inline-block;padding:14px 36px;border-radius:100px;border:none;font-size:14px;font-weight:500;letter-spacing:1px;cursor:pointer;transition:all 0.3s ease;font-family:var(--ff);text-decoration:none}
-.d-btn-cyan{background:linear-gradient(135deg,var(--cyan),var(--orange));background-size:200% 200%;background-position:0% 50%;color:var(--white);border-radius:100px;font-family:var(--display);font-weight:500;box-shadow:0 4px 16px -6px rgba(6,182,212,0.25);transition:background-position 0.6s cubic-bezier(0.22,1,0.36,1),transform 0.35s cubic-bezier(0.22,1,0.36,1),box-shadow 0.35s cubic-bezier(0.22,1,0.36,1),filter 0.35s}
+.d-btn{display:inline-block;padding:14px 36px;border-radius:100px;border:none;font-size:14px;font-weight:300;letter-spacing:1px;cursor:pointer;transition:all 0.3s ease;font-family:var(--ff);text-decoration:none}
+.d-btn-cyan{background:linear-gradient(135deg,var(--cyan),var(--orange));background-size:200% 200%;background-position:0% 50%;color:var(--white);border-radius:100px;font-family:var(--display);font-weight:300;box-shadow:0 4px 16px -6px rgba(6,182,212,0.25);transition:background-position 0.6s cubic-bezier(0.22,1,0.36,1),transform 0.35s cubic-bezier(0.22,1,0.36,1),box-shadow 0.35s cubic-bezier(0.22,1,0.36,1),filter 0.35s}
 .d-btn-cyan:hover{background-position:100% 50%;transform:translateY(-2px) scale(1.02);box-shadow:0 14px 32px -8px rgba(6,182,212,0.45),0 0 30px -10px rgba(249,115,22,0.3);filter:brightness(1.08)}
 .d-btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--white);font-weight:300;backdrop-filter:blur(8px)}
 .d-btn.dis{opacity:0.3;pointer-events:none}
@@ -329,7 +329,7 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 /* ═══ CTA ═══ */
 .cta-section{text-align:center;padding:var(--section-pad) 44px;position:relative}
 .cta-section::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:200px;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent)}
-.cta-quote{font-family:var(--display);font-weight:200;font-size:20px;color:rgba(255,245,230,0.75);line-height:1.8;max-width:600px;margin:0 auto 48px;letter-spacing:1.5px}
+.cta-quote{font-family:var(--display);font-weight:200;font-size:clamp(15px,1.8vw,18px);color:rgba(255,245,230,0.75);line-height:1.8;max-width:600px;margin:0 auto 48px;letter-spacing:1.5px}
 
 /* ═══ AVATAR ═══ */
 .cta-avatar{width:110px;height:110px;border-radius:50%;overflow:hidden;margin:0 auto 12px;position:relative;border:2px solid transparent;background-origin:border-box;background-clip:padding-box,border-box;background-image:linear-gradient(var(--bg),var(--bg)),linear-gradient(135deg,var(--cyan),var(--orange))}
@@ -359,7 +359,7 @@ footer a:hover{color:var(--cyan)}
 .for-block:hover{background:rgba(6,182,212,0.06);border-left-color:var(--orange)}
 .for-block p{font-weight:300;font-size:16px;color:var(--tx2);line-height:1.8;margin:0}
 .for-block em{color:var(--cyan);font-style:normal;font-weight:400}
-.for-closing{margin-top:28px;font-weight:300;font-size:16px;color:var(--tx2);line-height:1.8}
+.for-closing{font-family:var(--display);font-weight:200;margin-top:28px;font-weight:300;font-size:16px;color:var(--tx2);line-height:1.8}
 .for-closing em{color:var(--cyan);font-style:normal;font-weight:500}
 
 /* ═══ SCROLL ANIM — with stagger support ═══ */
@@ -493,7 +493,7 @@ footer a:hover{color:var(--cyan)}
 .for-block:nth-of-type(1).visible{transition-delay:0s}
 .for-block:nth-of-type(2).visible{transition-delay:0.35s}
 .for-block:nth-of-type(3).visible{transition-delay:0.7s}
-.for-closing{transition:opacity 1s ease 1.05s,transform 1s ease 1.05s}
+.for-closing{font-family:var(--display);font-weight:200;transition:opacity 1s ease 1.05s,transform 1s ease 1.05s}
 
 /* ═══ FAQ — 11 items per claude.md §12 ═══ */
 .faq-wrap{max-width:760px;margin:0 auto;text-align:left}
@@ -519,7 +519,7 @@ footer a:hover{color:var(--cyan)}
 .overview-step{display:flex;align-items:center;gap:20px;padding:18px 28px;background:var(--bg)}
 .overview-num{font-family:var(--display);font-weight:200;font-size:22px;color:var(--cyan);opacity:0.5;min-width:28px}
 .overview-body{flex:1}
-.overview-name{font-family:var(--display);font-weight:500;font-size:13px;color:var(--white);letter-spacing:0.5px}
+.overview-name{font-family:var(--display);font-weight:300;font-size:13px;color:var(--white);letter-spacing:0.5px}
 .overview-detail{font-size:13px;color:var(--tx3);line-height:1.5;margin-top:2px}
 .overview-price{font-family:var(--display);font-weight:300;font-size:14px;color:var(--orange);white-space:nowrap}
 .overview-link{text-align:center;margin-top:20px}
@@ -575,7 +575,7 @@ footer a:hover{color:var(--cyan)}
 .why-verse p{font-family:var(--display);font-weight:200;font-size:17px;color:rgba(255,245,230,0.85);line-height:1.9;letter-spacing:0.5px;margin:0;text-align:left}
 .why-verse p:last-child{color:rgba(255,245,230,0.60);}
 .why-precision{margin-top:40px;padding:28px 32px;background:rgba(6,182,212,0.04);border:1px solid rgba(6,182,212,0.12);border-radius:12px}
-.why-precision-heading{font-family:var(--display);font-weight:500;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--cyan);margin:0 0 16px}
+.why-precision-heading{font-family:var(--display);font-weight:300;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--cyan);margin:0 0 16px}
 
 /* ═══ EPISODE SYSTEM ═══ */
 .episode{position:relative;z-index:1;padding:100px 44px}
@@ -589,7 +589,7 @@ footer a:hover{color:var(--cyan)}
 .ep-body p{font-weight:400;font-size:16px;color:rgba(255,242,225,0.82);line-height:2;margin-bottom:16px}
 .ep-body p:last-child{margin-bottom:0}
 .ep-body p strong{color:var(--cyan);font-weight:400}
-.ep-closer{font-family:var(--ff);font-weight:400;font-size:16px;color:rgba(255,245,230,0.82);margin-top:22px;padding-top:20px;border-top:1px solid var(--border)}
+.ep-closer{font-family:var(--display);font-weight:200;font-size:15px;color:rgba(255,245,230,0.82);margin-top:22px;padding-top:20px;border-top:1px solid var(--border)}
 .ep-sci{font-family:var(--display);font-size:10px;color:var(--tx4);letter-spacing:2px;margin-top:14px}
 /* Personal anchor */
 .pa{margin:20px 0 24px;padding:22px 32px;border-left:2px solid;border-image:linear-gradient(180deg,var(--cyan),var(--orange)) 1;background:rgba(6,182,212,0.03);border-radius:0 10px 10px 0}
@@ -600,7 +600,7 @@ footer a:hover{color:var(--cyan)}
 .sc-block{text-align:center;min-width:56px}
 .sc-num{font-family:var(--display);font-weight:200;font-size:24px;line-height:1;background:linear-gradient(135deg,var(--cyan),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:block}
 .sc-src{font-family:var(--display);font-size:8px;color:var(--tx4);letter-spacing:2px;text-transform:uppercase;margin-top:3px;display:block}
-.sc-txt{font-size:13px;color:var(--tx2);line-height:1.6;padding-top:4px}
+.sc-txt{font-family:var(--display);font-weight:200;font-size:13px;color:var(--tx2);line-height:1.6;padding-top:4px}
 .stats-row{display:flex;gap:14px;flex-wrap:wrap;margin:20px 0}
 /* Outcome block */
 .outcome{margin:22px 0 0;padding:18px 26px;background:rgba(6,182,212,0.05);border:1px solid rgba(6,182,212,0.15);border-radius:10px;display:flex;align-items:flex-start;gap:12px}
@@ -623,8 +623,8 @@ footer a:hover{color:var(--cyan)}
 .de-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
 .de-num{font-family:var(--display);font-size:10px;color:var(--orange);letter-spacing:3px;text-transform:uppercase}
 .de-tag{font-family:var(--display);font-size:9px;color:var(--tx4);letter-spacing:2px;text-transform:uppercase}
-.de-name{font-family:var(--display);font-weight:500;font-size:clamp(14px,1.4vw,17px);color:var(--white);margin-bottom:8px;line-height:1.3;letter-spacing:0.2px}
-.de-q{font-family:var(--ff);font-weight:300;font-size:12px;color:rgba(255,242,225,0.40);margin-bottom:11px;line-height:1.5}
+.de-name{font-family:var(--display);font-weight:300;font-size:clamp(14px,1.4vw,17px);color:var(--white);margin-bottom:8px;line-height:1.3;letter-spacing:0.2px}
+.de-q{font-family:var(--display);font-weight:200;font-size:13px;color:rgba(255,242,225,0.40);margin-bottom:11px;line-height:1.5}
 .de-catches{padding:9px 13px;background:rgba(0,0,0,0.2);border-left:2px solid rgba(249,115,22,0.35);margin-bottom:11px}
 .de-catches-label{font-family:var(--display);font-size:8px;color:var(--orange);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:4px;opacity:0.8}
 .de-catches-text{font-size:12px;color:var(--tx2);line-height:1.55}
@@ -639,7 +639,7 @@ footer a:hover{color:var(--cyan)}
 /* Clinical */
 .clinical{position:relative;padding:32px 38px;margin:0 0 24px;background:rgba(6,182,212,0.04);border:1px solid rgba(6,182,212,0.14);border-radius:14px}
 .clinical::before{content:'Personal Foundation';position:absolute;top:-1px;left:22px;transform:translateY(-50%);font-family:var(--display);font-size:9px;letter-spacing:3px;color:var(--cyan);background:var(--bg);padding:0 10px;text-transform:uppercase}
-.clinical-anchor{font-family:var(--display);font-weight:300;font-style:normal;font-size:clamp(16px,2vw,23px);color:var(--white);line-height:1.35;margin-bottom:16px}
+.clinical-anchor{font-family:var(--display);font-weight:200;font-style:normal;font-size:clamp(16px,2vw,23px);color:var(--white);line-height:1.35;margin-bottom:16px}
 .clinical p{font-size:15px;line-height:1.9;color:var(--tx2);margin-bottom:12px}
 .clinical p:last-child{margin-bottom:0}
 .clinical-stamp{font-family:var(--display);font-size:10px;color:var(--cyan);letter-spacing:3px;text-transform:uppercase;margin-top:16px;padding-top:13px;border-top:1px solid var(--border)}
@@ -649,8 +649,8 @@ footer a:hover{color:var(--cyan)}
 .diff-card{background:var(--glass2);border:1px solid var(--border);border-radius:14px;padding:28px 24px;position:relative;overflow:hidden}
 .diff-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(6,182,212,0.18),transparent)}
 .diff-n{font-family:var(--display);font-size:10px;color:var(--orange);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border)}
-.diff-h{font-family:var(--display);font-weight:500;font-size:clamp(13px,1.3vw,16px);color:var(--white);margin-bottom:11px;line-height:1.4;letter-spacing:0.2px}
-.diff-b{font-size:13px;line-height:1.85;color:rgba(255,242,225,0.58)}
+.diff-h{font-family:var(--display);font-weight:300;font-size:clamp(13px,1.3vw,16px);color:var(--white);margin-bottom:11px;line-height:1.4;letter-spacing:0.2px}
+.diff-b{font-family:var(--ff);font-weight:400;font-size:13px;line-height:1.85;color:rgba(255,242,225,0.58)}
 .diff-b strong{color:var(--cyan);font-weight:400}
 .diff-sci{font-family:var(--display);font-size:10px;color:var(--tx4);letter-spacing:1.5px;margin-top:11px}
 
@@ -765,25 +765,25 @@ strong,b{font-weight:400}
 <div id="episodes"></div>
 <section class="episode fade-in">
 <div class="episode-wrap">
-<div class="ep-meta"><span class="ep-num">01</span><span class="ep-label">The Pattern</span></div><h2 class="ep-q">What&#8217;s everyone in your room pretending not to notice?</h2><p class="ep-ans">There&#8217;s an unspoken agreement about what can and cannot be said. It didn&#8217;t start with a decision. It accumulated.</p><div class="pa"><div class="pa-text">&#8220;I have been that person &mdash; the one whose nervous system was already deciding what was safe to say before anyone opened their mouth.&#8221;</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>It&#8217;s never a people problem. It&#8217;s one condition: an organisation running on <strong>survival architecture</strong> &mdash; the operating system it defaulted to under pressure and never switched off. It decides who speaks — and what gets buried.</p><p>The pattern predates the organisation. It predates their first word.</p></div><div class="stats-row"><div class="stat-call"><div class="sc-block"><span class="sc-num" data-target="56" data-prefix="" data-suffix="%">0%</span><span class="sc-src">PMI</span></div><div class="sc-txt">of leaders report their team doesn&#8217;t surface real problems to them</div></div><div class="stat-call"><div class="sc-block"><span class="sc-num" data-target="3" data-prefix="€" data-suffix="K">&euro;0K</span><span class="sc-src">EU&#8209;OSHA</span></div><div class="sc-txt">average annual cost per employee in stress-related absence alone</div></div></div><p class="ep-closer">That&#8217;s the layer no restructure reaches. No software sees it. Because it looks like normal.</p><div class="outcome"><span class="outcome-label">What changes</span><span class="outcome-text"><strong>The conversation after the meeting stops contradicting the meeting.</strong> Problems surface before crises. The hire who was leaving stays.</span></div><div class="ep-sci">Porges (2011) &middot; Barsade (2002) &middot; EU&#8209;OSHA (2022)</div>
+<div class="ep-meta"><span class="ep-num">01</span><span class="ep-label">The Pattern</span></div><h2 class="ep-q">What&#8217;s everyone in your room pretending not to notice?</h2><p class="ep-ans">There&#8217;s an unspoken agreement about what can and cannot be said. It didn&#8217;t start with a decision. It accumulated.</p><div class="pa"><div class="pa-text">“I have been that person &mdash; the one whose nervous system was already deciding what was safe to say before anyone opened their mouth.”</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>It&#8217;s never a people problem. It&#8217;s one condition: an organisation running on <strong>survival architecture</strong> &mdash; the operating system it defaulted to under pressure and never switched off. It decides who speaks — and what gets buried.</p><p>The pattern predates the organisation. It predates their first word.</p></div><div class="stats-row"><div class="stat-call"><div class="sc-block"><span class="sc-num" data-target="56" data-prefix="" data-suffix="%">0%</span><span class="sc-src">PMI</span></div><div class="sc-txt">of leaders report their team doesn&#8217;t surface real problems to them</div></div><div class="stat-call"><div class="sc-block"><span class="sc-num" data-target="3" data-prefix="€" data-suffix="K">&euro;0K</span><span class="sc-src">EU&#8209;OSHA</span></div><div class="sc-txt">average annual cost per employee in stress-related absence alone</div></div></div><p class="ep-closer">That&#8217;s the layer no restructure reaches. No software sees it. Because it looks like normal.</p><div class="outcome"><span class="outcome-label">What changes</span><span class="outcome-text"><strong>The conversation after the meeting stops contradicting the meeting.</strong> Problems surface before crises. The hire who was leaving stays.</span></div><div class="ep-sci">Porges (2011) &middot; Barsade (2002) &middot; EU&#8209;OSHA (2022)</div>
 </div>
 </section>
 <div class="section-div"></div>
 <section class="episode fade-in">
 <div class="episode-wrap">
-<div class="ep-meta"><span class="ep-num">02</span><span class="ep-label">The Origin</span></div><h2 class="ep-q">Where does the pattern come from?</h2><p class="ep-ans">The internal voice running beneath every decision was built before you could speak &mdash; for the environment you were born into, not the room you&#8217;re leading now.</p><div class="pa"><div class="pa-text">&#8220;I recognise this pattern because I carried one for most of my adult life &mdash; formed before I had language for it.&#8221;</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Charles Fernyhough&#8217;s research shows the internal narrative is built from the earliest relational environment &mdash; running automatically, beneath deliberation. <strong>Standard leadership development does not examine it.</strong> It affects every significant decision at senior level.</p><p>One pattern never changes: the unresolved story doesn&#8217;t stay personal. It migrates into leadership behaviour. <strong>Control replaces connection.</strong> Performance replaces presence. Not maliciously. Automatically.</p></div><div class="stats-row"><div class="stat-call"><div class="sc-block"><span class="sc-num" data-target="7" data-prefix="" data-suffix="×">0×</span><span class="sc-src">Edmondson &amp; Lei 2014</span></div><div class="sc-txt">higher innovation output in teams with genuine psychological safety &mdash; the direct result of removing this pattern</div></div></div><div class="quote-block"><div class="quote-text">&#8220;The organisation doesn&#8217;t copy the leader&#8217;s strategy. It copies the leader&#8217;s nervous system.&#8221;</div><div class="quote-attr">Tom Waldek</div></div><div class="outcome"><span class="outcome-label">What changes</span><span class="outcome-text"><strong>The pattern becomes visible &mdash; and therefore workable.</strong> Not through more insight. Through precision about where it began.</span></div><div class="ep-sci">Fernyhough (2016) &middot; Keltner (2016) &middot; Edmondson &amp; Lei (2014)</div>
+<div class="ep-meta"><span class="ep-num">02</span><span class="ep-label">The Origin</span></div><h2 class="ep-q">Where does the pattern come from?</h2><p class="ep-ans">The internal voice running beneath every decision was built before you could speak &mdash; for the environment you were born into, not the room you&#8217;re leading now.</p><div class="pa"><div class="pa-text">“I recognise this pattern because I carried one for most of my adult life &mdash; formed before I had language for it.”</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Charles Fernyhough&#8217;s research shows the internal narrative is built from the earliest relational environment &mdash; running automatically, beneath deliberation. <strong>Standard leadership development does not examine it.</strong> It affects every significant decision at senior level.</p><p>One pattern never changes: the unresolved story doesn&#8217;t stay personal. It migrates into leadership behaviour. <strong>Control replaces connection.</strong> Performance replaces presence. Not maliciously. Automatically.</p></div><div class="stats-row"><div class="stat-call"><div class="sc-block"><span class="sc-num" data-target="7" data-prefix="" data-suffix="×">0×</span><span class="sc-src">Edmondson &amp; Lei 2014</span></div><div class="sc-txt">higher innovation output in teams with genuine psychological safety &mdash; the direct result of removing this pattern</div></div></div><div class="quote-block"><div class="quote-text">“The organisation doesn&#8217;t copy the leader&#8217;s strategy. It copies the leader&#8217;s nervous system.”</div><div class="quote-attr">Tom Waldek</div></div><div class="outcome"><span class="outcome-label">What changes</span><span class="outcome-text"><strong>The pattern becomes visible &mdash; and therefore workable.</strong> Not through more insight. Through precision about where it began.</span></div><div class="ep-sci">Fernyhough (2016) &middot; Keltner (2016) &middot; Edmondson &amp; Lei (2014)</div>
 </div>
 </section>
 <div class="section-div"></div>
 <section id="trust" class="episode fade-in">
 <div class="episode-wrap">
-<div class="ep-meta"><span class="ep-num">03</span><span class="ep-label">The Cascade</span></div><h2 class="ep-q">Why does the room change when you walk in?</h2><p class="ep-ans">Not because of what you say. Because of what your nervous system broadcasts before you say anything.</p><div class="pa"><div class="pa-text">&#8220;I know what it is to be the leader setting that temperature &mdash; long before I understood that&#8217;s what I was doing.&#8221;</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>The leader&#8217;s nervous system is the organisation&#8217;s first operating system. Not metaphorically. Neurologically. The conditions that shaped that nervous system &mdash; long before the first leadership role, sometimes before the first memory &mdash; are <strong>already in the room.</strong></p><p>When <strong>survival architecture</strong> is running the leader, it runs the room. It starts being the atmosphere &mdash; the unspoken agreement about what can be said and what can&#8217;t.</p></div><div class="quote-block"><div class="quote-text">&#8220;The aura changes. Not the strategy. Not the structure. The room gets warmer, trust gets easier, and courage stops being an initiative and starts being the atmosphere.&#8221;</div><div class="quote-attr">Tom Waldek</div></div><div class="outcome"><span class="outcome-label">What changes</span><span class="outcome-text"><strong>The room changes permanently &mdash; not just while the work is happening.</strong> Decisions that were circling land. The P&amp;L effect is measurable: every unspoken truth at your leadership table had a line item.</span></div><div class="ep-sci">Porges (2011) &middot; Edmondson (1999) &middot; Zak (2017)</div>
+<div class="ep-meta"><span class="ep-num">03</span><span class="ep-label">The Cascade</span></div><h2 class="ep-q">Why does the room change when you walk in?</h2><p class="ep-ans">Not because of what you say. Because of what your nervous system broadcasts before you say anything.</p><div class="pa"><div class="pa-text">“I know what it is to be the leader setting that temperature &mdash; long before I understood that&#8217;s what I was doing.”</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>The leader&#8217;s nervous system is the organisation&#8217;s first operating system. Not metaphorically. Neurologically. The conditions that shaped that nervous system &mdash; long before the first leadership role, sometimes before the first memory &mdash; are <strong>already in the room.</strong></p><p>When <strong>survival architecture</strong> is running the leader, it runs the room. It starts being the atmosphere &mdash; the unspoken agreement about what can be said and what can&#8217;t.</p></div><div class="quote-block"><div class="quote-text">“The aura changes. Not the strategy. Not the structure. The room gets warmer, trust gets easier, and courage stops being an initiative and starts being the atmosphere.”</div><div class="quote-attr">Tom Waldek</div></div><div class="outcome"><span class="outcome-label">What changes</span><span class="outcome-text"><strong>The room changes permanently &mdash; not just while the work is happening.</strong> Decisions that were circling land. The P&amp;L effect is measurable: every unspoken truth at your leadership table had a line item.</span></div><div class="ep-sci">Porges (2011) &middot; Edmondson (1999) &middot; Zak (2017)</div>
 </div>
 </section>
 <div class="section-div"></div>
 <section class="episode fade-in">
 <div class="episode-wrap">
-<div class="ep-meta"><span class="ep-num">04</span><span class="ep-label">The Capacity</span></div><h2 class="ep-q">What does AI actually make visible?</h2><p class="ep-ans">Every organisation asking what AI will replace is answering its own question. The behaviour most at risk was never creative, never personal, never present.</p><div class="pa"><div class="pa-text">&#8220;Twenty-five years on set &mdash; watching talented people working at a fraction of what they actually were. Not from lack of skill. Because the space to be that didn&#8217;t exist.&#8221;</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>The anxiety isn&#8217;t that AI will take something. It&#8217;s the recognition that <strong>what you&#8217;ve been performing was never uniquely yours.</strong></p><p>What no system replicates is what that survival architecture has been hiding: the full capacity of your people. Reading a room before anyone speaks. Making the call no dataset supports &mdash; and being right. Not from data. From something a nervous system knows before language does.</p></div><p class="ep-closer">Not soft skill. The original technology.</p><div class="outcome"><span class="outcome-label">What changes</span><span class="outcome-text"><strong>Your people are needed as themselves &mdash; not as the role.</strong> What they build from there couldn&#8217;t have been built any other way. That&#8217;s the capacity no competitor can replicate.</span></div><div class="ep-sci">Edmondson &amp; Lei (2014) &middot; Zak (2017)</div>
+<div class="ep-meta"><span class="ep-num">04</span><span class="ep-label">The Capacity</span></div><h2 class="ep-q">What does AI actually make visible?</h2><p class="ep-ans">Every organisation asking what AI will replace is answering its own question. The behaviour most at risk was never creative, never personal, never present.</p><div class="pa"><div class="pa-text">“Twenty-five years on set &mdash; watching talented people working at a fraction of what they actually were. Not from lack of skill. Because the space to be that didn&#8217;t exist.”</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>The anxiety isn&#8217;t that AI will take something. It&#8217;s the recognition that <strong>what you&#8217;ve been performing was never uniquely yours.</strong></p><p>What no system replicates is what that survival architecture has been hiding: the full capacity of your people. Reading a room before anyone speaks. Making the call no dataset supports &mdash; and being right. Not from data. From something a nervous system knows before language does.</p></div><p class="ep-closer">Not soft skill. The original technology.</p><div class="outcome"><span class="outcome-label">What changes</span><span class="outcome-text"><strong>Your people are needed as themselves &mdash; not as the role.</strong> What they build from there couldn&#8217;t have been built any other way. That&#8217;s the capacity no competitor can replicate.</span></div><div class="ep-sci">Edmondson &amp; Lei (2014) &middot; Zak (2017)</div>
 </div>
 </section>
 
@@ -804,7 +804,7 @@ strong,b{font-weight:400}
 
 <section id="method" class="episode fade-in">
 <div class="episode-wrap">
-<div class="ep-meta"><span class="ep-num">05</span><span class="ep-label">The Method</span></div><h2 class="ep-q">What does film have to do with leadership?</h2><p class="ep-ans">Film is the only discipline where truth and performance are both required &mdash; and where the gap between them becomes measurable in real time.</p><div class="pa"><div class="pa-text">&#8220;The camera does not negotiate. Over twenty-five years I watched what bodies do when performance stops being enough to hide behind.&#8221;</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Most leadership diagnostics observe what a leader performs. Film records what they cannot &mdash; the involuntary physiological signatures that appear under creative and relational pressure: breath hold, vocal register, avoidance timing.</p><p><strong>This is not coaching. It is diagnostic work.</strong> Six disciplines in live settings &mdash; not workshops. In the room where it matters.</p></div>
+<div class="ep-meta"><span class="ep-num">05</span><span class="ep-label">The Method</span></div><h2 class="ep-q">What does film have to do with leadership?</h2><p class="ep-ans">Film is the only discipline where truth and performance are both required &mdash; and where the gap between them becomes measurable in real time.</p><div class="pa"><div class="pa-text">“The camera does not negotiate. Over twenty-five years I watched what bodies do when performance stops being enough to hide behind.”</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Most leadership diagnostics observe what a leader performs. Film records what they cannot &mdash; the involuntary physiological signatures that appear under creative and relational pressure: breath hold, vocal register, avoidance timing.</p><p><strong>This is not coaching. It is diagnostic work.</strong> Six disciplines in live settings &mdash; not workshops. In the room where it matters.</p></div>
 </div>
 </section>
 <section style="position:relative;z-index:1;padding:0 44px 90px" class="fade-in">
@@ -860,7 +860,7 @@ strong,b{font-weight:400}
     <div class="ep-meta"><span class="ep-num">06</span><span class="ep-label">Why This Work Exists</span></div>
     <h2 class="ep-q">Why me, specifically?</h2>
     <div class="clinical">
-      <div class="clinical-anchor">&#8220;I was kept alive by a machine before I was ever held in human arms.&#8221;</div>
+      <div class="clinical-anchor">“I was kept alive by a machine before I was ever held in human arms.”</div>
       <p>I was born three months early. The first five months of my life ran inside an incubator &mdash; no skin contact, no co-regulation. In my second year: chemotherapy and surgery for liver cancer. The window when a nervous system learns safety through another body&#8217;s warmth and rhythm &mdash; I spent it being kept alive by machines. The foundation most people receive by default was never built.</p><p>That is not confession. It is clinical evidence. The nervous system learns from whatever data it has, and does not update through insight. I know this from inside the deficit.</p>
       <div class="clinical-stamp">That is the foundation of every diagnostic I conduct. &mdash; Tom Waldek</div>
     </div>
@@ -1011,7 +1011,7 @@ strong,b{font-weight:400}
   <div class="wrap" style="max-width:760px;text-align:left">
     <div class="section-label">How The Work Happens</div>
     <h2 class="h2-sora" style="text-align:center;margin-bottom:8px">Five phases. No workshops.</h2>
-    <div class="quote-block" style="max-width:560px;margin:28px auto 48px"><div class="quote-text">&#8220;Not dishonest. Not weak. Just never given the conditions for anything braver. Create them, and people flourish. The work follows.&#8221;</div><div class="quote-attr">Tom Waldek</div></div>
+    <div class="quote-block" style="max-width:560px;margin:28px auto 48px"><div class="quote-text">“Not dishonest. Not weak. Just never given the conditions for anything braver. Create them, and people flourish. The work follows.”</div><div class="quote-attr">Tom Waldek</div></div>
     <div class="phase-list"><div class="phase"><div class="phase-num">0</div><div class="phase-content"><div class="phase-name">Entry Conversation</div><p class="phase-desc">No pitch. One question &mdash; the real one.</p></div><div class="phase-fee">No fee</div></div><div class="phase"><div class="phase-num">1</div><div class="phase-content"><div class="phase-name">Trust Architecture Diagnostic</div><p class="phase-desc">3&ndash;4 weeks on-site. Five observation contexts in live meetings and decisions. <strong>Deliverable: Trust Architecture Map.</strong></p></div><div class="phase-fee">&euro;12K</div></div><div class="phase"><div class="phase-num">2</div><div class="phase-content"><div class="phase-name">Origin Work</div><p class="phase-desc">3&ndash;5 months on-site. Dissolving patterns in live conversations and real decisions. <strong>Deliverable: Decisions from the person &mdash; not the pattern.</strong></p></div><div class="phase-fee">On request</div></div><div class="phase"><div class="phase-num">3</div><div class="phase-content"><div class="phase-name">Integration</div><p class="phase-desc">Embedding the new operating conditions into permanent structure. Concurrent with the final weeks of Origin Work.</p></div><div class="phase-fee">Included</div></div><div class="phase"><div class="phase-num">4</div><div class="phase-content"><div class="phase-name">Review</div><p class="phase-desc">6 months after completion. One day on-site. Confirming what held, catching what shifted.</p></div><div class="phase-fee">Included</div></div></div>
   </div>
 </section>

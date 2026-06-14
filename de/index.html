@@ -169,7 +169,7 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 .disc-card:hover{border-color:rgba(249,115,22,0.28);transform:translateY(-2px);background:linear-gradient(135deg,rgba(6,182,212,0.04) 0%,rgba(249,115,22,0.09) 100%);box-shadow:0 12px 36px -10px rgba(249,115,22,0.18)}
 .disc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--orange));opacity:0;transition:opacity 0.3s}
 .disc-card:hover::after{opacity:1}
-.disc-num{font-family:var(--display);font-weight:400;font-size:12px;color:var(--cyan);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(6,182,212,0.15);opacity:0.88}
+.disc-num{font-family:var(--display);font-weight:300;font-size:12px;color:var(--cyan);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(6,182,212,0.15);opacity:0.88}
 .disc-name{font-family:var(--display);font-weight:300;font-size:19px;color:rgba(255,255,255,0.95);margin-bottom:14px;letter-spacing:0.2px;line-height:1.4}
 .disc-desc{font-weight:400;font-size:14px;color:rgba(255,242,225,0.62);line-height:1.8}
 
@@ -185,7 +185,7 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 .phase:hover{background:var(--glass2);border-color:var(--border2)}
 .phase-num{font-family:var(--display);font-weight:200;font-size:32px;color:var(--cyan);opacity:0.4;min-width:40px;line-height:1}
 .phase-body{flex:1}
-.phase-name{font-family:var(--display);font-weight:500;font-size:14px;color:var(--white);margin-bottom:6px;letter-spacing:0.5px}
+.phase-name{font-family:var(--display);font-weight:300;font-size:14px;color:var(--white);margin-bottom:6px;letter-spacing:0.5px}
 .phase-desc{font-weight:400;font-size:14px;color:rgba(255,242,225,0.65);line-height:1.7}
 .phase-fee{font-family:var(--display);font-weight:400;font-size:11px;color:var(--orange);letter-spacing:2px;text-transform:uppercase;min-width:88px;text-align:right;padding-top:6px;opacity:0.65;transition:all 0.3s}
 
@@ -234,7 +234,7 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 .diag-audience{margin-top:26px;font-family:var(--display);font-size:10px;letter-spacing:2px;color:var(--tx4);font-weight:300;text-align:center}
 .diag-intro{text-align:center;margin-bottom:32px}
 .diag-intro p{font-weight:300;font-size:14px;color:var(--tx3)}
-.diag-intro .count{font-family:var(--display);font-weight:500;color:var(--cyan)}
+.diag-intro .count{font-family:var(--display);font-weight:300;color:var(--cyan)}
 .diag-standalone{margin-top:20px;font-family:var(--display);font-weight:300;font-size:11px;color:var(--tx4);letter-spacing:1.5px;text-align:center}
 .diag-standalone a{color:var(--cyan);text-decoration:none;border-bottom:1px solid rgba(6,182,212,0.3);transition:all 0.3s}
 .diag-standalone a:hover{border-bottom-color:var(--cyan);color:var(--white)}
@@ -248,15 +248,15 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 .d-text{font-family:var(--display);font-weight:300;font-size:18px;color:var(--white);line-height:1.55;margin-bottom:22px}
 .d-neuro{background:rgba(6,182,212,0.04);border:1px solid rgba(6,182,212,0.12);border-radius:8px;padding:14px 16px;margin-bottom:28px;max-height:500px;overflow:hidden;transition:max-height 0.4s ease,opacity 0.4s ease,margin 0.4s ease,padding 0.4s ease}
 .d-neuro.hidden{max-height:0;opacity:0;margin-bottom:0;padding:0 16px;border-color:transparent}
-.d-neuro-icon{font-family:var(--display);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:6px;font-weight:500}
+.d-neuro-icon{font-family:var(--display);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:6px;font-weight:400}
 .d-neuro-text{font-size:13px;line-height:1.6;color:rgba(255,255,255,0.45)}
 .d-neuro-ref{font-size:11px;color:var(--tx4);margin-top:8px}
 .d-opt{padding:14px 18px;margin-bottom:8px;border-radius:8px;border:1px solid var(--border);background:transparent;cursor:pointer;font-size:14px;color:var(--tx2);transition:all 0.2s ease;font-family:var(--ff);width:100%;text-align:left}
 .d-opt:hover{border-color:rgba(255,255,255,0.1);background:rgba(255,255,255,0.04)}
 .d-opt.sel{border-color:var(--cyan);background:rgba(6,182,212,0.08);color:var(--white)}
 .d-nav{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
-.d-btn{display:inline-block;padding:14px 36px;border-radius:100px;border:none;font-size:14px;font-weight:500;letter-spacing:1px;cursor:pointer;transition:all 0.3s ease;font-family:var(--ff);text-decoration:none}
-.d-btn-cyan{background:linear-gradient(135deg,var(--cyan),var(--orange));background-size:200% 200%;background-position:0% 50%;color:var(--white);border-radius:100px;font-family:var(--display);font-weight:500;box-shadow:0 4px 16px -6px rgba(6,182,212,0.25);transition:background-position 0.6s cubic-bezier(0.22,1,0.36,1),transform 0.35s cubic-bezier(0.22,1,0.36,1),box-shadow 0.35s cubic-bezier(0.22,1,0.36,1),filter 0.35s}
+.d-btn{display:inline-block;padding:14px 36px;border-radius:100px;border:none;font-size:14px;font-weight:300;letter-spacing:1px;cursor:pointer;transition:all 0.3s ease;font-family:var(--ff);text-decoration:none}
+.d-btn-cyan{background:linear-gradient(135deg,var(--cyan),var(--orange));background-size:200% 200%;background-position:0% 50%;color:var(--white);border-radius:100px;font-family:var(--display);font-weight:300;box-shadow:0 4px 16px -6px rgba(6,182,212,0.25);transition:background-position 0.6s cubic-bezier(0.22,1,0.36,1),transform 0.35s cubic-bezier(0.22,1,0.36,1),box-shadow 0.35s cubic-bezier(0.22,1,0.36,1),filter 0.35s}
 .d-btn-cyan:hover{background-position:100% 50%;transform:translateY(-2px) scale(1.02);box-shadow:0 14px 32px -8px rgba(6,182,212,0.45),0 0 30px -10px rgba(249,115,22,0.3);filter:brightness(1.08)}
 .d-btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--white);font-weight:300;backdrop-filter:blur(8px)}
 .d-btn.dis{opacity:0.3;pointer-events:none}
@@ -329,7 +329,7 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 /* ═══ CTA ═══ */
 .cta-section{text-align:center;padding:var(--section-pad) 44px;position:relative}
 .cta-section::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:200px;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent)}
-.cta-quote{font-family:var(--display);font-weight:200;font-size:20px;color:rgba(255,245,230,0.75);line-height:1.8;max-width:600px;margin:0 auto 48px;letter-spacing:1.5px}
+.cta-quote{font-family:var(--display);font-weight:200;font-size:clamp(15px,1.8vw,18px);color:rgba(255,245,230,0.75);line-height:1.8;max-width:600px;margin:0 auto 48px;letter-spacing:1.5px}
 
 /* ═══ AVATAR ═══ */
 .cta-avatar{width:110px;height:110px;border-radius:50%;overflow:hidden;margin:0 auto 12px;position:relative;border:2px solid transparent;background-origin:border-box;background-clip:padding-box,border-box;background-image:linear-gradient(var(--bg),var(--bg)),linear-gradient(135deg,var(--cyan),var(--orange))}
@@ -359,7 +359,7 @@ footer a:hover{color:var(--cyan)}
 .for-block:hover{background:rgba(6,182,212,0.06);border-left-color:var(--orange)}
 .for-block p{font-weight:300;font-size:16px;color:var(--tx2);line-height:1.8;margin:0}
 .for-block em{color:var(--cyan);font-style:normal;font-weight:400}
-.for-closing{margin-top:28px;font-weight:300;font-size:16px;color:var(--tx2);line-height:1.8}
+.for-closing{font-family:var(--display);font-weight:200;margin-top:28px;font-weight:300;font-size:16px;color:var(--tx2);line-height:1.8}
 .for-closing em{color:var(--cyan);font-style:normal;font-weight:500}
 
 /* ═══ SCROLL ANIM — with stagger support ═══ */
@@ -493,7 +493,7 @@ footer a:hover{color:var(--cyan)}
 .for-block:nth-of-type(1).visible{transition-delay:0s}
 .for-block:nth-of-type(2).visible{transition-delay:0.35s}
 .for-block:nth-of-type(3).visible{transition-delay:0.7s}
-.for-closing{transition:opacity 1s ease 1.05s,transform 1s ease 1.05s}
+.for-closing{font-family:var(--display);font-weight:200;transition:opacity 1s ease 1.05s,transform 1s ease 1.05s}
 
 /* ═══ FAQ — 11 items per claude.md §12 ═══ */
 .faq-wrap{max-width:760px;margin:0 auto;text-align:left}
@@ -519,7 +519,7 @@ footer a:hover{color:var(--cyan)}
 .overview-step{display:flex;align-items:center;gap:20px;padding:18px 28px;background:var(--bg)}
 .overview-num{font-family:var(--display);font-weight:200;font-size:22px;color:var(--cyan);opacity:0.5;min-width:28px}
 .overview-body{flex:1}
-.overview-name{font-family:var(--display);font-weight:500;font-size:13px;color:var(--white);letter-spacing:0.5px}
+.overview-name{font-family:var(--display);font-weight:300;font-size:13px;color:var(--white);letter-spacing:0.5px}
 .overview-detail{font-size:13px;color:var(--tx3);line-height:1.5;margin-top:2px}
 .overview-price{font-family:var(--display);font-weight:300;font-size:14px;color:var(--orange);white-space:nowrap}
 .overview-link{text-align:center;margin-top:20px}
@@ -575,7 +575,7 @@ footer a:hover{color:var(--cyan)}
 .why-verse p{font-family:var(--display);font-weight:200;font-size:17px;color:rgba(255,245,230,0.85);line-height:1.9;letter-spacing:0.5px;margin:0;text-align:left}
 .why-verse p:last-child{color:rgba(255,245,230,0.60);}
 .why-precision{margin-top:40px;padding:28px 32px;background:rgba(6,182,212,0.04);border:1px solid rgba(6,182,212,0.12);border-radius:12px}
-.why-precision-heading{font-family:var(--display);font-weight:500;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--cyan);margin:0 0 16px}
+.why-precision-heading{font-family:var(--display);font-weight:300;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--cyan);margin:0 0 16px}
 
 /* ═══ EPISODE SYSTEM ═══ */
 .episode{position:relative;z-index:1;padding:100px 44px}
@@ -589,7 +589,7 @@ footer a:hover{color:var(--cyan)}
 .ep-body p{font-weight:400;font-size:16px;color:rgba(255,242,225,0.82);line-height:2;margin-bottom:16px}
 .ep-body p:last-child{margin-bottom:0}
 .ep-body p strong{color:var(--cyan);font-weight:400}
-.ep-closer{font-family:var(--ff);font-weight:400;font-size:16px;color:rgba(255,245,230,0.82);margin-top:22px;padding-top:20px;border-top:1px solid var(--border)}
+.ep-closer{font-family:var(--display);font-weight:200;font-size:15px;color:rgba(255,245,230,0.82);margin-top:22px;padding-top:20px;border-top:1px solid var(--border)}
 .ep-sci{font-family:var(--display);font-size:10px;color:var(--tx4);letter-spacing:2px;margin-top:14px}
 /* Personal anchor */
 .pa{margin:20px 0 24px;padding:22px 32px;border-left:2px solid;border-image:linear-gradient(180deg,var(--cyan),var(--orange)) 1;background:rgba(6,182,212,0.03);border-radius:0 10px 10px 0}
@@ -600,7 +600,7 @@ footer a:hover{color:var(--cyan)}
 .sc-block{text-align:center;min-width:56px}
 .sc-num{font-family:var(--display);font-weight:200;font-size:24px;line-height:1;background:linear-gradient(135deg,var(--cyan),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:block}
 .sc-src{font-family:var(--display);font-size:8px;color:var(--tx4);letter-spacing:2px;text-transform:uppercase;margin-top:3px;display:block}
-.sc-txt{font-size:13px;color:var(--tx2);line-height:1.6;padding-top:4px}
+.sc-txt{font-family:var(--display);font-weight:200;font-size:13px;color:var(--tx2);line-height:1.6;padding-top:4px}
 .stats-row{display:flex;gap:14px;flex-wrap:wrap;margin:20px 0}
 /* Outcome block */
 .outcome{margin:22px 0 0;padding:18px 26px;background:rgba(6,182,212,0.05);border:1px solid rgba(6,182,212,0.15);border-radius:10px;display:flex;align-items:flex-start;gap:12px}
@@ -623,8 +623,8 @@ footer a:hover{color:var(--cyan)}
 .de-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
 .de-num{font-family:var(--display);font-size:10px;color:var(--orange);letter-spacing:3px;text-transform:uppercase}
 .de-tag{font-family:var(--display);font-size:9px;color:var(--tx4);letter-spacing:2px;text-transform:uppercase}
-.de-name{font-family:var(--display);font-weight:500;font-size:clamp(14px,1.4vw,17px);color:var(--white);margin-bottom:8px;line-height:1.3;letter-spacing:0.2px}
-.de-q{font-family:var(--ff);font-weight:300;font-size:12px;color:rgba(255,242,225,0.40);margin-bottom:11px;line-height:1.5}
+.de-name{font-family:var(--display);font-weight:300;font-size:clamp(14px,1.4vw,17px);color:var(--white);margin-bottom:8px;line-height:1.3;letter-spacing:0.2px}
+.de-q{font-family:var(--display);font-weight:200;font-size:13px;color:rgba(255,242,225,0.40);margin-bottom:11px;line-height:1.5}
 .de-catches{padding:9px 13px;background:rgba(0,0,0,0.2);border-left:2px solid rgba(249,115,22,0.35);margin-bottom:11px}
 .de-catches-label{font-family:var(--display);font-size:8px;color:var(--orange);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:4px;opacity:0.8}
 .de-catches-text{font-size:12px;color:var(--tx2);line-height:1.55}
@@ -639,7 +639,7 @@ footer a:hover{color:var(--cyan)}
 /* Clinical */
 .clinical{position:relative;padding:32px 38px;margin:0 0 24px;background:rgba(6,182,212,0.04);border:1px solid rgba(6,182,212,0.14);border-radius:14px}
 .clinical::before{content:'Personal Foundation';position:absolute;top:-1px;left:22px;transform:translateY(-50%);font-family:var(--display);font-size:9px;letter-spacing:3px;color:var(--cyan);background:var(--bg);padding:0 10px;text-transform:uppercase}
-.clinical-anchor{font-family:var(--display);font-weight:300;font-style:normal;font-size:clamp(16px,2vw,23px);color:var(--white);line-height:1.35;margin-bottom:16px}
+.clinical-anchor{font-family:var(--display);font-weight:200;font-style:normal;font-size:clamp(16px,2vw,23px);color:var(--white);line-height:1.35;margin-bottom:16px}
 .clinical p{font-size:15px;line-height:1.9;color:var(--tx2);margin-bottom:12px}
 .clinical p:last-child{margin-bottom:0}
 .clinical-stamp{font-family:var(--display);font-size:10px;color:var(--cyan);letter-spacing:3px;text-transform:uppercase;margin-top:16px;padding-top:13px;border-top:1px solid var(--border)}
@@ -649,8 +649,8 @@ footer a:hover{color:var(--cyan)}
 .diff-card{background:var(--glass2);border:1px solid var(--border);border-radius:14px;padding:28px 24px;position:relative;overflow:hidden}
 .diff-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(6,182,212,0.18),transparent)}
 .diff-n{font-family:var(--display);font-size:10px;color:var(--orange);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border)}
-.diff-h{font-family:var(--display);font-weight:500;font-size:clamp(13px,1.3vw,16px);color:var(--white);margin-bottom:11px;line-height:1.4;letter-spacing:0.2px}
-.diff-b{font-size:13px;line-height:1.85;color:rgba(255,242,225,0.58)}
+.diff-h{font-family:var(--display);font-weight:300;font-size:clamp(13px,1.3vw,16px);color:var(--white);margin-bottom:11px;line-height:1.4;letter-spacing:0.2px}
+.diff-b{font-family:var(--ff);font-weight:400;font-size:13px;line-height:1.85;color:rgba(255,242,225,0.58)}
 .diff-b strong{color:var(--cyan);font-weight:400}
 .diff-sci{font-family:var(--display);font-size:10px;color:var(--tx4);letter-spacing:1.5px;margin-top:11px}
 
@@ -765,25 +765,25 @@ strong,b{font-weight:400}
 <div id="episodes"></div>
 <section class="episode fade-in">
 <div class="episode-wrap">
-<div class="ep-meta"><span class="ep-num">01</span><span class="ep-label">Das Muster</span></div><h2 class="ep-q">Was sehen in Ihrem Raum alle &mdash; und spricht niemand aus?</h2><p class="ep-ans">Es gibt eine unausgesprochene Vereinbarung dar&uuml;ber, was gesagt werden darf und was nicht. Sie ist nicht das Ergebnis einer Entscheidung. Sie hat sich angesammelt.</p><div class="pa"><div class="pa-text">&#8220;Ich war dieser Mensch &mdash; das Nervensystem hatte bereits entschieden, was sicher zu sagen war, bevor jemand sprach.&#8221;</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Es liegt nie an den Menschen. Es ist ein Zustand: Ein Unternehmen, das auf <strong>&Uuml;berlebensarchitektur</strong> l&auml;uft &mdash; das Betriebssystem, das es unter Druck entwickelt hat und nie wieder abgelegt hat. Es bestimmt, wer spricht &mdash; und was begraben bleibt.</p><p>Das Muster ist &auml;lter als die Organisation. &Auml;lter als das erste Wort.</p></div><div class="stats-row"><div class="stat-call"><div class="sc-block"><span class="sc-num" data-target="56" data-prefix="" data-suffix="%">0%</span><span class="sc-src">PMI</span></div><div class="sc-txt">der F&uuml;hrungskr&auml;fte berichten: Ihr Team spricht echte Probleme nicht an</div></div><div class="stat-call"><div class="sc-block"><span class="sc-num" data-target="3" data-prefix="€" data-suffix="K">&euro;0K</span><span class="sc-src">EU&#8209;OSHA</span></div><div class="sc-txt">durchschnittliche j&auml;hrliche Kosten pro Person durch stressbedingte Abwesenheit</div></div></div><p class="ep-closer">Das ist die Schicht, an die keine Umstrukturierung herankommt. Keine Software sieht sie. Weil es als normal gilt.</p><div class="outcome"><span class="outcome-label">Was sich ver&auml;ndert</span><span class="outcome-text"><strong>Das Gespr&auml;ch nach dem Meeting h&ouml;rt auf, dem Meeting zu widersprechen.</strong> Probleme werden sichtbar, bevor sie zur Krise werden. Der Mensch, der kurz vor dem Gehen war, bleibt.</span></div><div class="ep-sci">Porges (2011) &middot; Barsade (2002) &middot; EU&#8209;OSHA (2022)</div>
+<div class="ep-meta"><span class="ep-num">01</span><span class="ep-label">Das Muster</span></div><h2 class="ep-q">Was sehen in Ihrem Raum alle &mdash; und spricht niemand aus?</h2><p class="ep-ans">Es gibt eine unausgesprochene Vereinbarung dar&uuml;ber, was gesagt werden darf und was nicht. Sie ist nicht das Ergebnis einer Entscheidung. Sie hat sich angesammelt.</p><div class="pa"><div class="pa-text">“Ich war dieser Mensch &mdash; das Nervensystem hatte bereits entschieden, was sicher zu sagen war, bevor jemand sprach.”</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Es liegt nie an den Menschen. Es ist ein Zustand: Ein Unternehmen, das auf <strong>&Uuml;berlebensarchitektur</strong> l&auml;uft &mdash; das Betriebssystem, das es unter Druck entwickelt hat und nie wieder abgelegt hat. Es bestimmt, wer spricht &mdash; und was begraben bleibt.</p><p>Das Muster ist &auml;lter als die Organisation. &Auml;lter als das erste Wort.</p></div><div class="stats-row"><div class="stat-call"><div class="sc-block"><span class="sc-num" data-target="56" data-prefix="" data-suffix="%">0%</span><span class="sc-src">PMI</span></div><div class="sc-txt">der F&uuml;hrungskr&auml;fte berichten: Ihr Team spricht echte Probleme nicht an</div></div><div class="stat-call"><div class="sc-block"><span class="sc-num" data-target="3" data-prefix="€" data-suffix="K">&euro;0K</span><span class="sc-src">EU&#8209;OSHA</span></div><div class="sc-txt">durchschnittliche j&auml;hrliche Kosten pro Person durch stressbedingte Abwesenheit</div></div></div><p class="ep-closer">Das ist die Schicht, an die keine Umstrukturierung herankommt. Keine Software sieht sie. Weil es als normal gilt.</p><div class="outcome"><span class="outcome-label">Was sich ver&auml;ndert</span><span class="outcome-text"><strong>Das Gespr&auml;ch nach dem Meeting h&ouml;rt auf, dem Meeting zu widersprechen.</strong> Probleme werden sichtbar, bevor sie zur Krise werden. Der Mensch, der kurz vor dem Gehen war, bleibt.</span></div><div class="ep-sci">Porges (2011) &middot; Barsade (2002) &middot; EU&#8209;OSHA (2022)</div>
 </div>
 </section>
 <div class="section-div"></div>
 <section class="episode fade-in">
 <div class="episode-wrap">
-<div class="ep-meta"><span class="ep-num">02</span><span class="ep-label">Der Ursprung</span></div><h2 class="ep-q">Woher kommt das Muster?</h2><p class="ep-ans">Die innere Stimme, die jede Entscheidung begleitet, wurde gebaut, bevor Sie sprechen konnten &mdash; f&uuml;r das Umfeld, in das Sie hineingeboren wurden. Nicht f&uuml;r den Raum, den Sie heute f&uuml;hren.</p><div class="pa"><div class="pa-text">&#8220;Ich erkenne dieses Muster, weil ich eines &uuml;ber den gr&ouml;&szlig;ten Teil meines Lebens mitgetragen habe &mdash; entstanden, bevor ich Worte daf&uuml;r hatte.&#8221;</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Charles Fernyhoughs Forschung zeigt: Die innere Erz&auml;hlung entsteht aus den Beziehungsdaten der fr&uuml;hesten Umgebung &mdash; automatisch, unterhalb bewusster &Uuml;berlegung. <strong>Standardm&auml;&szlig;ige F&uuml;hrungsentwicklung untersucht sie nicht.</strong> Sie pr&auml;gt jede bedeutende Entscheidung.</p><p>Ein Muster &auml;ndert sich nie: Die ungel&ouml;ste Geschichte bleibt nicht pers&ouml;nlich. Sie migriert in F&uuml;hrungsverhalten. <strong>Kontrolle ersetzt Verbindung.</strong> Darstellung ersetzt Pr&auml;senz. Nicht b&ouml;swillig. Automatisch.</p></div><div class="stats-row"><div class="stat-call"><div class="sc-block"><span class="sc-num" data-target="7" data-prefix="" data-suffix="×">0×</span><span class="sc-src">Edmondson &amp; Lei 2014</span></div><div class="sc-txt">h&ouml;here Innovationsleistung in Teams mit echter psychologischer Sicherheit &mdash; das direkte Ergebnis der Aufl&ouml;sung dieses Musters</div></div></div><div class="quote-block"><div class="quote-text">&#8220;Die Organisation kopiert nicht die Strategie des Leaders. Sie kopiert sein Nervensystem.&#8221;</div><div class="quote-attr">Tom Waldek</div></div><div class="outcome"><span class="outcome-label">Was sich ver&auml;ndert</span><span class="outcome-text"><strong>Das Muster wird sichtbar &mdash; und damit bearbeitbar.</strong> Nicht durch mehr Einsicht. Durch Pr&auml;zision dar&uuml;ber, wo es begann.</span></div><div class="ep-sci">Fernyhough (2016) &middot; Keltner (2016) &middot; Edmondson &amp; Lei (2014)</div>
+<div class="ep-meta"><span class="ep-num">02</span><span class="ep-label">Der Ursprung</span></div><h2 class="ep-q">Woher kommt das Muster?</h2><p class="ep-ans">Die innere Stimme, die jede Entscheidung begleitet, wurde gebaut, bevor Sie sprechen konnten &mdash; f&uuml;r das Umfeld, in das Sie hineingeboren wurden. Nicht f&uuml;r den Raum, den Sie heute f&uuml;hren.</p><div class="pa"><div class="pa-text">“Ich erkenne dieses Muster, weil ich eines &uuml;ber den gr&ouml;&szlig;ten Teil meines Lebens mitgetragen habe &mdash; entstanden, bevor ich Worte daf&uuml;r hatte.”</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Charles Fernyhoughs Forschung zeigt: Die innere Erz&auml;hlung entsteht aus den Beziehungsdaten der fr&uuml;hesten Umgebung &mdash; automatisch, unterhalb bewusster &Uuml;berlegung. <strong>Standardm&auml;&szlig;ige F&uuml;hrungsentwicklung untersucht sie nicht.</strong> Sie pr&auml;gt jede bedeutende Entscheidung.</p><p>Ein Muster &auml;ndert sich nie: Die ungel&ouml;ste Geschichte bleibt nicht pers&ouml;nlich. Sie migriert in F&uuml;hrungsverhalten. <strong>Kontrolle ersetzt Verbindung.</strong> Darstellung ersetzt Pr&auml;senz. Nicht b&ouml;swillig. Automatisch.</p></div><div class="stats-row"><div class="stat-call"><div class="sc-block"><span class="sc-num" data-target="7" data-prefix="" data-suffix="×">0×</span><span class="sc-src">Edmondson &amp; Lei 2014</span></div><div class="sc-txt">h&ouml;here Innovationsleistung in Teams mit echter psychologischer Sicherheit &mdash; das direkte Ergebnis der Aufl&ouml;sung dieses Musters</div></div></div><div class="quote-block"><div class="quote-text">“Die Organisation kopiert nicht die Strategie des Leaders. Sie kopiert sein Nervensystem.”</div><div class="quote-attr">Tom Waldek</div></div><div class="outcome"><span class="outcome-label">Was sich ver&auml;ndert</span><span class="outcome-text"><strong>Das Muster wird sichtbar &mdash; und damit bearbeitbar.</strong> Nicht durch mehr Einsicht. Durch Pr&auml;zision dar&uuml;ber, wo es begann.</span></div><div class="ep-sci">Fernyhough (2016) &middot; Keltner (2016) &middot; Edmondson &amp; Lei (2014)</div>
 </div>
 </section>
 <div class="section-div"></div>
 <section id="trust" class="episode fade-in">
 <div class="episode-wrap">
-<div class="ep-meta"><span class="ep-num">03</span><span class="ep-label">Die Kaskade</span></div><h2 class="ep-q">Warum ver&auml;ndert sich der Raum, wenn Sie eintreten?</h2><p class="ep-ans">Nicht durch das, was Sie sagen. Durch das, was Ihr Nervensystem ausstrahlt &mdash; bevor Sie irgendetwas sagen.</p><div class="pa"><div class="pa-text">&#8220;Ich wei&szlig;, wie es ist, diese Temperatur zu setzen &mdash; lange bevor ich verstanden habe, dass genau das meine Wirkung war.&#8221;</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Das Nervensystem der F&uuml;hrungskraft ist das erste Betriebssystem der Organisation. Nicht metaphorisch. Neurologisch real. Die Bedingungen, die dieses Nervensystem gepr&auml;gt haben &mdash; lange vor der ersten F&uuml;hrungsrolle, manchmal vor der ersten Erinnerung &mdash; sind <strong>bereits im Raum.</strong></p><p>Wenn <strong>&Uuml;berlebensarchitektur</strong> die F&uuml;hrung steuert, steuert sie den Raum. Es wird zur Atmosph&auml;re &mdash; die unausgesprochene Vereinbarung dar&uuml;ber, was gesagt werden darf und was nicht.</p></div><div class="quote-block"><div class="quote-text">&#8220;Die Atmosph&auml;re ver&auml;ndert sich. Nicht die Strategie. Nicht die Struktur. Der Raum wird w&auml;rmer, Vertrauen wird leichter, und Mut h&ouml;rt auf, eine Initiative zu sein &mdash; und wird zur Atmosph&auml;re.&#8221;</div><div class="quote-attr">Tom Waldek</div></div><div class="outcome"><span class="outcome-label">Was sich ver&auml;ndert</span><span class="outcome-text"><strong>Der Raum ver&auml;ndert sich dauerhaft &mdash; nicht nur w&auml;hrend die Arbeit l&auml;uft.</strong> Entscheidungen, die kreisten, fallen. Der GuV-Effekt ist messbar: Jede unausgesprochene Wahrheit an Ihrem F&uuml;hrungstisch hatte einen Posten.</span></div><div class="ep-sci">Porges (2011) &middot; Edmondson (1999) &middot; Zak (2017)</div>
+<div class="ep-meta"><span class="ep-num">03</span><span class="ep-label">Die Kaskade</span></div><h2 class="ep-q">Warum ver&auml;ndert sich der Raum, wenn Sie eintreten?</h2><p class="ep-ans">Nicht durch das, was Sie sagen. Durch das, was Ihr Nervensystem ausstrahlt &mdash; bevor Sie irgendetwas sagen.</p><div class="pa"><div class="pa-text">“Ich wei&szlig;, wie es ist, der Leader zu sein, der diese Temperatur setzt &mdash; lange bevor ich verstanden habe, was ich damit tat.”</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Das Nervensystem der F&uuml;hrungskraft ist das erste Betriebssystem der Organisation. Nicht metaphorisch. Neurologisch real. Die Bedingungen, die dieses Nervensystem gepr&auml;gt haben &mdash; lange vor der ersten F&uuml;hrungsrolle, manchmal vor der ersten Erinnerung &mdash; sind <strong>bereits im Raum.</strong></p><p>Wenn <strong>&Uuml;berlebensarchitektur</strong> die F&uuml;hrung steuert, steuert sie den Raum. Es wird zur Atmosph&auml;re &mdash; die unausgesprochene Vereinbarung dar&uuml;ber, was gesagt werden darf und was nicht.</p></div><div class="quote-block"><div class="quote-text">“Die Atmosph&auml;re ver&auml;ndert sich. Nicht die Strategie. Nicht die Struktur. Der Raum wird w&auml;rmer, Vertrauen wird leichter, und Mut h&ouml;rt auf, eine Initiative zu sein &mdash; und wird zur Atmosph&auml;re.”</div><div class="quote-attr">Tom Waldek</div></div><div class="outcome"><span class="outcome-label">Was sich ver&auml;ndert</span><span class="outcome-text"><strong>Der Raum ver&auml;ndert sich dauerhaft &mdash; nicht nur w&auml;hrend die Arbeit l&auml;uft.</strong> Entscheidungen, die kreisten, fallen. Der GuV-Effekt ist messbar: Jede unausgesprochene Wahrheit an Ihrem F&uuml;hrungstisch hatte einen Posten.</span></div><div class="ep-sci">Porges (2011) &middot; Edmondson (1999) &middot; Zak (2017)</div>
 </div>
 </section>
 <div class="section-div"></div>
 <section class="episode fade-in">
 <div class="episode-wrap">
-<div class="ep-meta"><span class="ep-num">04</span><span class="ep-label">Die Kapazit&auml;t</span></div><h2 class="ep-q">Was macht KI eigentlich sichtbar?</h2><p class="ep-ans">Jede Organisation, die fragt, was KI ersetzen wird, beantwortet damit ihre eigene Frage. Das Verhalten, das am st&auml;rksten gef&auml;hrdet ist, war nie kreativ, nie pers&ouml;nlich, nie pr&auml;sent.</p><div class="pa"><div class="pa-text">&#8220;F&uuml;nfundzwanzig Jahre am Set &mdash; talentierte Menschen, die mit einem Bruchteil von sich selbst arbeiteten. Nicht aus Mangel an K&ouml;nnen. Weil der Raum f&uuml;r mehr nie existierte.&#8221;</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Die Angst ist nicht, dass KI etwas wegnimmt. Es ist die Erkenntnis: <strong>Was Sie dargestellt haben, war nie wirklich Ihres.</strong></p><p>Was kein System replizieren kann, ist das, was diese &Uuml;berlebensarchitektur verbirgt: die volle Kapazit&auml;t Ihrer Menschen. Einen Raum lesen, bevor jemand spricht. Die Entscheidung treffen, die kein Datensatz unterst&uuml;tzt &mdash; und recht haben. Nicht aus Daten, sondern aus dem, was ein Nervensystem wei&szlig;, bevor Sprache greift.</p></div><p class="ep-closer">Kein Soft Skill. Die eigentliche F&auml;higkeit.</p><div class="outcome"><span class="outcome-label">Was sich ver&auml;ndert</span><span class="outcome-text"><strong>Ihre Menschen werden als sie selbst gebraucht &mdash; nicht als die Rolle.</strong> Was sie von dort aus aufbauen, h&auml;tte auf keine andere Weise entstehen k&ouml;nnen. Das ist die Kapazit&auml;t, die kein Konkurrent kopieren kann.</span></div><div class="ep-sci">Edmondson &amp; Lei (2014) &middot; Zak (2017)</div>
+<div class="ep-meta"><span class="ep-num">04</span><span class="ep-label">Die Kapazit&auml;t</span></div><h2 class="ep-q">Was macht KI eigentlich sichtbar?</h2><p class="ep-ans">Jede Organisation, die fragt, was KI ersetzen wird, beantwortet damit ihre eigene Frage. Das Verhalten, das am st&auml;rksten gef&auml;hrdet ist, war nie kreativ, nie pers&ouml;nlich, nie pr&auml;sent.</p><div class="pa"><div class="pa-text">“F&uuml;nfundzwanzig Jahre am Set &mdash; talentierte Menschen, die mit einem Bruchteil von sich selbst arbeiteten. Nicht aus Mangel an K&ouml;nnen. Weil der Raum f&uuml;r mehr nie existierte.”</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Die Angst ist nicht, dass KI etwas wegnimmt. Es ist die Erkenntnis: <strong>Was Sie dargestellt haben, war nie wirklich Ihres.</strong></p><p>Was kein System replizieren kann, ist das, was diese &Uuml;berlebensarchitektur verbirgt: die volle Kapazit&auml;t Ihrer Menschen. Einen Raum lesen, bevor jemand spricht. Die Entscheidung treffen, die kein Datensatz unterst&uuml;tzt &mdash; und recht haben. Nicht aus Daten, sondern aus dem, was ein Nervensystem wei&szlig;, bevor Sprache greift.</p></div><p class="ep-closer">Kein Soft Skill. Die eigentliche F&auml;higkeit.</p><div class="outcome"><span class="outcome-label">Was sich ver&auml;ndert</span><span class="outcome-text"><strong>Ihre Menschen werden als sie selbst gebraucht &mdash; nicht als die Rolle.</strong> Was sie von dort aus aufbauen, h&auml;tte auf keine andere Weise entstehen k&ouml;nnen. Das ist die Kapazit&auml;t, die kein Konkurrent kopieren kann.</span></div><div class="ep-sci">Edmondson &amp; Lei (2014) &middot; Zak (2017)</div>
 </div>
 </section>
 
@@ -804,7 +804,7 @@ strong,b{font-weight:400}
 
 <section id="method" class="episode fade-in">
 <div class="episode-wrap">
-<div class="ep-meta"><span class="ep-num">05</span><span class="ep-label">Die Methode</span></div><h2 class="ep-q">Was hat Film mit F&uuml;hrung zu tun?</h2><p class="ep-ans">Film ist die einzige Disziplin, in der Wahrheit und Darstellung gleichzeitig gefordert sind &mdash; und in der die L&uuml;cke zwischen beiden in Echtzeit messbar wird.</p><div class="pa"><div class="pa-text">&#8220;Die Kamera verhandelt nicht. In f&uuml;nfundzwanzig Jahren habe ich gesehen, was K&ouml;rper tun, wenn die Darstellung nicht mehr ausreicht, um sich zu verbergen.&#8221;</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Die meisten F&uuml;hrungsdiagnostiken beobachten, was ein Leader darstellt. Film zeigt, was er nicht kann &mdash; die unwillk&uuml;rlichen physiologischen Signaturen unter Druck: gehaltener Atem, Stimmverengung, Ausweich-Timing.</p><p><strong>Das ist kein Coaching. Es ist diagnostische Arbeit.</strong> Sechs Disziplinen in echten Settings &mdash; keine Workshops. Im Raum, wo es z&auml;hlt.</p></div>
+<div class="ep-meta"><span class="ep-num">05</span><span class="ep-label">Die Methode</span></div><h2 class="ep-q">Was hat Film mit F&uuml;hrung zu tun?</h2><p class="ep-ans">Film ist die einzige Disziplin, in der Wahrheit und Darstellung gleichzeitig gefordert sind &mdash; und in der die L&uuml;cke zwischen beiden in Echtzeit messbar wird.</p><div class="pa"><div class="pa-text">“Die Kamera verhandelt nicht. In f&uuml;nfundzwanzig Jahren habe ich gesehen, was K&ouml;rper tun, wenn die Darstellung nicht mehr ausreicht, um sich zu verbergen.”</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Die meisten F&uuml;hrungsdiagnostiken beobachten, was ein Leader darstellt. Film zeigt, was er nicht kann &mdash; die unwillk&uuml;rlichen physiologischen Signaturen unter Druck: gehaltener Atem, Stimmverengung, Ausweich-Timing.</p><p><strong>Das ist kein Coaching. Es ist diagnostische Arbeit.</strong> Sechs Disziplinen in echten Settings &mdash; keine Workshops. Im Raum, wo es z&auml;hlt.</p></div>
 </div>
 </section>
 <section style="position:relative;z-index:1;padding:0 44px 90px" class="fade-in">
@@ -860,7 +860,7 @@ strong,b{font-weight:400}
     <div class="ep-meta"><span class="ep-num">06</span><span class="ep-label">Warum es diese Arbeit gibt</span></div>
     <h2 class="ep-q">Warum ich, konkret?</h2>
     <div class="clinical">
-      <div class="clinical-anchor">&#8220;Ich wurde am Leben gehalten von einer Maschine, bevor mich je ein Mensch in die Arme nahm.&#8221;</div>
+      <div class="clinical-anchor">“Ich wurde am Leben gehalten von einer Maschine, bevor mich je ein Mensch in die Arme nahm.”</div>
       <p>Ich wurde drei Monate zu fr&uuml;h geboren. Die ersten f&uuml;nf Monate meines Lebens verbrachte ich in einem Brutkasten &mdash; kein Hautkontakt. Keine Ko-Regulation. Im zweiten Lebensjahr: Chemotherapie und Operation wegen Leberkrebs. Das Fenster, in dem ein Nervensystem durch die W&auml;rme und den Rhythmus eines anderen K&ouml;rpers Sicherheit lernt &mdash; ich verbrachte es damit, von Maschinen am Leben gehalten zu werden. Das Fundament, das die meisten Menschen als Selbstverst&auml;ndlichkeit erhalten, wurde nie gebaut.</p><p>Das ist keine Biografie. Es ist klinische Evidenz. Das Nervensystem lernt von welchen Daten es hat &mdash; und aktualisiert sich nicht durch Einsicht. Ich wei&szlig; das von innen. Alles, was ich in f&uuml;nfundzwanzig Jahren in dieser Arbeit aufgebaut habe, hat dort begonnen.</p>
       <div class="clinical-stamp">Das ist das Fundament jeder Diagnostik, die ich durchf&uuml;hre. &mdash; Tom Waldek</div>
     </div>
@@ -1011,7 +1011,7 @@ strong,b{font-weight:400}
   <div class="wrap" style="max-width:760px;text-align:left">
     <div class="section-label">Wie die Arbeit abl&auml;uft</div>
     <h2 class="h2-sora" style="text-align:center;margin-bottom:8px">F&uuml;nf Phasen. Keine Workshops.</h2>
-    <div class="quote-block" style="max-width:560px;margin:28px auto 48px"><div class="quote-text">&#8220;Nicht unehrlich. Nicht schwach. Einfach nie die Bedingungen bekommen f&uuml;r etwas Mutigeres. Schaffen Sie sie, und Menschen bl&uuml;hen auf. Die Arbeit folgt.&#8221;</div><div class="quote-attr">Tom Waldek</div></div>
+    <div class="quote-block" style="max-width:560px;margin:28px auto 48px"><div class="quote-text">“Nicht unehrlich. Nicht schwach. Einfach nie die Bedingungen bekommen f&uuml;r etwas Mutigeres. Schaffen Sie sie, und Menschen bl&uuml;hen auf. Die Arbeit folgt.”</div><div class="quote-attr">Tom Waldek</div></div>
     <div class="phase-list"><div class="phase"><div class="phase-num">0</div><div class="phase-content"><div class="phase-name">Erstgespr&auml;ch</div><p class="phase-desc">Kein Pitch. Eine Frage &mdash; die wahrhaftige.</p></div><div class="phase-fee">Kostenlos</div></div><div class="phase"><div class="phase-num">1</div><div class="phase-content"><div class="phase-name">Trust Architecture Diagnostic</div><p class="phase-desc">3&ndash;4 Wochen vor Ort. F&uuml;nf Beobachtungskontexte in echten Meetings und Entscheidungen. <strong>Ergebnis: Trust Architecture Map.</strong></p></div><div class="phase-fee">&euro;12K</div></div><div class="phase"><div class="phase-num">2</div><div class="phase-content"><div class="phase-name">Origin Work</div><p class="phase-desc">3&ndash;5 Monate vor Ort. Aufl&ouml;sung von Mustern in echten Gespr&auml;chen. <strong>Ergebnis: Entscheidungen vom Menschen &mdash; nicht vom Muster.</strong></p></div><div class="phase-fee">Auf Anfrage</div></div><div class="phase"><div class="phase-num">3</div><div class="phase-content"><div class="phase-name">Integration</div><p class="phase-desc">Verankerung der neuen Betriebsbedingungen in dauerhafter Struktur. Parallel zu den letzten Wochen von Origin Work.</p></div><div class="phase-fee">Inbegriffen</div></div><div class="phase"><div class="phase-num">4</div><div class="phase-content"><div class="phase-name">&Uuml;berpr&uuml;fung</div><p class="phase-desc">6 Monate nach Abschluss. Ein Tag vor Ort. Konfirmation, was gehalten hat, was sich ver&auml;ndert hat.</p></div><div class="phase-fee">Inbegriffen</div></div></div>
   </div>
 </section>
