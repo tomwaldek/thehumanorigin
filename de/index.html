@@ -824,31 +824,12 @@ section.visible,div.visible{opacity:1 !important;transform:none !important}
 
 
 /* ══ WHO-FOR — vertical statement list ══ */
-.who-grid{display:flex;flex-direction:column;gap:4px;max-width:680px;margin:32px auto 0}
-.who-card{
-  padding:18px 0 18px 24px;
-  background:none;
-  border:none;
-  border-left:2px solid rgba(6,182,212,0.28);
-  border-radius:0;
-  position:relative;
-  overflow:visible;
-  transition:border-color 0.2s,transform 0.2s;
-  backdrop-filter:none}
-.who-card::before{display:none}
-.who-card:hover{
-  border-left-color:rgba(6,182,212,0.65);
-  transform:translateX(3px);
-  box-shadow:none}
-.who-num{
-  font-family:var(--display);font-weight:200;font-size:9px;
-  color:rgba(6,182,212,0.40);letter-spacing:3px;
-  display:block;margin-bottom:8px;position:relative;z-index:1}
-.who-card p{
-  font-family:var(--display);font-weight:300;
-  font-size:clamp(14px,1.6vw,16px);
-  color:var(--tx2);line-height:1.7;
-  margin:0;position:relative;z-index:1}
+
+
+
+
+
+
 
 
 
@@ -880,6 +861,31 @@ section.visible,div.visible{opacity:1 !important;transform:none !important}
 
 /* CTA — warm orange close */
 #contact{background:linear-gradient(180deg,rgba(249,115,22,0.05) 0%,rgba(249,115,22,0.02) 100%)}
+
+
+/* ══ WHO-FOR — statement list with cyan highlights ══ */
+.who-grid{display:flex;flex-direction:column;gap:0;max-width:720px;margin:32px auto 0}
+.who-card{
+  padding:22px 0 22px 26px;
+  background:none;
+  border:none;
+  border-left:2px solid rgba(6,182,212,0.25);
+  border-radius:0;
+  transition:border-color 0.25s,transform 0.2s}
+.who-card::before{display:none}
+.who-card:hover{
+  border-left-color:rgba(6,182,212,0.60);
+  transform:translateX(4px)}
+.who-num{
+  font-family:var(--display);font-weight:200;font-size:9px;
+  color:rgba(6,182,212,0.35);letter-spacing:3px;
+  display:block;margin-bottom:10px}
+.who-card p{
+  font-family:var(--display);font-weight:300;
+  font-size:clamp(15px,1.7vw,17px);
+  color:var(--tx2);line-height:1.7;margin:0}
+.who-card p .wh{color:var(--cyan);font-weight:300}
+@media(max-width:768px){.who-grid{margin:24px 0 0}}
 
 </style>
 </head>
@@ -955,10 +961,10 @@ section.visible,div.visible{opacity:1 !important;transform:none !important}
     <h2 class="h2-sora">Ist das f&uuml;r Sie?</h2>
   </div>
   <div class="who-grid">
-<div class="who-card"><span class="who-num">01</span><p>Sie haben talentierte Menschen beobachtet, die mit einem Bruchteil von sich selbst arbeiteten. Nicht aus Mangel an K&ouml;nnen. Der Raum f&uuml;r mehr existierte nicht.</p></div>
-<div class="who-card"><span class="who-num">02</span><p>Sie waren in einem Raum, in dem die falsche Entscheidung getroffen wurde, weil die richtige zu teuer war, um sie laut auszusprechen.</p></div>
-<div class="who-card"><span class="who-num">03</span><p>Sie haben die L&uuml;cke gesp&uuml;rt zwischen dem, was Ihre Organisation zeigt, und dem, was es kostet, das aufrechtzuerhalten.</p></div>
-<div class="who-card"><span class="who-num">04</span><p>Sie haben F&uuml;hrungskr&auml;fteentwicklung versucht. Etwas hat sich ver&auml;ndert. Dann war der Raum wieder so wie vorher.</p></div>
+<div class="who-card"><span class="who-num">01</span><p>Sie haben talentierte Menschen beobachtet, die mit einem Bruchteil von sich selbst arbeiteten. Nicht aus Mangel an K&ouml;nnen. <span class="wh">Der Raum f&uuml;r mehr existierte nicht.</span></p></div>
+<div class="who-card"><span class="who-num">02</span><p>Sie waren in einem Raum, in dem die falsche Entscheidung getroffen wurde, weil <span class="wh">die richtige zu teuer war, um sie laut auszusprechen.</span></p></div>
+<div class="who-card"><span class="who-num">03</span><p>Sie haben die L&uuml;cke gesp&uuml;rt zwischen dem, was Ihre Organisation nach au&szlig;en zeigt, und dem, womit sie <span class="wh">tats&auml;chlich l&auml;uft.</span></p></div>
+<div class="who-card"><span class="who-num">04</span><p>Sie haben F&uuml;hrungskr&auml;fteentwicklung versucht. Etwas hat sich ver&auml;ndert. <span class="wh">Dann war der Raum wieder so wie vorher.</span></p></div>
 </div>
   <div style="text-align:center;padding:32px 44px 56px;position:relative;z-index:1">
     <a href="https://cal.eu/tomwaldek/erstgespraech" data-cal-link="tomwaldek/erstgespraech" data-cal-origin="https://cal.eu" data-cal-config='{"layout":"month_view","theme":"dark"}' class="soft-cta">Ihr freies Gespr&auml;ch sichern</a>
