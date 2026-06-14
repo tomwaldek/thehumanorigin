@@ -226,7 +226,7 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 .diag-stat-label{font-family:var(--display);font-weight:400;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.45)}
 .diag-stat-divider{width:1px;height:32px;background:linear-gradient(180deg,transparent,rgba(6,182,212,0.25),rgba(249,115,22,0.15),transparent);margin:0 4px}
 .diag-subtitle{font-family:var(--ff);font-weight:300;font-size:14px;color:rgba(255,242,225,0.72);line-height:1.7;text-align:center;max-width:520px;margin:0 auto 32px}
-.diag-measures{padding:22px 28px;background:rgba(6,182,212,0.04);border-radius:12px;border:1px solid rgba(6,182,212,0.22);margin:0 auto 40px;max-width:560px;text-align:left}
+.diag-measures{padding:22px 28px;background:rgba(6,182,212,0.04);border-radius:12px;border:1px solid rgba(6,182,212,0.30);margin:0 auto 40px;max-width:560px;text-align:left}
 .diag-measures-label{font-family:var(--display);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--cyan);margin-bottom:10px;font-weight:400;opacity:0.88}
 
 .diag-cta-wrap{text-align:center}
@@ -265,7 +265,7 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 .d-sw.on{background:var(--orange)}.d-sw.off{background:rgba(255,255,255,0.06)}
 .d-knob{width:16px;height:16px;border-radius:50%;background:#fff;position:absolute;top:3px;transition:left 0.3s ease}
 .d-sw.on .d-knob{left:21px}.d-sw.off .d-knob{left:3px}
-.d-info{margin:24px auto;max-width:480px;padding:20px 24px;background:rgba(6,182,212,0.03);border-radius:12px;border:1px solid rgba(6,182,212,0.22);text-align:left}
+.d-info{margin:24px auto;max-width:480px;padding:20px 24px;background:rgba(6,182,212,0.03);border-radius:12px;border:1px solid rgba(6,182,212,0.30);text-align:left}
 .d-info-title{font-family:var(--display);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:12px;font-weight:400}
 .d-info-body{font-size:13px;line-height:1.8;color:var(--tx3)}
 .d-phase{display:none}.d-phase.active{display:block;animation:dFadeUp 0.4s ease}
@@ -299,8 +299,7 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 .why-frame-inner{background:var(--bg);border-radius:24px;padding:58px 60px 62px;position:relative;overflow:hidden}
 
 .why-photo{position:relative;width:100%;aspect-ratio:2.4/1;border-radius:12px;overflow:hidden;
-  opacity:0;transform:scale(0.88) translateY(28px)}
-.why-photo.revealed{opacity:1;transform:scale(1) translateY(0);transition:opacity 2s cubic-bezier(0.23,1,0.32,1),transform 2.2s cubic-bezier(0.23,1,0.32,1)}
+  opacity:1;transform:none;transform:scale(1) translateY(0);transition:opacity 2s cubic-bezier(0.23,1,0.32,1),transform 2.2s cubic-bezier(0.23,1,0.32,1)}
 .why-photo img{width:100%;height:100%;object-fit:cover;object-position:center 5%;
   filter:brightness(0.76) saturate(0.88) contrast(1.06);transform:scale(1.14);transition:transform 2.8s cubic-bezier(0.23,1,0.32,1) 0.1s,filter 2.8s ease 0.1s}
 .why-photo.revealed img{transform:scale(1)}
@@ -592,7 +591,7 @@ footer a:hover{color:var(--cyan)}
 .sc-txt{font-family:var(--display);font-weight:200;font-size:13px;color:var(--tx2);line-height:1.6;padding-top:4px}
 .stats-row{display:flex;gap:14px;flex-wrap:wrap;margin:20px 0}
 /* Outcome block */
-.outcome{margin:22px 0 0;padding:18px 26px;background:rgba(6,182,212,0.05);border:1px solid rgba(6,182,212,0.22);border-radius:10px;display:flex;align-items:flex-start;gap:12px}
+.outcome{margin:22px 0 0;padding:18px 26px;background:rgba(6,182,212,0.05);border:1px solid rgba(6,182,212,0.30);border-radius:10px;display:flex;align-items:flex-start;gap:12px}
 .outcome-label{font-family:var(--display);font-size:9px;color:var(--cyan);letter-spacing:3px;text-transform:uppercase;white-space:nowrap;margin-top:3px;flex-shrink:0;opacity:0.8}
 .outcome-text{font-size:14px;color:var(--tx2);line-height:1.65}
 .outcome-text strong{color:var(--white);font-weight:400}
@@ -724,7 +723,7 @@ strong,b{font-weight:400}
 
 
 /* ══ WHY UNIFIED CARD ══ */
-.wuc{max-width:680px;margin:32px auto 0;padding:36px 40px;background:rgba(6,182,212,0.025);border:1px solid rgba(6,182,212,0.1);border-radius:10px}
+.wuc{max-width:680px;margin:32px auto 0;padding:36px 40px;background:rgba(6,182,212,0.025);border:1px solid rgba(6,182,212,0.22);border-radius:10px}
 .wuc-line{font-family:var(--display);font-weight:300;font-size:clamp(14px,1.6vw,16px);color:rgba(255,255,255,0.85);line-height:1.65;margin:0 0 16px}
 .wuc-body{font-family:var(--display);font-weight:200;font-size:clamp(13px,1.4vw,14px);color:var(--tx2);line-height:1.8;margin:0 0 24px}
 .wuc-close{font-family:var(--display);font-weight:300;font-size:clamp(13px,1.4vw,15px);color:rgba(255,255,255,0.82);padding-top:20px;border-top:1px solid rgba(6,182,212,0.12);margin:0}
@@ -735,10 +734,10 @@ strong,b{font-weight:400}
 .disc-enhanced{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:32px}
 .disc-e{
   padding:24px 26px 26px;
-  background:linear-gradient(145deg,rgba(249,115,22,0.10) 0%,rgba(6,182,212,0.05) 60%,rgba(249,115,22,0.04) 100%);
+  background:linear-gradient(145deg,rgba(249,115,22,0.14) 0%,rgba(6,182,212,0.06) 60%,rgba(249,115,22,0.05) 100%);
   backdrop-filter:blur(12px);
   -webkit-backdrop-filter:blur(12px);
-  border:1px solid rgba(249,115,22,0.28);
+  border:1px solid rgba(249,115,22,0.38);
   border-radius:12px;
   position:relative;
   overflow:hidden;
@@ -773,7 +772,7 @@ strong,b{font-weight:400}
 
 /* WHO-FOR CARDS */
 .who-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:760px;margin:32px auto 0}
-.who-card{padding:22px 24px;background:linear-gradient(145deg,rgba(6,182,212,0.09) 0%,rgba(6,182,212,0.04) 100%);backdrop-filter:blur(8px);border:1px solid rgba(6,182,212,0.22);border-radius:10px;position:relative;overflow:hidden;transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s}
+.who-card{padding:22px 24px;background:linear-gradient(145deg,rgba(6,182,212,0.12) 0%,rgba(6,182,212,0.05) 100%);backdrop-filter:blur(8px);border:1px solid rgba(6,182,212,0.30);border-radius:10px;position:relative;overflow:hidden;transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s}
 .who-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(6,182,212,0.6),transparent)}
 .who-card:hover{border-color:rgba(6,182,212,0.35);transform:translateY(-2px);box-shadow:0 8px 28px rgba(6,182,212,0.08)}
 .who-num{font-family:var(--display);font-weight:200;font-size:10px;color:rgba(6,182,212,0.55);letter-spacing:3px;display:block;margin-bottom:10px;position:relative;z-index:1}
@@ -786,6 +785,10 @@ section.visible,div.visible{opacity:1 !important;transform:none !important}
 .diff-section{opacity:1}
 .bridge{opacity:1}
 .stats-grid{opacity:1}
+
+/* ═══ CARD VISIBILITY SAFETY ═══ */
+.disc-e,.who-card,.wuc,.diff-card,.phase,.faq-item,.proof-frame,.stat-call{opacity:1 !important}
+
 </style>
 </head>
 <body>
