@@ -885,6 +885,21 @@ section{padding:var(--section-pad) var(--pad-x)}
   section,.episode,.who-ep,.diff-section,#faq,#process,#contact{padding:72px 24px}
   .episode-wrap{padding:0}
 }
+
+/* ═══ ALIGNMENT FIXES — resolve conflicts ═══ */
+/* Remove why-text p:last-child centre override */
+.why-text p,.why-text p:last-child{text-align:left}
+/* Fix phase-fee conflict */
+.phase-fee{text-align:right}
+/* Remove ep-ans duplicate */
+.ep-ans{text-align:center;max-width:var(--col-n,640px);margin-left:auto;margin-right:auto}
+/* Body text always left */
+.ep-body p,.faq-a-inner,.phase-desc,.diff-b{text-align:left}
+/* Bridge always centred */
+.bridge,.bridge p,.bridge-teaser{text-align:center}
+/* WHO-FOR left — statements read better left */
+.who-card p{text-align:left}
+
 </style>
 </head>
 <body>
