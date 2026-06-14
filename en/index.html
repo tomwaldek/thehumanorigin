@@ -665,6 +665,12 @@ footer a:hover{color:var(--cyan)}
 @media(max-width:900px){.disc-enhanced{grid-template-columns:1fr}.diff-3{grid-template-columns:1fr}}
 @media(max-width:768px){.episode,.diff-section,.who-ep,.bridge{padding-left:24px;padding-right:24px}.ep-num{font-size:44px;min-width:50px}.clinical{padding:24px 20px}.stats-row{flex-direction:column}}
 
+
+/* ── SAFETY: if JS/IntersectionObserver unavailable, show content ── */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { opacity:1 !important; transform:none !important; }
+  .fade-in .stagger-1,.fade-in .stagger-2,.fade-in .stagger-3,.fade-in .stagger-4 { opacity:1 !important; transform:none !important; }
+}
 </style>
 </head>
 <body>
@@ -684,7 +690,7 @@ footer a:hover{color:var(--cyan)}
 </nav>
 <section class="hero">
   <div class="hero-mesh"></div>
-  <div class="hero-content fade-in">
+  <div class="hero-content">
     <div class="hero-portrait" id="heroPortrait"><div class="hero-portrait-glow"></div><div class="hero-portrait-inner"><img src="../TomWaldek_Actor_01.jpg" alt="Tom Waldek, Founder, The Human Origin"></div></div>
     <div class="hero-role">Tom Waldek &mdash; Founder, The Human Origin</div>
     <h1 class="hero-title"><span class="line-label">The Human</span><span class="line-anchor">Origin</span></h1>
@@ -1034,8 +1040,13 @@ if(epStatEls.length){
 }
 
 // ── FADE IN ──
-var fObs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible')});},{threshold:0.07});
-document.querySelectorAll('.fade-in').forEach(function(el){fObs.observe(el)});
+var fObs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible')});},{threshold:0.07,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.fade-in').forEach(function(el){
+  // Immediately show elements already in viewport (above-fold safety)
+  var r=el.getBoundingClientRect();
+  if(r.top<window.innerHeight&&r.bottom>0){el.classList.add('visible');}
+  else{fObs.observe(el);}
+});
 
 // ── SECTION DIVIDERS ──
 var sdObs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:0.5});
