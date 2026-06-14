@@ -298,16 +298,11 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 .why-section.fade-in.visible 
 .why-frame-inner{background:var(--bg);border-radius:24px;padding:58px 60px 62px;position:relative;overflow:hidden}
 
-.why-photo{position:relative;width:100%;aspect-ratio:2.4/1;border-radius:12px;overflow:hidden;
-  opacity:1;transform:none;transform:scale(1) translateY(0);transition:opacity 2s cubic-bezier(0.23,1,0.32,1),transform 2.2s cubic-bezier(0.23,1,0.32,1)}
-.why-photo img{width:100%;height:100%;object-fit:cover;object-position:center 5%;
-  filter:brightness(0.76) saturate(0.88) contrast(1.06);transform:scale(1.14);transition:transform 2.8s cubic-bezier(0.23,1,0.32,1) 0.1s,filter 2.8s ease 0.1s}
+
+
 .why-photo.revealed img{transform:scale(1)}
-.why-photo::before{content:'';position:absolute;inset:0;z-index:1;
-  background:radial-gradient(ellipse at center,transparent 28%,rgba(8,13,18,0.4) 70%,var(--bg) 92%)}
-.why-photo::after{content:'';position:absolute;inset:0;z-index:2;
-  background:linear-gradient(180deg,var(--bg) 0%,transparent 15%,transparent 68%,var(--bg) 100%),
-  linear-gradient(90deg,var(--bg) 0%,transparent 10%,transparent 90%,var(--bg) 100%)}
+
+
 
 
 
@@ -722,12 +717,11 @@ strong,b{font-weight:400}
 @media(max-width:768px){}
 
 
-/* ══ WHY UNIFIED CARD ══ */
-.wuc{max-width:680px;margin:32px auto 0;padding:36px 40px;background:rgba(6,182,212,0.025);border:1px solid rgba(6,182,212,0.22);border-radius:10px}
-.wuc-line{font-family:var(--display);font-weight:300;font-size:clamp(14px,1.6vw,16px);color:rgba(255,255,255,0.85);line-height:1.65;margin:0 0 16px}
-.wuc-body{font-family:var(--display);font-weight:200;font-size:clamp(13px,1.4vw,14px);color:var(--tx2);line-height:1.8;margin:0 0 24px}
-.wuc-close{font-family:var(--display);font-weight:300;font-size:clamp(13px,1.4vw,15px);color:rgba(255,255,255,0.82);padding-top:20px;border-top:1px solid rgba(6,182,212,0.12);margin:0}
-@media(max-width:768px){.wuc{padding:28px 24px}}
+
+
+
+
+@media(max-width:768px){}
 
 
 /* ══ DISC CARDS — glass orange style ══ */
@@ -858,7 +852,7 @@ section{padding:var(--section-pad) var(--pad-x)}
 .ep-body{max-width:var(--col-n);text-align:left}
 .episode-wrap{max-width:var(--col-m)}
 .faq-wrap{max-width:var(--col-m)}
-.wuc{max-width:var(--col-n)}
+
 .cta-quote{max-width:580px}
 @media(max-width:768px){section,.episode,.who-ep,.diff-section{padding:80px 24px}}
 
@@ -870,6 +864,19 @@ section{padding:var(--section-pad) var(--pad-x)}
 .who-setup{font-family:var(--display);font-weight:200;font-size:clamp(14px,1.7vw,17px);color:rgba(255,242,225,0.50);line-height:1.65;margin:0 0 5px}
 .who-sting{font-family:var(--display);font-weight:300;font-size:clamp(15px,1.8vw,18px);color:rgba(255,242,225,0.90);line-height:1.5;margin:0}
 @media(max-width:768px){.who-grid{gap:36px;padding:0 4px}}
+
+
+/* ═══ EP06 — Why This Work Exists ═══ */
+.why-lines{max-width:660px;margin:32px auto 0;text-align:center;display:flex;flex-direction:column;gap:10px}
+.why-line{font-family:var(--display);font-weight:300;font-size:clamp(15px,1.8vw,18px);color:rgba(255,255,255,0.88);line-height:1.55}
+.why-body{max-width:var(--col-n,640px);margin:40px auto 0;text-align:left}
+.why-body p{font-family:var(--ff);font-weight:400;font-size:clamp(15px,1.5vw,16px);color:rgba(255,242,225,0.80);line-height:1.9;margin:0 0 22px}
+.why-body p:last-child{margin:0}
+.why-photo{width:100%;aspect-ratio:2.35/1;border-radius:10px;overflow:hidden;margin:44px 0;position:relative}
+.why-photo::before{content:'';position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse at center,transparent 30%,rgba(8,13,18,0.7) 80%)}
+.why-photo::after{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(8,13,18,0.5) 0%,transparent 18%,transparent 72%,rgba(8,13,18,0.6) 100%),linear-gradient(90deg,rgba(8,13,18,0.3) 0%,transparent 15%,transparent 85%,rgba(8,13,18,0.3) 100%)}
+.why-photo img{width:100%;height:100%;object-fit:cover;object-position:center 5%;filter:brightness(0.78) saturate(0.85) contrast(1.02);transform:scale(1.04)}
+.why-mission{font-family:var(--display);font-weight:300;font-size:clamp(15px,1.8vw,18px);color:rgba(255,255,255,0.88);text-align:center;max-width:560px;margin:0 auto;line-height:1.55}
 
 </style>
 </head>
@@ -1006,15 +1013,26 @@ section{padding:var(--section-pad) var(--pad-x)}
 <div class="section-div"></div>
 
 <section class="episode slide-reveal ep-even" id="why">
-  <div class="episode-wrap">
-    <div class="ep-meta"><span class="ep-num">06</span><span class="ep-label">Warum es diese Arbeit gibt</span></div>
-    <h2 class="ep-q">Warum ich, konkret?</h2>
-<div class="wuc">
-<p class="wuc-line">Ich wurde am Leben gehalten von einer Maschine, bevor mich je ein Mensch in die Arme nahm.</p>
-<p class="wuc-line">Ich lernte den Unterschied in meinem Körper — bevor ich ein Wort dafür hatte.</p>
-<p class="wuc-line">Eine ganze Welt macht gerade denselben Tausch — und nennt es Verbindung. Ist es nicht.</p>
-<p class="wuc-body">Ich habe Kapazität von innen aufgebaut. Am Set, in Räumen, in denen ich nicht hätte sein sollen, und in Räumen, in denen ich endlich aufgehört habe, so zu tun als ob. Sie ist keine Geschichte — sie ist, wie ich jetzt lebe. Und der Grund, warum ich das Muster erkenne, bevor andere es benennen.</p>
-<p class="wuc-close">Sie sichtbar zu machen ist meine Mission.</p>
+<div class="episode-wrap">
+<div class="ep-meta"><span class="ep-num">06</span><span class="ep-label">Warum es diese Arbeit gibt</span></div>
+<h2 class="ep-q">Warum ich, konkret?</h2>
+
+<div class="why-lines">
+  <p class="why-line">Ich wurde am Leben gehalten von einer Maschine, bevor mich je ein Mensch in die Arme nahm.</p>
+  <p class="why-line">Ich lernte den Unterschied in meinem K&ouml;rper &mdash; bevor ich ein Wort daf&uuml;r hatte.</p>
+  <p class="why-line">Eine ganze Welt macht gerade denselben Tausch &mdash; und nennt es Verbindung. Ist es nicht.</p>
+</div>
+
+<div class="why-body">
+  <p>F&uuml;nfundzwanzig Jahre am Set haben mich gelehrt, zu lesen, was Darstellung nicht verbergen kann. Wenn die Kamera l&auml;uft, entscheidet der K&ouml;rper &mdash; lange bevor der Verstand zustimmt. Ich habe gesehen, was mit Schauspielern, Regisseuren, F&uuml;hrungskr&auml;ften in Corporate-Produktionen passiert, wenn die L&uuml;cke zwischen Absicht und Ausstrahlung sichtbar wird. Das Willk&uuml;rliche und das Unwillk&uuml;rliche. Das Polierte und das Physiologische. Diese Distanz &mdash; zwischen dem, was jemand darstellt, und dem, was sein Nervensystem dem Raum mitteilt &mdash; ist die einzige L&uuml;cke, die in einem F&uuml;hrungskontext z&auml;hlt. Film hat sie sichtbar gemacht. Jedes Mal.</p>
+  <p>Ich habe Kapazit&auml;t von innen aufgebaut. Nicht als Theorie. In R&auml;umen, in denen mein Nervensystem eine Last trug, die es nie allein tragen sollte &mdash; und eine eigene Architektur um diese Abwesenheit herum baute. Das ist keine Geschichte. Es ist, wie ich heute navigiere. Und deshalb erkenne ich das Muster, das in Ihrer Organisation l&auml;uft, bevor Sie ein Wort daf&uuml;r haben &mdash; bevor Sie es &uuml;berhaupt als Muster identifiziert haben.</p>
+</div>
+
+<div class="why-photo">
+  <img src="../TomWaldek_cinema_seats.jpg" alt="Tom Waldek &mdash; The Human Origin" loading="lazy">
+</div>
+
+<p class="why-mission">Diese Kapazit&auml;t sichtbar zu machen &mdash; in den R&auml;umen, in denen sie am meisten verborgen war &mdash; das ist diese Arbeit.</p>
 </div>
 </section>
 
