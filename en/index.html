@@ -689,10 +689,10 @@ footer a:hover{color:var(--cyan)}
     <div class="hero-role">Tom Waldek &mdash; Founder, The Human Origin</div>
     <h1 class="hero-title"><span class="line-label">The Human</span><span class="line-anchor">Origin</span></h1>
     <div class="hero-method">Six film disciplines. The nervous system as evidence — from inside.</div>
-    <div class="hero-tagline" class="hero-tagline">When was the last time something true was said in one of your meetings?</div>
+    <div>When was the last time something true was said in one of your meetings?</div>
     <div class="hero-ctas">
       <a href="#diagnostic" class="btn-primary">Start Pulse Check &mdash; 3 min</a>
-      <a href="mailto:tom@thehumanorigin.org?subject=Entry%20Conversation" onclick="openBooking(event)" class="btn-ghost" >Get your free conversation</a>
+      <a href="https://cal.eu/tomwaldek/entry-conversation" data-cal-link="tomwaldek/entry-conversation" data-cal-origin="https://cal.eu" data-cal-config='{"layout":"month_view","theme":"dark"}' class="btn-ghost" >Get your free conversation</a>
     </div>
   </div>
 </section>
@@ -740,7 +740,7 @@ footer a:hover{color:var(--cyan)}
   </div>
 
 <div style="text-align:center;padding:20px 44px 56px;position:relative;z-index:1">
-  <a href="mailto:tom@thehumanorigin.org?subject=Entry%20Conversation" onclick="openBooking(event)" class="soft-cta" >Get your free conversation</a>
+  <a href="https://cal.eu/tomwaldek/entry-conversation" data-cal-link="tomwaldek/entry-conversation" data-cal-origin="https://cal.eu" data-cal-config='{"layout":"month_view","theme":"dark"}' class="soft-cta" >Get your free conversation</a>
 </div>
 
 <div class="section-div"></div>
@@ -965,7 +965,7 @@ footer a:hover{color:var(--cyan)}
     <p class="sec-text" style="max-width:480px;margin:0 auto 14px">Leaders who say what&#8217;s true. Teams that surface problems before they become crises. Partners who stay.</p>
     <p style="font-family:var(--display);font-size:12px;color:var(--tx3);letter-spacing:3px;text-transform:uppercase;margin-bottom:40px">A Trust Architecture Diagnostic.</p>
     <div class="hero-ctas">
-      <a href="mailto:tom@thehumanorigin.org?subject=Entry%20Conversation" onclick="openBooking(event)" class="btn-primary" >Get your free conversation</a>
+      <a href="https://cal.eu/tomwaldek/entry-conversation" data-cal-link="tomwaldek/entry-conversation" data-cal-origin="https://cal.eu" data-cal-config='{"layout":"month_view","theme":"dark"}' class="btn-primary" >Get your free conversation</a>
       <a href="#diagnostic" class="btn-ghost">Start Pulse Check First</a>
     </div>
     <p style="margin-top:24px;font-size:13px;color:var(--tx4)">tom@thehumanorigin.org</p>
@@ -1098,26 +1098,28 @@ function toggleFaq(el){
 }
 
 
-var CAL_BOOKING_URL = "tomwaldek/entry-conversation";
+var CAL_SLUG = "tomwaldek/entry-conversation";
+var CAL_FALLBACK = "mailto:tom@thehumanorigin.org?subject=Entry%20Conversation";
 (function(C,A,L){
   var p=function(a,ar){a.q=a.q||[];a.q.push(ar)};
   var d=C.document;
   C.Cal=C.Cal||function(){p(C.Cal,arguments)};
   C.Cal.ns={};C.Cal.loaded=false;
   var s=d.createElement("script");
-  s.src=A;s.async=true;
+  s.src=A;s.async=true;s.onload=function(){C.Cal.loaded=true};
   d.head.appendChild(s);
   C.Cal("init",{origin:"https://cal.eu"});
   C.Cal("ui",{theme:"dark",styles:{branding:{brandColor:"#06b6d4"}},hideEventTypeDetails:false,layout:"month_view"});
 })(window,"https://app.cal.eu/embed/embed.js","init");
+
+// Emergency fallback — only if user calls openBooking() directly
+// (diagnostic result button) — tries direct URL first, email only if blocked
 function openBooking(e){
   if(e) e.preventDefault();
-  var opened=false;
-  if(window.Cal&&window.Cal.loaded){
-    try{
-      Cal("openModal",{calLink:CAL_BOOKING_URL,config:{layout:"month_view",theme:"dark"}});
-      opened=true;
-    }catch(err){}
+  window.open("https://cal.eu/tomwaldek/entry-conversation", "_blank") ||
+    (window.location.href = CAL_FALLBACK);
+}
+
   }
   if(!opened){
     window.location.href="mailto:tom@thehumanorigin.org?subject=Entry%20Conversation";
