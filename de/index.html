@@ -320,9 +320,9 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 .why-photo::after{content:'';position:absolute;inset:0;z-index:2;
   background:linear-gradient(180deg,var(--bg) 0%,transparent 15%,transparent 68%,var(--bg) 100%),
   linear-gradient(90deg,var(--bg) 0%,transparent 10%,transparent 90%,var(--bg) 100%)}
-.why-text{max-width:640px;margin:36px auto 0}
 
-.why-break{font-weight:400;font-size:17px;color:rgba(255,242,225,0.88);line-height:2;margin:0 0 28px;text-align:left;letter-spacing:0.1px}
+
+
 .why-text p{font-weight:400;font-size:14px;color:rgba(255,242,225,0.78);line-height:1.85;margin-bottom:20px;text-align:left}
 .why-text p:last-child{margin-bottom:0;text-align:center;margin-top:28px;font-size:14px;color:rgba(255,245,230,0.85);line-height:1.8}
 
@@ -571,9 +571,9 @@ footer a:hover{color:var(--cyan)}
   .overview-price{font-size:12px}
 }
 .hero-teaser{font-family:var(--display);font-weight:200;font-size:15px;color:rgba(255,242,225,0.50);letter-spacing:1.5px;text-align:center;margin:12px 0 8px}
-.why-verse{margin:32px 0 40px;padding:28px 36px;border-left:2px solid;border-image:linear-gradient(180deg,var(--cyan),var(--orange)) 1;background:rgba(6,182,212,0.03);border-radius:0 12px 12px 0}
-.why-verse p{font-family:var(--display);font-weight:200;font-size:17px;color:rgba(255,245,230,0.85);line-height:1.9;letter-spacing:0.5px;margin:0;text-align:left}
-.why-verse p:last-child{color:rgba(255,245,230,0.60);}
+
+
+
 .why-precision{margin-top:40px;padding:28px 32px;background:rgba(6,182,212,0.04);border:1px solid rgba(6,182,212,0.12);border-radius:12px}
 .why-precision-heading{font-family:var(--display);font-weight:300;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--cyan);margin:0 0 16px}
 
@@ -637,12 +637,12 @@ footer a:hover{color:var(--cyan)}
 
 
 /* Clinical */
-.clinical{position:relative;padding:32px 38px;margin:0 0 24px;background:rgba(6,182,212,0.04);border:1px solid rgba(6,182,212,0.14);border-radius:14px}
+
 .clinical::before{content:'Personal Foundation';position:absolute;top:-1px;left:22px;transform:translateY(-50%);font-family:var(--display);font-size:9px;letter-spacing:3px;color:var(--cyan);background:var(--bg);padding:0 10px;text-transform:uppercase}
-.clinical-anchor{font-family:var(--display);font-weight:200;font-style:normal;font-size:clamp(16px,2vw,23px);color:var(--white);line-height:1.35;margin-bottom:16px}
+
 .clinical p{font-size:15px;line-height:1.9;color:var(--tx2);margin-bottom:12px}
 .clinical p:last-child{margin-bottom:0}
-.clinical-stamp{font-family:var(--display);font-size:10px;color:var(--cyan);letter-spacing:3px;text-transform:uppercase;margin-top:16px;padding-top:13px;border-top:1px solid var(--border)}
+
 /* Differentiators */
 .diff-section{position:relative;z-index:1;padding:80px 44px}
 .diff-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
@@ -663,7 +663,7 @@ footer a:hover{color:var(--cyan)}
 
 /* Responsive */
 @media(max-width:900px){.diff-3{grid-template-columns:1fr}}
-@media(max-width:768px){.episode,.diff-section,.who-ep,.bridge{padding-left:24px;padding-right:24px}.ep-num{font-size:36px;min-width:50px}.clinical{padding:24px 20px}.stats-row{flex-direction:column}}
+@media(max-width:768px){.episode,.diff-section,.who-ep,.bridge{padding-left:24px;padding-right:24px}.ep-num{font-size:36px;min-width:50px}.stats-row{flex-direction:column}}
 
 
 /* ── SAFETY: if JS/IntersectionObserver unavailable, show content ── */
@@ -693,7 +693,7 @@ footer a:hover{color:var(--cyan)}
 /* Standardised max-widths — 4 values */
 .episode-wrap{max-width:800px}
 .faq-wrap{max-width:760px}
-.why-text{max-width:680px;margin-left:auto;margin-right:auto}
+
 .cta-quote{max-width:640px}
 
 /* Footer links */
@@ -741,6 +741,14 @@ strong,b{font-weight:400}
 .who-dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);opacity:0.5;flex-shrink:0;margin-top:7px}
 .who-card p{font-family:var(--display);font-weight:300;font-size:clamp(13px,1.4vw,15px);color:var(--tx2);line-height:1.7;margin:0}
 @media(max-width:768px){.who-grid{grid-template-columns:1fr}}
+
+
+/* ══ WHY UNIFIED CARD ══ */
+.wuc{max-width:680px;margin:32px auto 0;padding:36px 40px;background:rgba(6,182,212,0.025);border:1px solid rgba(6,182,212,0.1);border-radius:10px}
+.wuc-line{font-family:var(--display);font-weight:300;font-size:clamp(14px,1.6vw,16px);color:rgba(255,255,255,0.85);line-height:1.65;margin:0 0 16px}
+.wuc-body{font-family:var(--display);font-weight:200;font-size:clamp(13px,1.4vw,14px);color:var(--tx2);line-height:1.8;margin:0 0 24px}
+.wuc-close{font-family:var(--display);font-weight:300;font-size:clamp(13px,1.4vw,15px);color:rgba(255,255,255,0.82);padding-top:20px;border-top:1px solid rgba(6,182,212,0.12);margin:0}
+@media(max-width:768px){.wuc{padding:28px 24px}}
 
 </style>
 </head>
@@ -869,19 +877,13 @@ strong,b{font-weight:400}
   <div class="episode-wrap">
     <div class="ep-meta"><span class="ep-num">06</span><span class="ep-label">Warum es diese Arbeit gibt</span></div>
     <h2 class="ep-q">Warum ich, konkret?</h2>
-    <div class="clinical">
-      <div class="clinical-anchor">“Ich wurde am Leben gehalten von einer Maschine, bevor mich je ein Mensch in die Arme nahm.”</div>
-      <p>Ich wurde drei Monate zu fr&uuml;h geboren. Die ersten f&uuml;nf Monate meines Lebens verbrachte ich in einem Brutkasten &mdash; kein Hautkontakt. Keine Ko-Regulation. Im zweiten Lebensjahr: Chemotherapie und Operation wegen Leberkrebs. Das Fenster, in dem ein Nervensystem durch die W&auml;rme und den Rhythmus eines anderen K&ouml;rpers Sicherheit lernt &mdash; ich verbrachte es damit, von Maschinen am Leben gehalten zu werden. Das Fundament, das die meisten Menschen als Selbstverst&auml;ndlichkeit erhalten, wurde nie gebaut.</p><p>Das ist keine Biografie. Es ist klinische Evidenz. Das Nervensystem lernt von welchen Daten es hat &mdash; und aktualisiert sich nicht durch Einsicht. Ich wei&szlig; das von innen. Alles, was ich in f&uuml;nfundzwanzig Jahren in dieser Arbeit aufgebaut habe, hat dort begonnen.</p>
-      <div class="clinical-stamp">Das ist das Fundament jeder Diagnostik, die ich durchf&uuml;hre. &mdash; Tom Waldek</div>
-    </div>
-    <div class="why-text">
-      <div class="why-verse"><p>Ich wurde am Leben gehalten von einer Maschine, bevor mich je ein Mensch in die Arme nahm.</p><p>Ich lernte den Unterschied in meinem K&ouml;rper — bevor ich ein Wort dafür hatte.</p><p>Eine ganze Welt macht jetzt denselben Handel &mdash; und nennt es Verbindung.</p></div>
-      <p class="why-break">Das ist es nicht.</p>
-      <p style="font-size:16px;line-height:2;color:rgba(255,242,225,0.82);margin-bottom:16px">Ich habe Kapazit&auml;t von innen aufgebaut. Am Set, in R&auml;umen, in denen ich nicht h&auml;tte sein sollen, und in R&auml;umen, in denen ich endlich aufgeh&ouml;rt habe, so zu tun als ob. Sie ist keine Geschichte &mdash; sie ist, wie ich jetzt lebe. Und der Grund, warum ich das Muster erkenne, bevor andere es benennen.</p>
-      <p style="font-size:16px;line-height:2;color:rgba(255,242,225,0.82)">Sie sichtbar zu machen ist meine Mission.</p>
-    </div>
-    <div class="why-photo" style="margin-top:36px"><img src="../TomWaldek_cinema_seats.jpg" alt="Tom Waldek"></div>
-  </div>
+<div class="wuc">
+<p class="wuc-line">Ich wurde am Leben gehalten von einer Maschine, bevor mich je ein Mensch in die Arme nahm.</p>
+<p class="wuc-line">Ich lernte den Unterschied in meinem Körper — bevor ich ein Wort dafür hatte.</p>
+<p class="wuc-line">Eine ganze Welt macht gerade denselben Tausch — und nennt es Verbindung. Ist es nicht.</p>
+<p class="wuc-body">Ich habe Kapazität von innen aufgebaut. Am Set, in Räumen, in denen ich nicht hätte sein sollen, und in Räumen, in denen ich endlich aufgehört habe, so zu tun als ob. Sie ist keine Geschichte — sie ist, wie ich jetzt lebe. Und der Grund, warum ich das Muster erkenne, bevor andere es benennen.</p>
+<p class="wuc-close">Sie sichtbar zu machen ist meine Mission.</p>
+</div>
 </section>
 
 <div class="section-div"></div>
