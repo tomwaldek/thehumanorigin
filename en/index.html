@@ -823,113 +823,46 @@ section.visible,div.visible{opacity:1 !important;transform:none !important}
 .disc-e,.who-card,.diff-card,.wuc,.phase,.faq-item{opacity:1}
 
 
-/* ══ WHO-FOR — vertical statement list ══ */
-
-
-
-
-
-
-
-
-
-
-/* ═══ SECTION BACKGROUND TINTS — subtle rhythm ═══ */
-/* Same glass-dark language as nav, lightly varied per section */
-
-/* Stats bar — warm orange lift */
-#stats-section{background:linear-gradient(180deg,rgba(249,115,22,0.06) 0%,rgba(249,115,22,0.02) 100%)}
-
-/* Episodes — odd=cyan, even=orange */
-.ep-odd{background:linear-gradient(180deg,rgba(6,182,212,0.05) 0%,transparent 100%)}
-.ep-even{background:linear-gradient(180deg,rgba(249,115,22,0.04) 0%,transparent 100%)}
-
-/* Who-for — cyan tint */
-.who-ep{background:linear-gradient(180deg,rgba(6,182,212,0.04) 0%,rgba(6,182,212,0.01) 100%)}
-
-/* Why Different — warm orange */
-.diff-section{background:linear-gradient(180deg,rgba(249,115,22,0.04) 0%,transparent 100%)}
-
-/* Diagnostic — cyan */
-#diagnostic{background:linear-gradient(180deg,rgba(6,182,212,0.05) 0%,rgba(6,182,212,0.01) 100%)}
-
-/* FAQ — subtle warm */
-#faq{background:linear-gradient(180deg,rgba(249,115,22,0.03) 0%,transparent 100%)}
-
-/* Process — cyan */
-#process{background:linear-gradient(180deg,rgba(6,182,212,0.04) 0%,transparent 100%)}
-
-/* CTA — warm orange close */
-#contact{background:linear-gradient(180deg,rgba(249,115,22,0.05) 0%,rgba(249,115,22,0.02) 100%)}
-
-
-/* ══ WHO-FOR — statement list with cyan highlights ══ */
-.who-grid{display:flex;flex-direction:column;gap:0;max-width:720px;margin:32px auto 0}
-.who-card{
-  padding:22px 0 22px 26px;
-  background:none;
-  border:none;
-  border-left:2px solid rgba(6,182,212,0.25);
-  border-radius:0;
-  transition:border-color 0.25s,transform 0.2s}
-.who-card::before{display:none}
-.who-card:hover{
-  border-left-color:rgba(6,182,212,0.60);
-  transform:translateX(4px)}
-.who-num{
-  font-family:var(--display);font-weight:200;font-size:9px;
-  color:rgba(6,182,212,0.35);letter-spacing:3px;
-  display:block;margin-bottom:10px}
-.who-card p{
-  font-family:var(--display);font-weight:300;
-  font-size:clamp(15px,1.7vw,17px);
-  color:var(--tx2);line-height:1.7;margin:0}
-.who-card p .wh{color:var(--cyan);font-weight:300}
-@media(max-width:768px){.who-grid{margin:24px 0 0}}
-
-
-/* ═══ ALIGNMENT SYSTEM — 3 column widths, one rhythm ═══ */
-:root{
-  --col-n: 640px;   /* body text / single column */
-  --col-m: 820px;   /* section content */
-  --col-w: 1060px;  /* grids */
-  --pad-x: clamp(24px,5vw,60px);
-}
-
-/* Column helpers */
-.col-n{max-width:var(--col-n);margin-left:auto;margin-right:auto}
-.col-m{max-width:var(--col-m);margin-left:auto;margin-right:auto}
-.col-w{max-width:var(--col-w);margin-left:auto;margin-right:auto}
-
-/* Section layout rhythm */
-section{padding:var(--section-pad) var(--pad-x)}
-.episode{padding:100px var(--pad-x)}
-.who-ep{padding:80px var(--pad-x)}
-.diff-section{padding:80px var(--pad-x)}
-
-/* Heading centering — all section headings centred */
-.section-label{text-align:center}
-.h2-sora{text-align:center}
-.h2-serif{text-align:center}
-.ep-q{text-align:left}
-
-/* Body text — left within centered column */
-.ep-body{max-width:var(--col-n);text-align:left}
-.ep-ans{max-width:var(--col-n);margin-left:auto;margin-right:auto;text-align:center}
-.bridge{max-width:var(--col-m);margin-left:auto;margin-right:auto;text-align:center}
-.bridge-teaser{max-width:var(--col-n)}
-.wuc{max-width:var(--col-n)}
-.who-grid{max-width:680px}
-.faq-wrap{max-width:var(--col-m)}
-.episode-wrap{max-width:var(--col-m)}
-.cta-quote{max-width:580px}
-
-@media(max-width:768px){
-  section{padding:80px 24px}
   .episode{padding:72px 24px}
   .who-ep{padding:64px 24px}
   .diff-section{padding:64px 24px}
 }
+
+
+/* ══ WHO-FOR — centered setup + sting format ══ */
+.who-grid{
+  display:flex;flex-direction:column;
+  gap:40px;
+  max-width:620px;
+  margin:40px auto 0;
+  text-align:center}
+.who-card{
+  padding:0;
+  background:none;border:none;
+  position:relative}
+.who-card::before{display:none}
+.who-card:hover{transform:none;border:none;box-shadow:none}
+.who-setup{
+  font-family:var(--display);font-weight:200;
+  font-size:clamp(14px,1.5vw,16px);
+  color:var(--tx3);
+  line-height:1.65;
+  margin:0 0 6px}
+.who-sting{
+  font-family:var(--display);font-weight:300;
+  font-size:clamp(16px,1.8vw,19px);
+  color:var(--tx);
+  line-height:1.5;
+  margin:0}
+/* Subtle divider between statements */
+.who-card+.who-card::before{
+  content:'';display:block;
+  width:32px;height:1px;
+  background:rgba(6,182,212,0.25);
+  margin:0 auto 40px;
+  position:static}
+@media(max-width:768px){
+  .who-grid{gap:32px;text-align:center;padding:0 4px}}
 
 </style>
 </head>
@@ -1005,10 +938,22 @@ section{padding:var(--section-pad) var(--pad-x)}
     <h2 class="h2-sora">Is this for you?</h2>
   </div>
   <div class="who-grid">
-<div class="who-card"><span class="who-num">01</span><p>You&#8217;ve watched talented people work at a fraction of what they are. Not from lack of skill. <span class="wh">The space to be anything else didn&#8217;t exist.</span></p></div>
-<div class="who-card"><span class="who-num">02</span><p>You&#8217;ve been in a room where the wrong decision was made because <span class="wh">the right one was too expensive to say out loud.</span></p></div>
-<div class="who-card"><span class="who-num">03</span><p>You&#8217;ve felt the gap between what your organisation presents and what it <span class="wh">actually runs on.</span></p></div>
-<div class="who-card"><span class="who-num">04</span><p>You&#8217;ve tried leadership development before. Something shifted. <span class="wh">Then the room went back to how it was.</span></p></div>
+<div class="who-card">
+  <p class="who-setup">You&#8217;ve watched talented people work at a fraction of what they are. Not from lack of skill.</p>
+  <p class="who-sting">The space to be anything else didn&#8217;t exist.</p>
+</div>
+<div class="who-card">
+  <p class="who-setup">You&#8217;ve been in a room where the wrong decision was made because</p>
+  <p class="who-sting">the right one was too expensive to say out loud.</p>
+</div>
+<div class="who-card">
+  <p class="who-setup">You&#8217;ve felt the distance between the organisation you describe in the room</p>
+  <p class="who-sting">and the one you manage outside of it.</p>
+</div>
+<div class="who-card">
+  <p class="who-setup">You&#8217;ve tried leadership development before. Something shifted.</p>
+  <p class="who-sting">Then the room went back to how it was.</p>
+</div>
 </div>
   <div style="text-align:center;padding:32px 44px 56px;position:relative;z-index:1">
     <a href="https://cal.eu/tomwaldek/entry-conversation" data-cal-link="tomwaldek/entry-conversation" data-cal-origin="https://cal.eu" data-cal-config='{"layout":"month_view","theme":"dark"}' class="soft-cta">Get your free conversation</a>
