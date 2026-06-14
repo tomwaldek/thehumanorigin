@@ -692,7 +692,7 @@ footer a:hover{color:var(--cyan)}
     <div class="hero-tagline">Wann wurde in einem Ihrer Meetings zuletzt etwas Wahres gesagt?</div>
     <div class="hero-ctas">
       <a href="#diagnostic" class="btn-primary">Pulscheck starten &mdash; 3 Min.</a>
-      <a href="mailto:tom@thehumanorigin.org?subject=Entry%20Conversation" class="btn-ghost" >Erstgespr&auml;ch buchen &mdash; kostenlos</a>
+      <a href="mailto:tom@thehumanorigin.org?subject=Entry%20Conversation" onclick="openBooking(event)" class="btn-ghost" >Starten Sie Ihr Erstgespräch — kostenlos</a>
     </div>
   </div>
 </section>
@@ -740,7 +740,7 @@ footer a:hover{color:var(--cyan)}
   </div>
 
 <div style="text-align:center;padding:20px 44px 56px;position:relative;z-index:1">
-  <a href="mailto:tom@thehumanorigin.org?subject=Entry%20Conversation" class="soft-cta" >Erstgespr&auml;ch buchen &mdash; kostenlos</a>
+  <a href="mailto:tom@thehumanorigin.org?subject=Entry%20Conversation" onclick="openBooking(event)" class="soft-cta" >Starten Sie Ihr Erstgespräch — kostenlos</a>
 </div>
 
 <div class="section-div"></div>
@@ -965,7 +965,7 @@ footer a:hover{color:var(--cyan)}
     <p class="sec-text" style="max-width:480px;margin:0 auto 14px">F&uuml;hrungskr&auml;fte, die sagen, was wahr ist. Teams, die Probleme ansprechen, bevor sie zu Krisen werden. Partner, die bleiben.</p>
     <p style="font-family:var(--display);font-size:12px;color:var(--tx3);letter-spacing:3px;text-transform:uppercase;margin-bottom:40px">Ein Trust Architecture Diagnostic.</p>
     <div class="hero-ctas">
-      <a href="mailto:tom@thehumanorigin.org?subject=Entry%20Conversation" class="btn-primary" >Erstgespr&auml;ch buchen &mdash; kostenlos</a>
+      <a href="mailto:tom@thehumanorigin.org?subject=Entry%20Conversation" onclick="openBooking(event)" class="btn-primary" >Starten Sie Ihr Erstgespräch — kostenlos</a>
       <a href="#diagnostic" class="btn-ghost">Zuerst Pulscheck starten</a>
     </div>
     <p style="margin-top:24px;font-size:13px;color:var(--tx4)">tom@thehumanorigin.org</p>
@@ -1090,6 +1090,33 @@ function toggleFaq(el){
   var wasOpen=item.classList.contains('open');
   document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open')});
   if(!wasOpen)item.classList.add('open');
+}
+
+
+var CAL_BOOKING_URL = "tomwaldek/erstgespraech";
+(function(C,A,L){
+  var p=function(a,ar){a.q=a.q||[];a.q.push(ar)};
+  var d=C.document;
+  C.Cal=C.Cal||function(){p(C.Cal,arguments)};
+  C.Cal.ns={};C.Cal.loaded=false;
+  var s=d.createElement("script");
+  s.src=A;s.async=true;
+  d.head.appendChild(s);
+  C.Cal("init",{origin:"https://cal.eu"});
+  C.Cal("ui",{theme:"dark",styles:{branding:{brandColor:"#06b6d4"}},hideEventTypeDetails:false,layout:"month_view"});
+})(window,"https://app.cal.eu/embed/embed.js","init");
+function openBooking(e){
+  if(e) e.preventDefault();
+  var opened=false;
+  if(window.Cal&&window.Cal.loaded){
+    try{
+      Cal("openModal",{calLink:CAL_BOOKING_URL,config:{layout:"month_view",theme:"dark"}});
+      opened=true;
+    }catch(err){}
+  }
+  if(!opened){
+    window.location.href="mailto:tom@thehumanorigin.org?subject=Erstgespr%C3%A4ch";
+  }
 }
 
 </script>
