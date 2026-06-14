@@ -722,16 +722,7 @@ strong,b{font-weight:400}
 .ep-body em,.ep-body i,.ep-ans em,.bridge em,
 .ep-body strong,.ep-ans strong,.bridge strong,
 
-/* ══ DISC CARDS — simplified 3-element ══ */
-.disc-enhanced{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
-.disc-e{padding:22px 24px;background:rgba(6,182,212,0.025);border:1px solid rgba(6,182,212,0.08);border-radius:8px;transition:border-color 0.2s}
-.disc-e:hover{border-color:rgba(6,182,212,0.18)}
-.de-top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
-.de-num{font-family:var(--display);font-weight:200;font-size:11px;color:var(--cyan);letter-spacing:3px}
-.de-disc{font-family:var(--display);font-weight:300;font-size:10px;color:var(--tx4);letter-spacing:2.5px;text-transform:uppercase}
-.de-name{font-family:var(--display);font-weight:300;font-size:14px;color:rgba(255,255,255,0.88);line-height:1.55;margin-bottom:10px}
-.de-desc{font-family:var(--ff);font-weight:400;font-size:13px;color:var(--tx3);line-height:1.65}
-@media(max-width:768px){.disc-enhanced{grid-template-columns:1fr}}
+}
 
 
 /* ══ WHO FOR — card grid with rounded dots ══ */
@@ -749,6 +740,46 @@ strong,b{font-weight:400}
 .wuc-body{font-family:var(--display);font-weight:200;font-size:clamp(13px,1.4vw,14px);color:var(--tx2);line-height:1.8;margin:0 0 24px}
 .wuc-close{font-family:var(--display);font-weight:300;font-size:clamp(13px,1.4vw,15px);color:rgba(255,255,255,0.82);padding-top:20px;border-top:1px solid rgba(6,182,212,0.12);margin:0}
 @media(max-width:768px){.wuc{padding:28px 24px}}
+
+
+/* ══ DISC CARDS — glass orange style ══ */
+.disc-enhanced{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:32px}
+.disc-e{
+  padding:24px 26px 26px;
+  background:linear-gradient(145deg,rgba(249,115,22,0.07) 0%,rgba(6,182,212,0.03) 60%,rgba(249,115,22,0.02) 100%);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border:1px solid rgba(249,115,22,0.18);
+  border-radius:12px;
+  position:relative;
+  overflow:hidden;
+  transition:transform 0.25s ease,border-color 0.25s,box-shadow 0.25s}
+/* top shimmer line */
+.disc-e::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent 0%,rgba(249,115,22,0.7) 40%,rgba(6,182,212,0.4) 70%,transparent 100%)}
+/* inner glow */
+.disc-e::after{
+  content:'';position:absolute;top:0;left:0;right:0;bottom:0;
+  background:radial-gradient(ellipse at top left,rgba(249,115,22,0.06) 0%,transparent 60%);
+  pointer-events:none}
+.disc-e:hover{
+  transform:translateY(-3px);
+  border-color:rgba(249,115,22,0.38);
+  box-shadow:0 12px 40px rgba(249,115,22,0.10),0 4px 16px rgba(0,0,0,0.3)}
+.de-top{display:flex;align-items:center;gap:10px;margin-bottom:14px;position:relative;z-index:1}
+.de-num{font-family:var(--display);font-weight:200;font-size:11px;color:var(--orange);letter-spacing:3px;opacity:0.9}
+.de-disc{font-family:var(--display);font-weight:300;font-size:10px;color:rgba(249,115,22,0.5);letter-spacing:2.5px;text-transform:uppercase}
+.de-name{font-family:var(--display);font-weight:300;font-size:clamp(13px,1.4vw,15px);color:rgba(255,255,255,0.92);line-height:1.55;margin:0 0 10px;position:relative;z-index:1}
+.de-desc{font-family:var(--ff);font-weight:400;font-size:13px;color:var(--tx3);line-height:1.65;margin:0 0 14px;position:relative;z-index:1}
+.de-result{
+  font-family:var(--display);font-weight:200;font-size:12px;
+  color:rgba(249,115,22,0.70);
+  line-height:1.65;margin:0;
+  padding-top:12px;
+  border-top:1px solid rgba(249,115,22,0.12);
+  position:relative;z-index:1}
+@media(max-width:768px){.disc-enhanced{grid-template-columns:1fr}}
 
 </style>
 </head>
@@ -840,31 +871,37 @@ strong,b{font-weight:400}
   <div class="de-top"><span class="de-num">01</span><span class="de-disc">Drehbuch</span></div>
   <p class="de-name">Die Erzählung gestalten, bevor jemand beginnt, sie darzustellen.</p>
   <p class="de-desc">Die Lücke zwischen der Erzählung, die Führung darstellt, und der, in der die Organisation tatsächlich lebt.</p>
+  <p class="de-result">Der Raum hört auf, die Geschichte zu schützen, die seine Dysfunktion erklärbar macht. Eine Erzählung, auf die Führung tatsächlich hinarbeiten kann, wird möglich.</p>
 </div>
 <div class="disc-e">
   <div class="de-top"><span class="de-num">02</span><span class="de-disc">Regie</span></div>
   <p class="de-name">Bedingungen schaffen, unter denen Wahrheit sichtbar wird.</p>
   <p class="de-desc">Die unausgesprochene Vereinbarung darüber, was gesagt werden darf und was nicht — sichtbar gemacht.</p>
+  <p class="de-result">Entscheidungen werden im Meeting getroffen, nicht im Vorgespräch. Menschen hören auf, Sicherheit darzustellen, und beginnen, sie zu nutzen.</p>
 </div>
 <div class="disc-e">
   <div class="de-top"><span class="de-num">03</span><span class="de-disc">Schauspiel</span></div>
   <p class="de-name">Die Lücke zwischen dargestellter Sicherheit und echter Präsenz.</p>
   <p class="de-desc">Der Preis, eine Version von sich selbst aufrechtzuerhalten, die der Druck verlangt.</p>
+  <p class="de-result">Die Energie, die für die Selbst-Darstellung aufgewendet wurde, wird für echte Arbeit verfügbar. Was der Raum erwartet hat, wird ausgesprochen.</p>
 </div>
 <div class="disc-e">
   <div class="de-top"><span class="de-num">04</span><span class="de-disc">Schnitt</span></div>
   <p class="de-name">Schneiden, was nicht mehr dient. Stärken, was trägt.</p>
   <p class="de-desc">Die Gewohnheiten, Dynamiken und Gespräche, die einst schützten — und jetzt einengen.</p>
+  <p class="de-result">Das Gespräch, das jahrelang steckte, findet in einer Session statt. Das Team erkennt, was es schützte und was es tatsächlich braucht.</p>
 </div>
 <div class="disc-e">
   <div class="de-top"><span class="de-num">05</span><span class="de-disc">Produktion</span></div>
   <p class="de-name">Das Fundament, das Menschen trägt, damit sie aufhören können, sich allein zusammenzuhalten.</p>
   <p class="de-desc">Die Person oder Dynamik, von der das gesamte System abhängt. Von innen unsichtbar.</p>
+  <p class="de-result">Das System hört auf, von der Person abzuhängen, die niemand benennen will. Kapazität verteilt sich — und hält.</p>
 </div>
 <div class="disc-e">
   <div class="de-top"><span class="de-num">06</span><span class="de-disc">Intimacy Coordination</span></div>
   <p class="de-name">Verletzlichkeit als tägliche Praxis am Führungstisch.</p>
   <p class="de-desc">Die Stille, die keine Zustimmung ist. Der Widerspruch, der im Flur lebt.</p>
+  <p class="de-result">Der Widerspruch, der im Flur lebte, zieht in den Raum ein. Die Entscheidung, die alle von euch brauchte, wird endlich mit allen getroffen.</p>
 </div>
 </div>
 </section>
