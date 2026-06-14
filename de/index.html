@@ -163,12 +163,12 @@ h2.section-label,h3.disc-name{margin:0;padding:0}
 /* ═══ DISCIPLINES ═══ */
 .method-anchor{font-weight:400;font-size:16px;color:rgba(255,242,225,0.82);line-height:1.9;margin:0 auto 36px;max-width:680px;text-align:left;padding:22px 28px;background:rgba(249,115,22,0.04);border-left:2px solid var(--orange);border-radius:0 12px 12px 0}
 .method-anchor strong{color:var(--orange);font-weight:500}
-.disc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:40px}
-.disc-card{padding:28px 32px;background:linear-gradient(135deg,rgba(6,182,212,0.03) 0%,rgba(249,115,22,0.055) 100%);border:1px solid rgba(249,115,22,0.13);border-radius:12px;transition:all 0.4s cubic-bezier(0.22,1,0.36,1);position:relative;overflow:hidden;text-align:left;backdrop-filter:blur(10px)}
-.disc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(249,115,22,0.35),transparent);opacity:0.6}
-.disc-card:hover{border-color:rgba(249,115,22,0.28);transform:translateY(-2px);background:linear-gradient(135deg,rgba(6,182,212,0.04) 0%,rgba(249,115,22,0.09) 100%);box-shadow:0 12px 36px -10px rgba(249,115,22,0.18)}
+
+
+
+
 .disc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--orange));opacity:0;transition:opacity 0.3s}
-.disc-card:hover::after{opacity:1}
+
 .disc-num{font-family:var(--display);font-weight:300;font-size:12px;color:var(--cyan);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(6,182,212,0.15);opacity:0.88}
 .disc-name{font-family:var(--display);font-weight:300;font-size:19px;color:rgba(255,255,255,0.95);margin-bottom:14px;letter-spacing:0.2px;line-height:1.4}
 .disc-desc{font-weight:400;font-size:14px;color:rgba(255,242,225,0.62);line-height:1.8}
@@ -532,7 +532,7 @@ footer a:hover{color:var(--cyan)}
   section{padding:80px 24px}
   nav{padding:16px 24px}
   .stats-grid{grid-template-columns:repeat(2,1fr);gap:24px}
-  .disc-grid{grid-template-columns:1fr}
+  
   .proof-grid{grid-template-columns:1fr}
   .hero-ctas{flex-direction:column}
   .btn-primary,.btn-ghost{text-align:center}
@@ -616,20 +616,20 @@ footer a:hover{color:var(--cyan)}
 .soft-cta{display:inline-block;padding:10px 28px;border:1px solid rgba(6,182,212,0.25);border-radius:100px;font-family:var(--display);font-size:11px;color:var(--cyan);letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all 0.3s}
 .soft-cta:hover{background:rgba(6,182,212,0.07);border-color:rgba(6,182,212,0.5)}
 /* Enhanced discipline cards */
-.disc-enhanced{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:32px}
-.disc-e{background:var(--glass2);border:1px solid var(--border);border-radius:14px;padding:26px 26px;position:relative;overflow:hidden;transition:border-color 0.3s}
+
+
 .disc-e:hover{border-color:rgba(6,182,212,0.28)}
 .disc-e::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(6,182,212,0.14),transparent)}
-.de-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
-.de-num{font-family:var(--display);font-size:10px;color:var(--orange);letter-spacing:3px;text-transform:uppercase}
-.de-tag{font-family:var(--display);font-size:9px;color:var(--tx4);letter-spacing:2px;text-transform:uppercase}
-.de-name{font-family:var(--display);font-weight:300;font-size:clamp(14px,1.4vw,17px);color:var(--white);margin-bottom:8px;line-height:1.3;letter-spacing:0.2px}
-.de-q{font-family:var(--display);font-weight:200;font-size:13px;color:rgba(255,242,225,0.40);margin-bottom:11px;line-height:1.5}
-.de-catches{padding:9px 13px;background:rgba(0,0,0,0.2);border-left:2px solid rgba(249,115,22,0.35);margin-bottom:11px}
-.de-catches-label{font-family:var(--display);font-size:8px;color:var(--orange);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:4px;opacity:0.8}
-.de-catches-text{font-size:12px;color:var(--tx2);line-height:1.55}
-.de-delivers{font-size:12px;color:rgba(255,242,225,0.52);line-height:1.6;padding-top:9px;border-top:1px solid var(--border)}
-.de-delivers strong{color:var(--cyan);font-weight:400}
+
+
+
+
+
+
+
+
+
+
 /* Who For */
 .who-ep{position:relative;z-index:1;padding:80px 44px}
 .who-list{max-width:720px;margin:22px auto 0}
@@ -662,7 +662,7 @@ footer a:hover{color:var(--cyan)}
 .h2-serif{font-family:var(--serif);font-weight:600;font-size:clamp(26px,4vw,50px);color:var(--white);line-height:1.15;letter-spacing:-0.4px;margin-bottom:16px}
 
 /* Responsive */
-@media(max-width:900px){.disc-enhanced{grid-template-columns:1fr}.diff-3{grid-template-columns:1fr}}
+@media(max-width:900px){.diff-3{grid-template-columns:1fr}}
 @media(max-width:768px){.episode,.diff-section,.who-ep,.bridge{padding-left:24px;padding-right:24px}.ep-num{font-size:36px;min-width:50px}.clinical{padding:24px 20px}.stats-row{flex-direction:column}}
 
 
@@ -722,6 +722,18 @@ strong,b{font-weight:400}
 .ep-body em,.ep-body i,.ep-ans em,.bridge em,.who-item em,
 .sec-text em,.proof-frame em,.phase-desc em,.faq-a-inner em{font-style:normal}
 .ep-body strong,.ep-ans strong,.bridge strong,.who-item strong{font-weight:300}
+
+/* ══ DISC CARDS — simplified 3-element ══ */
+.disc-enhanced{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
+.disc-e{padding:22px 24px;background:rgba(6,182,212,0.025);border:1px solid rgba(6,182,212,0.08);border-radius:8px;transition:border-color 0.2s}
+.disc-e:hover{border-color:rgba(6,182,212,0.18)}
+.de-top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.de-num{font-family:var(--display);font-weight:200;font-size:11px;color:var(--cyan);letter-spacing:3px}
+.de-disc{font-family:var(--display);font-weight:300;font-size:10px;color:var(--tx4);letter-spacing:2.5px;text-transform:uppercase}
+.de-name{font-family:var(--display);font-weight:300;font-size:14px;color:rgba(255,255,255,0.88);line-height:1.55;margin-bottom:10px}
+.de-desc{font-family:var(--ff);font-weight:400;font-size:13px;color:var(--tx3);line-height:1.65}
+@media(max-width:768px){.disc-enhanced{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -809,45 +821,38 @@ strong,b{font-weight:400}
 </section>
 <section style="position:relative;z-index:1;padding:0 44px 90px" class="fade-in">
   <div style="max-width:1060px;margin:0 auto">
-    <div class="disc-enhanced"><div class="disc-e">
-  <div class="de-top"><span class="de-num">01 &mdash; Drehbuch</span><span class="de-tag">Narrativ-Zone</span></div>
-  <h3 class="de-name">Die Erz&auml;hlung formen, bevor jemand sie inszeniert.</h3>
-  <p class="de-q">&bdquo;Welche Geschichte lebt die Organisation wirklich &mdash; und welche erz&auml;hlt sie sich selbst?&ldquo;</p>
-  <div class="de-catches"><div class="de-catches-label">Was es aufdeckt</div><div class="de-catches-text">Die L&uuml;cke zwischen dem Narrativ, das die F&uuml;hrung darstellt, und dem, in dem die Organisation tats&auml;chlich lebt.</div></div>
-  <div class="de-delivers"><strong>Liefert:</strong> Klarheit dar&uuml;ber, wo Narrativ und Realit&auml;t auseinanderdriften &mdash; und was das freisetzt.</div>
-</div><div class="disc-e">
-  <div class="de-top"><span class="de-num">02 &mdash; Regie</span><span class="de-tag">Sicherheits-Zone</span></div>
-  <h3 class="de-name">Bedingungen schaffen, in denen Wahrheit auftaucht.</h3>
-  <p class="de-q">&bdquo;Niemandem wird gesagt, was zu f&uuml;hlen ist. Der Raum wird ver&auml;ndert, bis das Echte keine andere Wahl hat als aufzutauchen.&ldquo;</p>
-  <div class="de-catches"><div class="de-catches-label">Was es aufdeckt</div><div class="de-catches-text">Die unausgesprochene Vereinbarung dar&uuml;ber, was gesagt werden darf. F&uuml;r die Menschen darin unsichtbar. Auf Film sichtbar.</div></div>
-  <div class="de-delivers"><strong>Liefert:</strong> Psychologische Sicherheitsbedingungen, die kein Mut erfordern, um aufrechtzuerhalten. Der 7&times;-Innovationseffekt (Edmondson) kommt von hier.</div>
-</div><div class="disc-e">
-  <div class="de-top"><span class="de-num">03 &mdash; Schauspiel</span><span class="de-tag">Pr&auml;senz-Zone</span></div>
-  <h3 class="de-name">Der Unterschied zwischen inszenierter Sicherheit und echter Pr&auml;senz.</h3>
-  <p class="de-q">&bdquo;Was tut der K&ouml;rper, wenn die Darstellung nicht mehr ausreicht, um sich zu verbergen?&ldquo;</p>
-  <div class="de-catches"><div class="de-catches-label">Was es aufdeckt</div><div class="de-catches-text">Die Last, eine Version von sich selbst aufrechtzuerhalten, die der Druck verlangt. Messbar in Atemmustern, Stimmregister, Ausweich-Timing.</div></div>
-  <div class="de-delivers"><strong>Liefert:</strong> F&uuml;hrung, die unter Druck standhält &mdash; ohne den Darstellungsaufwand.</div>
-</div><div class="disc-e">
-  <div class="de-top"><span class="de-num">04 &mdash; Schnitt</span><span class="de-tag">Entscheidungs-Zone</span></div>
-  <h3 class="de-name">Entfernen, was nicht mehr dient. St&auml;rken, was tr&auml;gt.</h3>
-  <p class="de-q">&bdquo;Was bleibt in diesem Raum, das schon vor drei Jahren h&auml;tte herausgeschnitten werden sollen?&ldquo;</p>
-  <div class="de-catches"><div class="de-catches-label">Was es aufdeckt</div><div class="de-catches-text">Gewohnheiten, Dynamiken, Gespr&auml;che, die einst sch&uuml;tzten, jetzt aber einschr&auml;nken. Die Blockade der Entscheidungsgeschwindigkeit.</div></div>
-  <div class="de-delivers"><strong>Liefert:</strong> Entscheidungsgeschwindigkeit. Das blockierte Gespr&auml;ch, das endlich stattfindet. Die Klarheit, die seit Monaten kreiste &mdash; sichtbar gemacht, dann dauerhaft verankert.</div>
-</div><div class="disc-e">
-  <div class="de-top"><span class="de-num">05 &mdash; Produktion</span><span class="de-tag">Kapazit&auml;ts-Zone</span></div>
-  <h3 class="de-name">Das Fundament, das Menschen tr&auml;gt, damit sie aufh&ouml;ren, alles allein zusammenzuhalten.</h3>
-  <p class="de-q">&bdquo;Wer h&auml;lt hier alles zusammen &mdash; und was passiert, wenn diese Person aufh&ouml;rt?&ldquo;</p>
-  <div class="de-catches"><div class="de-catches-label">Was es aufdeckt</div><div class="de-catches-text">Die Person oder Dynamik, von der das gesamte System abh&auml;ngt. Von innen unsichtbar. Auf Film klar.</div></div>
-  <div class="de-delivers"><strong>Liefert:</strong> Verteilte Kapazit&auml;t. Das Team, das nicht zusammenbricht, wenn jemand geht.</div>
-</div><div class="disc-e">
-  <div class="de-top"><span class="de-num">06 &mdash; Intimacy Coordination</span><span class="de-tag">Relationale Zone</span></div>
-  <h3 class="de-name">Verletzlichkeit als t&auml;gliche Praxis am F&uuml;hrungstisch.</h3>
-  <p class="de-q">&bdquo;Ist &sbquo;Ich wei&szlig; es nicht&lsquo; in diesem Raum sicher zu sagen &mdash; oder kostet es etwas?&ldquo;</p>
-  <div class="de-catches"><div class="de-catches-label">Was es aufdeckt</div><div class="de-catches-text">Die Stille, die keine Zustimmung ist. Der Widerspruch, der im Flur nach dem Meeting lebt.</div></div>
-  <div class="de-delivers"><strong>Liefert:</strong> Das ehrliche Gespr&auml;ch. Die Meinungsverschiedenheit, die im Raum ausgesprochen wird.</div>
-</div></div>
-    <p class="tx-signpost">Alle sechs &uuml;ber neun diagnostische Zonen aktiv &middot; In echten Settings angewandt &mdash; keine Workshops</p>
-  </div>
+    <div class="disc-enhanced">
+<div class="disc-e">
+  <div class="de-top"><span class="de-num">01</span><span class="de-disc">Drehbuch</span></div>
+  <p class="de-name">Die Erzählung gestalten, bevor jemand beginnt, sie darzustellen.</p>
+  <p class="de-desc">Die Lücke zwischen der Erzählung, die Führung darstellt, und der, in der die Organisation tatsächlich lebt.</p>
+</div>
+<div class="disc-e">
+  <div class="de-top"><span class="de-num">02</span><span class="de-disc">Regie</span></div>
+  <p class="de-name">Bedingungen schaffen, unter denen Wahrheit sichtbar wird.</p>
+  <p class="de-desc">Die unausgesprochene Vereinbarung darüber, was gesagt werden darf und was nicht — sichtbar gemacht.</p>
+</div>
+<div class="disc-e">
+  <div class="de-top"><span class="de-num">03</span><span class="de-disc">Schauspiel</span></div>
+  <p class="de-name">Die Lücke zwischen dargestellter Sicherheit und echter Präsenz.</p>
+  <p class="de-desc">Der Preis, eine Version von sich selbst aufrechtzuerhalten, die der Druck verlangt.</p>
+</div>
+<div class="disc-e">
+  <div class="de-top"><span class="de-num">04</span><span class="de-disc">Schnitt</span></div>
+  <p class="de-name">Schneiden, was nicht mehr dient. Stärken, was trägt.</p>
+  <p class="de-desc">Die Gewohnheiten, Dynamiken und Gespräche, die einst schützten — und jetzt einengen.</p>
+</div>
+<div class="disc-e">
+  <div class="de-top"><span class="de-num">05</span><span class="de-disc">Produktion</span></div>
+  <p class="de-name">Das Fundament, das Menschen trägt, damit sie aufhören können, sich allein zusammenzuhalten.</p>
+  <p class="de-desc">Die Person oder Dynamik, von der das gesamte System abhängt. Von innen unsichtbar.</p>
+</div>
+<div class="disc-e">
+  <div class="de-top"><span class="de-num">06</span><span class="de-disc">Intimacy Coordination</span></div>
+  <p class="de-name">Verletzlichkeit als tägliche Praxis am Führungstisch.</p>
+  <p class="de-desc">Die Stille, die keine Zustimmung ist. Der Widerspruch, der im Flur lebt.</p>
+</div>
+</div>
 </section>
 
   <div class="who-list"><div class="who-item">Sie haben talentierte Menschen beobachtet, die mit einem Bruchteil von sich selbst arbeiteten. Nicht aus Mangel an K&ouml;nnen. Der Raum f&uuml;r mehr existierte nicht.</div><div class="who-item">Sie waren in einem Raum, in dem die falsche Entscheidung getroffen wurde, weil die richtige zu teuer war, um ausgesprochen zu werden.</div><div class="who-item">Sie haben die L&uuml;cke gesp&uuml;rt zwischen dem, was Ihre Organisation zeigt, und dem, was es kostet, das aufrechtzuerhalten.</div><div class="who-item">Sie haben F&uuml;hrungsentwicklung ausprobiert. Etwas hat sich ver&auml;ndert. Dann ist der Raum zur&uuml;ckgegangen, wie er war.</div></div>
