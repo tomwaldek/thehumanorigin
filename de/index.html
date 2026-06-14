@@ -823,17 +823,6 @@ section.visible,div.visible{opacity:1 !important;transform:none !important}
 }
 
 
-/* ══ WHO-FOR — centered setup + sting format ══ */
-
-
-
-
-
-
-/* Subtle divider between statements */
-.who-card+
-@media(max-width:768px){
-  }
 
 
 /* ═══ ALIGNMENT SYSTEM ═══ */
@@ -857,13 +846,13 @@ section{padding:var(--section-pad) var(--pad-x)}
 @media(max-width:768px){section,.episode,.who-ep,.diff-section{padding:80px 24px}}
 
 /* ══ WHO-FOR — matches episode ep-ans visual language ══ */
-.who-grid{display:flex;flex-direction:column;gap:44px;max-width:var(--col-n,640px);margin:44px auto 0;text-align:center}
-.who-card{padding:0;background:none;border:none}
-.who-card::before{display:none}
-.who-card:hover{transform:none;border:none;box-shadow:none}
-.who-setup{font-family:var(--display);font-weight:200;font-size:clamp(14px,1.7vw,17px);color:rgba(255,242,225,0.50);line-height:1.65;margin:0 0 5px}
-.who-sting{font-family:var(--display);font-weight:300;font-size:clamp(15px,1.8vw,18px);color:rgba(255,242,225,0.90);line-height:1.5;margin:0}
-@media(max-width:768px){.who-grid{gap:36px;padding:0 4px}}
+
+
+
+
+
+
+@media(max-width:768px){}
 
 
 /* ═══ EP06 — Why This Work Exists ═══ */
@@ -877,6 +866,15 @@ section{padding:var(--section-pad) var(--pad-x)}
 .why-photo::after{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(8,13,18,0.5) 0%,transparent 18%,transparent 72%,rgba(8,13,18,0.6) 100%),linear-gradient(90deg,rgba(8,13,18,0.3) 0%,transparent 15%,transparent 85%,rgba(8,13,18,0.3) 100%)}
 .why-photo img{width:100%;height:100%;object-fit:cover;object-position:center 5%;filter:brightness(0.78) saturate(0.85) contrast(1.02);transform:scale(1.04)}
 .why-mission{font-family:var(--display);font-weight:300;font-size:clamp(15px,1.8vw,18px);color:rgba(255,255,255,0.88);text-align:center;max-width:560px;margin:0 auto;line-height:1.55}
+
+
+/* ══ WHO-FOR — single statement, left-aligned, cyan key phrase ══ */
+.who-grid{display:flex;flex-direction:column;gap:0;max-width:var(--col-n,640px);margin:40px auto 0}
+.who-card{padding:20px 0;border-bottom:1px solid rgba(255,255,255,0.06)}
+.who-card:last-child{border-bottom:none}
+.who-card p{font-family:var(--display);font-weight:300;font-size:clamp(15px,1.7vw,17px);color:rgba(255,242,225,0.82);line-height:1.8;margin:0;text-align:left}
+.who-card p .wh,.who-card .wh{color:var(--cyan);font-weight:300}
+@media(max-width:768px){.who-grid{margin:32px 0 0}}
 
 </style>
 </head>
@@ -952,9 +950,9 @@ section{padding:var(--section-pad) var(--pad-x)}
     <h2 class="h2-sora">Ist das f&uuml;r Sie?</h2>
   </div>
   <div class="who-grid">
-<div class="who-card"><p class="who-setup">Sie waren in einem Raum, in dem die falsche Entscheidung getroffen wurde,</p><p class="who-sting">weil die richtige zu teuer war, um sie laut auszusprechen.</p></div>
-<div class="who-card"><p class="who-setup">Sie haben den Abstand gesp&uuml;rt zwischen der Organisation, die Sie im Meeting beschreiben,</p><p class="who-sting">und der, die Sie danach managen.</p></div>
-<div class="who-card"><p class="who-setup">Sie haben F&uuml;hrungskr&auml;fteentwicklung versucht. Etwas hat sich ver&auml;ndert.</p><p class="who-sting">Dann war der Raum wieder so wie vorher.</p></div>
+<div class="who-card"><p>Sie waren in einem Raum, in dem die falsche Entscheidung getroffen wurde, weil <span class="wh">die richtige zu teuer war, um sie laut auszusprechen.</span></p></div>
+<div class="who-card"><p>Sie haben den Abstand gesp&uuml;rt zwischen der Organisation, die Sie im Meeting beschreiben, <span class="wh">und der, die Sie danach managen.</span></p></div>
+<div class="who-card"><p>Sie haben F&uuml;hrungskr&auml;fteentwicklung versucht. Etwas hat sich ver&auml;ndert. <span class="wh">Dann war der Raum wieder so wie vorher.</span></p></div>
 </div>
   <div style="text-align:center;padding:32px 44px 56px;position:relative;z-index:1">
     <a href="https://cal.eu/tomwaldek/erstgespraech" data-cal-link="tomwaldek/erstgespraech" data-cal-origin="https://cal.eu" data-cal-config='{"layout":"month_view","theme":"dark"}' class="soft-cta">Ihr freies Gespr&auml;ch sichern</a>
