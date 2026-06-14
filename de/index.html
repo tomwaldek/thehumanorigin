@@ -42,19 +42,19 @@ body{background:var(--bg);color:var(--tx);font-family:var(--ff);overflow-x:hidde
 /* ═══ FULL-PAGE MESH ═══ */
 .mesh-layer{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
 .mesh-orb{position:absolute;border-radius:50%;filter:blur(120px);will-change:transform}
-.mesh-orb.cyan1{width:50vw;height:50vw;top:-15%;left:-10%;background:rgba(6,182,212,0.18);animation:orbA 22s ease-in-out infinite}
-.mesh-orb.orange1{width:45vw;height:45vw;bottom:-10%;right:-15%;background:rgba(249,115,22,0.14);animation:orbB 28s ease-in-out infinite}
-.mesh-orb.cyan2{width:35vw;height:35vw;top:40%;right:20%;background:rgba(8,145,178,0.14);animation:orbC 25s ease-in-out infinite}
-.mesh-orb.orange2{width:35vw;height:35vw;top:65%;left:5%;background:rgba(249,115,22,0.1);animation:orbA 30s ease-in-out infinite reverse}
-.mesh-orb.orange3{width:25vw;height:25vw;top:30%;left:40%;background:rgba(249,115,22,0.06);animation:orbB 20s ease-in-out infinite reverse}
+.mesh-orb.cyan1{width:50vw;height:50vw;top:-15%;left:-10%;background:rgba(6,182,212,0.32);animation:orbA 22s ease-in-out infinite}
+.mesh-orb.orange1{width:45vw;height:45vw;bottom:-10%;right:-15%;background:rgba(249,115,22,0.26);animation:orbB 28s ease-in-out infinite}
+.mesh-orb.cyan2{width:35vw;height:35vw;top:40%;right:20%;background:rgba(8,145,178,0.22);animation:orbC 25s ease-in-out infinite}
+.mesh-orb.orange2{width:35vw;height:35vw;top:65%;left:5%;background:rgba(249,115,22,0.18);animation:orbA 30s ease-in-out infinite reverse}
+.mesh-orb.orange3{width:25vw;height:25vw;top:30%;left:40%;background:rgba(6,182,212,0.12);animation:orbB 20s ease-in-out infinite reverse}
 @keyframes orbA{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,-40px)}}
 @keyframes orbB{0%,100%{transform:translate(0,0)}50%{transform:translate(-50px,30px)}}
 @keyframes orbC{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,50px) scale(1.1)}}
 
 /* ═══ WARM GRADIENT SHIFT ═══ */
 .bg-warmth{position:fixed;inset:0;z-index:0;pointer-events:none;
-  background:linear-gradient(180deg,#080d12 0%,#080d12 30%,#0f0d0a 60%,#1a1008 100%);
-  opacity:0;transition:none;will-change:opacity}
+  background:linear-gradient(135deg,rgba(249,115,22,0.05) 0%,transparent 45%,rgba(6,182,212,0.04) 100%);
+  opacity:0.85;transition:none;will-change:opacity}
 
 /* ═══ HERO PORTRAIT ═══ */
 .hero-portrait{position:relative;width:160px;height:160px;margin:0 auto 28px;z-index:2;opacity:0;transform:scale(0.97);animation:portraitReveal 2.4s ease-out 0.6s forwards}
@@ -500,7 +500,7 @@ footer a:hover{color:var(--cyan)}
 .nav-logo{text-decoration:none;cursor:pointer}
 .nav-right{display:flex;align-items:center;gap:10px}
 .nav-pulse{font-family:var(--display);font-size:10px;font-weight:400;letter-spacing:2px;color:var(--orange);border:1px solid rgba(249,115,22,0.3);padding:4px 14px;border-radius:100px;text-decoration:none;text-transform:uppercase;transition:all 0.3s;white-space:nowrap}
-.nav-pulse:hover{background:rgba(249,115,22,0.1);border-color:rgba(249,115,22,0.5);color:var(--orange)}
+.nav-pulse:hover{background:rgba(249,115,22,0.18);border-color:rgba(249,115,22,0.5);color:var(--orange)}
 .nav-lang{font-family:var(--display);font-size:10px;font-weight:400;letter-spacing:2px;color:rgba(255,255,255,0.35);border:1px solid rgba(255,255,255,0.12);padding:4px 14px;border-radius:100px;text-decoration:none;text-transform:uppercase;transition:all 0.3s}
 .nav-lang:hover{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.25);color:rgba(255,255,255,0.6)}
 .overview-steps{display:grid;gap:1px;margin:32px auto;max-width:720px;background:var(--border);border-radius:12px;overflow:hidden}
@@ -786,8 +786,41 @@ section.visible,div.visible{opacity:1 !important;transform:none !important}
 .bridge{opacity:1}
 .stats-grid{opacity:1}
 
-/* ═══ CARD VISIBILITY SAFETY ═══ */
-.disc-e,.who-card,.wuc,.diff-card,.phase,.faq-item,.proof-frame,.stat-call{opacity:1 !important}
+
+
+
+/* ═══ BRIGHTER GRADIENT BACKGROUND ═══ */
+.mesh-orb-1{background:radial-gradient(ellipse,rgba(6,182,212,0.32) 0%,transparent 70%)}
+.mesh-orb-2{background:radial-gradient(ellipse,rgba(249,115,22,0.26) 0%,transparent 70%)}
+.mesh-orb-3{background:radial-gradient(ellipse,rgba(6,182,212,0.22) 0%,transparent 70%)}
+.mesh-orb-4{background:radial-gradient(ellipse,rgba(249,115,22,0.18) 0%,transparent 70%)}
+.mesh-orb-5{background:radial-gradient(ellipse,rgba(6,182,212,0.12) 0%,transparent 70%)}
+
+/* ═══ SLIDE-IN REVEALS ═══ */
+@keyframes slideCard{
+  from{opacity:0;transform:translateY(28px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes slideSection{
+  from{opacity:0;transform:translateY(18px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* Section wrappers slide in */
+.slide-reveal{opacity:0;transform:translateY(18px);transition:opacity 0.75s cubic-bezier(0.22,1,0.36,1),transform 0.75s cubic-bezier(0.22,1,0.36,1)}
+.slide-reveal.in{opacity:1;transform:translateY(0)}
+
+/* Cards: staggered slide when parent gets .in */
+.slide-reveal.in .disc-e,.slide-reveal.in .who-card,.slide-reveal.in .diff-card{animation:slideCard 0.65s cubic-bezier(0.22,1,0.36,1) both}
+.slide-reveal.in .disc-e:nth-child(1),.slide-reveal.in .who-card:nth-child(1),.slide-reveal.in .diff-card:nth-child(1){animation-delay:0.05s}
+.slide-reveal.in .disc-e:nth-child(2),.slide-reveal.in .who-card:nth-child(2),.slide-reveal.in .diff-card:nth-child(2){animation-delay:0.13s}
+.slide-reveal.in .disc-e:nth-child(3),.slide-reveal.in .who-card:nth-child(3),.slide-reveal.in .diff-card:nth-child(3){animation-delay:0.21s}
+.slide-reveal.in .disc-e:nth-child(4),.slide-reveal.in .who-card:nth-child(4),.slide-reveal.in .diff-card:nth-child(4){animation-delay:0.29s}
+.slide-reveal.in .disc-e:nth-child(5){animation-delay:0.37s}
+.slide-reveal.in .disc-e:nth-child(6){animation-delay:0.45s}
+
+/* Individual card fallback — always visible if JS fails */
+.disc-e,.who-card,.diff-card,.wuc,.phase,.faq-item{opacity:1}
 
 </style>
 </head>
@@ -830,25 +863,25 @@ section.visible,div.visible{opacity:1 !important;transform:none !important}
 
 <div class="section-div"></div>
 <div id="episodes"></div>
-<section class="episode">
+<section class="episode slide-reveal">
 <div class="episode-wrap">
 <div class="ep-meta"><span class="ep-num">01</span><span class="ep-label">Das Muster</span></div><h2 class="ep-q">Was sehen in Ihrem Raum alle &mdash; und spricht niemand aus?</h2><p class="ep-ans">Es gibt eine unausgesprochene Vereinbarung dar&uuml;ber, was gesagt werden darf und was nicht. Sie ist nicht das Ergebnis einer Entscheidung. Sie hat sich angesammelt.</p><div class="pa"><div class="pa-text">“Ich war dieser Mensch &mdash; das Nervensystem hatte bereits entschieden, was sicher zu sagen war, bevor jemand sprach.”</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Es liegt nie an den Menschen. Es ist ein Zustand: Ein Unternehmen, das auf <strong>&Uuml;berlebensarchitektur</strong> l&auml;uft &mdash; das Betriebssystem, das es unter Druck entwickelt hat und nie wieder abgelegt hat. Es bestimmt, wer spricht &mdash; und was begraben bleibt.</p><p>Das Muster ist &auml;lter als die Organisation. &Auml;lter als das erste Wort.</p></div><div class="stats-row"><div class="stat-call"><div class="sc-block"><span class="sc-num" data-target="56" data-prefix="" data-suffix="%">0%</span><span class="sc-src">PMI</span></div><div class="sc-txt">der F&uuml;hrungskr&auml;fte berichten: Ihr Team spricht echte Probleme nicht an</div></div><div class="stat-call"><div class="sc-block"><span class="sc-num" data-target="3" data-prefix="€" data-suffix="K">&euro;0K</span><span class="sc-src">EU&#8209;OSHA</span></div><div class="sc-txt">durchschnittliche j&auml;hrliche Kosten pro Person durch stressbedingte Abwesenheit</div></div></div><p class="ep-closer">Das ist die Schicht, an die keine Umstrukturierung herankommt. Keine Software sieht sie. Weil es als normal gilt.</p><div class="outcome"><span class="outcome-label">Was sich ver&auml;ndert</span><span class="outcome-text"><strong>Das Gespr&auml;ch nach dem Meeting h&ouml;rt auf, dem Meeting zu widersprechen.</strong> Probleme werden sichtbar, bevor sie zur Krise werden. Der Mensch, der kurz vor dem Gehen war, bleibt.</span></div><div class="ep-sci">Porges (2011) &middot; Barsade (2002) &middot; EU&#8209;OSHA (2022)</div>
 </div>
 </section>
 <div class="section-div"></div>
-<section class="episode">
+<section class="episode slide-reveal">
 <div class="episode-wrap">
 <div class="ep-meta"><span class="ep-num">02</span><span class="ep-label">Der Ursprung</span></div><h2 class="ep-q">Woher kommt das Muster?</h2><p class="ep-ans">Die innere Stimme, die jede Entscheidung begleitet, wurde gebaut, bevor Sie sprechen konnten &mdash; f&uuml;r das Umfeld, in das Sie hineingeboren wurden. Nicht f&uuml;r den Raum, den Sie heute f&uuml;hren.</p><div class="pa"><div class="pa-text">“Ich erkenne dieses Muster, weil ich eines &uuml;ber den gr&ouml;&szlig;ten Teil meines Lebens mitgetragen habe &mdash; entstanden, bevor ich Worte daf&uuml;r hatte.”</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Charles Fernyhoughs Forschung zeigt: Die innere Erz&auml;hlung entsteht aus den Beziehungsdaten der fr&uuml;hesten Umgebung &mdash; automatisch, unterhalb bewusster &Uuml;berlegung. <strong>Standardm&auml;&szlig;ige F&uuml;hrungsentwicklung untersucht sie nicht.</strong> Sie pr&auml;gt jede bedeutende Entscheidung.</p><p>Ein Muster &auml;ndert sich nie: Die ungel&ouml;ste Geschichte bleibt nicht pers&ouml;nlich. Sie migriert in F&uuml;hrungsverhalten. <strong>Kontrolle ersetzt Verbindung.</strong> Darstellung ersetzt Pr&auml;senz. Nicht b&ouml;swillig. Automatisch.</p></div><div class="stats-row"><div class="stat-call"><div class="sc-block"><span class="sc-num" data-target="7" data-prefix="" data-suffix="×">0×</span><span class="sc-src">Edmondson &amp; Lei 2014</span></div><div class="sc-txt">h&ouml;here Innovationsleistung in Teams mit echter psychologischer Sicherheit &mdash; das direkte Ergebnis der Aufl&ouml;sung dieses Musters</div></div></div><div class="quote-block"><div class="quote-text">“Die Organisation kopiert nicht die Strategie des Leaders. Sie kopiert sein Nervensystem.”</div><div class="quote-attr">Tom Waldek</div></div><div class="outcome"><span class="outcome-label">Was sich ver&auml;ndert</span><span class="outcome-text"><strong>Das Muster wird sichtbar &mdash; und damit bearbeitbar.</strong> Nicht durch mehr Einsicht. Durch Pr&auml;zision dar&uuml;ber, wo es begann.</span></div><div class="ep-sci">Fernyhough (2016) &middot; Keltner (2016) &middot; Edmondson &amp; Lei (2014)</div>
 </div>
 </section>
 <div class="section-div"></div>
-<section id="trust" class="episode">
+<section id="trust" class="episode slide-reveal">
 <div class="episode-wrap">
 <div class="ep-meta"><span class="ep-num">03</span><span class="ep-label">Die Kaskade</span></div><h2 class="ep-q">Warum ver&auml;ndert sich der Raum, wenn Sie eintreten?</h2><p class="ep-ans">Nicht durch das, was Sie sagen. Durch das, was Ihr Nervensystem ausstrahlt &mdash; bevor Sie irgendetwas sagen.</p><div class="pa"><div class="pa-text">“Ich wei&szlig;, wie es ist, der Leader zu sein, der dieses Signal setzt &mdash; lange bevor ich verstanden habe, was ich damit tat.”</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Das Nervensystem der F&uuml;hrungskraft ist das erste Betriebssystem der Organisation. Nicht metaphorisch. Neurologisch real. Die Bedingungen, die dieses Nervensystem gepr&auml;gt haben &mdash; lange vor der ersten F&uuml;hrungsrolle, manchmal vor der ersten Erinnerung &mdash; sind <strong>bereits im Raum.</strong></p><p>Wenn <strong>&Uuml;berlebensarchitektur</strong> die F&uuml;hrung steuert, steuert sie den Raum. Es wird zur Atmosph&auml;re &mdash; die unausgesprochene Vereinbarung dar&uuml;ber, was gesagt werden darf und was nicht.</p></div><div class="quote-block"><div class="quote-text">“Die Atmosph&auml;re ver&auml;ndert sich. Nicht die Strategie. Nicht die Struktur. Der Raum wird w&auml;rmer, Vertrauen wird leichter, und Mut h&ouml;rt auf, eine Initiative zu sein &mdash; und wird zur Atmosph&auml;re.”</div><div class="quote-attr">Tom Waldek</div></div><div class="outcome"><span class="outcome-label">Was sich ver&auml;ndert</span><span class="outcome-text"><strong>Der Raum ver&auml;ndert sich dauerhaft &mdash; nicht nur w&auml;hrend die Arbeit l&auml;uft.</strong> Entscheidungen, die kreisten, fallen. Der GuV-Effekt ist messbar: Jede unausgesprochene Wahrheit an Ihrem F&uuml;hrungstisch hatte einen Posten.</span></div><div class="ep-sci">Porges (2011) &middot; Edmondson (1999) &middot; Zak (2017)</div>
 </div>
 </section>
 <div class="section-div"></div>
-<section class="episode">
+<section class="episode slide-reveal">
 <div class="episode-wrap">
 <div class="ep-meta"><span class="ep-num">04</span><span class="ep-label">Die Kapazit&auml;t</span></div><h2 class="ep-q">Was macht KI eigentlich sichtbar?</h2><p class="ep-ans">Jede Organisation, die fragt, was KI ersetzen wird, beantwortet damit ihre eigene Frage. Das Verhalten, das am st&auml;rksten gef&auml;hrdet ist, war nie kreativ, nie pers&ouml;nlich, nie pr&auml;sent.</p><div class="pa"><div class="pa-text">“F&uuml;nfundzwanzig Jahre am Set &mdash; talentierte Menschen, die mit einem Bruchteil von sich selbst arbeiteten. Nicht aus Mangel an K&ouml;nnen. Weil der Raum f&uuml;r mehr nie existierte.”</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Die Angst ist nicht, dass KI etwas wegnimmt. Es ist die Erkenntnis: <strong>Was Sie dargestellt haben, war nie wirklich Ihres.</strong></p><p>Was kein System replizieren kann, ist das, was diese &Uuml;berlebensarchitektur verbirgt: die volle Kapazit&auml;t Ihrer Menschen. Einen Raum lesen, bevor jemand spricht. Die Entscheidung treffen, die kein Datensatz unterst&uuml;tzt &mdash; und recht haben. Nicht aus Daten, sondern aus dem, was ein Nervensystem wei&szlig;, bevor Sprache greift.</p></div><p class="ep-closer">Kein Soft Skill. Die eigentliche F&auml;higkeit.</p><div class="outcome"><span class="outcome-label">Was sich ver&auml;ndert</span><span class="outcome-text"><strong>Ihre Menschen werden als sie selbst gebraucht &mdash; nicht als die Rolle.</strong> Was sie von dort aus aufbauen, h&auml;tte auf keine andere Weise entstehen k&ouml;nnen. Das ist die Kapazit&auml;t, die kein Konkurrent kopieren kann.</span></div><div class="ep-sci">Edmondson &amp; Lei (2014) &middot; Zak (2017)</div>
 </div>
@@ -858,7 +891,7 @@ section.visible,div.visible{opacity:1 !important;transform:none !important}
 
 <div class="section-div"></div>
 
-<div class="who-ep">
+<div class="who-ep slide-reveal">
   <div style="max-width:760px;margin:0 auto;text-align:center">
     <h2 class="h2-sora">Ist das f&uuml;r Sie?</h2>
   </div>
@@ -872,13 +905,13 @@ section.visible,div.visible{opacity:1 !important;transform:none !important}
     <a href="https://cal.eu/tomwaldek/erstgespraech" data-cal-link="tomwaldek/erstgespraech" data-cal-origin="https://cal.eu" data-cal-config='{"layout":"month_view","theme":"dark"}' class="soft-cta">Ihr freies Gespr&auml;ch sichern</a>
   </div>
 </section>
-<section id="method" class="episode">
+<section id="method" class="episode slide-reveal">
 <div class="episode-wrap">
 <div class="ep-meta"><span class="ep-num">05</span><span class="ep-label">Warum Film</span></div><h2 class="ep-q">Was hat Film mit F&uuml;hrung zu tun?</h2><p class="ep-ans">Film ist die einzige Disziplin, in der Wahrheit und Darstellung gleichzeitig gefordert werden &mdash; und in der die L&uuml;cke zwischen beiden in Echtzeit messbar wird.</p><div class="pa"><div class="pa-text">“Die Kamera verhandelt nicht. In f&uuml;nfundzwanzig Jahren habe ich gesehen, was K&ouml;rper tun, wenn die Darstellung nicht mehr ausreicht, um sich dahinter zu verstecken.”</div><div class="pa-attr">Tom Waldek</div></div><div class="ep-body"><p>Die meisten F&uuml;hrungsdiagnostiken beobachten, was dargestellt wird. Film zeigt, was Darstellung nicht verbergen kann &mdash; die unwillk&uuml;rlichen physiologischen Signaturen unter Druck: gehaltener Atem, Stimmverengung, Ausweich-Timing.</p><p>Das ist kein Coaching. Es ist diagnostische Arbeit. Sechs Disziplinen in echten Settings &mdash; keine Workshops. Im Raum, wo es z&auml;hlt.</p></div>
 </div>
 </section>
 <div class="section-div"></div>
-<section style="position:relative;z-index:1;padding:0 44px 90px">
+<section style="position:relative;z-index:1;padding:0 44px 90px" class="slide-reveal">
   <div style="max-width:1060px;margin:0 auto">
     <div class="disc-enhanced">
 <div class="disc-e">
@@ -924,7 +957,7 @@ section.visible,div.visible{opacity:1 !important;transform:none !important}
 
 <div class="section-div"></div>
 
-<section class="episode" id="why">
+<section class="episode slide-reveal" id="why">
   <div class="episode-wrap">
     <div class="ep-meta"><span class="ep-num">06</span><span class="ep-label">Warum es diese Arbeit gibt</span></div>
     <h2 class="ep-q">Warum ich, konkret?</h2>
@@ -939,7 +972,7 @@ section.visible,div.visible{opacity:1 !important;transform:none !important}
 
 <div class="section-div"></div>
 
-<div class="diff-section">
+<div class="diff-section slide-reveal">
   <div style="max-width:1060px;margin:0 auto;text-align:center">
     <div class="section-label">Warum das anders ist</div>
     <h2 class="h2-sora">Jede Methodik schaut auf den Output. Diese untersucht, was darunter l&auml;uft.</h2>
@@ -1243,6 +1276,25 @@ function openBooking(e){
   if(e) e.preventDefault();
   window.open("https://cal.eu/tomwaldek/erstgespraech", "_blank") ||
     (window.location.href = CAL_FALLBACK);
+}
+
+
+// ── SLIDE REVEAL OBSERVER ──
+var slideEls = document.querySelectorAll('.slide-reveal');
+if(slideEls.length){
+  var slideObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        slideObs.unobserve(e.target);
+      }
+    });
+  },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+  slideEls.forEach(function(el){
+    var r=el.getBoundingClientRect();
+    if(r.top<window.innerHeight&&r.bottom>0){el.classList.add('in');}
+    else{slideObs.observe(el);}
+  });
 }
 
 </script>
