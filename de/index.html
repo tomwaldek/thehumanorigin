@@ -900,6 +900,43 @@ section{padding:var(--section-pad) var(--pad-x)}
 /* WHO-FOR left — statements read better left */
 .who-card p{text-align:left}
 
+
+/* ══ FOUNDER ANCHOR ══ */
+.founder-anchor{
+  position:relative;z-index:1;
+  padding:52px var(--pad-x,clamp(24px,5vw,60px));
+  background:rgba(6,182,212,0.025);
+  border-top:1px solid rgba(6,182,212,0.07);
+  border-bottom:1px solid rgba(6,182,212,0.07)}
+.founder-anchor::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(6,182,212,0.18),rgba(249,115,22,0.08),transparent)}
+.anchor-inner{
+  display:grid;grid-template-columns:auto 1fr;
+  gap:22px;align-items:center;
+  max-width:560px;margin:0 auto}
+.anchor-portrait{
+  width:52px;height:52px;flex-shrink:0;border-radius:50%;
+  overflow:hidden;position:relative;
+  background:linear-gradient(135deg,rgba(6,182,212,0.2),rgba(249,115,22,0.12));
+  mask-image:radial-gradient(ellipse at center,black 55%,transparent 78%)}
+.anchor-portrait img{
+  width:100%;height:100%;object-fit:cover;object-position:center top;
+  filter:saturate(0.65) brightness(0.75) contrast(1.05)}
+.anchor-name{
+  font-family:var(--display);font-weight:300;font-size:9px;
+  letter-spacing:3px;text-transform:uppercase;
+  color:var(--cyan);opacity:0.65;margin-bottom:8px}
+.anchor-quote{
+  font-family:var(--display);font-weight:200;
+  font-size:clamp(13px,1.4vw,15px);
+  color:rgba(255,242,225,0.72);line-height:1.7}
+.anchor-quote em{
+  font-style:normal;color:rgba(255,242,225,0.90)}
+@media(max-width:600px){
+  .anchor-inner{grid-template-columns:1fr;gap:14px}
+  .anchor-portrait{width:44px;height:44px}}
+
 </style>
 </head>
 <body>
@@ -936,6 +973,15 @@ section{padding:var(--section-pad) var(--pad-x)}
 <div><div class="stat-num"><span class="counter-val" data-target="7" data-prefix="" data-suffix="×">0×</span></div><div class="stat-desc">H&ouml;here Innovationsleistung in psychologisch sicheren Teams &mdash; Edmondson &amp; Lei 2014</div></div>
 <div><div class="stat-num"><span class="counter-val" data-target="74" data-prefix="" data-suffix="%">0%</span></div><div class="stat-desc">H&ouml;heres Oxytocin &#8594; h&ouml;heres Vertrauen und Produktivit&auml;t &mdash; Zak 2017</div></div>
 </div></div>
+<section class="founder-anchor">
+  <div class="anchor-inner">
+    <div class="anchor-portrait"><img src="../TomWaldek_Actor_01.jpg" alt="Tom Waldek"></div>
+    <div>
+      <div class="anchor-name">Tom Waldek &mdash; Human Leadership Architect</div>
+      <p class="anchor-quote">Die ersten Jahre meines Lebens waren Chemotherapie. Ich lernte den Unterschied zwischen einem regulierten Nervensystem und einem &uuml;berlebenden &mdash; bevor ich Sprache daf&uuml;r hatte. <em>F&uuml;nfundzwanzig Jahre am Set haben daraus ein diagnostisches Instrument gemacht.</em></p>
+    </div>
+  </div>
+</section>
 <div class="bridge"><p>Sie haben talentierte Menschen beobachtet, die mit einem Bruchteil von sich selbst arbeiteten. Nicht aus Mangel an K&ouml;nnen. Weil der Raum f&uuml;r mehr nie existierte.</p></div>
 <p class="bridge-teaser">Das Muster l&auml;uft gerade jetzt. In jedem Raum, in dem Entscheidungen getroffen werden.</p>
 
