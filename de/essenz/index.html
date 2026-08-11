@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Essenz · The Human Origin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0c140f; --line:rgba(210,230,200,0.10);
+  --cream:#f4efe4; --cream2:rgba(244,239,228,0.62); --cream3:rgba(244,239,228,0.34);
+  --lime:#c7e78a; --limedeep:#a9cf63; --teal:#59c2ae; --amber:#e9a765;
+  --ff:'Sora',sans-serif;
+  --ease:cubic-bezier(0.33,1,0.68,1); --ed:0.55s;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--cream);font-family:var(--ff);font-weight:300;line-height:1.75;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.atmos{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.wash{position:absolute;border-radius:50%;filter:blur(120px)}
+.w1{width:660px;height:660px;background:radial-gradient(circle,rgba(233,167,101,0.46),transparent 66%);top:-170px;right:-130px}
+.w2{width:600px;height:600px;background:radial-gradient(circle,rgba(89,194,174,0.34),transparent 66%);top:34%;left:-170px}
+.w3{width:560px;height:560px;background:radial-gradient(circle,rgba(199,231,138,0.28),transparent 66%);top:66%;right:-130px}
+.w4{width:520px;height:520px;background:radial-gradient(circle,rgba(233,167,101,0.30),transparent 68%);bottom:-150px;left:16%}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(48px,36px)}}
+@media(prefers-reduced-motion:no-preference){.w1{animation:drift 26s ease-in-out infinite}.w2{animation:drift 32s ease-in-out infinite reverse}.w3{animation:drift 28s ease-in-out infinite}.w4{animation:drift 34s ease-in-out infinite reverse}}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(120% 78% at 50% -5%,transparent 38%,rgba(6,12,8,0.55) 100%)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 48px;position:relative;z-index:3}
+.narrow{max-width:720px}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hline .hw{display:inline-block;transition:transform .7s var(--ease),filter .7s var(--ease),opacity .7s var(--ease);transform-origin:center}
+.hline:hover .hw{filter:blur(2.4px);opacity:.48}
+.hline .hw:hover{filter:blur(0);opacity:1;transform:scale(1.07)}
+@media(prefers-reduced-motion:reduce){.hline .hw{transition:none}.hline:hover .hw{filter:none;opacity:1}.hline .hw:hover{transform:none}}
+nav{position:sticky;top:0;z-index:40;padding:24px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(12,20,15,0.55);backdrop-filter:blur(22px) saturate(1.3);border-bottom:1px solid var(--line)}
+.logo{font-weight:700;font-size:15px;letter-spacing:0.5px}.logo b{font-weight:200;color:var(--lime)}
+.nl{display:flex;gap:30px;align-items:center}
+.nl a{font-weight:400;font-size:12px;letter-spacing:0.5px;color:var(--cream2);text-decoration:none;transition:color var(--ed) var(--ease)}
+.nl a:hover,.nl a.on{color:var(--lime)}
+.pill{font-weight:700!important;color:#12200c!important;background:var(--lime);padding:9px 18px;border-radius:100px;font-size:12px!important}
+.hero{display:grid;grid-template-columns:1.15fr 0.85fr;gap:44px;align-items:center;padding:110px 0 92px}
+.label{font-weight:700;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--limedeep);margin-bottom:32px}
+h1{font-weight:200;font-size:clamp(42px,6vw,80px);line-height:1.02;letter-spacing:-2px;margin-bottom:34px}
+h1 .a{font-weight:800;color:var(--lime)}
+.lead{font-weight:300;font-size:20px;color:var(--cream2);line-height:1.65;max-width:520px;margin-bottom:38px}
+.lead b{font-weight:600;color:var(--cream)}
+.cta{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.btn{font-weight:700;font-size:14px;padding:15px 30px;border-radius:100px;text-decoration:none;transition:transform var(--ed) var(--ease),color var(--ed) var(--ease),border-color var(--ed) var(--ease),background var(--ed) var(--ease)}
+.btn-p{background:var(--lime);color:#12200c}.btn-p:hover{transform:translateY(-3px)}
+.btn-g{font-weight:400;color:var(--cream);border-bottom:1px solid var(--line);border-radius:0;padding:4px 2px}.btn-g:hover{color:var(--lime);border-color:var(--lime)}
+.deckcluster{position:relative;height:440px}
+.deck{position:absolute;border-radius:22px;border:1px solid rgba(255,255,255,0.11);background:rgba(255,255,255,0.05);backdrop-filter:blur(20px) saturate(1.4);box-shadow:0 50px 120px -50px rgba(0,0,0,0.92),inset 0 1px 0 rgba(255,255,255,0.07);overflow:hidden}
+.deck::before{content:'';position:absolute;inset:0;opacity:0.7;pointer-events:none}
+.deck.d1{width:300px;padding:32px;top:26px;left:20px}
+.deck.d1::before{background:radial-gradient(120% 90% at 20% 0%,rgba(233,167,101,0.30),transparent 60%)}
+.deck.d2{width:258px;padding:26px;bottom:16px;right:0}
+.deck.d2::before{background:radial-gradient(120% 90% at 80% 100%,rgba(89,194,174,0.30),transparent 60%)}
+@media(prefers-reduced-motion:no-preference){.deck.d1{animation:floaty 9s ease-in-out infinite}.deck.d2{animation:floaty 9s ease-in-out infinite -4s}}
+.deck .q{position:relative;font-weight:300;font-size:19px;line-height:1.45;color:var(--cream)}
+.deck .q b{font-weight:700}
+.deck .qa{position:relative;font-weight:700;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--limedeep);margin-top:16px}
+.deck .big2{position:relative;font-weight:800;font-size:24px;color:var(--cream);line-height:1.05;letter-spacing:-1px}
+.deck .big2 span{color:var(--lime)}
+section{padding:62px 0}
+.hr{height:1px;background:var(--line);max-width:1040px;margin:0 auto;position:relative;z-index:3}
+.slabel{font-weight:700;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--limedeep);margin-bottom:30px}
+p{font-weight:300;font-size:19px;color:var(--cream2);line-height:1.85;margin-bottom:22px}
+p b{color:var(--cream);font-weight:600}
+.on-lime{color:var(--lime);font-weight:600}
+.megaline{font-weight:800;font-size:clamp(30px,4.8vw,58px);line-height:1.05;letter-spacing:-2px;color:var(--cream);margin:6px 0 28px}
+.megaline .a{color:var(--lime)}
+.splitline{font-weight:800;font-size:clamp(40px,7.4vw,92px);line-height:1.02;letter-spacing:-2.5px;color:var(--cream);cursor:default}
+.splitline .split-word{color:var(--lime);display:inline-block;transition:letter-spacing .75s var(--ease),margin .75s var(--ease),transform .75s var(--ease)}
+.splitline:hover .split-word{letter-spacing:0.34em;margin-left:0.4em;transform:scale(1.04)}
+.splitline .all-word{display:inline-block;transition:color .6s var(--ease),filter .6s var(--ease)}
+.splitline:hover .all-word{color:var(--lime);filter:blur(0.9px)}
+@media(prefers-reduced-motion:reduce){.splitline .split-word,.splitline .all-word{transition:none}.splitline:hover .split-word{letter-spacing:normal;margin-left:0;transform:none}.splitline:hover .all-word{filter:none}}
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.mode{position:relative;border-radius:20px;border:1px solid rgba(255,255,255,0.09);background:rgba(255,255,255,0.04);backdrop-filter:blur(14px);padding:30px 28px;overflow:hidden;transition:transform var(--ed) var(--ease),border-color var(--ed) var(--ease),background var(--ed) var(--ease)}
+.mode::before{content:'';position:absolute;inset:0;background:radial-gradient(120% 80% at 30% 0%,rgba(199,231,138,0.14),transparent 62%);opacity:.5;transition:opacity var(--ed) var(--ease);pointer-events:none}
+.mode:hover{transform:translateY(-6px);border-color:rgba(199,231,138,0.35)}.mode:hover::before{opacity:1}
+.mode .mt{position:relative;font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--amber);margin-bottom:12px}
+.mode h3{position:relative;font-weight:700;font-size:21px;color:var(--cream);margin-bottom:10px;letter-spacing:-0.5px}
+.mode p{position:relative;font-size:14px;color:var(--cream2);margin:0;line-height:1.65}
+.clar{max-width:900px}
+.clar-item{display:grid;grid-template-columns:54px 1fr;gap:26px;align-items:center;margin-bottom:40px}
+.clar-item:nth-child(2){margin-left:10%}
+.clar-item:nth-child(3){margin-left:20%}
+.clar-item:last-child{margin-bottom:0}
+.clar-circle{width:54px;height:54px;border-radius:50%;border:1px solid rgba(233,167,101,0.45);background:rgba(255,255,255,0.03);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;font-weight:300;font-size:19px;color:var(--amber);letter-spacing:-1px;box-shadow:0 22px 44px -30px rgba(0,0,0,0.9)}
+@media(prefers-reduced-motion:no-preference){.clar-circle{animation:floaty 6s ease-in-out infinite}.clar-item:nth-child(2) .clar-circle{animation-delay:-2s}.clar-item:nth-child(3) .clar-circle{animation-delay:-4s}}
+.clar-k{font-weight:700;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--limedeep);margin-bottom:8px;display:block}
+.clar-t{font-weight:300;font-size:clamp(16px,1.8vw,19px);color:var(--cream2);line-height:1.6}
+.clar-t b{color:var(--cream);font-weight:600}
+@media(max-width:640px){.clar-item{margin-left:0!important;grid-template-columns:44px 1fr;gap:16px}.clar-circle{width:44px;height:44px;font-size:16px}}
+.pair{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:26px 32px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,0.025)}
+.pair-l{font-weight:300;font-size:16px;color:var(--cream2)}.pair-l b{color:var(--cream);font-weight:600}
+.pair a{font-weight:700;font-size:14px;color:var(--lime);text-decoration:none;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;transition:gap var(--ed) var(--ease),color var(--ed) var(--ease)}
+.pair a:hover{gap:14px;color:#d6f09b}
+.leadbridge{position:relative;border-radius:22px;border:1px solid rgba(89,194,174,0.28);background:rgba(89,194,174,0.05);backdrop-filter:blur(14px);padding:42px 44px;overflow:hidden}
+.leadbridge::before{content:'';position:absolute;inset:0;background:radial-gradient(120% 90% at 15% 0%,rgba(89,194,174,0.18),transparent 60%);pointer-events:none}
+.lb-label{position:relative;font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.lb-head{position:relative;font-weight:800;font-size:clamp(24px,3.2vw,36px);letter-spacing:-1px;color:var(--cream);line-height:1.06;margin-bottom:16px}
+.lb-text{position:relative;font-size:17px;color:var(--cream2);max-width:660px;margin-bottom:22px;line-height:1.7}
+.lb-link{position:relative;display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;color:var(--lime);text-decoration:none;transition:gap var(--ed) var(--ease),color var(--ed) var(--ease)}
+.lb-link:hover{gap:15px;color:#d6f09b}
+.finalcta{text-align:center;padding:92px 0}
+.finalcta .big{font-weight:800;font-size:clamp(30px,4.8vw,60px);letter-spacing:-2px;color:var(--cream);margin-bottom:26px;line-height:1.02}
+.finalcta .big .a{color:var(--lime)}
+footer{padding:70px 0 60px;text-align:center;border-top:1px solid var(--line);position:relative;z-index:3}
+footer p{font-weight:400;font-size:11px;letter-spacing:2px;color:var(--cream3);text-transform:uppercase}
+@media(max-width:820px){.hero{grid-template-columns:1fr;gap:24px}.deckcluster{height:320px}.nl a:not(.pill){display:none}.modes{grid-template-columns:1fr}}
+.soon{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--cream3)}.soon::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--amber);box-shadow:0 0 10px var(--amber)}
+footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoration:none;transition:color .55s cubic-bezier(0.33,1,0.68,1)}footer .legal a:hover{color:var(--lime)}
+</style>
+<link rel="canonical" href="https://thehumanorigin.org/de/essenz/">
+<link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/essence/">
+<link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/essenz/">
+<link rel="alternate" hreflang="x-default" href="https://thehumanorigin.org/en/essence/">
+</head>
+<body>
+<div class="atmos"><div class="wash w1"></div><div class="wash w2"></div><div class="wash w3"></div><div class="wash w4"></div></div>
+<div class="grain"></div>
+
+<nav>
+  <div class="logo">The Human <b>Origin</b></div>
+  <div class="nl"><a href="/de/">The Human Origin</a><a href="/de/fuehrungstisch/">Der Führungstisch</a><a class="on" href="/de/zwei-tueren/">Zwei Türen</a><a href="/de/original/">Das Original</a><a class="pill" href="/de/innerer-puls/">Innerer Puls</a></div>
+</nav>
+
+<div class="wrap">
+<section class="hero">
+  <div>
+    <div class="label">Zwei Türen · Essenz</div>
+    <h1 class="hline"><span class="hw">Unter</span> <span class="hw">dem,</span> <span class="hw">was</span> <span class="hw">Sie</span> <span class="hw">sein</span> <span class="hw">sollten,</span> <span class="hw">sind</span> <span class="hw">Sie</span> <span class="hw a">noch</span> <span class="hw a">da.</span></h1>
+    <p class="lead">Uns allen wird ein Skript in die Hand gedrückt — dafür, wie unser Männliches und unser Weibliches sein dürfen. Und wir begraben die Hälfte von uns, damit es passt. Wenn Sie noch immer von dem gesteuert werden, was Sie verbargen, um angenommen zu werden: Essenz heißt, dem Menschen zu begegnen, der Sie unter dem Skript sind — für Männer, Frauen, Paare und alle, für die es nie gepasst hat. <b>Sie werden nicht repariert. Sie finden zurück.</b></p>
+    <div class="cta"><a class="btn btn-p" href="/de/innerer-puls/">Inneren Puls starten</a><span class="soon">The Human Origin Nerve · demnächst</span></div>
+  </div>
+  <div class="deckcluster">
+    <div class="deck d1"><div class="q">„Was Sie verbergen mussten, um angenommen zu werden, <b>steuert Sie bis heute.</b>"</div><div class="qa">Das Muster</div></div>
+    <div class="deck d2"><div class="big2">Nicht reparieren.<br><span>Zurückfinden.</span></div></div>
+  </div>
+</section>
+</div>
+
+<div class="hr"></div>
+<div class="wrap"><section class="narrow">
+  <div class="slabel">Was geschehen ist</div>
+  <div class="megaline hline"><span class="hw">Zwei</span> <span class="hw">Dinge</span> <span class="hw">geschehen</span> <span class="hw">einem</span> <span class="hw a">Kind.</span></div>
+  <p>Die Anteile, die nicht in den Raum passten, in dem Sie aufwuchsen — Weichheit oder Feuer, Bedürfnis oder Begehren, zu viel Gefühl oder zu viel Wucht — haben Sie gelernt wegzuverwalten. Das ist Ihre <span class="on-lime">Essenz.</span> Nicht verschwunden. Begraben.</p>
+  <p>Und die Anteile, die Sie gar nicht zeigen konnten, haben Sie abgespalten — bis sie aus dem Dunkeln heraus die Führung übernehmen. Das ist Ihr <span class="on-lime">Schatten.</span> Was ein Mensch von sich weist, treibt ihn trotzdem an.</p>
+</section></div>
+
+<div class="hr"></div>
+<div class="wrap"><section class="narrow">
+  <div class="slabel">Wo es sitzt</div>
+  <p>Nichts davon war Schwäche. Es war ein Körper, der lernte, was ihn sicher hielt. Unter jedem <b>„jemand wie ich tut so etwas nicht"</b> liegt ein Nervensystem, das Sie einmal genau dazu gebracht hat — um im Raum bleiben zu dürfen, um die Liebe nicht zu verlieren.</p>
+  <p>Streiten Sie mit der Überzeugung, und nichts bewegt sich. Diese Arbeit geschieht dort, wo das Muster tatsächlich sitzt: im Körper, der es gebildet hat. Das ist es, was sie tragfähig macht — und was sie ehrlich hält, statt sie zu einer weiteren Vorstellung über Sie selbst werden zu lassen.</p>
+</section></div>
+
+<div class="hr"></div>
+<div class="wrap"><section class="narrow">
+  <div class="slabel">Die geerbte Prägung</div>
+  <div class="megaline hline"><span class="hw">Das</span> <span class="hw">alte</span> <span class="hw a">westliche</span> <span class="hw">Männliche</span> <span class="hw">und</span> <span class="hw">Weibliche</span> <span class="hw">gehörte</span> <span class="hw a">nie</span> <span class="hw a">Ihnen.</span></div>
+  <p>Dominieren, nicht fühlen, niemals brauchen. Gefallen, sich kleiner machen, alle tragen außer sich selbst. Zwei Hälften eines Erbes — beide weitergereicht, beide verzerrt, beide ein Überlebensmuster für eine Welt, die von der Spaltung profitiert.</p>
+  <p>Und die Welt draußen setzt es weiter durch. Was ein Mann sein darf, was eine Frau sein darf — dieses Bild formen Systeme, die nie für alle gebaut waren: patriarchal, rassistisch, ungerecht, errichtet, um die einen oben und die anderen in der Reihe zu halten. Die Polaritäten, mit denen wir geboren werden, werden von jenen überschrieben, die man uns verkauft. Und die Kosten tragen am schwersten jene Menschen, für die diese Systeme nie gebaut wurden.</p>
+  <p>Das Wissen, das diese Polaritäten einst im Gleichgewicht hielt, ging nicht zufällig verloren. Die Kolonisierung löschte es aus — die Weisheit indigener Völker, die das Männliche nie vom Weiblichen trennten, den Menschen nie vom Land, das Innen nie vom Außen. Der Westen ist über dieses Gleichgewicht nicht hinausgewachsen. Ihm wurde beigebracht, es zu vergessen. <b>Was uns fehlt, ist nichts Neues — es ist das, was genommen wurde.</b></p>
+  <p>Die geerbte Fassung zu verlernen bedeutet nicht, Ihr Männliches oder Ihr Weibliches zu verlieren. Es bedeutet, die echten zurückzubekommen — jene, die niemanden um Sie herum etwas kosten.</p>
+</section></div>
+
+<div class="hr"></div>
+<div class="wrap"><section class="narrow">
+  <div class="slabel">Für wen das ist</div>
+  <p>Jeder Mensch trägt beides in sich, unabhängig vom Geschlecht. Das ist für Männer, Frauen, Paare und alle, für die das alte Skript nie gepasst hat. Der Fokus liegt besonders auf Männern — in einer westlichen patriarchalen Welt bekamen sie das durchsetzende Ende der Verzerrung in die Hand, und das Muster löst sich am schnellsten, wenn jene es ablegen, die es halten. Doch niemand steht außerhalb davon.</p>
+</section></div>
+
+<div class="wrap"><section style="text-align:center;padding:34px 0 68px">
+  <div class="splitline">Die <span class="split-word">Spaltung</span> kostete uns <span class="all-word">alle</span>.</div>
+</section></div>
+
+<div class="hr"></div>
+<div class="wrap"><section>
+  <div class="slabel">Wie es stattfindet</div>
+  <div class="modes">
+    <div class="mode"><div class="mt">Vorträge</div><h3>Auf der Bühne</h3><p>Tom vor einem Raum — die zwei Polaritäten, das Nervensystem und die Welt, die beide verzerrt. Für gemischte Räume und für Veranstaltungen, die das echte Gespräch wollen, nicht das aufgeräumte.</p></div>
+    <div class="mode"><div class="mt">Im Rahmen</div><h3>Ein Kreis, über Monate</h3><p>Eine kleine Gruppe über Monate — Männerkreise, Frauenkreise oder gemischt. Von Mensch zu Mensch: Was einer sieht, erkennen die anderen wieder. Gehalten, nicht belehrt.</p></div>
+    <div class="mode"><div class="mt">Allein oder zu zweit</div><h3>Beginnen Sie, wo Sie stehen</h3><p>The Human Origin Nerve — Stücke und Übungen in Ihrem eigenen Tempo. Oder als Paar: die Polarität, die verstummt ist, und was an ihrer Stelle spielt.</p></div>
+  </div>
+</section></div>
+
+<div class="wrap"><section style="padding:14px 0 46px">
+  <div class="pair">
+    <div class="pair-l">Essenz ist eine von zwei Türen. Die meisten brauchen <b>beide.</b></div>
+    <a href="/de/praesenz/">Präsenz — die Tür des Körpers →</a>
+  </div>
+</section></div>
+
+<div class="hr"></div>
+<div class="wrap"><section>
+  <div class="leadbridge">
+    <div class="lb-label">Wo daraus Führung wird</div>
+    <div class="lb-head">Finden Sie Ihr Gleichgewicht, und der Raum findet seines.</div>
+    <p class="lb-text">Wer der eigenen Essenz und dem eigenen Schatten begegnet ist, reicht sie nicht mehr an die Menschen ringsum weiter. Das ist der innere Motor der Arbeit, für die ich bekannt bin — Menschen in der Führung, die sich selbst halten können und darum ihre Teams halten. Wenn es um Ihre Organisation geht:</p>
+    <a class="lb-link" href="/de/fuehrungstisch/">Der Führungstisch →</a>
+  </div>
+</section></div>
+
+<div class="wrap"><section class="finalcta">
+  <div class="big hline"><span class="hw">Begegnen</span> <span class="hw">Sie</span> <span class="hw">dem</span> <span class="hw">Menschen</span> <span class="hw a">darunter.</span></div>
+  <p style="max-width:520px;margin:0 auto 34px">Allein, zu zweit oder in einem Raum voller Menschen, die aufgehört haben, sich zu inszenieren. Der erste Blick ist kostenlos.</p>
+  <a class="btn btn-p" href="/de/innerer-puls/">Inneren Puls starten</a>
+</section></div>
+
+<footer><p>Wahrheit f&uuml;hrt. Fassade kostet. &middot; &copy; 2026 The Human Origin &middot; Tom Waldek</p><p class="legal"><a href="/de/impressum/">Impressum</a> &middot; <a href="/de/datenschutz/">Datenschutz</a> &middot; <a href="/sitemap.xml">Sitemap</a></p></footer>
+</body>
+</html>

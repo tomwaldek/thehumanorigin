@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Der Führungstisch · The Human Origin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0c140f; --line:rgba(210,230,200,0.10);
+  --cream:#f4efe4; --cream2:rgba(244,239,228,0.62); --cream3:rgba(244,239,228,0.34);
+  --lime:#c7e78a; --limedeep:#a9cf63; --teal:#59c2ae; --amber:#e9a765;
+  --ff:'Sora',sans-serif; --ease:cubic-bezier(0.33,1,0.68,1); --ed:0.55s;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--cream);font-family:var(--ff);font-weight:300;line-height:1.75;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.atmos{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.wash{position:absolute;border-radius:50%;filter:blur(120px)}
+.w1{width:660px;height:660px;background:radial-gradient(circle,rgba(233,167,101,0.44),transparent 66%);top:-170px;right:-130px}
+.w2{width:600px;height:600px;background:radial-gradient(circle,rgba(89,194,174,0.36),transparent 66%);top:34%;left:-170px}
+.w3{width:560px;height:560px;background:radial-gradient(circle,rgba(199,231,138,0.28),transparent 66%);top:66%;right:-130px}
+.w4{width:520px;height:520px;background:radial-gradient(circle,rgba(233,167,101,0.26),transparent 68%);bottom:-150px;left:16%}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(48px,36px)}}
+@media(prefers-reduced-motion:no-preference){.w1{animation:drift 26s ease-in-out infinite}.w2{animation:drift 32s ease-in-out infinite reverse}.w3{animation:drift 28s ease-in-out infinite}.w4{animation:drift 34s ease-in-out infinite reverse}}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(120% 78% at 50% -5%,transparent 38%,rgba(6,12,8,0.55) 100%)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 48px;position:relative;z-index:3}
+.narrow{max-width:720px}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hline .hw{display:inline-block;transition:transform .7s var(--ease),filter .7s var(--ease),opacity .7s var(--ease);transform-origin:center}
+.hline:hover .hw{filter:blur(2.4px);opacity:.48}
+.hline .hw:hover{filter:blur(0);opacity:1;transform:scale(1.07)}
+@media(prefers-reduced-motion:reduce){.hline .hw{transition:none}.hline:hover .hw{filter:none;opacity:1}.hline .hw:hover{transform:none}}
+nav{position:sticky;top:0;z-index:40;padding:24px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(12,20,15,0.55);backdrop-filter:blur(22px) saturate(1.3);border-bottom:1px solid var(--line)}
+.logo{font-weight:700;font-size:15px;letter-spacing:0.5px}.logo b{font-weight:200;color:var(--lime)}
+.nl{display:flex;gap:30px;align-items:center}
+.nl a{font-weight:400;font-size:12px;letter-spacing:0.5px;color:var(--cream2);text-decoration:none;transition:color var(--ed) var(--ease)}
+.nl a:hover,.nl a.on{color:var(--lime)}
+.pill{font-weight:700!important;color:#12200c!important;background:var(--lime);padding:9px 18px;border-radius:100px;font-size:12px!important}
+.hero{display:grid;grid-template-columns:1.15fr 0.85fr;gap:44px;align-items:center;padding:108px 0 92px}
+.label{font-weight:700;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--limedeep);margin-bottom:32px}
+h1{font-weight:200;font-size:clamp(40px,5.6vw,74px);line-height:1.05;letter-spacing:-2px;margin-bottom:34px}
+h1 .a{font-weight:800;color:var(--lime)}
+.lead{font-weight:300;font-size:20px;color:var(--cream2);line-height:1.65;max-width:520px;margin-bottom:38px}
+.lead b{font-weight:600;color:var(--cream)}
+.cta{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.btn{font-weight:700;font-size:14px;padding:15px 30px;border-radius:100px;text-decoration:none;transition:transform var(--ed) var(--ease),color var(--ed) var(--ease),border-color var(--ed) var(--ease),background var(--ed) var(--ease)}
+.btn-p{background:var(--lime);color:#12200c}.btn-p:hover{transform:translateY(-3px)}
+.btn-g{font-weight:400;color:var(--cream);border-bottom:1px solid var(--line);border-radius:0;padding:4px 2px}.btn-g:hover{color:var(--lime);border-color:var(--lime)}
+.deckcluster{position:relative;height:500px}
+.deck{position:absolute;border-radius:22px;border:1px solid rgba(255,255,255,0.11);background:rgba(255,255,255,0.05);backdrop-filter:blur(20px) saturate(1.4);box-shadow:0 50px 120px -50px rgba(0,0,0,0.92),inset 0 1px 0 rgba(255,255,255,0.07);overflow:hidden}
+.deck::before{content:'';position:absolute;inset:0;opacity:0.7;pointer-events:none}
+.deck.d1{width:300px;padding:30px;top:20px;left:20px}
+.deck.d1::before{background:radial-gradient(120% 90% at 20% 0%,rgba(89,194,174,0.32),transparent 60%)}
+.deck.d2{width:220px;padding:26px;bottom:14px;right:0}
+.deck.d2::before{background:radial-gradient(120% 90% at 80% 100%,rgba(233,167,101,0.34),transparent 60%)}
+@media(prefers-reduced-motion:no-preference){.deck.d1{animation:floaty 9s ease-in-out infinite}.deck.d2{animation:floaty 9s ease-in-out infinite -4s}}
+.deck .q{position:relative;font-weight:300;font-size:19px;line-height:1.45;color:var(--cream)}
+.deck .q b{font-weight:700}
+.deck .qa{position:relative;font-weight:700;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--limedeep);margin-top:16px}
+.deck .nn{position:relative;font-weight:200;font-size:40px;color:var(--lime);line-height:1;letter-spacing:-2px}
+.deck .nl2{position:relative;font-weight:400;font-size:12px;color:var(--cream2);margin-top:10px;line-height:1.4}
+section{padding:60px 0}
+.hr{height:1px;background:var(--line);max-width:1040px;margin:0 auto;position:relative;z-index:3}
+.slabel{font-weight:700;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--limedeep);margin-bottom:30px}
+p{font-weight:300;font-size:19px;color:var(--cream2);line-height:1.85;margin-bottom:22px}
+p b{color:var(--cream);font-weight:600}
+.on-lime{color:var(--lime);font-weight:600}
+.megaline{font-weight:800;font-size:clamp(30px,4.8vw,58px);line-height:1.05;letter-spacing:-2px;color:var(--cream);margin:6px 0 28px}
+.megaline .a{color:var(--lime)}
+.italic{font-weight:300;font-style:normal;font-size:clamp(20px,2.4vw,26px);color:var(--cream);opacity:.9;border-left:2px solid var(--limedeep);padding-left:22px;margin-top:20px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.stat{border-top:1px solid var(--line);padding-top:22px}
+.stat .n{font-weight:200;font-size:clamp(34px,4.4vw,52px);color:var(--lime);letter-spacing:-2px;line-height:1;filter:blur(16px);opacity:0;transition:filter 1s ease,opacity 1s ease}
+.stat.in .n{filter:blur(0);opacity:1}
+@media(prefers-reduced-motion:reduce){.stat .n{filter:none;opacity:1;transition:none}}
+.stat .l{font-weight:300;font-size:13px;color:var(--cream2);margin-top:12px;line-height:1.5}
+.stat .s{font-weight:600;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--cream3);margin-top:8px}
+.proofgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:16px}
+.proof{border-top:1px solid var(--line);padding-top:22px}
+.proof .pn{font-weight:200;font-size:clamp(42px,5.4vw,62px);color:var(--lime);letter-spacing:-2px;line-height:1}
+.proof .pl{font-weight:700;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--cream);margin:12px 0 12px}
+.proof .pd{font-weight:300;font-size:14px;color:var(--cream2);line-height:1.6;margin-bottom:12px}
+.proof .ps{font-weight:600;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--cream3)}
+.mgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.disc{position:relative;border-radius:20px;border:1px solid rgba(255,255,255,0.09);background:rgba(255,255,255,0.04);backdrop-filter:blur(14px);padding:28px 26px;transition:transform var(--ed) var(--ease),border-color var(--ed) var(--ease),background var(--ed) var(--ease);overflow:hidden}
+.disc::before{content:'';position:absolute;inset:0;background:radial-gradient(120% 80% at 30% 0%,rgba(199,231,138,0.14),transparent 62%);opacity:.5;transition:opacity var(--ed) var(--ease);pointer-events:none}
+.disc:hover{transform:translateY(-6px);border-color:rgba(199,231,138,0.35)}.disc:hover::before{opacity:1}
+.disc .dn{position:relative;font-weight:700;font-size:11px;letter-spacing:2px;color:var(--amber);text-transform:uppercase;margin-bottom:10px}
+.disc h3{position:relative;font-weight:700;font-size:22px;color:var(--cream);letter-spacing:-0.5px;margin-bottom:10px}
+.disc p{position:relative;font-size:13px;color:var(--cream2);margin:0;line-height:1.6}
+.phase{display:grid;grid-template-columns:60px 1fr auto;gap:26px;align-items:baseline;padding:26px 0;border-top:1px solid var(--line)}
+.phase:last-child{border-bottom:1px solid var(--line)}
+.phase .pn{font-weight:200;font-size:34px;color:var(--cream3);letter-spacing:-2px;line-height:1}
+.phase h4{font-weight:700;font-size:19px;color:var(--cream);margin-bottom:4px}
+.phase .pd{font-weight:300;font-size:14px;color:var(--cream2)}
+.phase .fee{font-weight:700;font-size:16px;color:var(--lime);white-space:nowrap;text-align:right}
+.phase .fee.soft{color:var(--cream3);font-weight:400;font-size:13px}
+.faq{max-width:760px}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;text-align:left;background:none;border:none;font-family:var(--ff);cursor:pointer;padding:24px 0;display:flex;justify-content:space-between;align-items:center;gap:22px;color:var(--cream);font-weight:400;font-size:clamp(17px,2vw,20px);line-height:1.4;transition:color var(--ed) var(--ease)}
+.faq-q:hover{color:var(--lime)}
+.faq-ic{flex-shrink:0;width:24px;height:24px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-weight:300;font-size:17px;color:var(--cream2);transition:transform var(--ed) var(--ease),border-color var(--ed) var(--ease),color var(--ed) var(--ease)}
+.faq-item.open .faq-ic{transform:rotate(45deg);border-color:var(--lime);color:var(--lime)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height var(--ed) var(--ease)}
+.faq-a-in{padding:0 0 26px;font-weight:300;font-size:16px;color:var(--cream2);line-height:1.75;max-width:660px}
+.faq-a-in b{color:var(--lime);font-weight:600}
+.foundation{padding:26px 0 74px}
+.fd-label{font-weight:700;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--teal);margin-bottom:22px}
+.fd-head{font-weight:800;font-size:clamp(30px,5vw,60px);letter-spacing:-2px;line-height:1.02;color:var(--cream);margin-bottom:24px;max-width:920px}
+.fd-head span{color:var(--lime)}
+.fd-text{font-weight:300;font-size:19px;color:var(--cream2);max-width:700px;line-height:1.75;margin-bottom:46px}
+.fd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.fd-card{position:relative;border-radius:24px;border:1px solid rgba(255,255,255,0.10);background:rgba(255,255,255,0.045);backdrop-filter:blur(18px) saturate(1.35);padding:36px 32px 30px;text-decoration:none;overflow:hidden;min-height:250px;display:flex;flex-direction:column;box-shadow:0 40px 90px -55px rgba(0,0,0,0.9);transition:transform var(--ed) var(--ease),border-color var(--ed) var(--ease)}
+.fd-card::before{content:'';position:absolute;inset:0;opacity:0.65;transition:opacity var(--ed) var(--ease);pointer-events:none}
+.fc1::before{background:radial-gradient(130% 90% at 25% 0%,rgba(233,167,101,0.34),transparent 60%)}
+.fc2::before{background:radial-gradient(130% 90% at 50% 0%,rgba(89,194,174,0.32),transparent 60%)}
+.fc3::before{background:radial-gradient(130% 90% at 75% 0%,rgba(199,231,138,0.30),transparent 60%)}
+.fd-card:hover{transform:translateY(-10px);border-color:rgba(199,231,138,0.42)}
+.fd-card:hover::before{opacity:1}
+.fd-k{position:relative;font-weight:700;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--cream3);margin-bottom:16px}
+.fd-card h3{position:relative;font-weight:800;font-size:clamp(26px,3vw,34px);letter-spacing:-1px;color:var(--cream);margin-bottom:12px;line-height:1}
+.fd-card .fp{position:relative;font-weight:300;font-size:14px;color:var(--cream2);line-height:1.62;margin:0 0 22px}
+.fd-arw{position:relative;margin-top:auto;font-weight:700;font-size:13px;letter-spacing:1px;color:var(--lime);display:inline-flex;align-items:center;gap:8px;transition:gap var(--ed) var(--ease)}
+.fd-card:hover .fd-arw{gap:15px}
+.finalcta{text-align:center;padding:96px 0}
+.finalcta .big{font-weight:800;font-size:clamp(30px,4.6vw,56px);letter-spacing:-2px;color:var(--cream);margin-bottom:30px;line-height:1.05}
+.finalcta .big .a{color:var(--lime)}
+footer{padding:70px 0 60px;text-align:center;border-top:1px solid var(--line);position:relative;z-index:3}
+footer p{font-weight:400;font-size:11px;letter-spacing:2px;color:var(--cream3);text-transform:uppercase}
+@media(max-width:820px){.hero{grid-template-columns:1fr;gap:24px}.deckcluster{height:320px}.nl a:not(.pill){display:none}.stats{grid-template-columns:repeat(2,1fr)}.mgrid,.proofgrid,.fd-grid{grid-template-columns:1fr}.phase{grid-template-columns:44px 1fr;gap:16px}.phase .fee{grid-column:2;text-align:left}}
+footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoration:none;transition:color .55s cubic-bezier(0.33,1,0.68,1)}footer .legal a:hover{color:var(--lime)}
+</style>
+<link rel="canonical" href="https://thehumanorigin.org/de/fuehrungstisch/">
+<link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/leadership-table/">
+<link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/fuehrungstisch/">
+<link rel="alternate" hreflang="x-default" href="https://thehumanorigin.org/en/leadership-table/">
+</head>
+<body>
+<div class="atmos"><div class="wash w1"></div><div class="wash w2"></div><div class="wash w3"></div><div class="wash w4"></div></div>
+<div class="grain"></div>
+
+<nav>
+  <div class="logo">The Human <b>Origin</b></div>
+  <div class="nl"><a href="/de/">The Human Origin</a><a class="on" href="/de/fuehrungstisch/">Der Führungstisch</a><a href="/de/zwei-tueren/">Zwei Türen</a><a href="/de/original/">Das Original</a><a class="pill" href="/de/pulscheck/">Pulscheck</a></div>
+</nav>
+
+<div class="wrap">
+<section class="hero">
+  <div>
+    <div class="label">Für Organisationen · Der Führungstisch</div>
+    <h1 class="hline"><span class="hw">Ihre</span> <span class="hw">Strategie</span> <span class="hw">ist</span> <span class="hw">selten</span> <span class="hw">das</span> <span class="hw">Problem.</span> <span class="hw">Was</span> <span class="hw">am</span> <span class="hw">Tisch</span> <span class="hw a">unausgesprochen</span> <span class="hw">bleibt,</span> <span class="hw">ist</span> <span class="hw">es.</span></h1>
+    <p class="lead">Was einen Führungstisch wirklich bestimmt, ist nicht der Plan an der Wand — es ist, was die Menschen ringsum aussprechen können und was nicht, und die Überlebensmuster, die das schon vor dem ersten Wort entscheiden. Fünfundzwanzig Jahre, in denen ich Räume gelesen habe, haben mich das sehen gelehrt. Wenn Sie Menschen führen und spüren, dass der Raum Ihnen nicht die Wahrheit sagt, macht die Diagnostik sie sichtbar — <b>damit Sie sich selbst und die Menschen um Sie herum ins Gleichgewicht bringen.</b></p>
+    <div class="cta"><a class="btn btn-p" href="/de/pulscheck/">Pulscheck starten</a><a class="btn btn-g" href="https://cal.eu/tomwaldek/erstgespraech" target="_blank" rel="noopener">Erstgespräch vereinbaren</a></div>
+  </div>
+  <div class="deckcluster">
+    <div class="deck d1"><div class="q">„Eine Organisation kopiert nicht die Strategie. Sie kopiert, wie die <b>Person in der Führung</b> tatsächlich ist."</div><div class="qa">Die Vertrauenskaskade</div></div>
+    <div class="deck d2"><div class="nn">€617 Mrd.</div><div class="nl2">jährliche EU-Kosten arbeitsbedingten Stresses — EU-OSHA</div></div>
+  </div>
+</section>
+</div>
+
+<div class="wrap"><section>
+  <div class="stats">
+    <div class="stat"><div class="n" data-prefix="€" data-value="617" data-suffix=" Mrd.">€617 Mrd.</div><div class="l">Jährliche EU-Kosten arbeitsbedingten Stresses</div><div class="s">EU-OSHA</div></div>
+    <div class="stat"><div class="n" data-value="56" data-suffix="%">56%</div><div class="l">Führungskräfte, deren Team echte Probleme nicht anspricht</div><div class="s">PMI</div></div>
+    <div class="stat"><div class="n" data-value="21" data-suffix="%">21%</div><div class="l">Höhere Profitabilität in hoch engagierten Teams</div><div class="s">Gallup 2023</div></div>
+    <div class="stat"><div class="n" data-value="74" data-suffix="%">74%</div><div class="l">Mehr Oxytocin → mehr Vertrauen und Leistung</div><div class="s">Zak 2017</div></div>
+  </div>
+</section></div>
+
+<div class="hr"></div>
+<div class="wrap"><section class="narrow">
+  <div class="slabel">Das Problem, das niemand misst</div>
+  <div class="megaline hline"><span class="hw">Das</span> <span class="hw">Nervensystem</span> <span class="hw">entscheidet</span> <span class="hw">zuerst:</span> <span class="hw a">sicher</span> <span class="hw">oder</span> <span class="hw a">Gefahr.</span></div>
+  <p>Bevor es irgendjemand im Raum bemerkt. Das Muster ist älter als die Organisation. Älter als der erste Tag der Führungskraft. Meist älter als ihr erstes Wort.</p>
+</section></div>
+
+<div class="hr"></div>
+<div class="wrap"><section class="narrow">
+  <div class="slabel">Die Vertrauenskaskade</div>
+  <div class="megaline hline"><span class="hw">Die</span> <span class="hw">Person</span> <span class="hw">in</span> <span class="hw">der</span> <span class="hw">Führung</span> <span class="hw">ist</span> <span class="hw">das</span> <span class="hw">erste</span> <span class="hw a">Betriebssystem.</span></div>
+  <p>Nicht als Stimmung. Als Struktur. Was bedeutet, dass die Bedingungen, die diese Person geprägt haben — lange vor der ersten Führungsrolle, manchmal vor der ersten Erinnerung — bereits im Raum sind.</p>
+  <p>Wenn <span class="on-lime">Überlebensarchitektur</span> die Führung steuert, steuert sie den Raum. <span class="on-lime">Weil alle es hinnehmen.</span> Es wird zur Atmosphäre: die unausgesprochene Vereinbarung darüber, was gesagt, entschieden und riskiert werden darf.</p>
+  <p><span class="on-lime">Kontrolle ersetzt Verbindung.</span> Darstellung ersetzt Präsenz.</p>
+</section></div>
+
+<div class="hr"></div>
+<div class="wrap"><section class="narrow">
+  <div class="slabel">Warum vor Wie</div>
+  <p>Frankl hat es vor allen in der Wirtschaft gesehen: Menschen fallen nicht in Überlebensmuster, weil sie schwach sind. Sondern weil sie den Zugang zu dem verloren haben, was zählt — <span class="on-lime">ihrem eigenen Sinn.</span> Die Rolle ersetzt den Grund. Darstellung füllt die Leere, wo einmal ein Warum gelebt hat.</p>
+  <p>Was wie ein Führungsproblem aussieht, ist <span class="on-lime">ein Sinnproblem.</span> Wird der Zugang zum Warum wiederhergestellt, hat das Muster nichts mehr, woran es sich halten kann.</p>
+  <div class="italic">Die Arbeit beginnt dort. Vor der Strategie. Vor der Methode. Beim Warum.</div>
+</section></div>
+
+<div class="hr"></div>
+<div class="wrap"><section class="narrow">
+  <div class="slabel">Die Chance, die niemand automatisiert</div>
+  <div class="megaline hline"><span class="hw">Was</span> <span class="hw">keine</span> <span class="hw">Maschine</span> <span class="hw">nachbildet,</span> <span class="hw">ist</span> <span class="hw">das,</span> <span class="hw">was</span> <span class="hw">das</span> <span class="hw">Muster</span> <span class="hw a">verbirgt.</span></div>
+  <p>Jede Organisation, die fragt, was KI ersetzen wird, beantwortet ihre eigene Frage. Das gefährdetste Verhalten war nie kreativ, nie persönlich, nie präsent. Es war Muster. Optimierte Darstellung. Verwaltetes Risiko.</p>
+  <p>Die eigentliche Einsicht ist nicht, dass KI Ihnen etwas nimmt. Sondern dass das, was Sie inszeniert haben, ohnehin nie einzigartig Ihres war. Was kein System nachbildet, ist die volle Kapazität Ihrer Menschen, die diese Architektur verbirgt: einen Raum lesen, die echten Entscheidungen treffen, richtig liegen — nicht aus Daten, sondern aus dem, was ein Körper weiß, bevor die Sprache es tut. <b>Kein Soft Skill. Die ursprüngliche Technologie.</b></p>
+</section></div>
+
+<div class="hr"></div>
+<div class="wrap"><section>
+  <div class="slabel">Handfeste Belege</div>
+  <p style="max-width:640px">Keine Absichten. Messbare Verschiebungen — was das in Ihrer G+V bedeutet.</p>
+  <div class="proofgrid">
+    <div class="proof"><div class="pn">66%</div><div class="pl">weniger Fluktuation</div><div class="pd">Der größte verborgene Posten in jeder G+V des Mittelstands — um zwei Drittel gesenkt, wenn sich das Überlebensmuster löst.</div><div class="ps">Gallup Workplace Research</div></div>
+    <div class="proof"><div class="pn">7×</div><div class="pl">mehr Experimente</div><div class="pd">Siebenmal höhere Innovationsgeschwindigkeit in psychologisch sicheren Teams — ohne eine einzige zusätzliche Einstellung.</div><div class="ps">Edmondson &amp; Lei, 2014</div></div>
+    <div class="proof"><div class="pn">3×</div><div class="pl">Ideen am Tisch</div><div class="pd">Dreimal so viele Ideen, die den Entscheidungstisch erreichen — jene, die sonst im Schweigen sterben.</div><div class="ps">Edmondson, Harvard</div></div>
+  </div>
+</section></div>
+
+<div class="hr"></div>
+<div class="wrap"><section>
+  <div class="slabel">Die Methode — sechs Filmdisziplinen</div>
+  <div class="mgrid">
+    <div class="disc"><div class="dn">01 · Drehbuch</div><h3>Drehbuch</h3><p>Die Geschichte, die ein Team sich erzählt — und die Lücke zwischen ihr und der Wahrheit.</p></div>
+    <div class="disc"><div class="dn">02 · Regie</div><h3>Regie</h3><p>Wie der Raum wirklich geführt wird: was gesagt werden darf, was nicht. Die Überlebensarchitektur hinter jeder Entscheidung.</p></div>
+    <div class="disc"><div class="dn">03 · Schauspiel</div><h3>Schauspiel</h3><p>Was inszeniert wird, gegen das, was echt ist zwischen Menschen. Der Ursprung, den jeder mitbringt.</p></div>
+    <div class="disc"><div class="dn">04 · Schnitt</div><h3>Schnitt</h3><p>Was die Organisation nach außen sendet — und ob der Schnitt zum Material passt. Das Vertrauenssignal von außen.</p></div>
+    <div class="disc"><div class="dn">05 · Produktion</div><h3>Produktion</h3><p>Wie das Ganze unter Druck zusammenhält. Das relationale Muster, das entscheidet, ob Menschen bleiben.</p></div>
+    <div class="disc"><div class="dn">06 · Intimacy</div><h3>Intimacy Coordination</h3><p>Das Handwerk der Sicherheit in Nähe. Wie Bindung und Ehrlichkeit dort gelingen, wo die Verletzlichkeit am größten ist.</p></div>
+  </div>
+</section></div>
+
+<div class="hr"></div>
+<div class="wrap"><section class="narrow">
+  <div class="slabel">Warum ein Filmprofi Führungstische liest</div>
+  <p>Fünfundzwanzig Jahre an Filmsets, über sechs Disziplinen hinweg — Drehbuch, Regie, Schauspiel, Schnitt, Produktion, Intimacy Coordination. Darunter liegt eine einzige Fähigkeit: zu unterscheiden, was in einem Raum echt ist, von dem, was für den Raum inszeniert wird.</p>
+  <p>Das ist hier die ganze Aufgabe — was einen Führungstisch bestimmt, ist nicht die Strategie an der Wand, sondern das, was die Menschen ringsum aussprechen können und was nicht.</p>
+  <div class="italic">Woher diese Art zu lesen kommt — und warum sie so genau ist — ist eine eigene Geschichte. <a href="/de/" style="color:var(--lime);text-decoration:none;font-weight:600">→ The Human Origin</a></div>
+</section></div>
+
+<div class="hr"></div>
+<div class="wrap"><section class="narrow">
+  <div class="slabel">Wie die Arbeit abläuft</div>
+  <div class="phase"><div class="pn">00</div><div><h4>Pulscheck</h4><div class="pd">3 Minuten, 9 Fragen — Online-Diagnostik</div></div><div class="fee">Kostenlos</div></div>
+  <div class="phase"><div class="pn">01</div><div><h4>Erstgespräch</h4><div class="pd">45 Minuten — eine Frage, die echte</div></div><div class="fee">Kostenfrei</div></div>
+  <div class="phase"><div class="pn">02</div><div><h4>Diagnostik-Besprechung</h4><div class="pd">90 Minuten — optional, einzeln buchbar</div></div><div class="fee">€2.500</div></div>
+  <div class="phase"><div class="pn">03</div><div><h4>Vertrauensarchitektur-Diagnostik</h4><div class="pd">3–4 Wochen</div></div><div class="fee">€12.000</div></div>
+  <div class="phase"><div class="pn">04</div><div><h4>Origin Work</h4><div class="pd">3–5 Monate — Integration und Überprüfung inbegriffen</div></div><div class="fee soft">Auf Anfrage</div></div>
+  <div class="phase"><div class="pn">05</div><div><h4>Retained Advisory</h4><div class="pd">Fortlaufend</div></div><div class="fee soft">Auf Anfrage</div></div>
+</section></div>
+
+<div class="hr"></div>
+<div class="wrap"><section class="narrow">
+  <div class="slabel">Häufige Fragen</div>
+  <div class="faq">
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">Ist das Therapie, Coaching oder ein Trainingsprogramm?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">Nichts davon. Es ist eine <b>Diagnostik</b> — sie liest die Überlebensmuster, die einen Menschen oder einen Raum steuern, so wie fünfundzwanzig Jahre Film mich gelehrt haben, ein Set zu lesen. Keine Couch, kein Lehrplan, kein Workshop.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">Es gibt eine Seite für Organisationen und eine für den Menschen. Welche ist für mich?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">Zwei Türen, ein Ursprung. Wenn Sie Menschen führen, beginnen Sie mit <b>dem Führungstisch</b> und dem Pulscheck. Wenn es persönlicher ist — wer Sie unter der Rolle sind, oder im eigenen Körper anzukommen — beginnen Sie mit <b>Zwei Türen</b> und dem Inneren Puls. Die meisten, ehrlich gesagt, brauchen beides.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">Wie hängen Pulscheck und Innerer Puls zusammen?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">Der Pulscheck liest Ihren Führungsraum; der Innere Puls liest Sie. Dieselbe Linse, zweimal gewendet — denn <b>der Raum kopiert den Zustand, den Sie hineintragen.</b> Nehmen Sie eines von beiden; sie verweisen aufeinander.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">Meine Organisation läuft gut. Warum sollte ich das in Betracht ziehen?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">Gut zu funktionieren und die Wahrheit zu sagen ist nicht dasselbe. Die meisten Organisationen inszenieren das Unternehmen, das sie sich wünschen. Diese Lücke bleibt unsichtbar — <b>bis sie Sie jemanden oder etwas kostet, das Sie sich nicht leisten konnten zu verlieren.</b></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">Ist die persönliche Arbeit — Essenz und Präsenz — nur für Männer?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">Nein. Jeder Mensch trägt beides in sich, ein Männliches und ein Weibliches, unabhängig vom Geschlecht — das ist für Männer, Frauen, Paare und alle, für die das alte Skript nie passte. Es gibt einen <b>besonderen Fokus auf Männer</b>, weil eine patriarchale Welt ihnen das durchsetzende Ende des Musters übergeben hat — aber niemand steht außerhalb davon.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">Was kostet es, und was verlangt es von uns?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">Die Bereitschaft, zuerst hinzusehen. Pulscheck und Innerer Puls sind kostenlos und dauern drei Minuten. Für Organisationen läuft die Vertrauensarchitektur-Diagnostik drei bis vier Wochen (<b>€12.000</b>); die Arbeit darüber hinaus erfolgt auf Anfrage. Die persönliche Arbeit beginnt kostenlos und vertieft sich von dort.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">Ist alles vertraulich?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">Vollständig. Was im Raum gesagt wird, bleibt im Raum — das ist die ganze <b>Voraussetzung</b> dafür, dass überhaupt etwas Wahres gesagt wird.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">Gibt es Belege, dass das funktioniert?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">Es steht im Einklang mit einem Jahrhundert an Forschung — Porges dazu, wie der Körper Sicherheit liest; Frankl zum Sinn; Edmondson dazu, was Teams aussprechen und was nicht; Keltner zur Macht — und fünfundzwanzig Jahren, in denen ich dieselben Muster an Filmsets gesehen habe. <b>Die Wissenschaft bestätigt, was der Raum längst wusste.</b></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">In welchen Sprachen und Regionen arbeiten Sie?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">International, auf Englisch und Deutsch. Die Wurzeln liegen im europäischen Film und in Führungsräumen — aber ein Nervensystem hat <b>keine Nationalität</b>, und diese Arbeit reist.</div></div></div>
+  </div>
+</section></div>
+
+<div class="hr"></div>
+<div class="wrap"><section class="foundation">
+  <div class="fd-label">Worauf Führung baut</div>
+  <h2 class="fd-head">Sie können nur so frei führen, wie Sie <span>innerlich frei</span> sind.</h2>
+  <p class="fd-text">Die Diagnostik legt das Muster offen. Die Führungskräfte, die es nicht nur bewältigen, sondern überwachsen, sind jene, die ihre eigene Arbeit getan haben. Dort gewinnen Sie mehr als je zuvor — wenn Sie aus dem führen, was Sie wirklich sind, nicht aus der Rolle, die Sie spielen. Drei Räume tragen die Führung.</p>
+  <div class="fd-grid">
+    <a class="fd-card fc1" href="/de/essenz/"><div class="fd-k">Für Sie</div><h3>Essenz</h3><p class="fp">Begegnen Sie dem, was Sie vergraben und verleugnet haben. Führen Sie, ohne Ihren Schatten in den Raum zu geben.</p><span class="fd-arw">Eintauchen →</span></a>
+    <a class="fd-card fc2" href="/de/praesenz/"><div class="fd-k">Für Sie</div><h3>Präsenz</h3><p class="fp">Kommen Sie im Körper an. Eine Führung, deren System sich sicher fühlt, macht den ganzen Raum sicher.</p><span class="fd-arw">Eintauchen →</span></a>
+    <a class="fd-card fc3" href="/de/original/"><div class="fd-k">Das Fundament</div><h3>Das Original</h3><p class="fp">Warum der Mensch das Original ist, nicht das Beiwerk. Die Überzeugung unter allem.</p><span class="fd-arw">Eintauchen →</span></a>
+  </div>
+</section></div>
+
+<div class="wrap"><section class="finalcta">
+  <div class="big hline"><span class="hw">Beginnen</span> <span class="hw">Sie</span> <span class="hw">mit</span> <span class="hw">einer</span> <span class="hw a">Frage.</span></div>
+  <p style="max-width:520px;margin:0 auto 34px">Drei Minuten legen das Überlebensmuster offen, das Ihre Organisation steuert — und zeigen, was es kostet.</p>
+  <a class="btn btn-p" href="/de/pulscheck/">Pulscheck starten</a>
+</section></div>
+
+<footer><p>Wahrheit f&uuml;hrt. Fassade kostet. &middot; &copy; 2026 The Human Origin &middot; Tom Waldek</p><p class="legal"><a href="/de/impressum/">Impressum</a> &middot; <a href="/de/datenschutz/">Datenschutz</a> &middot; <a href="/sitemap.xml">Sitemap</a></p></footer>
+
+<script>
+(function(){
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function ease(t){return 1-Math.pow(1-t,3);}
+  function count(el){var pre=el.dataset.prefix||'',suf=el.dataset.suffix||'',val=+el.dataset.value,dur=1300,t0=null;function step(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/dur);el.textContent=pre+Math.round(ease(p)*val)+suf;if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
+  var nums=[].slice.call(document.querySelectorAll('.stat .n'));
+  nums.forEach(function(n){if(!reduce)n.textContent=(n.dataset.prefix||'')+'0'+(n.dataset.suffix||'');n.addEventListener('mouseenter',function(){count(n);});});
+  if(!reduce){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.parentElement.classList.add('in');count(e.target);io.unobserve(e.target);}});},{threshold:0.6});nums.forEach(function(n){io.observe(n);});}
+})();
+function faq(btn){var item=btn.parentElement;var a=item.querySelector('.faq-a');var open=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(el){el.classList.remove('open');el.querySelector('.faq-a').style.maxHeight=null;});if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}}
+</script>
+</body>
+</html>

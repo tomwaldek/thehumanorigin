@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zwei Türen · The Human Origin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0c140f; --line:rgba(210,230,200,0.10);
+  --cream:#f4efe4; --cream2:rgba(244,239,228,0.62); --cream3:rgba(244,239,228,0.34);
+  --lime:#c7e78a; --limedeep:#a9cf63; --teal:#59c2ae; --amber:#e9a765;
+  --ff:'Sora',sans-serif;
+  --ease:cubic-bezier(0.33,1,0.68,1); --ed:0.55s;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--cream);font-family:var(--ff);font-weight:300;line-height:1.75;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.atmos{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.wash{position:absolute;border-radius:50%;filter:blur(120px)}
+.w1{width:660px;height:660px;background:radial-gradient(circle,rgba(233,167,101,0.46),transparent 66%);top:-170px;right:-130px}
+.w2{width:600px;height:600px;background:radial-gradient(circle,rgba(89,194,174,0.34),transparent 66%);top:40%;left:-170px}
+.w3{width:540px;height:540px;background:radial-gradient(circle,rgba(199,231,138,0.26),transparent 66%);bottom:-140px;right:-110px}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(48px,36px)}}
+@media(prefers-reduced-motion:no-preference){.w1{animation:drift 26s ease-in-out infinite}.w2{animation:drift 32s ease-in-out infinite reverse}.w3{animation:drift 30s ease-in-out infinite}}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(120% 78% at 50% -5%,transparent 38%,rgba(6,12,8,0.55) 100%)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 48px;position:relative;z-index:3}
+.narrow{max-width:720px}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hline .hw{display:inline-block;transition:transform .7s var(--ease),filter .7s var(--ease),opacity .7s var(--ease);transform-origin:center}
+.hline:hover .hw{filter:blur(2.4px);opacity:.48}
+.hline .hw:hover{filter:blur(0);opacity:1;transform:scale(1.07)}
+@media(prefers-reduced-motion:reduce){.hline .hw{transition:none}.hline:hover .hw{filter:none;opacity:1}.hline .hw:hover{transform:none}}
+nav{position:sticky;top:0;z-index:40;padding:24px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(12,20,15,0.55);backdrop-filter:blur(22px) saturate(1.3);border-bottom:1px solid var(--line)}
+.logo{font-weight:700;font-size:15px;letter-spacing:0.5px}.logo b{font-weight:200;color:var(--lime)}
+.nl{display:flex;gap:30px;align-items:center}
+.nl a{font-weight:400;font-size:12px;letter-spacing:0.5px;color:var(--cream2);text-decoration:none;transition:color var(--ed) var(--ease)}
+.nl a:hover,.nl a.on{color:var(--lime)}
+.pill{font-weight:700!important;color:#12200c!important;background:var(--lime);padding:9px 18px;border-radius:100px;font-size:12px!important}
+.hero{padding:112px 0 66px;max-width:760px}
+.label{font-weight:700;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--limedeep);margin-bottom:28px}
+h1{font-weight:200;font-size:clamp(48px,7.4vw,100px);line-height:0.98;letter-spacing:-3px;margin-bottom:14px}
+h1 .a{font-weight:800;color:var(--lime)}
+.subtitle{font-weight:300;font-size:clamp(19px,2.4vw,26px);color:var(--cream2);margin-bottom:30px;font-style:italic}
+.lead{font-weight:300;font-size:21px;color:var(--cream2);line-height:1.6;margin-bottom:36px}
+.lead b{font-weight:600;color:var(--cream)}
+.cta{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.btn{font-weight:700;font-size:14px;padding:15px 30px;border-radius:100px;text-decoration:none;transition:transform var(--ed) var(--ease),color var(--ed) var(--ease),border-color var(--ed) var(--ease),background var(--ed) var(--ease)}
+.btn-p{background:var(--lime);color:#12200c}.btn-p:hover{transform:translateY(-3px)}
+.btn-g{font-weight:400;color:var(--cream);border-bottom:1px solid var(--line);border-radius:0;padding:4px 2px}.btn-g:hover{color:var(--lime);border-color:var(--lime)}
+section{padding:56px 0}
+.hr{height:1px;background:var(--line);max-width:1040px;margin:0 auto;position:relative;z-index:3}
+.slabel{font-weight:700;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--limedeep);margin-bottom:28px}
+p{font-weight:300;font-size:19px;color:var(--cream2);line-height:1.85;margin-bottom:22px}
+p b{color:var(--cream);font-weight:600}
+.megaline{font-weight:800;font-size:clamp(30px,4.8vw,58px);line-height:1.05;letter-spacing:-2px;color:var(--cream);margin:6px 0 28px}
+.megaline .a{color:var(--lime)}
+.doors{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:8px}
+.door{position:relative;border-radius:24px;border:1px solid rgba(255,255,255,0.10);background:rgba(255,255,255,0.045);backdrop-filter:blur(18px) saturate(1.35);padding:40px 38px 34px;text-decoration:none;overflow:hidden;min-height:250px;display:flex;flex-direction:column;box-shadow:0 40px 90px -55px rgba(0,0,0,0.9);transition:transform var(--ed) var(--ease),border-color var(--ed) var(--ease)}
+.door::before{content:'';position:absolute;inset:0;opacity:0.62;transition:opacity var(--ed) var(--ease);pointer-events:none}
+.dr1::before{background:radial-gradient(130% 90% at 25% 0%,rgba(233,167,101,0.30),transparent 60%)}
+.dr2::before{background:radial-gradient(130% 90% at 75% 0%,rgba(199,231,138,0.28),transparent 60%)}
+.door:hover{transform:translateY(-9px);border-color:rgba(199,231,138,0.4)}.door:hover::before{opacity:1}
+.dr-k{position:relative;font-weight:700;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--cream3);margin-bottom:14px}
+.door h3{position:relative;font-weight:800;font-size:clamp(28px,3.4vw,40px);letter-spacing:-1.5px;color:var(--cream);margin-bottom:12px;line-height:1}
+.door .dp{position:relative;font-weight:300;font-size:15px;color:var(--cream2);line-height:1.6;margin:0 0 22px}
+.dr-arw{position:relative;margin-top:auto;font-weight:700;font-size:13px;letter-spacing:1px;color:var(--lime);display:inline-flex;align-items:center;gap:8px;transition:gap var(--ed) var(--ease)}
+.door:hover .dr-arw{gap:15px}
+.both{max-width:720px;margin:34px auto 0;text-align:center;font-weight:300;font-size:18px;color:var(--cream2)}
+.both b{color:var(--lime);font-weight:600}
+.leadbridge{position:relative;border-radius:22px;border:1px solid rgba(89,194,174,0.28);background:rgba(89,194,174,0.05);backdrop-filter:blur(14px);padding:42px 44px;overflow:hidden}
+.leadbridge::before{content:'';position:absolute;inset:0;background:radial-gradient(120% 90% at 15% 0%,rgba(89,194,174,0.18),transparent 60%);pointer-events:none}
+.lb-label{position:relative;font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.lb-head{position:relative;font-weight:800;font-size:clamp(24px,3.2vw,36px);letter-spacing:-1px;color:var(--cream);line-height:1.06;margin-bottom:16px}
+.lb-text{position:relative;font-size:17px;color:var(--cream2);max-width:680px;margin-bottom:22px;line-height:1.7}
+.lb-link{position:relative;display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;color:var(--lime);text-decoration:none;transition:gap var(--ed) var(--ease),color var(--ed) var(--ease)}
+.lb-link:hover{gap:15px;color:#d6f09b}
+.faq{max-width:760px}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;text-align:left;background:none;border:none;font-family:var(--ff);cursor:pointer;padding:24px 0;display:flex;justify-content:space-between;align-items:center;gap:22px;color:var(--cream);font-weight:400;font-size:clamp(17px,2vw,20px);line-height:1.4;transition:color var(--ed) var(--ease)}
+.faq-q:hover{color:var(--lime)}
+.faq-ic{flex-shrink:0;width:24px;height:24px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-weight:300;font-size:17px;color:var(--cream2);transition:transform var(--ed) var(--ease),border-color var(--ed) var(--ease),color var(--ed) var(--ease)}
+.faq-item.open .faq-ic{transform:rotate(45deg);border-color:var(--lime);color:var(--lime)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height var(--ed) var(--ease)}
+.faq-a-in{padding:0 0 26px;font-weight:300;font-size:16px;color:var(--cream2);line-height:1.75;max-width:660px}
+.faq-a-in b{color:var(--lime);font-weight:600}
+.finalcta{text-align:center;padding:88px 0}
+.finalcta .big{font-weight:800;font-size:clamp(30px,4.8vw,60px);letter-spacing:-2px;color:var(--cream);margin-bottom:26px;line-height:1.02}
+.finalcta .big .a{color:var(--lime)}
+footer{padding:70px 0 60px;text-align:center;border-top:1px solid var(--line);position:relative;z-index:3}
+footer p{font-weight:400;font-size:11px;letter-spacing:2px;color:var(--cream3);text-transform:uppercase}
+@media(max-width:760px){.nl a:not(.pill){display:none}.doors{grid-template-columns:1fr}}
+.soon{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--cream3)}.soon::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--amber);box-shadow:0 0 10px var(--amber)}
+footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoration:none;transition:color .55s cubic-bezier(0.33,1,0.68,1)}footer .legal a:hover{color:var(--lime)}
+</style>
+<link rel="canonical" href="https://thehumanorigin.org/de/zwei-tueren/">
+<link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/two-doors/">
+<link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/zwei-tueren/">
+<link rel="alternate" hreflang="x-default" href="https://thehumanorigin.org/en/two-doors/">
+</head>
+<body>
+<div class="atmos"><div class="wash w1"></div><div class="wash w2"></div><div class="wash w3"></div></div>
+<div class="grain"></div>
+
+<nav>
+  <div class="logo">The Human <b>Origin</b></div>
+  <div class="nl"><a href="/de/">The Human Origin</a><a href="/de/fuehrungstisch/">Der Führungstisch</a><a class="on" href="/de/zwei-tueren/">Zwei Türen</a><a href="/de/original/">Das Original</a><a class="pill" href="/de/innerer-puls/">Innerer Puls</a></div>
+</nav>
+
+<div class="wrap">
+<section class="hero">
+  <div class="label">Zwei Türen · die innere Arbeit</div>
+  <h1 class="hline"><span class="hw">Kommen</span> <span class="hw">Sie</span> <span class="hw">zu</span> <span class="hw">sich</span> <span class="hw a">zurück.</span></h1>
+  <div class="subtitle">Die Arbeit hinter der Rolle.</div>
+  <p class="lead">Zwei Wege hinein, ein Ziel — der Mensch, der Sie waren, bevor Sie lernten, sich in etwas Annehmbares zurechtzubiegen. Ein Eingang über den Verstand, einer über den Körper. <b>Die meisten brauchen beides.</b></p>
+  <div class="cta"><a class="btn btn-p" href="/de/innerer-puls/">Inneren Puls starten</a><span class="soon">The Human Origin Nerve · demnächst</span></div>
+</section>
+</div>
+
+<div class="hr"></div>
+<div class="wrap"><section class="narrow">
+  <div class="slabel">Eine Spaltung, zwei Türen</div>
+  <div class="megaline hline"><span class="hw">Eine</span> <span class="hw">Spaltung.</span> <span class="hw a">Zwei</span> <span class="hw a">Türen.</span></div>
+  <p>Was die Leistungskultur nimmt, nimmt sie an zwei Stellen. Sie begräbt, wer Sie sind, unter der Rolle — Ihre Essenz, Ihren Schatten. Und sie bringt dem Körper bei, sich anzuspannen, sich zu inszenieren, nie ganz anzukommen. Der Weg zurück führt durch beide. Beginnen Sie mit der Tür, die Sie stärker hineinzieht.</p>
+</section></div>
+
+<div class="wrap"><section>
+  <div class="doors">
+    <a class="door dr1" href="/de/essenz/"><div class="dr-k">Für Sie · Essenz</div><h3>Essenz</h3><div class="dp">Wer Sie unter dem Skript sind, das man Ihnen gab — das Männliche und das Weibliche, Essenz und Schatten. Das Selbst, wieder zurückgeholt.</div><span class="dr-arw">Eintauchen →</span></a>
+    <a class="door dr2" href="/de/praesenz/"><div class="dr-k">Für Sie · Präsenz</div><h3>Präsenz</h3><div class="dp">Der Körper, den Sie spüren können — Sicherheit, Nähe, Berührung. Wo Einsicht endlich zu etwas wird, das Sie leben, nicht nur verstehen.</div><span class="dr-arw">Eintauchen →</span></a>
+  </div>
+  <p class="both">Die meisten brauchen beides. <b>Der Verstand gibt dem Körper die Erlaubnis; der Körper macht die Einsicht des Verstandes wirklich.</b></p>
+</section></div>
+
+<div class="hr"></div>
+<div class="wrap"><section class="narrow">
+  <div class="slabel">Häufige Fragen</div>
+  <div class="faq">
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">Ist das Therapie, Coaching oder ein Trainingsprogramm?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">Nichts davon. Es ist eine <b>Diagnostik</b> — sie liest die Überlebensmuster, die in einem Menschen oder einem Raum laufen, so wie fünfundzwanzig Jahre Film mich gelehrt haben, ein Set zu lesen. Keine Couch, kein Lehrplan, kein Workshop.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">Es gibt eine Seite für Organisationen und eine für den Menschen. Welche ist für mich?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">Zwei Türen, ein Ursprung. Wenn Sie Menschen führen, beginnen Sie mit <b>dem Führungstisch</b> und dem Pulscheck. Wenn es Sie eher persönlich anzieht — wer Sie unter der Rolle sind, oder im eigenen Körper anzukommen — beginnen Sie mit <b>Zwei Türen</b> und dem Inneren Puls. Die meisten, ehrlich gesagt, brauchen beides.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">Wie hängen der Innere Puls und der Pulscheck zusammen?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">Der Innere Puls liest Sie; der Pulscheck liest den Raum, den Sie führen. Dieselbe Linse, zweimal ausgerichtet — denn <b>der Raum kopiert den Zustand, den Sie hineintragen.</b> Nehmen Sie eine von beiden; sie verweisen aufeinander.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">Ist die persönliche Arbeit — Essenz und Präsenz — nur für Männer?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">Nein. Jeder Mensch trägt ein Männliches und ein Weibliches in sich, unabhängig vom Geschlecht — das ist für Männer, Frauen, Paare und alle, für die das alte Skript nie gepasst hat. Es gibt einen <b>besonderen Fokus auf Männer</b>, weil eine patriarchale Welt ihnen das durchsetzende Ende des Musters in die Hand gegeben hat — doch niemand steht außerhalb davon.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">Was passiert nach dem Inneren Puls — und was kostet er?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">Der Innere Puls ist kostenlos und dauert drei Minuten. Von dort können Sie allein über den Kanal beginnen, sich einem Kreis anschließen oder eins zu eins arbeiten. Die persönliche Arbeit <b>beginnt kostenlos und vertieft sich von dort</b>; körpernahe Arbeit öffnet sich, sobald ihre Struktur richtig steht.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">Ist alles vertraulich?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">Vollständig. Was gesagt wird, bleibt, wo es gesagt wurde — das ist die ganze <b>Voraussetzung</b> dafür, dass überhaupt etwas Wahres gesagt wird.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">Gibt es Belege, dass das funktioniert?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">Es steht im Einklang mit einem Jahrhundert an Forschung — Porges dazu, wie der Körper Sicherheit liest, Frankl zum Sinn, Edmondson dazu, was Teams aussprechen und was nicht, Keltner zur Macht — und fünfundzwanzig Jahren, in denen ich dieselben Muster an Filmsets beobachtet habe. <b>Die Wissenschaft bestätigt, was der Körper längst wusste.</b></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">In welchen Sprachen und Regionen arbeiten Sie?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">International, auf Englisch und Deutsch. Die Wurzeln liegen im europäischen Film und in Führungsräumen — doch ein Nervensystem hat <b>keine Nationalität</b>, und diese Arbeit reist mit.</div></div></div>
+  </div>
+</section></div>
+
+<div class="hr"></div>
+<div class="wrap"><section>
+  <div class="leadbridge">
+    <div class="lb-label">Wo daraus Führung wird</div>
+    <div class="lb-head">Kommen Sie zu sich zurück, und führen Sie wahrhaftig.</div>
+    <p class="lb-text">Die innere Arbeit ist nicht getrennt davon, wie Sie führen — sie ist das Fundament. Ein Mensch, der zu sich zurückgefunden hat, führt, gestaltet und verbindet sich aus einem Ort, den keine Rolle vortäuschen kann. Genau diesen Vorsprung soll die Arbeit einer Organisation geben:</p>
+    <a class="lb-link" href="/de/fuehrungstisch/">Der Führungstisch →</a>
+  </div>
+</section></div>
+
+<div class="wrap"><section class="finalcta">
+  <div class="big hline"><span class="hw">Kommen</span> <span class="hw">Sie</span> <span class="hw a">zurück.</span></div>
+  <p style="max-width:520px;margin:0 auto 34px">Beginnen Sie mit der Tür, die Sie hineinzieht. Die andere wird warten.</p>
+  <a class="btn btn-p" href="/de/innerer-puls/">Inneren Puls starten</a>
+</section></div>
+
+<footer><p>Wahrheit f&uuml;hrt. Fassade kostet. &middot; &copy; 2026 The Human Origin &middot; Tom Waldek</p><p class="legal"><a href="/de/impressum/">Impressum</a> &middot; <a href="/de/datenschutz/">Datenschutz</a> &middot; <a href="/sitemap.xml">Sitemap</a></p></footer>
+<script>
+function faq(btn){var item=btn.parentElement;var a=item.querySelector('.faq-a');var open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(el){el.classList.remove('open');el.querySelector('.faq-a').style.maxHeight=null;});
+  if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}}
+</script>
+</body>
+</html>

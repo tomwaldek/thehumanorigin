@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pulscheck · The Human Origin</title>
+<title>Innerer Puls · The Human Origin</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
@@ -19,9 +19,9 @@
 body{background:var(--bg);color:var(--cream);font-family:var(--ff);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;min-height:100vh}
 .atmos{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
 .wash{position:absolute;border-radius:50%;filter:blur(120px)}
-.w1{width:620px;height:620px;background:radial-gradient(circle,rgba(89,194,174,0.30),transparent 66%);top:-160px;right:-120px}
-.w2{width:560px;height:560px;background:radial-gradient(circle,rgba(233,167,101,0.26),transparent 66%);bottom:-140px;left:-120px}
-.w3{width:520px;height:520px;background:radial-gradient(circle,rgba(199,231,138,0.20),transparent 66%);top:40%;right:-100px}
+.w1{width:620px;height:620px;background:radial-gradient(circle,rgba(233,167,101,0.34),transparent 66%);top:-160px;right:-120px}
+.w2{width:560px;height:560px;background:radial-gradient(circle,rgba(89,194,174,0.28),transparent 66%);bottom:-140px;left:-120px}
+.w3{width:520px;height:520px;background:radial-gradient(circle,rgba(199,231,138,0.22),transparent 66%);top:40%;right:-100px}
 @keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(44px,32px)}}
 @media(prefers-reduced-motion:no-preference){.w1{animation:drift 26s ease-in-out infinite}.w2{animation:drift 30s ease-in-out infinite reverse}.w3{animation:drift 34s ease-in-out infinite}}
 .grain{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(120% 80% at 50% 0%,transparent 40%,rgba(6,12,8,0.5) 100%)}
@@ -32,14 +32,15 @@ nav{position:sticky;top:0;z-index:40;padding:22px 44px;display:flex;justify-cont
 .nl a:hover,.nl a.on{color:var(--lime)}
 .stage{position:relative;z-index:3;max-width:720px;margin:0 auto;padding:70px 32px 90px;min-height:70vh;display:flex;flex-direction:column;justify-content:center}
 .card{position:relative;border-radius:26px;border:1px solid rgba(255,255,255,0.10);background:rgba(255,255,255,0.045);backdrop-filter:blur(20px) saturate(1.35);box-shadow:0 50px 120px -55px rgba(0,0,0,0.9);padding:52px 52px 48px;overflow:hidden}
-.card::before{content:'';position:absolute;inset:0;opacity:0.5;pointer-events:none;background:radial-gradient(120% 90% at 12% 0%,rgba(89,194,174,0.12),transparent 60%)}
+.card::before{content:'';position:absolute;inset:0;opacity:0.5;pointer-events:none;background:radial-gradient(120% 90% at 12% 0%,rgba(199,231,138,0.12),transparent 60%)}
 .label{position:relative;font-weight:700;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--limedeep);margin-bottom:22px}
-.hbig{position:relative;font-weight:800;font-size:clamp(30px,4.6vw,50px);letter-spacing:-1.5px;line-height:1.05;color:var(--cream);margin-bottom:20px}
+.hbig{position:relative;font-weight:800;font-size:clamp(28px,4.2vw,46px);letter-spacing:-1.5px;line-height:1.05;color:var(--cream);margin-bottom:20px}
 .hbig .a{color:var(--lime)}
 .sub{position:relative;font-weight:300;font-size:18px;color:var(--cream2);margin-bottom:34px;line-height:1.6}
 .btn{position:relative;font-weight:700;font-size:14px;padding:15px 32px;border-radius:100px;text-decoration:none;border:none;cursor:pointer;font-family:var(--ff);transition:transform var(--ed) var(--ease),background var(--ed) var(--ease),color var(--ed) var(--ease),border-color var(--ed) var(--ease)}
 .btn-p{background:var(--lime);color:#12200c}.btn-p:hover{transform:translateY(-3px)}
 .btn-g{background:none;color:var(--cream);border:1px solid var(--line)}.btn-g:hover{border-color:var(--lime);color:var(--lime)}
+/* progress */
 .prog{position:relative;display:flex;align-items:center;gap:14px;margin-bottom:30px}
 .prog-count{font-weight:200;font-size:15px;color:var(--cream3);letter-spacing:1px;white-space:nowrap}
 .prog-bar{flex:1;height:2px;background:var(--line);border-radius:2px;overflow:hidden}
@@ -55,23 +56,25 @@ nav{position:sticky;top:0;z-index:40;padding:22px 44px;display:flex;justify-cont
 .opt.sel .dot{background:#12200c;border-color:#12200c;box-shadow:none}
 .back{position:relative;margin-top:26px;background:none;border:none;color:var(--cream3);font-family:var(--ff);font-size:13px;cursor:pointer;transition:color var(--ed) var(--ease)}
 .back:hover{color:var(--lime)}
+/* results */
 .meters{position:relative;display:grid;gap:20px;margin:30px 0 34px}
 .meter .mtop{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px;gap:14px}
 .meter .mname{font-weight:700;font-size:13px;letter-spacing:1px;color:var(--cream)}
 .meter .mval{font-weight:200;font-size:14px;color:var(--cream3);white-space:nowrap}
 .meter .mtrack{height:8px;background:var(--line);border-radius:8px;overflow:hidden}
 .meter .mfill{height:100%;border-radius:8px;width:0;transition:width 1s var(--ease)}
-.meter.room .mfill{background:linear-gradient(90deg,var(--teal),#8fe0d0)}
-.meter.you .mfill{background:linear-gradient(90deg,var(--amber),#f2c48a)}
+.meter.mind .mfill{background:linear-gradient(90deg,var(--amber),#f2c48a)}
+.meter.body .mfill{background:linear-gradient(90deg,var(--teal),#8fe0d0)}
 .rlead{position:relative;font-weight:300;font-size:19px;color:var(--cream2);line-height:1.7;margin-bottom:14px}
 .rlead b{color:var(--cream);font-weight:600}
-.route{position:relative;border-left:2px solid var(--limedeep);padding:4px 0 4px 22px;margin:22px 0 0}
+.route{position:relative;border-left:2px solid var(--limedeep);padding:4px 0 4px 22px;margin:22px 0 30px}
 .route .rn{font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--limedeep);margin-bottom:8px}
 .route .rt{font-weight:300;font-size:18px;color:var(--cream);line-height:1.6}
 .route .rt b{color:var(--lime);font-weight:600}
-.route-i{margin-top:32px}
-.rcta{position:relative;margin-top:20px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-.beyond{position:relative;margin-top:34px;padding-top:28px;border-top:1px solid var(--line)}
+.route-o{margin-top:34px}
+.orcta{margin-top:20px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.rcta{position:relative;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.beyond{position:relative;margin-top:34px;padding-top:28px;border-top:1px solid var(--line);display:grid;gap:20px}
 .beyond-item{font-weight:300;font-size:15px;color:var(--cream2);line-height:1.62}
 .beyond-item .bk{display:block;font-weight:700;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--cream3);margin-bottom:6px}
 .beyond-item a{color:var(--lime);text-decoration:none;font-weight:600;transition:color var(--ed) var(--ease)}
@@ -81,10 +84,10 @@ nav{position:sticky;top:0;z-index:40;padding:22px 44px;display:flex;justify-cont
 @media(max-width:640px){.card{padding:36px 26px 32px}.nl a{display:none}.qtext{min-height:0}}
 footer{padding:60px 0 54px;text-align:center;border-top:1px solid var(--line);position:relative;z-index:3;max-width:720px;margin:0 auto}footer p{font-weight:400;font-size:11px;letter-spacing:2px;color:var(--cream3);text-transform:uppercase}footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoration:none;transition:color .55s cubic-bezier(0.33,1,0.68,1)}footer .legal a:hover{color:var(--lime)}
 </style>
-<link rel="canonical" href="https://thehumanorigin.org/de/pulscheck/">
-<link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/pulse-check/">
-<link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/pulscheck/">
-<link rel="alternate" hreflang="x-default" href="https://thehumanorigin.org/en/pulse-check/">
+<link rel="canonical" href="https://thehumanorigin.org/de/innerer-puls/">
+<link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/inner-pulse/">
+<link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/innerer-puls/">
+<link rel="alternate" hreflang="x-default" href="https://thehumanorigin.org/en/inner-pulse/">
 </head>
 <body>
 <div class="atmos"><div class="wash w1"></div><div class="wash w2"></div><div class="wash w3"></div></div>
@@ -98,13 +101,15 @@ footer{padding:60px 0 54px;text-align:center;border-top:1px solid var(--line);po
 <div class="stage">
   <div class="card">
 
+    <!-- INTRO -->
     <div id="intro">
-      <div class="label">Pulscheck</div>
-      <div class="hbig">Sagt Ihnen Ihr Raum die <span class="a">Wahrheit?</span></div>
-      <div class="sub">Acht Aussagen. Drei Minuten. Vor allem über den Raum, den Sie führen — und am Ende über den Zustand, den Sie hineintragen. Das sieht niemand außer Ihnen.</div>
-      <button class="btn btn-p" onclick="start()">Pulscheck starten</button>
+      <div class="label">Innerer Puls</div>
+      <div class="hbig">Wo <span class="a">inszenieren</span> Sie sich? Wo sind Sie präsent?</div>
+      <div class="sub">Acht Aussagen. Drei Minuten. Das sieht niemand außer Ihnen — es ist ein Spiegel, keine Prüfung. Antworten Sie so, wie es tatsächlich ist, nicht wie es sein sollte.</div>
+      <button class="btn btn-p" onclick="start()">Inneren Puls starten</button>
     </div>
 
+    <!-- QUESTION -->
     <div id="quiz" class="hidden">
       <div class="prog"><span class="prog-count" id="pcount">01 / 08</span><div class="prog-bar"><div class="prog-fill" id="pfill"></div></div></div>
       <div class="qtext" id="qtext"></div>
@@ -112,20 +117,23 @@ footer{padding:60px 0 54px;text-align:center;border-top:1px solid var(--line);po
       <button class="back hidden" id="backbtn" onclick="back()">← zurück</button>
     </div>
 
+    <!-- RESULTS -->
     <div id="results" class="hidden">
-      <div class="label">Ihr Pulscheck</div>
+      <div class="label">Ihr Innerer Puls</div>
       <div class="hbig" id="rhead"></div>
       <div class="rlead" id="rlead"></div>
       <div class="meters">
-        <div class="meter room"><div class="mtop"><span class="mname">Der Raum — was ungesagt bleibt</span><span class="mval" id="roomv"></span></div><div class="mtrack"><div class="mfill" id="roomf"></div></div></div>
-        <div class="meter you"><div class="mtop"><span class="mname">Sie — der Zustand, den Sie hineintragen</span><span class="mval" id="youv"></span></div><div class="mtrack"><div class="mfill" id="youf"></div></div></div>
+        <div class="meter mind"><div class="mtop"><span class="mname">Die Tür des Verstandes — was unter der Rolle liegt</span><span class="mval" id="mindv"></span></div><div class="mtrack"><div class="mfill" id="mindf"></div></div></div>
+        <div class="meter body"><div class="mtop"><span class="mname">Die Tür des Körpers — Sicherheit, die Sie spüren</span><span class="mval" id="bodyv"></span></div><div class="mtrack"><div class="mfill" id="bodyf"></div></div></div>
       </div>
-      <div class="route"><div class="rn">Wo die Arbeit stattfindet</div><div class="rt">Genau das legt die Vertrauensarchitektur-Diagnostik offen — die Überlebensmuster, die Ihren Raum steuern, sichtbar gemacht und dann verändert. <b>Der Führungstisch</b> ist der Ort dafür.</div><div class="rcta"><a class="btn btn-p" href="/de/fuehrungstisch/">Der Führungstisch →</a><a class="btn btn-g" href="https://cal.eu/tomwaldek/erstgespraech" target="_blank" rel="noopener">Erstgespräch vereinbaren</a></div></div>
-      <div class="route route-i"><div class="rn">Es beginnt bei Ihnen</div><div class="rt" id="rstarts"></div><div class="rcta"><a class="btn btn-p" href="/de/innerer-puls/">Zum Inneren Puls →</a><a class="btn btn-g" href="/de/zwei-tueren/">oder Zwei Türen</a></div></div>
+      <div class="route"><div class="rn">Wo Sie beginnen</div><div class="rt" id="rroute"></div><div class="rcta" id="rcta" style="margin-top:20px"></div></div>
+
+      <div class="route route-o"><div class="rn">Das größere Bild</div><div class="rt">Nichts davon ist ein Fehler. Es ist der Mensch, der sich an das anpasst, was nicht sicher war — und gerade die menschlichsten Anteile in Ihnen sind die, deren Rückholung sich lohnt. Diese Überzeugung ist der Boden, auf dem hier alles steht.</div><div class="orcta"><a class="btn btn-p" href="/de/original/">Das Original →</a></div></div>
+
       <div class="beyond">
-        <div class="beyond-item"><span class="bk">Das größere Bild</span>Nichts davon ist ein Fehler in Ihren Leuten oder in Ihnen — es ist der Mensch, der sich an das anpasst, was nicht sicher war. Warum das zählt und was es kostet, darüber hinwegzusehen, ist die ganze Überzeugung hier. <a href="/de/original/">Das Original →</a></div>
+        <div class="beyond-item"><span class="bk">Wenn Sie Menschen führen</span>Dieses Muster bleibt nicht in Ihrem eigenen Leben — der Zustand, den Sie in einen Raum tragen, wird zum Raum. <a href="/de/fuehrungstisch/">Der Führungstisch →</a></div>
       </div>
-      <div class="disclaimer">Der Pulscheck ist eine Reflexion, keine Diagnose. Er misst nichts Klinisches — er gibt dem Sprache, was Sie im Raum ohnehin spüren. Nichts davon wird gespeichert oder gesendet.</div>
+      <div class="disclaimer">Der Innere Puls ist eine Reflexion, keine Diagnose. Er misst nichts Klinisches — er gibt nur dem Sprache, was Sie ohnehin spüren. Nichts davon wird gespeichert oder gesendet.</div>
     </div>
 
   </div>
@@ -133,18 +141,19 @@ footer{padding:60px 0 54px;text-align:center;border-top:1px solid var(--line);po
 
 <script>
 const Q=[
- {t:"In unseren Besprechungen sagen die Menschen eher das, was <b>sicher</b> ist, als das, was wahr ist.", d:"room"},
- {t:"Echte Probleme erreichen mich <b>spät</b> — erst, wenn sie schon etwas gekostet haben.", d:"room"},
- {t:"Zwischen dem Unternehmen, das wir nach außen zeigen, und dem, das wir <b>sind</b>, liegt eine Lücke.", d:"room"},
- {t:"Meine Leute könnten Ihnen sagen, was sie tun — aber nicht, <b>warum es ihnen wichtig ist.</b>", d:"room"},
- {t:"Gute Leute gehen, und der wahre Grund kommt im <b>Austrittsgespräch</b> selten zur Sprache.", d:"room"},
- {t:"Entscheidungen fallen im Raum — und werden dann still <b>auf dem Flur neu getroffen.</b>", d:"room"},
- {t:"Wenn der Druck steigt, greife ich schneller zu <b>Kontrolle</b> als zu Verbindung.", d:"you"},
- {t:"Der Zustand, mit dem ich hereinkomme — mir ist nicht immer bewusst, was er im Raum <b>auslöst.</b>", d:"you"}
+ {t:"Es gibt eine Version von mir, die ich der Welt zeige — und eine <b>wahrere</b>, die ich verberge.", door:"mind"},
+ {t:"Ich lebe vor allem im <b>Kopf</b> — was mein Körper macht, nehme ich selten wahr.", door:"body"},
+ {t:"Anteile von mir — Wut, Bedürfnis, Weichheit, Hunger — habe ich gelernt, <b>aus dem Blick zu halten.</b>", door:"mind"},
+ {t:"Wenn mir jemand nahekommt, körperlich oder emotional, <b>spannt sich</b> etwas in mir an.", door:"body"},
+ {t:"Ich <b>spiele</b> öfter, dass es mir gut geht, als es mir tatsächlich gut geht.", door:"mind"},
+ {t:"Auch wenn nichts ist, fällt es mir schwer, ganz <b>zur Ruhe zu kommen.</b>", door:"body"},
+ {t:"Ich habe mich so lange in etwas Annehmbares geformt, dass ich <b>nicht sicher bin, was darunter liegt.</b>", door:"mind"},
+ {t:"Ruhe, Stille oder Nähe können sich schwerer anfühlen als <b>beschäftigt zu bleiben.</b>", door:"body"}
 ];
-const OPTS=[["Selten",0],["Manchmal",1],["Oft",2],["Fast immer",3]];
-let i=0, ans=new Array(Q.length).fill(null), busy=false;
+const OPTS=[["Nicht ich",0],["Ein wenig",1],["Oft",2],["Das bin ich",3]];
+let i=0, ans=new Array(Q.length).fill(null);
 const $=id=>document.getElementById(id);
+
 function start(){i=0;ans=new Array(Q.length).fill(null);busy=false;$('intro').classList.add('hidden');$('results').classList.add('hidden');$('quiz').classList.remove('hidden');render();}
 function render(){
   const q=Q[i];
@@ -160,31 +169,41 @@ function render(){
   });
   $('backbtn').classList.toggle('hidden', i===0);
 }
+let busy=false;
 function choose(val,btn){
-  if(busy)return;busy=true;ans[i]=val;if(btn)btn.classList.add('sel');
+  if(busy)return;busy=true;
+  ans[i]=val;
+  if(btn)btn.classList.add('sel');
   setTimeout(()=>{busy=false;i++;if(i<Q.length){render();}else{$('pfill').style.width='100%';results();}},340);
 }
 function back(){if(i>0){i--;busy=false;render();}}
+
 function results(){
   $('quiz').classList.add('hidden');$('results').classList.remove('hidden');
-  let room=0,you=0;
-  Q.forEach((q,k)=>{if(q.d==='room')room+=ans[k];else you+=ans[k];});
-  const rp=room/18;              // the headline describes the ROOM — band it on the room questions only
+  let mind=0,body=0;
+  Q.forEach((q,k)=>{if(q.door==='mind')mind+=ans[k];else body+=ans[k];});
+  const total=mind+body; // 0..24
   let head,lead;
-  if(rp<=0.25){head='Ihr Raum <span class="a">atmet.</span>';lead='Seltene Luft — hier sagen Ihnen die Menschen eher die Wahrheit, als dass sie Sie davor schützen. Es bleibt immer etwas zu entdecken, doch dieser Raum ist so, wie ein Raum sein sollte.';}
-  else if(rp<=0.50){head='Der Raum <span class="a">inszeniert</span> mehr, als er sagt.';lead='Fähig, tragfähig — und dabei still damit beschäftigt, sich um Sie herum zurechtzuschneiden. Sie spüren die Lücke zwischen dem, was gesagt wird, und dem, was gemeint ist; sie zu benennen ist der Anfang davon, sie zu schließen.';}
-  else if(rp<=0.75){head='<span class="a">Überlebensarchitektur</span> steuert den Raum.';lead='Vieles bleibt ungesagt, damit es weitergeht. Das trägt — bis die Kosten des Verborgenen den Komfort des Verbergens übersteigen. Genau das legt die Diagnostik offen.';}
-  else{head='Der Raum hat gelernt, sich <span class="a">selbst zu inszenieren.</span>';lead='Fast alles Echte wird aus dem Blick verwaltet — und es gab Gründe, warum es so kam. Kein Versagen. Ein Muster mit einem Ursprung — und mit einem Weg hinaus.';}
+  if(total<=6){head='Sie sind weitgehend <span class="a">da.</span>';lead='Sie leben näher bei sich als die meisten. Es gibt noch Türen, die sich zu öffnen lohnen — aber Sie inszenieren sich nicht durch den Tag, und das ist seltener, als Sie denken.';}
+  else if(total<=12){head='Sie <span class="a">inszenieren</span> mehr, als Sie zeigen.';lead='Nach außen tragen Sie es, nach innen kostet es still mehr. Sie spüren das längst — jetzt hat es einen Namen, und ihn auszusprechen ist der erste Schritt, der etwas verändert.';}
+  else if(total<=18){head='Vieles von Ihnen bleibt <span class="a">aus dem Blick.</span>';lead='Sie halten vieles von sich zurück, damit es weiterläuft. Keine Schwäche — eine Strategie, die Sie einmal sicher hielt und inzwischen mehr kostet, als sie zurückgibt.';}
+  else{head='Sie <span class="a">inszenieren sich schon lange.</span>';lead='Gerade wird fast alles gespielt oder abgewehrt — und dafür gab es echte Gründe. Das ist kein Urteil. Es ist der Moment, in dem Sie es bemerken dürfen — und beginnen zurückzufinden.';}
   $('rhead').innerHTML=head;$('rlead').innerHTML=lead;
-  $('roomv').textContent=room+' / 18';$('youv').textContent=you+' / 6';
-  setTimeout(()=>{$('roomf').style.width=(room/18*100)+'%';$('youf').style.width=(you/6*100)+'%';},80);
-  let starts;
-  if(you/6 > room/18){
-    starts='Ihr eigener Wert liegt höher als der des Raumes — und der Raum übernimmt ihn. Die Vertrauenskaskade läuft nur in eine Richtung: <b>bevor sich der Raum ändert, ändert sich das hier.</b> Beginnen Sie bei dem Zustand, den Sie hineintragen — mit dem Inneren Puls oder mit Zwei Türen.';
+  $('mindv').textContent=mind+' / 12';$('bodyv').textContent=body+' / 12';
+  setTimeout(()=>{$('mindf').style.width=(mind/12*100)+'%';$('bodyf').style.width=(body/12*100)+'%';},80);
+  let rn,cta;
+  const gap=mind-body;
+  if(gap>4){
+    rn='Die Tür des Verstandes schlägt etwas lauter aus — mehr von Ihnen ist begraben oder gespielt als angespannt. <b>Essenz</b> ist ein natürlicher Einstieg: dem Menschen zu begegnen, der Sie unter der Rolle sind. Die Tür des Körpers zählt trotzdem — die meisten brauchen beide.';
+    cta='<a class="btn btn-p" href="/de/essenz/">Zur Essenz →</a><a class="btn btn-g" href="/de/zwei-tueren/">oder bei Zwei Türen beginnen</a>';
+  }else if(gap<-4){
+    rn='Die Tür des Körpers schlägt etwas lauter aus — mehr von Ihnen ist angespannt als begraben. <b>Präsenz</b> ist ein natürlicher Einstieg: den Körper lernen zu lassen, dass es sicher ist, hier zu sein. Die Tür des Verstandes zählt trotzdem — die meisten brauchen beide.';
+    cta='<a class="btn btn-p" href="/de/praesenz/">Zur Präsenz →</a><a class="btn btn-g" href="/de/zwei-tueren/">oder bei Zwei Türen beginnen</a>';
   }else{
-    starts='Auch hier übernimmt der Raum den Zustand, den Sie hineintragen. Der tiefste Hebel Ihrer Führung ist keine Technik — <b>das sind Sie.</b> Der Innere Puls oder Zwei Türen: dort beginnt diese Seite der Arbeit.';
+    rn='Beide Türen stehen in Ihnen offen — das Selbst unter der Rolle und der Körper, der es trägt. Das sind <b>Zwei Türen</b>. Beginnen Sie mit der, die Sie hineinzieht; die andere wird warten.';
+    cta='<a class="btn btn-p" href="/de/zwei-tueren/">Zu Zwei Türen →</a>';
   }
-  $('rstarts').innerHTML=starts;
+  $('rroute').innerHTML=rn;$('rcta').innerHTML=cta;
 }
 </script>
 <footer><p>Wahrheit f&uuml;hrt. Fassade kostet. &middot; &copy; 2026 The Human Origin &middot; Tom Waldek</p><p class="legal"><a href="/de/impressum/">Impressum</a> &middot; <a href="/de/datenschutz/">Datenschutz</a> &middot; <a href="/sitemap.xml">Sitemap</a></p></footer>
