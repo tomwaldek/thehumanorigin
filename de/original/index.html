@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Das Original · The Human Origin</title>
-<meta name="description" content="KI ist die neueste Schicht auf einer sehr alten Maschine. Sie bekommt das Ergebnis — nie das Entstehen. Warum der Mensch das Original bleibt.">
+<meta name="description" content="KI ist die neueste Schicht auf einer sehr alten Maschine. Koloniale, patriarchale, rassistische Ordnungen kamen zuerst — und sie laufen bis heute. Warum der Mensch das Original bleibt, und wie Sie es zurückholen.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
@@ -64,6 +64,18 @@ h1 .a{font-weight:800;color:var(--lime)}
 .deck .qa{position:relative;font-weight:700;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--limedeep);margin-top:16px}
 .deck .big2{position:relative;font-weight:800;font-size:24px;color:var(--cream);line-height:1.05;letter-spacing:-1px}
 .deck .big2 span{color:var(--lime)}
+/* glass clarity block */
+.clar{max-width:900px}
+.clar-item{display:grid;grid-template-columns:54px 1fr;gap:26px;align-items:center;margin-bottom:40px}
+.clar-item:nth-child(2){margin-left:10%}
+.clar-item:nth-child(3){margin-left:20%}
+.clar-item:last-child{margin-bottom:0}
+.clar-circle{width:54px;height:54px;border-radius:50%;border:1px solid rgba(199,231,138,0.42);background:rgba(255,255,255,0.03);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;font-weight:300;font-size:19px;color:var(--lime);letter-spacing:-1px;box-shadow:0 22px 44px -30px rgba(0,0,0,0.9)}
+@media(prefers-reduced-motion:no-preference){.clar-circle{animation:floaty 6s ease-in-out infinite}.clar-item:nth-child(2) .clar-circle{animation-delay:-2s}.clar-item:nth-child(3) .clar-circle{animation-delay:-4s}}
+.clar-k{font-weight:700;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--limedeep);margin-bottom:8px;display:block}
+.clar-t{font-weight:300;font-size:clamp(16px,1.8vw,19px);color:var(--cream2);line-height:1.6}
+.clar-t b{color:var(--cream);font-weight:600}
+@media(max-width:640px){.clar-item{margin-left:0!important;grid-template-columns:44px 1fr;gap:16px}.clar-circle{width:44px;height:44px;font-size:16px}}
 section{padding:62px 0}
 .hr{height:1px;background:var(--line);max-width:1040px;margin:0 auto;position:relative;z-index:3}
 .slabel{font-weight:700;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--limedeep);margin-bottom:30px}
@@ -98,7 +110,7 @@ footer p{font-weight:400;font-size:11px;letter-spacing:2px;color:var(--cream3);t
 .rv{opacity:0;transform:translateY(16px);transition:opacity .75s var(--ease),transform .75s var(--ease),filter .75s var(--ease)}.rv.on{opacity:1;transform:none;filter:none}@media(min-width:821px){.rv{filter:blur(7px)}}@media(prefers-reduced-motion:reduce){.rv,.rv.on{opacity:1;transform:none;filter:none;transition:none}}
 footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoration:none;transition:color .55s cubic-bezier(0.33,1,0.68,1)}footer .legal a:hover{color:var(--lime)}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://thehumanorigin.org/#organization","name":"The Human Origin","url":"https://thehumanorigin.org/","email":"tom@thehumanorigin.org","areaServed":"Europe","founder":{"@id":"https://thehumanorigin.org/#tomwaldek"}},{"@type":"Person","@id":"https://thehumanorigin.org/#tomwaldek","name":"Tom Waldek","jobTitle":"Founder, The Human Origin","email":"tom@thehumanorigin.org","url":"https://thehumanorigin.org/","knowsLanguage":["de","en"],"worksFor":{"@id":"https://thehumanorigin.org/#organization"}},{"@type":"WebSite","@id":"https://thehumanorigin.org/#website","name":"The Human Origin","url":"https://thehumanorigin.org/","inLanguage":["de","en"],"publisher":{"@id":"https://thehumanorigin.org/#organization"}},{"@type":"WebPage","@id":"https://thehumanorigin.org/de/original/#webpage","url":"https://thehumanorigin.org/de/original/","name":"Das Original · The Human Origin","inLanguage":"de","description":"KI ist die neueste Schicht auf einer sehr alten Maschine. Sie bekommt das Ergebnis — nie das Entstehen. Warum der Mensch das Original bleibt.","isPartOf":{"@id":"https://thehumanorigin.org/#website"},"about":{"@id":"https://thehumanorigin.org/#organization"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://thehumanorigin.org/#organization","name":"The Human Origin","url":"https://thehumanorigin.org/","email":"tom@thehumanorigin.org","areaServed":"Europe","founder":{"@id":"https://thehumanorigin.org/#tomwaldek"}},{"@type":"Person","@id":"https://thehumanorigin.org/#tomwaldek","name":"Tom Waldek","jobTitle":"Founder, The Human Origin","email":"tom@thehumanorigin.org","url":"https://thehumanorigin.org/","knowsLanguage":["de","en"],"worksFor":{"@id":"https://thehumanorigin.org/#organization"}},{"@type":"WebSite","@id":"https://thehumanorigin.org/#website","name":"The Human Origin","url":"https://thehumanorigin.org/","inLanguage":["de","en"],"publisher":{"@id":"https://thehumanorigin.org/#organization"}},{"@type":"WebPage","@id":"https://thehumanorigin.org/de/original/#webpage","url":"https://thehumanorigin.org/de/original/","name":"Das Original · The Human Origin","inLanguage":"de","description":"KI ist die neueste Schicht auf einer sehr alten Maschine. Koloniale, patriarchale, rassistische Ordnungen kamen zuerst — und sie laufen bis heute. Warum der Mensch das Original bleibt, und wie Sie es zurückholen.","isPartOf":{"@id":"https://thehumanorigin.org/#website"},"about":{"@id":"https://thehumanorigin.org/#organization"}}]}</script>
 <link rel="canonical" href="https://thehumanorigin.org/de/original/">
 <link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/original/">
 <link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/original/">
@@ -119,7 +131,7 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
     <div class="label">Das Fundament</div>
     <h1 class="hline"><span class="hw">Der</span> <span class="hw">Mensch</span> <span class="hw">ist</span> <span class="hw">das</span> <span class="hw a">Original.</span></h1>
     <div class="subtitle">Alles andere ist die Kopie, die hinterherläuft.</div>
-    <p class="lead">Vor jedem System ein Nervensystem. Vor jeder Strategie ein Körper, der über sicher oder nicht entscheidet. Vor jeder Inszenierung ein Mensch, der einfach da war. Alles seither ist <b>die Kopie einer Fähigkeit, die wir längst sind.</b> Wenn Sie den Sog spüren, Ihr Denken und Ihr Gestalten an die Maschine abzugeben — und etwas in Ihnen weigert sich —, dann finden Sie hier das Warum — und den Boden, auf dem Sie stehen, während Sie es sich zurückholen.</p>
+    <p class="lead">Vor jedem System ein Nervensystem. Vor jeder Strategie ein Körper, der über sicher oder nicht entscheidet. Vor jeder Inszenierung ein Mensch, der einfach da war. Alles seither ist <b>die Kopie einer Fähigkeit, die wir längst sind.</b> Die Maschine ist nur die neueste Kopie. Die älteren wurden von Imperien entworfen, und sie laufen bis heute. Wenn Sie den Sog spüren, Ihr Denken und Ihr Gestalten an die Maschine abzugeben — und etwas in Ihnen weigert sich —, dann finden Sie hier das Warum — und den Boden, auf dem Sie stehen, während Sie es sich zurückholen.</p>
     <div class="cta"><a class="btn btn-p" href="/de/fuehrungstisch/">Der Führungstisch</a><a class="btn btn-g" href="/de/">The Human Origin</a></div>
   </div>
   <div class="deckcluster">
@@ -134,6 +146,24 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
   <div class="slabel">Die Haltung</div>
   <div class="megaline hline"><span class="hw">Verteidigen</span> <span class="hw">Sie</span> <span class="hw">den</span> <span class="hw">Menschen</span> <span class="hw">nicht.</span> <span class="hw">Kehren</span> <span class="hw">Sie</span> <span class="hw">zu</span> <span class="hw">ihm</span> <span class="hw a">zurück.</span></div>
   <p>Das ist kein Krieg gegen das Neue. Der Mensch braucht keine Verteidigung — er braucht Erinnerung. Die Fähigkeiten, die man uns als ersetzbar verkauft, sind die ursprünglichen. Alles andere ist die Nachahmung, die hinterherkommt.</p>
+</section></div>
+
+<div class="hr"></div>
+<div class="wrap"><section class="narrow">
+  <div class="slabel">Die ältere Maschine</div>
+  <div class="megaline hline"><span class="hw">Die</span> <span class="hw">Maschine</span> <span class="hw">ist</span> <span class="hw">nicht</span> <span class="hw">neu.</span> <span class="hw">Nur</span> <span class="hw">die</span> <span class="hw a">Verkabelung.</span></div>
+  <p>Lange vor dem Algorithmus gab es Systeme, gebaut, um den Menschen zu etwas Nützlichem und Gehorsamem zurechtzustutzen — koloniale, patriarchale, rassistische Ordnungen, die entschieden, wessen Menschlichkeit zählt, und allen beibrachten, Teile von sich aufzugeben, um zu überleben. KI ist die neueste Schicht auf einer sehr alten Maschine.</p>
+  <p>Die Methode blieb dieselbe. Man nimmt einem Volk sein Wissen und einem Menschen das Wissen von sich selbst und setzt an diese Stelle, was denen nützt, die abrechnen. Die Sprache, das Land, der Körper, die Götter, die Art, ein Kind großzuziehen — für primitiv erklärt und überschrieben von einem Maßstab, den niemand im Raum gewählt hatte. Aus Eroberung wurde Lehrplan. Aus Lehrplan wurde Selbstverständlichkeit.</p>
+  <p>Und die Besatzung endet nicht, wenn die Flagge eingeholt wird. Sie zieht nach innen. Sie wird zu der Stimme, die Sie an genau diesem Maßstab misst und für ein wenig falsch befindet — zu viel, zu emotional, zu fremd, zu weich, zu laut, zu langsam. Die meisten halten diese Stimme für die eigene. <b>Sie wurde anerzogen.</b></p>
+  <p>Die Rechnung wurde nie gleich verteilt. Am schwersten zahlen die Menschen, für die diese Ordnungen nie gebaut wurden — als Erste und am längsten: im Raum, im Körper, in dem, was sie an der Tür zurücklassen, um eingelassen zu werden. Wer je einen Raum betreten und sich still kleiner gemacht hat, kennt den Mechanismus von innen. Für die einen ist es ein Moment. Für die anderen jeder Raum, jeden Tag.</p>
+</section></div>
+
+<div class="hr"></div>
+<div class="wrap"><section class="narrow">
+  <div class="slabel">Was genommen wurde</div>
+  <p>Das Wissen, das den Menschen ganz hielt — die Weisheit indigener Völker, die den Menschen nie vom Körper trennten und den Körper nie vom Land —, ging nicht verloren. Es wurde absichtlich ausgelöscht, denn ein ganzer Mensch ist schwer zu beherrschen.</p>
+  <p>An seine Stelle trat das, was wir heute normal nennen. Ein Selbst, in Teile zerlegt, von denen einer bei der Arbeit zulässig ist. Denken ohne Körper. Leisten ohne Jahreszeit. Wissen, ohne irgendwo dazuzugehören. Das ist nicht die Natur des Menschen. Das ist eine Entscheidung am Reißbrett, und jemand hat sie unterschrieben.</p>
+  <p>Und nun bekommt eine Maschine genau diese Aufzeichnung zu lesen. Jahrhunderte darüber, wer zählte und wer nicht — gewichtet, berechnet, zurückgegeben ohne Akzent und ohne Zögern. <b>Dasselbe Urteil wie zuvor, nur schneller und schwerer zu bestreiten.</b> Das ist die Fortsetzung, an der die Debatte über KI vorbeiläuft.</p>
 </section></div>
 
 <div class="hr"></div>
@@ -154,10 +184,16 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
 
 <div class="hr"></div>
 <div class="wrap"><section class="narrow">
-  <div class="slabel">Die ältere Maschine</div>
-  <div class="megaline hline"><span class="hw">Die</span> <span class="hw">Maschine</span> <span class="hw">ist</span> <span class="hw">nicht</span> <span class="hw">neu.</span> <span class="hw">Nur</span> <span class="hw">die</span> <span class="hw a">Verkabelung.</span></div>
-  <p>Lange vor dem Algorithmus gab es Systeme, gebaut, um den Menschen zu etwas Nützlichem und Gehorsamem zurechtzustutzen — koloniale, patriarchale, rassistische Ordnungen, die entschieden, wessen Menschlichkeit zählt, und allen beibrachten, Teile von sich aufzugeben, um zu überleben. KI ist die neueste Schicht auf einer sehr alten Maschine.</p>
-  <p>Das Wissen, das den Menschen ganz hielt — die Weisheit indigener Völker, die den Menschen nie vom Körper trennten und den Körper nie vom Land — wurde absichtlich ausgelöscht, denn ein ganzer Mensch ist schwer zu beherrschen. Das Original zurückzuholen heißt, es aus alldem zurückzuholen. <b>Was uns fehlt, ist nichts Neues. Es ist das, was genommen wurde.</b></p>
+  <div class="slabel">Es zurückholen</div>
+  <div class="megaline hline"><span class="hw">Die</span> <span class="hw">letzte</span> <span class="hw a">Kolonie</span> <span class="hw">liegt</span> <span class="hw">im</span> <span class="hw">Inneren.</span></div>
+  <p>Das Original zurückzuholen heißt, es aus alldem zurückzuholen — aus der Maschine und aus der älteren Maschine darunter. Nicht, indem Sie sie studieren. Sondern indem Sie den Moment bemerken, in dem Ihr Körper Sie in etwas Zulässiges umschreibt — und Sie sich einmal dagegen entscheiden.</p>
+  <div class="clar">
+    <div class="clar-item"><div class="clar-circle">01</div><div><span class="clar-k">Aus der Maschine</span><div class="clar-t">Behalten Sie das Entstehen. Das Kreisen, die falschen Wege, die Lernkurve, die Sie verändert — <b>den Teil, auf den kein Modell trainiert werden kann.</b></div></div></div>
+    <div class="clar-item"><div class="clar-circle">02</div><div><span class="clar-k">Aus der alten Ordnung</span><div class="clar-t">Fragen Sie, wessen Maßstab gerade läuft, wer ihn gesetzt hat und was es kostet, ihm weiter zu genügen. <b>Eine Inventur, die niemand außer Ihnen machen kann.</b></div></div></div>
+    <div class="clar-item"><div class="clar-circle">03</div><div><span class="clar-k">Aus der Stimme im Inneren</span><div class="clar-t">Jene, die Sie zu viel nennt, zu fremd, zu weich. <b>Sie gehörte Ihnen von Anfang an nicht.</b></div></div></div>
+  </div>
+  <p style="margin-top:40px">Im Raum, den Sie führen, dreht sich dieselbe Frage nach außen. Wessen Art zu sein gilt hier als professionell? Wer muss sich erst übersetzen, um gehört zu werden? Wer gilt als schwierig, sobald das Wahre ausgesprochen wird? Ein Raum verändert sich, wenn die Person am Kopf des Tisches verändert, was darin als normal gilt.</p>
+  <p><b>Was uns fehlt, ist nichts Neues. Es ist das, was genommen wurde.</b></p>
 </section></div>
 
 <div class="hr"></div>
@@ -167,6 +203,7 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
     <div class="lb-head">Wer sich erinnert, das Original zu sein, führt genau so.</div>
     <p class="lb-text">Das ist keine Philosophie um ihrer selbst willen — es ist der Boden, auf dem die ganze Arbeit steht. Geben Sie einem Menschen sich selbst zurück, und er führt, gestaltet und verbindet sich aus einem Ort, den kein System kopieren kann. Genau diesen Vorsprung soll die Arbeit einer Organisation geben:</p>
     <a class="lb-link" href="/de/fuehrungstisch/">Der Führungstisch →</a>
+    <p class="lb-text" style="margin:26px 0 0;font-size:15px">Dasselbe Verlernen, persönlich genommen — das geerbte Drehbuch dort, wo es tatsächlich sitzt, im Körper: <a class="lb-link" style="font-size:15px" href="/de/zwei-tueren/">Zwei Türen →</a></p>
   </div>
 </section></div>
 
