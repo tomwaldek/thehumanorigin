@@ -69,6 +69,7 @@ section{padding:60px 0}
 .slabel{font-weight:700;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--limedeep);margin-bottom:30px}
 p{font-weight:300;font-size:19px;color:var(--cream2);line-height:1.85;margin-bottom:22px}
 p b{color:var(--cream);font-weight:600}
+.on-lime{color:var(--lime);font-weight:600}
 em.hot{font-style:normal;font-weight:700;color:var(--lime)}
 .megaline{font-weight:800;font-size:clamp(30px,4.8vw,58px);line-height:1.05;letter-spacing:-2px;color:var(--cream);margin:6px 0 28px}
 .megaline .a{color:var(--lime)}
@@ -105,6 +106,8 @@ footer p{font-weight:400;font-size:11px;letter-spacing:2px;color:var(--cream3);t
 .rv{opacity:0;transform:translateY(16px);transition:opacity .75s var(--ease),transform .75s var(--ease),filter .75s var(--ease)}.rv.on{opacity:1;transform:none;filter:none}@media(min-width:821px){.rv{filter:blur(7px)}}@media(prefers-reduced-motion:reduce){.rv,.rv.on{opacity:1;transform:none;filter:none;transition:none}}
 .storyface{float:right;width:236px;margin:6px 0 20px 32px;position:relative;opacity:.55}.storyface img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 18%;display:block;border-radius:24px;filter:saturate(0.22) brightness(0.76) contrast(1.05);-webkit-mask-image:radial-gradient(135% 130% at 50% 42%,#000 34%,transparent 92%);mask-image:radial-gradient(135% 130% at 50% 42%,#000 34%,transparent 92%)}.storyface::after{content:'';position:absolute;inset:0;border-radius:24px;mix-blend-mode:soft-light;background:linear-gradient(160deg,rgba(199,231,138,0.4),rgba(89,194,174,0.22) 60%,transparent);pointer-events:none;-webkit-mask-image:radial-gradient(135% 130% at 50% 42%,#000 34%,transparent 92%);mask-image:radial-gradient(135% 130% at 50% 42%,#000 34%,transparent 92%)}@media(max-width:640px){.storyface{float:none;width:210px;margin:0 auto 24px}}
 .cgrid{display:grid;grid-template-columns:190px 1fr;gap:30px;align-items:center;margin-top:34px}.cgrid .storyface{float:none;width:190px;margin:0}.cgrid .storyface img{aspect-ratio:4/5}@media(max-width:640px){.cgrid{grid-template-columns:1fr}.cgrid .storyface{margin:0 auto}}
+
+.nerve{max-width:720px;margin:0 auto;padding:32px 36px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,0.028);position:relative;z-index:3}.nerve .nk{display:block;font-weight:700;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--limedeep);margin-bottom:10px}.nerve .nt{font-weight:700;font-size:19px;color:var(--cream);letter-spacing:-0.4px;display:block;margin-bottom:8px}.nerve .nd{font-weight:300;font-size:15px;color:var(--cream2);line-height:1.7;margin:0}@media(max-width:640px){.nerve{padding:26px 24px}}
 footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoration:none;transition:color .55s cubic-bezier(0.33,1,0.68,1)}footer .legal a:hover{color:var(--lime)}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://thehumanorigin.org/#organization","name":"The Human Origin","url":"https://thehumanorigin.org/","email":"tom@thehumanorigin.org","areaServed":"Europe","founder":{"@id":"https://thehumanorigin.org/#tomwaldek"}},{"@type":"Person","@id":"https://thehumanorigin.org/#tomwaldek","name":"Tom Waldek","jobTitle":"Founder, The Human Origin","email":"tom@thehumanorigin.org","url":"https://thehumanorigin.org/","knowsLanguage":["de","en"],"worksFor":{"@id":"https://thehumanorigin.org/#organization"}},{"@type":"WebSite","@id":"https://thehumanorigin.org/#website","name":"The Human Origin","url":"https://thehumanorigin.org/","inLanguage":["de","en"],"publisher":{"@id":"https://thehumanorigin.org/#organization"}},{"@type":"WebPage","@id":"https://thehumanorigin.org/de/#webpage","url":"https://thehumanorigin.org/de/","name":"Tom Waldek · The Human Origin — Wahrheit führt. Fassade kostet.","inLanguage":"de","description":"Vor jeder Strategie entscheidet ein Nervensystem: sicher oder nicht. Diese Schicht liegt unter Führung, Beziehung und Körper — die Tür zu allen dreien.","isPartOf":{"@id":"https://thehumanorigin.org/#website"},"about":{"@id":"https://thehumanorigin.org/#organization"}}]}</script>
@@ -130,7 +133,7 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
     <h1 class="hline"><span class="hw">The</span> <span class="hw">Human</span> <span class="hw a">Origin</span></h1>
     <div class="subtitle">Wo jedes menschliche Muster beginnt.</div>
     <p class="lead">Vor jeder Strategie, vor jedem Wort, bevor irgendjemand im Raum es bemerkt, hat ein Nervensystem längst entschieden: <b>sicher oder nicht.</b> Diese eine Entscheidung bestimmt den Raum, die Beziehung, die ganze Kultur. Wenn Sie dasselbe Muster in Ihrer Führung, in Ihrer engsten Beziehung und in Ihrem eigenen Leben gespürt haben — hier liegt die Schicht unter allen dreien. Und die Tür zu jeder davon.</p>
-    <div class="cta"><a class="btn btn-p" href="/de/pulscheck/">Pulscheck starten</a><span class="soon">The Human Origin Nerve · demnächst</span></div>
+    <div class="cta"><a class="btn btn-p" href="/de/pulscheck/">Pulscheck starten</a></div>
   </div>
   <div class="deckcluster">
     <div class="deck d1"><div class="q">„Eine Organisation kopiert nicht die Strategie. Sie kopiert, wie die <b>Person in der Führung</b> tatsächlich ist."</div><div class="qa">Die Vertrauenskaskade</div></div>
@@ -142,33 +145,26 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
 <div class="hr"></div>
 <div class="wrap"><section class="narrow">
   <div class="slabel">Woher das kommt</div>
-  <p>Ich kam drei Monate zu früh zur Welt. Die ersten fünf Monate verbrachte ich im Inkubator — kein Hautkontakt, nirgends vermerkt. In meinem zweiten Lebensjahr: Chemotherapie und eine Operation wegen Leberkrebs. Die Monate, in denen ein Körper Sicherheit über die Wärme und den Rhythmus eines anderen lernen soll, verbrachte ich an Maschinen, die mich am Leben hielten.</p>
-  <p>Der Halt, den die meisten Menschen selbstverständlich mitbekommen, wurde in mir nie angelegt. Also baute ich ihn von innen auf — an Filmsets, in Unternehmen, in Räumen, in die ich nicht gehörte, und in den Räumen, in denen ich endlich aufhörte, mich zu verstellen.</p>
-  <p>Daher kommt die Genauigkeit. Nicht aus einem Titel. Ein Nervensystem, geprägt vom Fehlen eines anderen Körpers, an dem es in den ersten Wochen zur Ruhe hätte kommen können, bewusst neu aufgebaut — der Grund, warum ich in jedem Raum erkenne, was andere gelernt haben zu übersehen.</p>
-  <div class="cgrid"><figure class="storyface"><img src="/TomWaldek_Actor_01.jpg" alt="Tom Waldek" loading="lazy"></figure><p>Fünfundzwanzig Jahre Film — Drehbuch, Regie, Schauspiel, Schnitt, Produktion, Intimacy Coordination. Heute lese ich mit demselben Handwerk Führungsräume: als Gründer von The Human Origin, von Wien aus, in ganz Europa.</p></div>
+  <p>Ich kam drei Monate zu früh zur Welt. Die ersten fünf Monate verbrachte ich im Inkubator — kein Hautkontakt, nirgends vermerkt. In meinem zweiten Lebensjahr: Chemotherapie und eine Operation wegen Leberkrebs. Die Monate, in denen ein Körper Sicherheit über die Wärme und den Rhythmus eines anderen lernen soll, <b>verbrachte ich an Maschinen, die mich am Leben hielten.</b></p>
+  <p>Der Halt, den die meisten Menschen selbstverständlich mitbekommen, wurde in mir nie angelegt. <b>Also baute ich ihn von innen auf</b> — an Filmsets, in Unternehmen, in Räumen, in die ich nicht gehörte, und in den Räumen, in denen ich endlich aufhörte, mich zu verstellen.</p>
+  <p>Daher kommt die Genauigkeit. <span class="on-lime">Nicht aus einem Titel.</span> Ein Nervensystem, geprägt vom Fehlen eines anderen Körpers, an dem es in den ersten Wochen zur Ruhe hätte kommen können, bewusst neu aufgebaut — <b>der Grund, warum ich in jedem Raum erkenne, was andere gelernt haben zu übersehen.</b></p>
+  <div class="cgrid"><figure class="storyface"><img src="/TomWaldek_Actor_01.jpg" alt="Tom Waldek" loading="lazy"></figure><p>Fünfundzwanzig Jahre Film — Drehbuch, Regie, Schauspiel, Schnitt, Produktion, Intimacy Coordination. <b>Heute lese ich mit demselben Handwerk Führungsräume</b>: als Gründer von The Human Origin, von Wien aus, in ganz Europa.</p></div>
 </section></div>
 
 <div class="hr"></div>
 <div class="wrap"><section class="narrow">
   <div class="slabel">Das Muster</div>
   <div class="megaline hline"><span class="hw">Ein</span> <span class="hw">Nervensystem</span> <span class="hw">findet</span> <span class="hw">Sicherheit</span> <span class="hw">nie</span> <span class="hw a">allein.</span></div>
-  <p>Es leiht sie sich — von einem anderen Körper und vom Raum ringsum. Wenn niemand da ist, an dem es zur Ruhe kommt, improvisiert der Körper. Er inszeniert sich. Er kontrolliert. Er verstummt. Und er gibt weiter, was er gelernt hat — an ein Team, an ein Kind, an eine Kultur, die das Ganze für normal erklärt.</p>
-  <p>Und Sicherheit war nie nur eine private Angelegenheit. Ein Körper liest den Raum, in dem er steht — und nicht jeder Raum wurde gebaut, um alle darin willkommen zu heißen. Manche der ältesten Ordnungen, in denen wir noch immer leben — koloniale, patriarchale, rassistische — haben längst entschieden, wessen natürlicher Zustand als willkommen gilt. Die Kosten tragen am schwersten jene Menschen, für die diese Systeme nie gebaut wurden.</p>
+  <p>Es leiht sie sich — von einem anderen Körper und vom Raum ringsum. Wenn niemand da ist, an dem es zur Ruhe kommt, improvisiert der Körper. <b>Er inszeniert sich. Er kontrolliert. Er verstummt.</b> Und er gibt weiter, was er gelernt hat — an ein Team, an ein Kind, an eine Kultur, die das Ganze für normal erklärt.</p>
+  <p>Und Sicherheit war nie nur eine private Angelegenheit. Ein Körper liest den Raum, in dem er steht — und nicht jeder Raum wurde gebaut, um alle darin willkommen zu heißen. Manche der ältesten Ordnungen, in denen wir noch immer leben — koloniale, patriarchale, rassistische — haben längst entschieden, wessen natürlicher Zustand als willkommen gilt. <span class="on-lime">Die Kosten tragen am schwersten jene Menschen, für die diese Systeme nie gebaut wurden.</span></p>
   <p>Derselbe Mechanismus, wo immer er läuft. Ein Führungstisch. Ein Mensch, der eine geerbte Vorstellung davon mit sich trägt, wer man sein darf. Ein Körper, der nie gelernt hat, dass Berührung sicher ist.</p>
   <div class="megaline hline"><span class="hw">Dieselbe</span> <span class="hw">Wurzel.</span> <span class="hw a">Andere</span> <span class="hw a">Räume.</span></div>
 </section></div>
 
 <div class="hr"></div>
 <div class="wrap"><section class="narrow">
-  <div class="slabel">The Human Origin Nerve</div>
-  <p>Ich mache diese Arbeit öffentlich — ungeschönt, vor der Kamera, ganz offen. Keine Musik, kein Vorspann, keine zur Schau gestellte Expertise. Das Nervensystem, erklärt von jemandem, der sich selbst erst eines aufbauen musste.</p>
-  <span class="soon">Demnächst</span>
-</section></div>
-
-<div class="hr"></div>
-<div class="wrap"><section class="narrow">
   <div class="slabel">Die Wissenschaft</div>
-  <p>Nichts davon habe ich erfunden. Es steht im Einklang mit einem Jahrhundert an Forschung — Porges dazu, wie der Körper Sicherheit liest; Frankl dazu, dass Überleben den Sinn ersetzt; Edmondson dazu, was Teams laut aussprechen und was nicht; Keltner dazu, was Macht mit der Wahrnehmung macht. Filmsets zeigten mir die Muster, bevor ich Namen dafür hatte. Die Wissenschaft bestätigt, was der Raum längst wusste.</p>
+  <p>Nichts davon habe ich erfunden. Es steht im Einklang mit einem Jahrhundert an Forschung — Porges dazu, wie der Körper Sicherheit liest; Frankl dazu, dass Überleben den Sinn ersetzt; Edmondson dazu, was Teams laut aussprechen und was nicht; Keltner dazu, was Macht mit der Wahrnehmung macht. <b>Filmsets zeigten mir die Muster, bevor ich Namen dafür hatte.</b> <span class="on-lime">Die Wissenschaft bestätigt, was der Raum längst wusste.</span></p>
   </section></div>
 
 <div class="hr"></div>
@@ -181,6 +177,7 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
   </div>
 </section></div>
 
+<div class="wrap"><section style="padding:0 0 62px"><div class="nerve"><span class="nk">Demnächst</span><span class="nt">The Human Origin Nerve</span><p class="nd">Ich mache diese Arbeit öffentlich — ungeschönt, vor der Kamera, ganz offen. Keine Musik, kein Vorspann, keine zur Schau gestellte Expertise. <b>Das Nervensystem, erklärt von jemandem, der sich selbst erst eines aufbauen musste.</b></p></div></section></div>
 <footer><p>Wahrheit f&uuml;hrt. Fassade kostet. &middot; &copy; 2026 The Human Origin &middot; Tom Waldek</p><p class="legal"><a href="/de/impressum/">Impressum</a> &middot; <a href="/de/datenschutz/">Datenschutz</a> &middot; <a href="/de/fuehrungstisch/#faq">FAQ</a></p></footer>
 <script>function toggleNav(b){var m=document.getElementById("navmenu");var o=b.getAttribute("aria-expanded")==="true";b.setAttribute("aria-expanded",String(!o));m.classList.toggle("open",!o);}document.addEventListener("click",function(e){var n=document.querySelector("nav");if(n&&!n.contains(e.target)){var b=document.querySelector(".navtoggle");if(b&&b.getAttribute("aria-expanded")==="true"){b.setAttribute("aria-expanded","false");document.getElementById("navmenu").classList.remove("open");}}});document.addEventListener("keydown",function(e){if(e.key==="Escape"){var b=document.querySelector(".navtoggle");if(b){b.setAttribute("aria-expanded","false");document.getElementById("navmenu").classList.remove("open");}}});document.querySelectorAll("#navmenu a").forEach(function(a){a.addEventListener("click",function(){var b=document.querySelector(".navtoggle");if(b){b.setAttribute("aria-expanded","false");document.getElementById("navmenu").classList.remove("open");}});});</script>
 <script>(function(){if(!('IntersectionObserver' in window))return;var sel='.label,.slabel,.megaline,.doorhead,.splitline,h1,.subtitle,.lead,.cta,.deck,.door,.mode,.pair,.leadbridge,.gated,.frame,.clar-item,.faq-item,.both,.linkrow,.beyond-item,.finalcta .big,.finalcta p,.finalcta .btn,.hbig,.sub,.wrap section p,.storyface';var els=[].slice.call(document.querySelectorAll(sel)).filter(function(e){return !e.closest('#quiz,#results,nav,footer')&&!e.closest('.heroport')});var n=0;els.forEach(function(e){e.classList.add('rv')});var io=new IntersectionObserver(function(ents){ents.forEach(function(en){if(en.isIntersecting){var e=en.target;e.style.transitionDelay=Math.min((n++%6)*70,350)+'ms';e.classList.add('on');io.unobserve(e);setTimeout(function(){e.style.transitionDelay=''},1000);}});},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)});})();</script>

@@ -55,6 +55,7 @@ section{padding:56px 0}
 .slabel{font-weight:700;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--limedeep);margin-bottom:28px}
 p{font-weight:300;font-size:19px;color:var(--cream2);line-height:1.85;margin-bottom:22px}
 p b{color:var(--cream);font-weight:600}
+.on-lime{color:var(--lime);font-weight:600}
 .megaline{font-weight:800;font-size:clamp(30px,4.8vw,58px);line-height:1.05;letter-spacing:-2px;color:var(--cream);margin:6px 0 28px}
 .megaline .a{color:var(--lime)}
 .doors{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:8px}
@@ -104,6 +105,8 @@ footer p{font-weight:400;font-size:11px;letter-spacing:2px;color:var(--cream3);t
 
 /* scroll-reveal: opacity+lift everywhere, blur joins on desktop only (mobile perf) */
 .rv{opacity:0;transform:translateY(16px);transition:opacity .75s var(--ease),transform .75s var(--ease),filter .75s var(--ease)}.rv.on{opacity:1;transform:none;filter:none}@media(min-width:821px){.rv{filter:blur(7px)}}@media(prefers-reduced-motion:reduce){.rv,.rv.on{opacity:1;transform:none;filter:none;transition:none}}
+
+.nerve{max-width:720px;margin:0 auto;padding:32px 36px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,0.028);position:relative;z-index:3}.nerve .nk{display:block;font-weight:700;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--limedeep);margin-bottom:10px}.nerve .nt{font-weight:700;font-size:19px;color:var(--cream);letter-spacing:-0.4px;display:block;margin-bottom:8px}.nerve .nd{font-weight:300;font-size:15px;color:var(--cream2);line-height:1.7;margin:0}@media(max-width:640px){.nerve{padding:26px 24px}}
 footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoration:none;transition:color .55s cubic-bezier(0.33,1,0.68,1)}footer .legal a:hover{color:var(--lime)}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://thehumanorigin.org/#organization","name":"The Human Origin","url":"https://thehumanorigin.org/","email":"tom@thehumanorigin.org","areaServed":"Europe","founder":{"@id":"https://thehumanorigin.org/#tomwaldek"}},{"@type":"Person","@id":"https://thehumanorigin.org/#tomwaldek","name":"Tom Waldek","jobTitle":"Founder, The Human Origin","email":"tom@thehumanorigin.org","url":"https://thehumanorigin.org/","knowsLanguage":["de","en"],"worksFor":{"@id":"https://thehumanorigin.org/#organization"}},{"@type":"WebSite","@id":"https://thehumanorigin.org/#website","name":"The Human Origin","url":"https://thehumanorigin.org/","inLanguage":["de","en"],"publisher":{"@id":"https://thehumanorigin.org/#organization"}},{"@type":"WebPage","@id":"https://thehumanorigin.org/en/two-doors/#webpage","url":"https://thehumanorigin.org/en/two-doors/","name":"Two Doors · The Human Origin","inLanguage":"en","description":"Two ways back to the person you were before the role: through the mind (Essence) or through the body (Presence). Most people need both.","isPartOf":{"@id":"https://thehumanorigin.org/#website"},"about":{"@id":"https://thehumanorigin.org/#organization"}}]}</script>
@@ -128,7 +131,7 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
   <h1 class="hline"><span class="hw">Come</span> <span class="hw">back</span> <span class="hw">to</span> <span class="hw a">yourself.</span></h1>
   <div class="subtitle">The work beneath the role.</div>
   <p class="lead">Two ways in, one destination — the person you were before you learned to manage yourself into something acceptable. Enter through the mind, or through the body. <b>Most people need both.</b></p>
-  <div class="cta"><a class="btn btn-p" href="/en/inner-pulse/">Start the Inner Pulse</a><span class="soon">The Human Origin Nerve · coming soon</span></div>
+  <div class="cta"><a class="btn btn-p" href="/en/inner-pulse/">Start the Inner Pulse</a></div>
 </section>
 </div>
 
@@ -136,7 +139,7 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
 <div class="wrap"><section class="narrow">
   <div class="slabel">One split, two doors</div>
   <div class="megaline hline"><span class="hw">One</span> <span class="hw">split.</span> <span class="hw a">Two</span> <span class="hw a">doors.</span></div>
-  <p>What performance culture takes, it takes in two places. It buries who you are beneath the role — your essence, your shadow. And it teaches the body to brace, to perform, to never quite arrive. The way back runs through both. Start with the one that pulls you.</p>
+  <p>What performance culture takes, it takes in two places. It buries who you are beneath the role — your essence, your shadow. And it teaches the body to brace, to perform, to never quite arrive. <b>The way back runs through both.</b> <span class="on-lime">Start with the one that pulls you.</span></p>
 </section></div>
 
 <div class="wrap"><section>
@@ -167,7 +170,7 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
   <div class="leadbridge">
     <div class="lb-label">Where this becomes leadership</div>
     <div class="lb-head">Come back to yourself, and lead like you mean it.</div>
-    <p class="lb-text">The inner work isn't separate from how you lead — it's the foundation. A person who's returned to themselves leads, creates and connects from a place no role can fake. That is exactly the edge the work is built to give an organisation:</p>
+    <p class="lb-text">The inner work isn't separate from how you lead — it's the foundation. A person who's returned to themselves <b>leads, creates and connects from a place no role can fake</b>. That is exactly the edge the work is built to give an organisation:</p>
     <a class="lb-link" href="/en/leadership-table/">The Leadership Table →</a>
   </div>
 </section></div>
@@ -178,6 +181,7 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
   <a class="btn btn-p" href="/en/inner-pulse/">Start the Inner Pulse</a><a class="btn btn-g" href="/en/pulse-check/">or the Pulse Check</a>
 </section></div>
 
+<div class="wrap"><section style="padding:0 0 62px"><div class="nerve"><span class="nk">Coming soon</span><span class="nt">The Human Origin Nerve</span><p class="nd">Practices you can do on your own — <b>no cost, no eyes on you.</b> The self-guided layer of this work.</p></div></section></div>
 <footer><p>Truth leads. Facade costs. &middot; &copy; 2026 The Human Origin &middot; Tom Waldek</p><p class="legal"><a href="/en/imprint/">Legal Notice</a> &middot; <a href="/en/privacy/">Privacy Policy</a> &middot; <a href="/en/leadership-table/#faq">FAQ</a></p></footer>
 <script>
 function faq(btn){var item=btn.parentElement;var a=item.querySelector('.faq-a');var open=item.classList.contains('open');

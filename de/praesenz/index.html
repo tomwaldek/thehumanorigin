@@ -117,6 +117,8 @@ footer p{font-weight:400;font-size:11px;letter-spacing:2px;color:var(--cream3);t
 
 /* scroll-reveal: opacity+lift everywhere, blur joins on desktop only (mobile perf) */
 .rv{opacity:0;transform:translateY(16px);transition:opacity .75s var(--ease),transform .75s var(--ease),filter .75s var(--ease)}.rv.on{opacity:1;transform:none;filter:none}@media(min-width:821px){.rv{filter:blur(7px)}}@media(prefers-reduced-motion:reduce){.rv,.rv.on{opacity:1;transform:none;filter:none;transition:none}}
+
+.nerve{max-width:720px;margin:0 auto;padding:32px 36px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,0.028);position:relative;z-index:3}.nerve .nk{display:block;font-weight:700;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--limedeep);margin-bottom:10px}.nerve .nt{font-weight:700;font-size:19px;color:var(--cream);letter-spacing:-0.4px;display:block;margin-bottom:8px}.nerve .nd{font-weight:300;font-size:15px;color:var(--cream2);line-height:1.7;margin:0}@media(max-width:640px){.nerve{padding:26px 24px}}
 footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoration:none;transition:color .55s cubic-bezier(0.33,1,0.68,1)}footer .legal a:hover{color:var(--lime)}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://thehumanorigin.org/#organization","name":"The Human Origin","url":"https://thehumanorigin.org/","email":"tom@thehumanorigin.org","areaServed":"Europe","founder":{"@id":"https://thehumanorigin.org/#tomwaldek"}},{"@type":"Person","@id":"https://thehumanorigin.org/#tomwaldek","name":"Tom Waldek","jobTitle":"Founder, The Human Origin","email":"tom@thehumanorigin.org","url":"https://thehumanorigin.org/","knowsLanguage":["de","en"],"worksFor":{"@id":"https://thehumanorigin.org/#organization"}},{"@type":"WebSite","@id":"https://thehumanorigin.org/#website","name":"The Human Origin","url":"https://thehumanorigin.org/","inLanguage":["de","en"],"publisher":{"@id":"https://thehumanorigin.org/#organization"}},{"@type":"WebPage","@id":"https://thehumanorigin.org/de/praesenz/#webpage","url":"https://thehumanorigin.org/de/praesenz/","name":"Präsenz · The Human Origin","inLanguage":"de","description":"Sicherheit lässt sich nicht herbeidenken — sie wird gespürt. Der Weg zurück in den eigenen Körper: Atem, Gewicht, Berührung. Alles im Tempo Ihres Ja.","isPartOf":{"@id":"https://thehumanorigin.org/#website"},"about":{"@id":"https://thehumanorigin.org/#organization"}}]}</script>
@@ -141,7 +143,7 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
     <h1 class="hline"><span class="hw">Sicherheit</span> <span class="hw">lässt</span> <span class="hw">sich</span> <span class="hw">nicht</span> <span class="hw a">herbeidenken.</span></h1>
     <div class="subtitle">Der Körper, den Sie spüren können.</div>
     <p class="lead">Der Teil von Ihnen, der entscheidet, ob Sie sicher sind, spricht nicht in Worten — er spricht in Atem, Wärme, Gewicht, Berührung. Wenn Sie im Kopf leben, sich gegen Nähe anspannen oder sich durch Intimität hindurch inszenieren, ist Präsenz der Weg zurück — der Körper lernt endlich wieder, <b>dass es sicher ist, hier zu sein.</b> Allein oder mit einem Menschen, dem Sie vertrauen.</p>
-    <div class="cta"><a class="btn btn-p" href="/de/innerer-puls/">Inneren Puls starten</a><span class="soon">The Human Origin Nerve · demnächst</span></div>
+    <div class="cta"><a class="btn btn-p" href="/de/innerer-puls/">Inneren Puls starten</a></div>
   </div>
   <div class="deckcluster">
     <div class="deck d1"><div class="q">Einsicht erreicht den Körper selten. Sicherheit muss <b>gespürt</b> werden, um geglaubt zu werden.</div><div class="qa">Der Ausgangspunkt</div></div>
@@ -154,14 +156,14 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
 <div class="wrap"><section class="narrow">
   <div class="slabel">Wo Sicherheit entschieden wird</div>
   <div class="megaline hline"><span class="hw">Sicherheit</span> <span class="hw">wird</span> <span class="hw a">gespürt,</span> <span class="hw">nicht</span> <span class="hw">gedacht.</span></div>
-  <p>Der Teil von Ihnen, der über sicher oder nicht entscheidet, bildete sich bereits vor der Sprache — und er hat nie lesen gelernt. Sie können alles über Ihre Muster verstehen und trotzdem nicht frei von ihnen sein: Verstehen landet im Verstand, das Muster sitzt im Körper. Das ist die Arbeit, die dorthin geht, wohin Worte nicht reichen.</p>
-  <p>Ich weiß das von innen. Die Monate, in denen ein Körper Sicherheit zum ersten Mal über die Wärme eines anderen lernt, verbrachte ich im Inkubator. Diese Sicherheit habe ich mir später bewusst aufgebaut, im Körper — und genau deshalb kann ich einem anderen Körper helfen, den Weg dorthin zu finden.</p>
+  <p>Der Teil von Ihnen, der über sicher oder nicht entscheidet, bildete sich bereits vor der Sprache — und er hat nie lesen gelernt. Sie können alles über Ihre Muster verstehen und trotzdem nicht frei von ihnen sein: <b>Verstehen landet im Verstand, das Muster sitzt im Körper.</b> <span class="on-lime">Das ist die Arbeit, die dorthin geht, wohin Worte nicht reichen.</span></p>
+  <p>Ich weiß das von innen. Die Monate, in denen ein Körper Sicherheit zum ersten Mal über die Wärme eines anderen lernt, verbrachte ich im Inkubator. <b>Diese Sicherheit habe ich mir später bewusst aufgebaut, im Körper</b> — und genau deshalb kann ich einem anderen Körper helfen, den Weg dorthin zu finden.</p>
 </section></div>
 
 <div class="hr"></div>
 <div class="wrap"><section class="narrow">
   <div class="slabel">Was verloren ging</div>
-  <p>Über Berührung lernt ein Nervensystem zuerst, dass es sicher ist — und bei den meisten von uns hörte Berührung irgendwann auf, sicher zu sein. Zu viel, zu wenig oder zu den Bedingungen anderer. Der Körper lernte, sich anzuspannen. Und ein Körper, der sich anspannt, kann nicht ganz ankommen — nicht in einem Raum, nicht in einem Bett, nicht im eigenen Leben.</p>
+  <p>Über Berührung lernt ein Nervensystem zuerst, dass es sicher ist — und bei den meisten von uns hörte Berührung irgendwann auf, sicher zu sein. Zu viel, zu wenig oder zu den Bedingungen anderer. Der Körper lernte, sich anzuspannen. Und <span class="on-lime">ein Körper, der sich anspannt, kann nicht ganz ankommen</span> — nicht in einem Raum, nicht in einem Bett, nicht im eigenen Leben.</p>
   <p>Das ist nicht nur privat. Wessen Körper Raum einnehmen darf, weich sein darf, mit Sorgfalt berührt werden darf — auch das hat eine ungerechte Welt geformt. Manchen Körpern wurde Sicherheit nie zugestanden. Präsenz redet das nicht weg. <b>Sie beginnt dort, wo Sie tatsächlich sind.</b></p>
 </section></div>
 
@@ -193,7 +195,7 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
   <div class="leadbridge">
     <div class="lb-label">Wo daraus Führung wird</div>
     <div class="lb-head">Wer im eigenen Körper sicher ist, macht den Raum sicher.</div>
-    <p class="lb-text">Wie Sie im eigenen Körper sind, ist das Erste, was Ihre Leute lesen — und das Erste, was sie übernehmen. Präsenz in Ihnen wird zu Ruhe für alle an Ihrem Tisch. Das ist die innere Seite der Arbeit, für die ich bekannt bin: dieselbe Arbeit, im Maßstab einer Organisation.</p>
+    <p class="lb-text">Wie Sie im eigenen Körper sind, ist das Erste, was Ihre Leute lesen — und das Erste, was sie übernehmen. <b>Präsenz in Ihnen wird zu Ruhe für alle an Ihrem Tisch.</b> Das ist die innere Seite der Arbeit, für die ich bekannt bin: dieselbe Arbeit, im Maßstab einer Organisation.</p>
     <a class="lb-link" href="/de/fuehrungstisch/">Der Führungstisch →</a>
   </div>
 </section></div>
@@ -204,6 +206,7 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
   <a class="btn btn-p" href="/de/innerer-puls/">Inneren Puls starten</a><a class="btn btn-g" href="/de/pulscheck/">oder der Pulscheck</a>
 </section></div>
 
+<div class="wrap"><section style="padding:0 0 62px"><div class="nerve"><span class="nk">Demnächst</span><span class="nt">The Human Origin Nerve</span><p class="nd">Übungen, die Sie allein machen können — <b>kostenlos, ohne Blicke auf Sie.</b> Die selbstgeführte Ebene dieser Arbeit.</p></div></section></div>
 <footer><p>Wahrheit f&uuml;hrt. Fassade kostet. &middot; &copy; 2026 The Human Origin &middot; Tom Waldek</p><p class="legal"><a href="/de/impressum/">Impressum</a> &middot; <a href="/de/datenschutz/">Datenschutz</a> &middot; <a href="/de/fuehrungstisch/#faq">FAQ</a></p></footer>
 <script>function toggleNav(b){var m=document.getElementById("navmenu");var o=b.getAttribute("aria-expanded")==="true";b.setAttribute("aria-expanded",String(!o));m.classList.toggle("open",!o);}document.addEventListener("click",function(e){var n=document.querySelector("nav");if(n&&!n.contains(e.target)){var b=document.querySelector(".navtoggle");if(b&&b.getAttribute("aria-expanded")==="true"){b.setAttribute("aria-expanded","false");document.getElementById("navmenu").classList.remove("open");}}});document.addEventListener("keydown",function(e){if(e.key==="Escape"){var b=document.querySelector(".navtoggle");if(b){b.setAttribute("aria-expanded","false");document.getElementById("navmenu").classList.remove("open");}}});document.querySelectorAll("#navmenu a").forEach(function(a){a.addEventListener("click",function(){var b=document.querySelector(".navtoggle");if(b){b.setAttribute("aria-expanded","false");document.getElementById("navmenu").classList.remove("open");}});});</script>
 <script>(function(){if(!('IntersectionObserver' in window))return;var sel='.label,.slabel,.megaline,.doorhead,.splitline,h1,.subtitle,.lead,.cta,.deck,.door,.mode,.pair,.leadbridge,.gated,.frame,.clar-item,.faq-item,.both,.linkrow,.beyond-item,.finalcta .big,.finalcta p,.finalcta .btn,.hbig,.sub,.wrap section p';var els=[].slice.call(document.querySelectorAll(sel)).filter(function(e){return !e.closest('#quiz,#results,nav,footer')&&!e.closest('.heroport')});var n=0;els.forEach(function(e){e.classList.add('rv')});var io=new IntersectionObserver(function(ents){ents.forEach(function(en){if(en.isIntersecting){var e=en.target;e.style.transitionDelay=Math.min((n++%6)*70,350)+'ms';e.classList.add('on');io.unobserve(e);setTimeout(function(){e.style.transitionDelay=''},1000);}});},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)});})();</script>

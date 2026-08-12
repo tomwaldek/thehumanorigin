@@ -55,6 +55,7 @@ section{padding:56px 0}
 .slabel{font-weight:700;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--limedeep);margin-bottom:28px}
 p{font-weight:300;font-size:19px;color:var(--cream2);line-height:1.85;margin-bottom:22px}
 p b{color:var(--cream);font-weight:600}
+.on-lime{color:var(--lime);font-weight:600}
 .megaline{font-weight:800;font-size:clamp(30px,4.8vw,58px);line-height:1.05;letter-spacing:-2px;color:var(--cream);margin:6px 0 28px}
 .megaline .a{color:var(--lime)}
 .doors{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:8px}
@@ -104,6 +105,8 @@ footer p{font-weight:400;font-size:11px;letter-spacing:2px;color:var(--cream3);t
 
 /* scroll-reveal: opacity+lift everywhere, blur joins on desktop only (mobile perf) */
 .rv{opacity:0;transform:translateY(16px);transition:opacity .75s var(--ease),transform .75s var(--ease),filter .75s var(--ease)}.rv.on{opacity:1;transform:none;filter:none}@media(min-width:821px){.rv{filter:blur(7px)}}@media(prefers-reduced-motion:reduce){.rv,.rv.on{opacity:1;transform:none;filter:none;transition:none}}
+
+.nerve{max-width:720px;margin:0 auto;padding:32px 36px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,0.028);position:relative;z-index:3}.nerve .nk{display:block;font-weight:700;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--limedeep);margin-bottom:10px}.nerve .nt{font-weight:700;font-size:19px;color:var(--cream);letter-spacing:-0.4px;display:block;margin-bottom:8px}.nerve .nd{font-weight:300;font-size:15px;color:var(--cream2);line-height:1.7;margin:0}@media(max-width:640px){.nerve{padding:26px 24px}}
 footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoration:none;transition:color .55s cubic-bezier(0.33,1,0.68,1)}footer .legal a:hover{color:var(--lime)}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://thehumanorigin.org/#organization","name":"The Human Origin","url":"https://thehumanorigin.org/","email":"tom@thehumanorigin.org","areaServed":"Europe","founder":{"@id":"https://thehumanorigin.org/#tomwaldek"}},{"@type":"Person","@id":"https://thehumanorigin.org/#tomwaldek","name":"Tom Waldek","jobTitle":"Founder, The Human Origin","email":"tom@thehumanorigin.org","url":"https://thehumanorigin.org/","knowsLanguage":["de","en"],"worksFor":{"@id":"https://thehumanorigin.org/#organization"}},{"@type":"WebSite","@id":"https://thehumanorigin.org/#website","name":"The Human Origin","url":"https://thehumanorigin.org/","inLanguage":["de","en"],"publisher":{"@id":"https://thehumanorigin.org/#organization"}},{"@type":"WebPage","@id":"https://thehumanorigin.org/de/zwei-tueren/#webpage","url":"https://thehumanorigin.org/de/zwei-tueren/","name":"Zwei Türen · The Human Origin","inLanguage":"de","description":"Zwei Wege zurück zu dem Menschen, der Sie vor der Rolle waren: über den Verstand (Essenz) oder über den Körper (Präsenz). Die meisten brauchen beide.","isPartOf":{"@id":"https://thehumanorigin.org/#website"},"about":{"@id":"https://thehumanorigin.org/#organization"}}]}</script>
@@ -128,7 +131,7 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
   <h1 class="hline"><span class="hw">Kommen</span> <span class="hw">Sie</span> <span class="hw">zu</span> <span class="hw">sich</span> <span class="hw a">zurück.</span></h1>
   <div class="subtitle">Die Arbeit hinter der Rolle.</div>
   <p class="lead">Zwei Wege hinein, ein Ziel — der Mensch, der Sie waren, bevor Sie lernten, sich in etwas Annehmbares zurechtzubiegen. Ein Eingang über den Verstand, einer über den Körper. <b>Die meisten brauchen beides.</b></p>
-  <div class="cta"><a class="btn btn-p" href="/de/innerer-puls/">Inneren Puls starten</a><span class="soon">The Human Origin Nerve · demnächst</span></div>
+  <div class="cta"><a class="btn btn-p" href="/de/innerer-puls/">Inneren Puls starten</a></div>
 </section>
 </div>
 
@@ -136,7 +139,7 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
 <div class="wrap"><section class="narrow">
   <div class="slabel">Eine Spaltung, zwei Türen</div>
   <div class="megaline hline"><span class="hw">Eine</span> <span class="hw">Spaltung.</span> <span class="hw a">Zwei</span> <span class="hw a">Türen.</span></div>
-  <p>Was die Leistungskultur nimmt, nimmt sie an zwei Stellen. Sie begräbt, wer Sie sind, unter der Rolle — Ihre Essenz, Ihren Schatten. Und sie bringt dem Körper bei, sich anzuspannen, sich zu inszenieren, nie ganz anzukommen. Der Weg zurück führt durch beide. Beginnen Sie mit der Tür, die Sie stärker hineinzieht.</p>
+  <p>Was die Leistungskultur nimmt, nimmt sie an zwei Stellen. Sie begräbt, wer Sie sind, unter der Rolle — Ihre Essenz, Ihren Schatten. Und sie bringt dem Körper bei, sich anzuspannen, sich zu inszenieren, nie ganz anzukommen. <b>Der Weg zurück führt durch beide.</b> <span class="on-lime">Beginnen Sie mit der Tür, die Sie stärker hineinzieht.</span></p>
 </section></div>
 
 <div class="wrap"><section>
@@ -167,7 +170,7 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
   <div class="leadbridge">
     <div class="lb-label">Wo daraus Führung wird</div>
     <div class="lb-head">Kommen Sie zu sich zurück, und führen Sie wahrhaftig.</div>
-    <p class="lb-text">Die innere Arbeit ist nicht getrennt davon, wie Sie führen — sie ist das Fundament. Ein Mensch, der zu sich zurückgefunden hat, führt, gestaltet und verbindet sich aus einem Ort, den keine Rolle vortäuschen kann. Genau diesen Vorsprung soll die Arbeit einer Organisation geben:</p>
+    <p class="lb-text">Die innere Arbeit ist nicht getrennt davon, wie Sie führen — sie ist das Fundament. Ein Mensch, der zu sich zurückgefunden hat, <b>führt, gestaltet und verbindet sich aus einem Ort, den keine Rolle vortäuschen kann</b>. Genau diesen Vorsprung soll die Arbeit einer Organisation geben:</p>
     <a class="lb-link" href="/de/fuehrungstisch/">Der Führungstisch →</a>
   </div>
 </section></div>
@@ -178,6 +181,7 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
   <a class="btn btn-p" href="/de/innerer-puls/">Inneren Puls starten</a><a class="btn btn-g" href="/de/pulscheck/">oder der Pulscheck</a>
 </section></div>
 
+<div class="wrap"><section style="padding:0 0 62px"><div class="nerve"><span class="nk">Demnächst</span><span class="nt">The Human Origin Nerve</span><p class="nd">Übungen, die Sie allein machen können — <b>kostenlos, ohne Blicke auf Sie.</b> Die selbstgeführte Ebene dieser Arbeit.</p></div></section></div>
 <footer><p>Wahrheit f&uuml;hrt. Fassade kostet. &middot; &copy; 2026 The Human Origin &middot; Tom Waldek</p><p class="legal"><a href="/de/impressum/">Impressum</a> &middot; <a href="/de/datenschutz/">Datenschutz</a> &middot; <a href="/de/fuehrungstisch/#faq">FAQ</a></p></footer>
 <script>
 function faq(btn){var item=btn.parentElement;var a=item.querySelector('.faq-a');var open=item.classList.contains('open');
