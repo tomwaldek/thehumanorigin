@@ -238,9 +238,9 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
   <div class="slabel">Positive proof</div>
   <p style="max-width:640px">Not aspirations. Measured shifts — what this looks like on your P&amp;L.</p>
   <div class="proofgrid">
-    <div class="proof"><div class="pn">66%</div><div class="pl">less turnover</div><div class="pd">The largest hidden line item in any mid-market P&amp;L — cut by two-thirds when the survival pattern lifts.</div><div class="ps">Gallup Workplace Research</div></div>
-    <div class="proof"><div class="pn">7×</div><div class="pl">more experimentation</div><div class="pd">Seven times the innovation velocity in psychologically safe teams — without hiring one more person.</div><div class="ps">Edmondson &amp; Lei, 2014</div></div>
-    <div class="proof"><div class="pn">3×</div><div class="pl">ideas at the table</div><div class="pd">Three times the ideas reaching the decision table — the ones that don't die in the silence.</div><div class="ps">Edmondson, Harvard</div></div>
+    <div class="proof"><div class="pn" data-prefix="" data-value="66" data-suffix="%">66%</div><div class="pl">less turnover</div><div class="pd">The largest hidden line item in any mid-market P&amp;L — cut by two-thirds when the survival pattern lifts.</div><div class="ps">Gallup Workplace Research</div></div>
+    <div class="proof"><div class="pn" data-prefix="" data-value="7" data-suffix="×">7×</div><div class="pl">more experimentation</div><div class="pd">Seven times the innovation velocity in psychologically safe teams — without hiring one more person.</div><div class="ps">Edmondson &amp; Lei, 2014</div></div>
+    <div class="proof"><div class="pn" data-prefix="" data-value="3" data-suffix="×">3×</div><div class="pl">ideas at the table</div><div class="pd">Three times the ideas reaching the decision table — the ones that don't die in the silence.</div><div class="ps">Edmondson, Harvard</div></div>
   </div>
 </section></div>
 
@@ -320,7 +320,7 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
     function step(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/dur);el.textContent=pre+Math.round(ease(p)*val)+suf;if(p<1)requestAnimationFrame(step);}
     requestAnimationFrame(step);
   }
-  var nums=[].slice.call(document.querySelectorAll('.stat .n'));
+  var nums=[].slice.call(document.querySelectorAll('.stat .n,.proof .pn'));
   nums.forEach(function(n){
     if(!reduce)n.textContent=(n.dataset.prefix||'')+'0'+(n.dataset.suffix||'');
     n.addEventListener('mouseenter',function(){count(n);});

@@ -220,9 +220,9 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
   <div class="slabel">Handfeste Belege</div>
   <p style="max-width:640px">Keine Absichten. Messbare Verschiebungen — was das in Ihrer G+V bedeutet.</p>
   <div class="proofgrid">
-    <div class="proof"><div class="pn">66%</div><div class="pl">weniger Fluktuation</div><div class="pd">Der größte verborgene Posten in jeder G+V des Mittelstands — um zwei Drittel gesenkt, wenn sich das Überlebensmuster löst.</div><div class="ps">Gallup Workplace Research</div></div>
-    <div class="proof"><div class="pn">7×</div><div class="pl">mehr Experimente</div><div class="pd">Siebenmal höhere Innovationsgeschwindigkeit in psychologisch sicheren Teams — ohne eine einzige zusätzliche Einstellung.</div><div class="ps">Edmondson &amp; Lei, 2014</div></div>
-    <div class="proof"><div class="pn">3×</div><div class="pl">Ideen am Tisch</div><div class="pd">Dreimal so viele Ideen, die den Entscheidungstisch erreichen — jene, die sonst im Schweigen sterben.</div><div class="ps">Edmondson, Harvard</div></div>
+    <div class="proof"><div class="pn" data-prefix="" data-value="66" data-suffix="%">66%</div><div class="pl">weniger Fluktuation</div><div class="pd">Der größte verborgene Posten in jeder G+V des Mittelstands — um zwei Drittel gesenkt, wenn sich das Überlebensmuster löst.</div><div class="ps">Gallup Workplace Research</div></div>
+    <div class="proof"><div class="pn" data-prefix="" data-value="7" data-suffix="×">7×</div><div class="pl">mehr Experimente</div><div class="pd">Siebenmal höhere Innovationsgeschwindigkeit in psychologisch sicheren Teams — ohne eine einzige zusätzliche Einstellung.</div><div class="ps">Edmondson &amp; Lei, 2014</div></div>
+    <div class="proof"><div class="pn" data-prefix="" data-value="3" data-suffix="×">3×</div><div class="pl">Ideen am Tisch</div><div class="pd">Dreimal so viele Ideen, die den Entscheidungstisch erreichen — jene, die sonst im Schweigen sterben.</div><div class="ps">Edmondson, Harvard</div></div>
   </div>
 </section></div>
 
@@ -299,7 +299,7 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
   function ease(t){return 1-Math.pow(1-t,3);}
   function count(el){var pre=el.dataset.prefix||'',suf=el.dataset.suffix||'',val=+el.dataset.value,dur=1300,t0=null;function step(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/dur);el.textContent=pre+Math.round(ease(p)*val)+suf;if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
-  var nums=[].slice.call(document.querySelectorAll('.stat .n'));
+  var nums=[].slice.call(document.querySelectorAll('.stat .n,.proof .pn'));
   nums.forEach(function(n){if(!reduce)n.textContent=(n.dataset.prefix||'')+'0'+(n.dataset.suffix||'');n.addEventListener('mouseenter',function(){count(n);});});
   if(!reduce){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.parentElement.classList.add('in');count(e.target);io.unobserve(e.target);}});},{threshold:0.6});nums.forEach(function(n){io.observe(n);});}
 })();
