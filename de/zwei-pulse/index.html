@@ -105,6 +105,7 @@ footer p{font-weight:400;font-size:11px;letter-spacing:2px;color:var(--cream3);t
 /* scroll-reveal: opacity+lift everywhere, blur joins on desktop only (mobile perf) */
 .rv{opacity:0;transform:translateY(16px);transition:opacity .75s var(--ease),transform .75s var(--ease),filter .75s var(--ease)}.rv.on{opacity:1;transform:none;filter:none}@media(min-width:821px){.rv{filter:blur(7px)}}@media(prefers-reduced-motion:reduce){.rv,.rv.on{opacity:1;transform:none;filter:none;transition:none}}
 footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoration:none;transition:color .55s cubic-bezier(0.33,1,0.68,1)}footer .legal a:hover{color:var(--lime)}
+footer .fbook{margin-top:16px}footer .fbook a{color:var(--limedeep);text-decoration:none;font-weight:700;transition:color .55s var(--ease)}footer .fbook a:hover{color:var(--lime)}@media(min-width:821px) and (max-width:1100px){.nl{gap:18px}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://thehumanorigin.org/#organization","name":"The Human Origin","url":"https://thehumanorigin.org/","email":"tom@thehumanorigin.org","areaServed":"Europe","founder":{"@id":"https://thehumanorigin.org/#tomwaldek"}},{"@type":"Person","@id":"https://thehumanorigin.org/#tomwaldek","name":"Tom Waldek","jobTitle":"Founder, The Human Origin","email":"tom@thehumanorigin.org","url":"https://thehumanorigin.org/","knowsLanguage":["de","en"],"worksFor":{"@id":"https://thehumanorigin.org/#organization"}},{"@type":"WebSite","@id":"https://thehumanorigin.org/#website","name":"The Human Origin","url":"https://thehumanorigin.org/","inLanguage":["de","en"],"publisher":{"@id":"https://thehumanorigin.org/#organization"}},{"@type":"WebPage","@id":"https://thehumanorigin.org/de/zwei-pulse/#webpage","url":"https://thehumanorigin.org/de/zwei-pulse/","name":"Zwei Pulse · The Human Origin","inLanguage":"de","description":"Zwei Lesarten, je drei Minuten: der Pulscheck für den Raum, den Sie führen, der Innere Puls für den Menschen, der ihn betritt. Je acht Aussagen. Das sieht niemand außer Ihnen.","isPartOf":{"@id":"https://thehumanorigin.org/#website"},"about":{"@id":"https://thehumanorigin.org/#organization"}}]}</script>
 <link rel="canonical" href="https://thehumanorigin.org/de/zwei-pulse/">
@@ -118,7 +119,7 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
 
 <nav>
   <a class="logo" href="/de/">The Human <b>Origin</b></a>
-  <button class="navtoggle" aria-label="Menü" aria-expanded="false" aria-controls="navmenu" onclick="toggleNav(this)"><span></span><span></span><span></span></button><div class="nl" id="navmenu"><a href="/de/">The Human Origin</a><a href="/de/fuehrungstisch/">Der Führungstisch</a><a href="/de/zwei-tueren/">Zwei Türen</a><a href="/de/original/">Das Original</a><span class="lang"><a href="/en/two-pulses/">EN</a><i>/</i><a class="on" href="/de/zwei-pulse/">DE</a></span><a class="pill on" href="/de/zwei-pulse/">Pulscheck</a></div>
+  <button class="navtoggle" aria-label="Menü" aria-expanded="false" aria-controls="navmenu" onclick="toggleNav(this)"><span></span><span></span><span></span></button><div class="nl" id="navmenu"><a href="/de/fuehrungstisch/">Der Führungstisch</a><a href="/de/zwei-tueren/">Zwei Türen</a><a href="/de/original/">Das Original</a><a href="https://cal.eu/tomwaldek/erstgespraech" target="_blank" rel="noopener">Gespr&auml;ch buchen</a><span class="lang"><a href="/en/two-pulses/">EN</a><i>/</i><a class="on" href="/de/zwei-pulse/">DE</a></span><a class="pill on" href="/de/zwei-pulse/">Pulscheck</a></div>
 </nav>
 
 <div class="wrap">
@@ -143,9 +144,10 @@ footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoratio
   <div class="slabel">In beiden Fällen</div>
   <p>Beides ist ein Spiegel, keine Diagnose. Je acht Aussagen, je drei Minuten, und <b>nichts davon wird gespeichert oder gesendet</b> — Sie antworten, Sie sehen, was sich daraus ergibt, und Sie entscheiden, was Sie damit tun.</p>
   <p>Was Sie auch wählen, der Boden darunter ist derselbe: Nichts davon ist ein Makel an Ihren Leuten oder an Ihnen. <b>Es ist der Mensch, der sich an das anpasst, was nicht sicher war.</b> <a class="lb-link" style="font-size:17px" href="/de/original/">Das Original &rarr;</a></p>
+  <p>Lieber gleich sprechen? <b>Buchen Sie stattdessen das Erstgespräch</b> — 45 Minuten, kostenlos, ohne Pitch, ohne Nachfassen, wenn Sie es nicht wollen. <a class="lb-link" style="font-size:17px" href="https://cal.eu/tomwaldek/erstgespraech" target="_blank" rel="noopener">Gespräch buchen &rarr;</a></p>
 </section></div>
 
-<footer><p>Wahrheit f&uuml;hrt. Fassade kostet. &middot; &copy; 2026 The Human Origin &middot; Tom Waldek</p><p class="legal"><a href="/de/impressum/">Impressum</a> &middot; <a href="/de/datenschutz/">Datenschutz</a> &middot; <a href="/de/fuehrungstisch/#faq">FAQ</a></p></footer>
+<footer><p>Wahrheit f&uuml;hrt. Fassade kostet. &middot; &copy; 2026 The Human Origin &middot; Tom Waldek</p><p class="legal fbook"><a href="https://cal.eu/tomwaldek/erstgespraech" target="_blank" rel="noopener">Gespr&auml;ch buchen</a> &middot; <a href="mailto:tom@thehumanorigin.org">tom@thehumanorigin.org</a></p><p class="legal"><a href="/de/impressum/">Impressum</a> &middot; <a href="/de/datenschutz/">Datenschutz</a> &middot; <a href="/de/fuehrungstisch/#faq">FAQ</a></p></footer>
 <script>
 function faq(btn){var item=btn.parentElement;var a=item.querySelector('.faq-a');var open=item.classList.contains('open');
   document.querySelectorAll('.faq-item.open').forEach(function(el){el.classList.remove('open');el.querySelector('.faq-a').style.maxHeight=null;});
