@@ -60,7 +60,7 @@ Leadership Table body sections: FAQ **619 words = 48%**, six disciplines 144, AI
 | Differentiator line | All three section pages |
 | **Proof (framework step 6)** | **Confidentiality absolute — no logos, no case studies, no names, ever. No client evidence. Do not invent any.** |
 | Hook trade-off | **OPEN** — see section 6 |
-| `Gründer:innen` | **OPEN** — see section 6 |
+| German gender form | **`Gründer:innen`** — settled. Standing rule for all new German copy. Exception: `de/index.html:153` "Tom Waldek · The Human Origin · **Gründer**" is his own title, one person — leave it. |
 
 ---
 
@@ -149,8 +149,7 @@ Leadership Table carries the full version inside Mechanism. The other two get on
 ## 6. Open questions — answer before implementing
 
 1. **The hook.** New h1 *"Your best people already know what's wrong"* stops harder, but the current h1 carries "strategy" search intent. Recommendation: take the new one — this page converts people who already arrived, it is not the discovery surface. Fallback: keep the old h1, use the new line as `.subtitle`.
-2. **`Gründer:innen`** appears in the German Führungstisch `.whatis` block. Alternatives: *Gründerinnen und Gründer*, or plain *Gründer*.
-3. **German copy for all of section 4** has not been written yet.
+2. **German copy for all of section 4** has not been written yet. Mirror the English beat for beat, Sie form, `Gründer:innen` wherever the audience is named.
 
 ---
 

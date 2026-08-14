@@ -120,7 +120,9 @@ Then one commit to `claude/thehumanorigin-refinement-stress-test-qxiayc` (exists
 
 ## One open detail
 
-German uses `Gründer:innen` in the Führungstisch block. Say the word if you'd prefer *Gründerinnen und Gründer* or plain *Gründer*, and I'll switch it.
+**Settled: use `Gründer:innen`.** Standing rule for all new German copy wherever the audience is named as a group. It does not currently appear anywhere on the site — the draft that carried it was superseded by the shorter section-page blocks — so this is a forward rule for the Phase 2 German, not a pending edit.
+
+One exception: `de/index.html:153` reads "Tom Waldek · The Human Origin · **Gründer**". That is his own job title, one person, and stays masculine singular.
 
 ---
 
