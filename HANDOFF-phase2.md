@@ -5,6 +5,7 @@
 - **Branch:** `claude/thehumanorigin-refinement-stress-test-qxiayc`
 - **Last commit:** `e996201` — Phase 1, already pushed
 - **Status:** Phase 2 is fully specified and approved. **Nothing implemented.** Start from section 4.
+- **Full plan:** `.plans/ethereal-rolling-curry.md` — same content plus the Phase 1 record. To resume with it loaded on desktop: `cp .plans/ethereal-rolling-curry.md ~/.claude/plans/`
 
 ---
 
