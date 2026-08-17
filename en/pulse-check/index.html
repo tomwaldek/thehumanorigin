@@ -128,7 +128,7 @@ footer .fbook{margin-top:16px}footer .fbook a{color:var(--limedeep);text-decorat
 
 <nav>
   <a class="logo" href="/en/">The Human <b>Origin</b></a>
-  <button class="navtoggle" aria-label="Menu" aria-expanded="false" aria-controls="navmenu" onclick="toggleNav(this)"><span></span><span></span><span></span></button><div class="nl" id="navmenu"><a href="/en/leadership-table/">The Leadership Table</a><a href="/en/inner/">Yourself</a><a href="/en/original/">The Original</a><a href="https://cal.eu/tomwaldek/entry-conversation" target="_blank" rel="noopener">Book a conversation</a><span class="lang"><a class="on" href="/en/pulse-check/">EN</a><i>/</i><a href="/de/pulscheck/">DE</a></span><a class="pill" href="/en/two-pulses/">Pulse Check</a></div>
+  <button class="navtoggle" aria-label="Menu" aria-expanded="false" aria-controls="navmenu" onclick="toggleNav(this)"><span></span><span></span><span></span></button><div class="nl" id="navmenu"><a href="/en/leadership-table/">The Leadership Table</a><a href="/en/inner/">The inner work</a><a href="/en/original/">The Original</a><a href="https://cal.eu/tomwaldek/entry-conversation" target="_blank" rel="noopener">Book a conversation</a><span class="lang"><a class="on" href="/en/pulse-check/">EN</a><i>/</i><a href="/de/pulscheck/">DE</a></span><a class="pill" href="/en/two-pulses/">Pulse Check</a></div>
 </nav>
 
 <div class="stage">
@@ -157,7 +157,7 @@ footer .fbook{margin-top:16px}footer .fbook a{color:var(--limedeep);text-decorat
         <div class="meter you"><div class="mtop"><span class="mname">You — the state you bring in</span><span class="mval" id="youv"></span></div><div class="mtrack"><div class="mfill" id="youf"></div></div></div>
       </div>
       <div class="route"><div class="rn">Where the work lives</div><div class="rt">This is what the Trust Architecture Diagnostic surfaces — the survival patterns running your room, made visible, then changed. <b>The Leadership Table</b> is where that engagement lives.</div><div class="rcta"><a class="btn btn-p" href="https://cal.eu/tomwaldek/entry-conversation" target="_blank" rel="noopener">Book an entry conversation →</a><a class="btn btn-g" href="/en/leadership-table/">or read The Leadership Table</a></div><div class="rfine">45 minutes. No fee, no pitch, no follow-up unless you ask. Bring what this just surfaced.</div></div>
-      <div class="route route-i"><div class="rn">It starts in you</div><div class="rt" id="rstarts"></div><div class="rcta"><a class="btn btn-p" href="/en/inner-pulse/">Take the Inner Pulse →</a><a class="btn btn-g" href="/en/inner/">or the inner work</a></div></div>
+      <div class="route route-i"><div class="rn">It starts in you</div><div class="rt" id="rstarts"></div><div class="rcta"><a class="btn btn-p" href="/en/inner-pulse/">Take the inner read →</a><a class="btn btn-g" href="/en/inner/">or the inner work</a></div></div>
       <div class="beyond">
         <div class="beyond-item"><span class="bk">The bigger picture</span>None of this is a flaw in your people or in you — it's the human, adapting to what wasn't safe. Why that matters, and what it costs to ignore, is the whole conviction here. <a href="/en/original/">The Original →</a></div>
       </div>
@@ -216,9 +216,9 @@ function results(){
   setTimeout(()=>{$('roomf').style.width=(room/18*100)+'%';$('youf').style.width=(you/6*100)+'%';},80);
   let starts;
   if(you/6 > room/18){
-    starts='Your own reads louder than the room’s — and the room is copying it. The Trust Cascade only runs one way: <b>before the room changes, this does.</b> Start with the state you bring in — the Inner Pulse, or the inner work.';
+    starts='Your own reads louder than the room’s — and the room is copying it. The Trust Cascade only runs one way: <b>before the room changes, this does.</b> Start with the state you bring in — the inner read, or the inner work.';
   }else{
-    starts='Even here, the room copies the state you bring it. The deepest lever on your leadership isn’t a technique — <b>it’s you.</b> The Inner Pulse, or the inner work, is where that side of the work begins.';
+    starts='Even here, the room copies the state you bring it. The deepest lever on your leadership isn’t a technique — <b>it’s you.</b> The inner read, or the inner work, is where that side of the work begins.';
   }
   $('rstarts').innerHTML=starts;
 }
