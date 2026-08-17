@@ -109,7 +109,7 @@ footer .fbook{margin-top:16px}footer .fbook a{color:var(--limedeep);text-decorat
 
 <nav>
   <a class="logo" href="/de/">The Human <b>Origin</b></a>
-  <button class="navtoggle" aria-label="Menü" aria-expanded="false" aria-controls="navmenu" onclick="toggleNav(this)"><span></span><span></span><span></span></button><div class="nl" id="navmenu"><a href="/de/fuehrungstisch/">Der Führungstisch</a><a href="/de/zwei-tueren/">Zwei Türen</a><a href="/de/original/">Das Original</a><a href="https://cal.eu/tomwaldek/erstgespraech" target="_blank" rel="noopener">Gespr&auml;ch buchen</a><span class="lang"><a href="/en/inner-pulse/">EN</a><i>/</i><a class="on" href="/de/innerer-puls/">DE</a></span><a class="pill" href="/de/zwei-pulse/">Pulscheck</a></div>
+  <button class="navtoggle" aria-label="Menü" aria-expanded="false" aria-controls="navmenu" onclick="toggleNav(this)"><span></span><span></span><span></span></button><div class="nl" id="navmenu"><a href="/de/fuehrungstisch/">Der Führungstisch</a><a href="/de/innen/">Sie selbst</a><a href="/de/original/">Das Original</a><a href="https://cal.eu/tomwaldek/erstgespraech" target="_blank" rel="noopener">Gespr&auml;ch buchen</a><span class="lang"><a href="/en/inner-pulse/">EN</a><i>/</i><a class="on" href="/de/innerer-puls/">DE</a></span><a class="pill" href="/de/zwei-pulse/">Pulscheck</a></div>
 </nav>
 
 <div class="stage">
@@ -142,7 +142,7 @@ footer .fbook{margin-top:16px}footer .fbook a{color:var(--limedeep);text-decorat
       </div>
       <div class="route"><div class="rn">Wo Sie beginnen</div><div class="rt" id="rroute"></div><div class="rcta" id="rcta" style="margin-top:20px"></div></div>
 
-      <div class="route"><div class="rn">Wenn es gehalten werden soll</div><div class="rt">Die persönliche Arbeit läuft in wenigen Formen — <b>ein Vortrag, ein Kreis über Monate, als Paar oder eins zu eins.</b> Schreiben Sie in einem ehrlichen Absatz, was Sie tragen, und Sie bekommen eine klare Antwort, ob das hier passt — oder wo Sie besser aufgehoben sind.</div><div class="rcta" style="margin-top:20px"><a class="btn btn-p" href="mailto:tom@thehumanorigin.org?subject=Innerer%20Puls%20—%20was%20ich%20gesehen%20habe">An Tom schreiben →</a><a class="btn btn-g" href="/de/zwei-tueren/">oder Zwei Türen ansehen</a></div></div>
+      <div class="route"><div class="rn">Wenn es gehalten werden soll</div><div class="rt">Die persönliche Arbeit läuft in wenigen Formen — <b>ein Vortrag, ein Kreis über Monate, als Paar oder eins zu eins.</b> Schreiben Sie in einem ehrlichen Absatz, was Sie tragen, und Sie bekommen eine klare Antwort, ob das hier passt — oder wo Sie besser aufgehoben sind.</div><div class="rcta" style="margin-top:20px"><a class="btn btn-p" href="mailto:tom@thehumanorigin.org?subject=Innerer%20Puls%20—%20was%20ich%20gesehen%20habe">An Tom schreiben →</a><a class="btn btn-g" href="/de/innen/">oder die innere Arbeit ansehen</a></div></div>
 
       <div class="route route-o"><div class="rn">Das größere Bild</div><div class="rt">Nichts davon ist ein Fehler. Es ist der Mensch, der sich an das anpasst, was nicht sicher war — und gerade die menschlichsten Anteile in Ihnen sind die, deren Rückholung sich lohnt. Diese Überzeugung ist der Boden, auf dem hier alles steht.</div><div class="orcta"><a class="btn btn-p" href="/de/original/">Das Original →</a></div></div>
 
@@ -210,14 +210,14 @@ function results(){
   let rn,cta;
   const gap=mind-body;
   if(gap>4){
-    rn='Die Tür des Verstandes schlägt etwas lauter aus — mehr von Ihnen ist begraben oder gespielt als angespannt. <b>Essenz</b> ist ein natürlicher Einstieg: dem Menschen zu begegnen, der Sie unter der Rolle sind. Die Tür des Körpers zählt trotzdem — die meisten brauchen beide.';
-    cta='<a class="btn btn-p" href="/de/essenz/">Zur Essenz →</a><a class="btn btn-g" href="/de/zwei-tueren/">oder bei Zwei Türen beginnen</a>';
+    rn='Die Tür des Verstandes schlägt etwas lauter aus — mehr von Ihnen ist begraben oder gespielt als angespannt. <b>Unter der Rolle</b> ist ein natürlicher Einstieg: dem Menschen zu begegnen, der Sie unter der Rolle sind. Die Tür des Körpers zählt trotzdem — die meisten brauchen beide.';
+    cta='<a class="btn btn-p" href="/de/innen/rolle/">Zu Unter der Rolle →</a><a class="btn btn-g" href="/de/innen/">oder mit der inneren Arbeit beginnen</a>';
   }else if(gap<-4){
-    rn='Die Tür des Körpers schlägt etwas lauter aus — mehr von Ihnen ist angespannt als begraben. <b>Präsenz</b> ist ein natürlicher Einstieg: den Körper lernen zu lassen, dass es sicher ist, hier zu sein. Die Tür des Verstandes zählt trotzdem — die meisten brauchen beide.';
-    cta='<a class="btn btn-p" href="/de/praesenz/">Zur Präsenz →</a><a class="btn btn-g" href="/de/zwei-tueren/">oder bei Zwei Türen beginnen</a>';
+    rn='Die Tür des Körpers schlägt etwas lauter aus — mehr von Ihnen ist angespannt als begraben. <b>Zurück im Körper</b> ist ein natürlicher Einstieg: den Körper lernen zu lassen, dass es sicher ist, hier zu sein. Die Tür des Verstandes zählt trotzdem — die meisten brauchen beide.';
+    cta='<a class="btn btn-p" href="/de/innen/koerper/">Zu Zurück im Körper →</a><a class="btn btn-g" href="/de/innen/">oder mit der inneren Arbeit beginnen</a>';
   }else{
-    rn='Beide Türen stehen in Ihnen offen — das Selbst unter der Rolle und der Körper, der es trägt. Das sind <b>Zwei Türen</b>. Beginnen Sie mit der, die Sie hineinzieht; die andere wird warten.';
-    cta='<a class="btn btn-p" href="/de/zwei-tueren/">Zu Zwei Türen →</a>';
+    rn='Beide Türen stehen in Ihnen offen — das Selbst unter der Rolle und der Körper, der es trägt. Das ist <b>die innere Arbeit</b>. Beginnen Sie mit der, die Sie hineinzieht; die andere wird warten.';
+    cta='<a class="btn btn-p" href="/de/innen/">Zur inneren Arbeit →</a>';
   }
   $('rroute').innerHTML=rn;$('rcta').innerHTML=cta;
 }

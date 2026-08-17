@@ -109,7 +109,7 @@ footer .fbook{margin-top:16px}footer .fbook a{color:var(--limedeep);text-decorat
 
 <nav>
   <a class="logo" href="/en/">The Human <b>Origin</b></a>
-  <button class="navtoggle" aria-label="Menu" aria-expanded="false" aria-controls="navmenu" onclick="toggleNav(this)"><span></span><span></span><span></span></button><div class="nl" id="navmenu"><a href="/en/leadership-table/">The Leadership Table</a><a href="/en/two-doors/">Two Doors</a><a href="/en/original/">The Original</a><a href="https://cal.eu/tomwaldek/entry-conversation" target="_blank" rel="noopener">Book a conversation</a><span class="lang"><a class="on" href="/en/inner-pulse/">EN</a><i>/</i><a href="/de/innerer-puls/">DE</a></span><a class="pill" href="/en/two-pulses/">Pulse Check</a></div>
+  <button class="navtoggle" aria-label="Menu" aria-expanded="false" aria-controls="navmenu" onclick="toggleNav(this)"><span></span><span></span><span></span></button><div class="nl" id="navmenu"><a href="/en/leadership-table/">The Leadership Table</a><a href="/en/inner/">Yourself</a><a href="/en/original/">The Original</a><a href="https://cal.eu/tomwaldek/entry-conversation" target="_blank" rel="noopener">Book a conversation</a><span class="lang"><a class="on" href="/en/inner-pulse/">EN</a><i>/</i><a href="/de/innerer-puls/">DE</a></span><a class="pill" href="/en/two-pulses/">Pulse Check</a></div>
 </nav>
 
 <div class="stage">
@@ -142,7 +142,7 @@ footer .fbook{margin-top:16px}footer .fbook a{color:var(--limedeep);text-decorat
       </div>
       <div class="route"><div class="rn">Where to start</div><div class="rt" id="rroute"></div><div class="rcta" id="rcta" style="margin-top:20px"></div></div>
 
-      <div class="route"><div class="rn">If you want it held</div><div class="rt">The personal work runs in a few shapes — <b>a talk, a circle over months, as a couple, or one to one.</b> Write in one honest paragraph about what you're carrying, and I'll tell you straight whether this fits — or where else to look.</div><div class="rcta" style="margin-top:20px"><a class="btn btn-p" href="mailto:tom@thehumanorigin.org?subject=Inner%20Pulse%20—%20what%20I%20saw">Write to Tom →</a><a class="btn btn-g" href="/en/two-doors/">or see Two Doors</a></div></div>
+      <div class="route"><div class="rn">If you want it held</div><div class="rt">The personal work runs in a few shapes — <b>a talk, a circle over months, as a couple, or one to one.</b> Write in one honest paragraph about what you're carrying, and I'll tell you straight whether this fits — or where else to look.</div><div class="rcta" style="margin-top:20px"><a class="btn btn-p" href="mailto:tom@thehumanorigin.org?subject=Inner%20Pulse%20—%20what%20I%20saw">Write to Tom →</a><a class="btn btn-g" href="/en/inner/">or see the inner work</a></div></div>
 
       <div class="route route-o"><div class="rn">The bigger picture</div><div class="rt">None of this is a flaw. It's the human, adapting to what wasn't safe — and the most human parts of you are exactly the ones worth getting back. That conviction is the ground everything here stands on.</div><div class="orcta"><a class="btn btn-p" href="/en/original/">The Original →</a></div></div>
 
@@ -212,14 +212,14 @@ function results(){
   let rn,cta;
   const gap=mind-body;
   if(gap>4){
-    rn='Your mind-door reads a little louder — more of you is buried or performed than braced. <b>Essence</b> is a natural way in: meeting who you are beneath the role. The body-door still matters, though — most people need both.';
-    cta='<a class="btn btn-p" href="/en/essence/">Enter Essence →</a><a class="btn btn-g" href="/en/two-doors/">or start at Two Doors</a>';
+    rn='Your mind-door reads a little louder — more of you is buried or performed than braced. <b>Underneath the Role</b> is a natural way in: meeting who you are when the script is set down. The body-door still matters, though — most people need both.';
+    cta='<a class="btn btn-p" href="/en/inner/role/">Enter Underneath the Role →</a><a class="btn btn-g" href="/en/inner/">or start with the inner work</a>';
   }else if(gap<-4){
-    rn='Your body-door reads a little louder — more of you is braced than buried. <b>Presence</b> is a natural way in: letting the body learn it’s safe to be here. The mind-door still matters, though — most people need both.';
-    cta='<a class="btn btn-p" href="/en/presence/">Enter Presence →</a><a class="btn btn-g" href="/en/two-doors/">or start at Two Doors</a>';
+    rn='Your body-door reads a little louder — more of you is braced than buried. <b>Back in the Body</b> is a natural way in: letting the body learn it’s safe to be here. The mind-door still matters, though — most people need both.';
+    cta='<a class="btn btn-p" href="/en/inner/body/">Enter Back in the Body →</a><a class="btn btn-g" href="/en/inner/">or start with the inner work</a>';
   }else{
-    rn='Both doors are open in you — the self beneath the role, and the body that holds it. This is <b>Two Doors</b>. Start with whichever pulls you; the other will be waiting.';
-    cta='<a class="btn btn-p" href="/en/two-doors/">Enter Two Doors →</a>';
+    rn='Both doors are open in you — the self beneath the role, and the body that holds it. This is <b>the inner work</b>. Start with whichever pulls you; the other will be waiting.';
+    cta='<a class="btn btn-p" href="/en/inner/">Enter the inner work →</a>';
   }
   $('rroute').innerHTML=rn;$('rcta').innerHTML=cta;
 }

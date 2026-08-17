@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zwei Pulse · The Human Origin</title>
-<meta name="description" content="Zwei Lesarten, je drei Minuten: der Pulscheck für den Raum, den Sie führen, der Innere Puls für den Menschen, der ihn betritt. Je acht Aussagen. Das sieht niemand außer Ihnen.">
+<title>Sie selbst · The Human Origin</title>
+<meta name="description" content="Zwei Wege zurück zu dem Menschen, der Sie vor der Rolle waren: über das Selbst darunter oder über den Körper, der es trägt. Die meisten brauchen beide.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
@@ -55,6 +55,7 @@ section{padding:56px 0}
 .slabel{font-weight:700;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--limedeep);margin-bottom:28px}
 p{font-weight:300;font-size:19px;color:var(--cream2);line-height:1.85;margin-bottom:22px}
 p b{color:var(--cream);font-weight:600}
+.on-lime{color:var(--lime);font-weight:600}
 .megaline{font-weight:800;font-size:clamp(30px,4.8vw,58px);line-height:1.05;letter-spacing:-2px;color:var(--cream);margin:6px 0 28px}
 .megaline .a{color:var(--lime)}
 .doors{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:8px}
@@ -104,14 +105,25 @@ footer p{font-weight:400;font-size:11px;letter-spacing:2px;color:var(--cream3);t
 
 /* scroll-reveal: opacity+lift everywhere, blur joins on desktop only (mobile perf) */
 .rv{opacity:0;transform:translateY(16px);transition:opacity .75s var(--ease),transform .75s var(--ease),filter .75s var(--ease)}.rv.on{opacity:1;transform:none;filter:none}@media(min-width:821px){.rv{filter:blur(7px)}}@media(prefers-reduced-motion:reduce){.rv,.rv.on{opacity:1;transform:none;filter:none;transition:none}}
+
+/* CTA clarity: booking + contact affordances */
+.btnrow{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:center}
+.ctafine{font-weight:300;font-size:14px;color:var(--cream3);margin:26px 0 0}
+.ctafine a{color:var(--limedeep);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(169,207,99,0.32);transition:color var(--ed) var(--ease),border-color var(--ed) var(--ease)}
+.ctafine a:hover{color:var(--lime);border-color:var(--lime)}
+.rfine{position:relative;margin-top:14px;font-weight:300;font-size:13px;color:var(--cream3);line-height:1.6}
+.whatis{border-left:2px solid var(--limedeep);padding:1px 0 1px 18px;margin:0 0 30px;font-weight:300;font-size:15px;color:rgba(250,247,240,0.92);line-height:1.6;max-width:640px}
+.whatis b{font-weight:700;color:var(--lime)}
+.whatis em{font-style:normal;font-weight:600;color:var(--cream)}
 footer .legal{margin-top:12px}footer .legal a{color:var(--cream3);text-decoration:none;transition:color .55s cubic-bezier(0.33,1,0.68,1)}footer .legal a:hover{color:var(--lime)}
 footer .fbook{margin-top:16px}footer .fbook a{color:var(--limedeep);text-decoration:none;font-weight:700;transition:color .55s var(--ease)}footer .fbook a:hover{color:var(--lime)}@media(min-width:821px) and (max-width:1100px){.nl{gap:18px}}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://thehumanorigin.org/#organization","name":"The Human Origin","url":"https://thehumanorigin.org/","email":"tom@thehumanorigin.org","areaServed":"Europe","founder":{"@id":"https://thehumanorigin.org/#tomwaldek"}},{"@type":"Person","@id":"https://thehumanorigin.org/#tomwaldek","name":"Tom Waldek","jobTitle":"Founder, The Human Origin","email":"tom@thehumanorigin.org","url":"https://thehumanorigin.org/","knowsLanguage":["de","en"],"worksFor":{"@id":"https://thehumanorigin.org/#organization"}},{"@type":"WebSite","@id":"https://thehumanorigin.org/#website","name":"The Human Origin","url":"https://thehumanorigin.org/","inLanguage":["de","en"],"publisher":{"@id":"https://thehumanorigin.org/#organization"}},{"@type":"WebPage","@id":"https://thehumanorigin.org/de/zwei-pulse/#webpage","url":"https://thehumanorigin.org/de/zwei-pulse/","name":"Zwei Pulse · The Human Origin","inLanguage":"de","description":"Zwei Lesarten, je drei Minuten: der Pulscheck für den Raum, den Sie führen, der Innere Puls für den Menschen, der ihn betritt. Je acht Aussagen. Das sieht niemand außer Ihnen.","isPartOf":{"@id":"https://thehumanorigin.org/#website"},"about":{"@id":"https://thehumanorigin.org/#organization"}}]}</script>
-<link rel="canonical" href="https://thehumanorigin.org/de/zwei-pulse/">
-<link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/two-pulses/">
-<link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/zwei-pulse/">
-<link rel="alternate" hreflang="x-default" href="https://thehumanorigin.org/en/two-pulses/">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://thehumanorigin.org/#organization","name":"The Human Origin","url":"https://thehumanorigin.org/","email":"tom@thehumanorigin.org","areaServed":"Europe","founder":{"@id":"https://thehumanorigin.org/#tomwaldek"}},{"@type":"Person","@id":"https://thehumanorigin.org/#tomwaldek","name":"Tom Waldek","jobTitle":"Founder, The Human Origin","email":"tom@thehumanorigin.org","url":"https://thehumanorigin.org/","knowsLanguage":["de","en"],"worksFor":{"@id":"https://thehumanorigin.org/#organization"}},{"@type":"WebSite","@id":"https://thehumanorigin.org/#website","name":"The Human Origin","url":"https://thehumanorigin.org/","inLanguage":["de","en"],"publisher":{"@id":"https://thehumanorigin.org/#organization"}},{"@type":"WebPage","@id":"https://thehumanorigin.org/de/innen/#webpage","url":"https://thehumanorigin.org/de/innen/","name":"Sie selbst · The Human Origin","inLanguage":"de","description":"Zwei Wege zurück zu dem Menschen, der Sie vor der Rolle waren: über das Selbst darunter oder über den Körper, der es trägt. Die meisten brauchen beide.","isPartOf":{"@id":"https://thehumanorigin.org/#website"},"about":{"@id":"https://thehumanorigin.org/#organization"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Ist das Therapie, Coaching oder ein Trainingsprogramm?", "acceptedAnswer": {"@type": "Answer", "text": "Nichts davon. Es ist eine Diagnostik — sie liest die Überlebensmuster, die in einem Menschen oder einem Raum laufen, so wie fünfundzwanzig Jahre Film mich gelehrt haben, ein Set zu lesen. Keine Couch, kein Lehrplan, kein Workshop."}}, {"@type": "Question", "name": "Es gibt eine Seite für Organisationen und eine für den Menschen. Welche ist für mich?", "acceptedAnswer": {"@type": "Answer", "text": "Zwei Türen, ein Ursprung. Wenn Sie Menschen führen, beginnen Sie mit dem Führungstisch und dem Pulscheck. Wenn es Sie eher persönlich anzieht — wer Sie unter der Rolle sind, oder im eigenen Körper anzukommen — beginnen Sie mit der inneren Arbeit und dem Inneren Puls. Die meisten, ehrlich gesagt, brauchen beides."}}, {"@type": "Question", "name": "Wie hängen der Innere Puls und der Pulscheck zusammen?", "acceptedAnswer": {"@type": "Answer", "text": "Der Innere Puls liest Sie; der Pulscheck liest den Raum, den Sie führen. Dieselbe Linse, zweimal ausgerichtet — denn der Raum kopiert den Zustand, den Sie hineintragen. Nehmen Sie eine von beiden; sie verweisen aufeinander."}}, {"@type": "Question", "name": "Ist die persönliche Arbeit — Unter der Rolle und Zurück im Körper — nur für Männer?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Jeder Mensch trägt ein Männliches und ein Weibliches in sich, unabhängig vom Geschlecht — das ist für Männer, Frauen, Paare und alle, für die das alte Skript nie gepasst hat. Es gibt einen besonderen Fokus auf Männer, weil eine patriarchale Welt ihnen die Rolle in die Hand gegeben hat, das Muster durchzusetzen — doch niemand steht außerhalb davon."}}, {"@type": "Question", "name": "Was passiert nach dem Inneren Puls — und was kostet er?", "acceptedAnswer": {"@type": "Answer", "text": "Der Innere Puls ist kostenlos und dauert drei Minuten. Von dort können Sie allein über den Kanal beginnen, sich einem Kreis anschließen oder eins zu eins arbeiten. Die persönliche Arbeit beginnt kostenlos und vertieft sich von dort; körpernahe Arbeit öffnet sich, sobald ihre Struktur richtig steht."}}, {"@type": "Question", "name": "Ist alles vertraulich?", "acceptedAnswer": {"@type": "Answer", "text": "Vollständig. Was gesagt wird, bleibt, wo es gesagt wurde — das ist die ganze Voraussetzung dafür, dass überhaupt etwas Wahres gesagt wird."}}, {"@type": "Question", "name": "Gibt es Belege, dass das funktioniert?", "acceptedAnswer": {"@type": "Answer", "text": "Es steht im Einklang mit einem Jahrhundert an Forschung — Porges dazu, wie der Körper Sicherheit liest, Frankl zum Sinn, Edmondson dazu, was Teams aussprechen und was nicht, Keltner zur Macht — und fünfundzwanzig Jahren, in denen ich dieselben Muster an Filmsets beobachtet habe. Die Wissenschaft bestätigt, was der Körper längst wusste."}}, {"@type": "Question", "name": "In welchen Sprachen und Regionen arbeiten Sie?", "acceptedAnswer": {"@type": "Answer", "text": "International, auf Englisch und Deutsch. Die Wurzeln liegen im europäischen Film und in Führungsräumen — doch ein Nervensystem hat keine Nationalität, und diese Arbeit reist mit."}}]}</script>
+<link rel="canonical" href="https://thehumanorigin.org/de/innen/">
+<link rel="alternate" hreflang="en" href="https://thehumanorigin.org/en/inner/">
+<link rel="alternate" hreflang="de" href="https://thehumanorigin.org/de/innen/">
+<link rel="alternate" hreflang="x-default" href="https://thehumanorigin.org/en/inner/">
 </head>
 <body>
 <div class="atmos"><div class="wash w1"></div><div class="wash w2"></div><div class="wash w3"></div></div>
@@ -119,34 +131,66 @@ footer .fbook{margin-top:16px}footer .fbook a{color:var(--limedeep);text-decorat
 
 <nav>
   <a class="logo" href="/de/">The Human <b>Origin</b></a>
-  <button class="navtoggle" aria-label="Menü" aria-expanded="false" aria-controls="navmenu" onclick="toggleNav(this)"><span></span><span></span><span></span></button><div class="nl" id="navmenu"><a href="/de/fuehrungstisch/">Der Führungstisch</a><a href="/de/innen/">Sie selbst</a><a href="/de/original/">Das Original</a><a href="https://cal.eu/tomwaldek/erstgespraech" target="_blank" rel="noopener">Gespr&auml;ch buchen</a><span class="lang"><a href="/en/two-pulses/">EN</a><i>/</i><a class="on" href="/de/zwei-pulse/">DE</a></span><a class="pill on" href="/de/zwei-pulse/">Pulscheck</a></div>
+  <button class="navtoggle" aria-label="Menü" aria-expanded="false" aria-controls="navmenu" onclick="toggleNav(this)"><span></span><span></span><span></span></button><div class="nl" id="navmenu"><a href="/de/fuehrungstisch/">Der Führungstisch</a><a class="on" href="/de/innen/">Sie selbst</a><a href="/de/original/">Das Original</a><a href="https://cal.eu/tomwaldek/erstgespraech" target="_blank" rel="noopener">Gespr&auml;ch buchen</a><span class="lang"><a href="/en/inner/">EN</a><i>/</i><a class="on" href="/de/innen/">DE</a></span><a class="pill" href="/de/zwei-pulse/">Pulscheck</a></div>
 </nav>
 
 <div class="wrap">
 <section class="hero">
-  <div class="label">Pulscheck · zwei Lesarten</div>
-  <h1 class="hline"><span class="hw">Zwei</span> <span class="hw">Pulse.</span> <span class="hw">Je</span> <span class="hw">acht</span> <span class="hw a">Aussagen.</span></h1>
-  <div class="subtitle">Drei Minuten. Das sieht niemand außer Ihnen.</div>
-  <p class="lead">Der eine liest den Raum, den Sie führen. Der andere den Menschen, der ihn betritt. Beide legen dasselbe Muster frei — von zwei Enden her. <b>Beginnen Sie mit dem, der Ihnen nicht mehr aus dem Kopf geht.</b></p>
+  <div class="label">Sie selbst · die innere Arbeit</div>
+  <h1 class="hline"><span class="hw">Kommen</span> <span class="hw">Sie</span> <span class="hw">zu</span> <span class="hw">sich</span> <span class="hw a">zurück.</span></h1>
+  <div class="subtitle">Die Arbeit hinter der Rolle.</div>
+  <p class="lead">Zwei Wege hinein, ein Ziel — der Mensch, der Sie waren, bevor Sie lernten, sich in etwas Annehmbares zurechtzubiegen. Ein Eingang über den Verstand, einer über den Körper. <b>Die meisten brauchen beides.</b></p>
+  <div class="whatis"><b>Keine Therapie. Kein Coaching. Kein Lehrplan.</b> Ich lese das Muster dort, wo es wirklich lebt — im Körper, der es gelernt hat — und ich weiß, dass es baubar ist, weil ich meines aus dem Nichts bauen musste. Was das Muster verschüttet hat, ist das Original in Ihnen — nie verloren, nur aberzogen. <em>Was jetzt kommt: zwei Türen, woran Sie erkennen, welche Ihre ist, und wie der Weg zurück wirklich läuft — im Körper, nicht in der Vorstellung davon.</em></div>
+  <div class="cta"><a class="btn btn-p" href="/de/innerer-puls/">Inneren Puls starten</a></div>
 </section>
 </div>
 
+<div class="hr"></div>
+<div class="wrap"><section class="narrow">
+  <div class="slabel">Eine Spaltung, zwei Türen</div>
+  <div class="megaline hline"><span class="hw">Eine</span> <span class="hw">Spaltung.</span> <span class="hw a">Zwei</span> <span class="hw a">Türen.</span></div>
+  <p>Was die Leistungskultur nimmt, nimmt sie an zwei Stellen. Sie begräbt, wer Sie sind, unter der Rolle — Ihre Essenz, Ihren Schatten. Und sie bringt dem Körper bei, sich anzuspannen, sich zu inszenieren, nie ganz anzukommen. <b>Der Weg zurück führt durch beide.</b> <span class="on-lime">Beginnen Sie mit der Tür, die Sie stärker hineinzieht.</span></p>
+</section></div>
+
 <div class="wrap"><section>
   <div class="doors">
-    <a class="door dr1" href="/de/pulscheck/"><div class="dr-k">Für den Raum · Pulscheck</div><h3>Pulscheck</h3><div class="dp">Sagt Ihnen Ihr Raum die Wahrheit? Acht Aussagen darüber, was an Ihrem Tisch unausgesprochen bleibt, was trotzdem entschieden wird und was das kostet. Vor allem über den Raum, den Sie führen — und am Ende über den Zustand, den Sie hineintragen.</div><span class="dr-arw">Pulscheck starten &rarr;</span></a>
-    <a class="door dr2" href="/de/innerer-puls/"><div class="dr-k">Für den Menschen · Innerer Puls</div><h3>Innerer Puls</h3><div class="dp">Wo inszenieren Sie sich? Wo sind Sie präsent? Acht Aussagen über das, was unter der Rolle liegt, und über das, was der Körper längst weiß. Ein Spiegel, keine Prüfung — antworten Sie so, wie es tatsächlich ist, nicht wie es sein sollte.</div><span class="dr-arw">Inneren Puls starten &rarr;</span></a>
+    <a class="door dr1" href="/de/innen/rolle/"><div class="dr-k">Für Sie</div><h3>Unter der Rolle</h3><div class="dp">Wer Sie unter dem Skript sind, das man Ihnen gab — das Männliche und das Weibliche, Essenz und Schatten. Das Selbst, wieder zurückgeholt.</div><span class="dr-arw">Eintauchen →</span></a>
+    <a class="door dr2" href="/de/innen/koerper/"><div class="dr-k">Für Sie</div><h3>Zurück im Körper</h3><div class="dp">Der Körper, den Sie spüren können — Sicherheit, Nähe, Berührung. Wo Einsicht endlich zu etwas wird, das Sie leben, nicht nur verstehen.</div><span class="dr-arw">Eintauchen →</span></a>
   </div>
-  <p class="both">Sie führen Menschen? Nehmen Sie beide. <b>Der Zustand, den Sie in einen Raum tragen, wird zum Raum — die beiden Lesarten ergeben erst nebeneinander ein Bild.</b></p>
+  <p class="both">Die meisten brauchen beides. <b>Der Verstand gibt dem Körper die Erlaubnis; der Körper macht die Einsicht des Verstandes wirklich.</b></p>
 </section></div>
 
 <div class="hr"></div>
-<div class="wrap"><section class="narrow">
-  <div class="slabel">In beiden Fällen</div>
-  <p>Beides ist ein Spiegel, keine Diagnose. Je acht Aussagen, je drei Minuten, und <b>nichts davon wird gespeichert oder gesendet</b> — Sie antworten, Sie sehen, was sich daraus ergibt, und Sie entscheiden, was Sie damit tun.</p>
-  <p>Was Sie auch wählen, der Boden darunter ist derselbe: Nichts davon ist ein Makel an Ihren Leuten oder an Ihnen. <b>Es ist der Mensch, der sich an das anpasst, was nicht sicher war.</b> <a class="lb-link" style="font-size:17px" href="/de/original/">Das Original &rarr;</a></p>
-  <p>Lieber gleich sprechen? <b>Buchen Sie stattdessen das Erstgespräch</b> — 45 Minuten, kostenlos, ohne Pitch, ohne Nachfassen, wenn Sie es nicht wollen. <a class="lb-link" style="font-size:17px" href="https://cal.eu/tomwaldek/erstgespraech" target="_blank" rel="noopener">Gespräch buchen &rarr;</a></p>
+<div class="wrap"><span id="faq"></span><section class="narrow">
+  <div class="slabel">Häufige Fragen</div>
+  <div class="faq">
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">Ist das Therapie, Coaching oder ein Trainingsprogramm?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">Nichts davon. Es ist eine <b>Diagnostik</b> — sie liest die Überlebensmuster, die in einem Menschen oder einem Raum laufen, so wie fünfundzwanzig Jahre Film mich gelehrt haben, ein Set zu lesen. Keine Couch, kein Lehrplan, kein Workshop.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">Es gibt eine Seite für Organisationen und eine für den Menschen. Welche ist für mich?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">Zwei Türen, ein Ursprung. Wenn Sie Menschen führen, beginnen Sie mit <b>dem Führungstisch</b> und dem Pulscheck. Wenn es Sie eher persönlich anzieht — wer Sie unter der Rolle sind, oder im eigenen Körper anzukommen — beginnen Sie mit <b>der inneren Arbeit</b> und dem Inneren Puls. Die meisten, ehrlich gesagt, brauchen beides.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">Wie hängen der Innere Puls und der Pulscheck zusammen?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">Der Innere Puls liest Sie; der Pulscheck liest den Raum, den Sie führen. Dieselbe Linse, zweimal ausgerichtet — denn <b>der Raum kopiert den Zustand, den Sie hineintragen.</b> Nehmen Sie eine von beiden; sie verweisen aufeinander.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">Ist die persönliche Arbeit — Unter der Rolle und Zurück im Körper — nur für Männer?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">Nein. Jeder Mensch trägt ein Männliches und ein Weibliches in sich, unabhängig vom Geschlecht — das ist für Männer, Frauen, Paare und alle, für die das alte Skript nie gepasst hat. Es gibt einen <b>besonderen Fokus auf Männer</b>, weil eine patriarchale Welt ihnen die Rolle in die Hand gegeben hat, das Muster durchzusetzen — doch niemand steht außerhalb davon.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">Was passiert nach dem Inneren Puls — und was kostet er?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">Der Innere Puls ist kostenlos und dauert drei Minuten. Von dort können Sie allein über den Kanal beginnen, sich einem Kreis anschließen oder eins zu eins arbeiten. Die persönliche Arbeit <b>beginnt kostenlos und vertieft sich von dort</b>; körpernahe Arbeit öffnet sich, sobald ihre Struktur richtig steht.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">Ist alles vertraulich?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">Vollständig. Was gesagt wird, bleibt, wo es gesagt wurde — das ist die ganze <b>Voraussetzung</b> dafür, dass überhaupt etwas Wahres gesagt wird.</div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">Gibt es Belege, dass das funktioniert?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">Es steht im Einklang mit einem Jahrhundert an Forschung — Porges dazu, wie der Körper Sicherheit liest, Frankl zum Sinn, Edmondson dazu, was Teams aussprechen und was nicht, Keltner zur Macht — und fünfundzwanzig Jahren, in denen ich dieselben Muster an Filmsets beobachtet habe. <b>Die Wissenschaft bestätigt, was der Körper längst wusste.</b></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="faq(this)">In welchen Sprachen und Regionen arbeiten Sie?<span class="faq-ic">+</span></button><div class="faq-a"><div class="faq-a-in">International, auf Englisch und Deutsch. Die Wurzeln liegen im europäischen Film und in Führungsräumen — doch ein Nervensystem hat <b>keine Nationalität</b>, und diese Arbeit reist mit.</div></div></div>
+  </div>
 </section></div>
 
+<div class="hr"></div>
+<div class="wrap"><section>
+  <div class="leadbridge">
+    <div class="lb-label">Wo daraus Führung wird</div>
+    <div class="lb-head">Kommen Sie zu sich zurück, und führen Sie wahrhaftig.</div>
+    <p class="lb-text">Die innere Arbeit ist nicht getrennt davon, wie Sie führen — sie ist das Fundament. Ein Mensch, der zu sich zurückgefunden hat, <b>führt, gestaltet und verbindet sich aus einem Ort, den keine Rolle vortäuschen kann</b>. Genau diesen Vorsprung soll die Arbeit einer Organisation geben:</p>
+    <a class="lb-link" href="/de/fuehrungstisch/">Der Führungstisch →</a>
+  </div>
+</section></div>
+
+<div class="wrap"><section class="finalcta">
+  <div class="big hline"><span class="hw">Kommen</span> <span class="hw">Sie</span> <span class="hw a">zurück.</span></div>
+  <p style="max-width:520px;margin:0 auto 34px">Beginnen Sie mit der Tür, die Sie hineinzieht. Die andere wird warten. Diese Arbeit geschieht auch mit anderen im Raum: <b>Die Leseprobe</b> — sechs bis zehn Menschen, einmal im Monat, 250 € pro Platz. Die ersten Tische entstehen — <a href="mailto:tom@thehumanorigin.org?subject=Die%20Leseprobe" style="color:var(--lime)">schreiben Sie mir</a>.</p>
+  <div class="btnrow"><a class="btn btn-p" href="/de/innerer-puls/">Inneren Puls starten</a><a class="btn btn-g" href="/de/pulscheck/">oder der Pulscheck</a></div>
+  <p class="ctafine">Oder erst eine echte Frage stellen — <a href="mailto:tom@thehumanorigin.org?subject=Zwei%20T%C3%BCren">tom@thehumanorigin.org</a></p>
+</section></div>
 <footer><p>Wahrheit f&uuml;hrt. Fassade kostet. &middot; &copy; 2026 The Human Origin &middot; Tom Waldek</p><p class="legal fbook"><a href="https://cal.eu/tomwaldek/erstgespraech" target="_blank" rel="noopener">Gespr&auml;ch buchen</a> &middot; <a href="mailto:tom@thehumanorigin.org">tom@thehumanorigin.org</a></p><p class="legal"><a href="/de/impressum/">Impressum</a> &middot; <a href="/de/datenschutz/">Datenschutz</a> &middot; <a href="/de/fuehrungstisch/#faq">FAQ</a> &middot; Deutsch &amp; Englisch &middot; Europa</p></footer>
 <script>
 function faq(btn){var item=btn.parentElement;var a=item.querySelector('.faq-a');var open=item.classList.contains('open');
