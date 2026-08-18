@@ -157,7 +157,7 @@ footer .fbook{margin-top:16px}footer .fbook a{color:var(--limedeep);text-decorat
         <div class="meter you"><div class="mtop"><span class="mname">Sie — der Zustand, den Sie hineintragen</span><span class="mval" id="youv"></span></div><div class="mtrack"><div class="mfill" id="youf"></div></div></div>
       </div>
       <div class="route"><div class="rn">Wo die Arbeit stattfindet</div><div class="rt">Genau das legt die Vertrauensarchitektur-Diagnostik offen — die Überlebensmuster, die Ihren Raum steuern, sichtbar gemacht und dann verändert. <b>Der Führungstisch</b> ist der Ort dafür.</div><div class="rcta"><a class="btn btn-p" href="https://cal.eu/tomwaldek/erstgespraech" target="_blank" rel="noopener">Erstgespräch buchen →</a><a class="btn btn-g" href="/de/fuehrungstisch/">oder Der Führungstisch</a></div><div class="rfine">45 Minuten. Kostenlos, ohne Pitch, ohne Nachfassen, wenn Sie es nicht wollen. Bringen Sie mit, was hier gerade sichtbar wurde.</div></div>
-      <div class="route route-i"><div class="rn">Es beginnt bei Ihnen</div><div class="rt" id="rstarts"></div><div class="rcta"><a class="btn btn-p" href="/de/innerer-puls/">Zur inneren Lesart →</a><a class="btn btn-g" href="/de/innen/">oder die innere Arbeit</a></div></div>
+      <div class="route route-i"><div class="rn">Es beginnt bei Ihnen</div><div class="rt" id="rstarts"></div><div class="rcta"><a class="btn btn-p" href="/de/innerer-puls/">Zum inneren Abgleich →</a><a class="btn btn-g" href="/de/innen/">oder die innere Arbeit</a></div></div>
       <div class="beyond">
         <div class="beyond-item"><span class="bk">Das größere Bild</span>Nichts davon ist ein Fehler in Ihren Leuten oder in Ihnen — es ist der Mensch, der sich an das anpasst, was nicht sicher war. Warum das zählt und was es kostet, darüber hinwegzusehen, ist die ganze Überzeugung hier. <a href="/de/original/">Das Original →</a></div>
       </div>
@@ -216,9 +216,9 @@ function results(){
   setTimeout(()=>{$('roomf').style.width=(room/18*100)+'%';$('youf').style.width=(you/6*100)+'%';},80);
   let starts;
   if(you/6 > room/18){
-    starts='Ihr eigener Wert liegt höher als der des Raumes — und der Raum übernimmt ihn. Die Vertrauenskaskade läuft nur in eine Richtung: <b>bevor sich der Raum ändert, ändert sich das hier.</b> Beginnen Sie bei dem Zustand, den Sie hineintragen — mit der inneren Lesart oder mit der inneren Arbeit.';
+    starts='Ihr eigener Wert liegt höher als der des Raumes — und der Raum übernimmt ihn. Die Vertrauenskaskade läuft nur in eine Richtung: <b>bevor sich der Raum ändert, ändert sich das hier.</b> Beginnen Sie bei dem Zustand, den Sie hineintragen — mit dem inneren Abgleich oder mit der inneren Arbeit.';
   }else{
-    starts='Auch hier übernimmt der Raum den Zustand, den Sie hineintragen. Der tiefste Hebel Ihrer Führung ist keine Technik — <b>das sind Sie.</b> Die innere Lesart oder die innere Arbeit: dort beginnt diese Seite der Arbeit.';
+    starts='Auch hier übernimmt der Raum den Zustand, den Sie hineintragen. Der tiefste Hebel Ihrer Führung ist keine Technik — <b>das sind Sie.</b> Der innere Abgleich oder die innere Arbeit: dort beginnt diese Seite der Arbeit.';
   }
   $('rstarts').innerHTML=starts;
 }
